@@ -349,4 +349,6 @@ if(function_exists('override_wpautop')){
 	add_filter( 'meta_content', 'wpautop' );
 }
 add_filter( 'meta_content', 'shortcode_unautop'  );
-add_filter( 'meta_content', 'prepend_attachment' );?>
+add_filter( 'meta_content', 'prepend_attachment' );
+
+?>

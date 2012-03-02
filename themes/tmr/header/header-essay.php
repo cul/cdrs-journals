@@ -82,7 +82,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		
 		
 		
-		<nav id="access" class="clearfix" role="navigation">
+		<nav id="access" class="span-18 prepend-6 clearfix" role="navigation">
 		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 			 	

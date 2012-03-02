@@ -76,26 +76,10 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		
 		
 		
-		<nav id="access" role="navigation">
+		<nav id="access" role="navigation" class="clearfix span-18 prepend-6">
 		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 			 	
 			 	
 			 	
 <?			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
-		
-		
-		
-		
-	
-
-
-
- 
-		
-		
-				
- 
-	
-	
-	

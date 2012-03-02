@@ -29,6 +29,7 @@ the_content();
 
 wp_link_pages();
 
+/*
 the_date();
 
 the_author();
@@ -36,6 +37,7 @@ the_author();
 comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
 
 edit_post_link(__('Edit This', 'carrington-jam'), '', '');
+*/
 
 ?>
 </div>
