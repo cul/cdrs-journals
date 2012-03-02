@@ -14,57 +14,42 @@
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 // **********************************************************************
-
+global $post;
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
- global $post;
-
 ?>
+<div>
 
-<div class="span-14 prepend-6">
+<a href="<?php the_permalink() ?>"><?php the_title(); ?></a><br>
+<?php 
 
-<?
+ 
+ 
 
-
-$product_terms = wp_get_object_terms($post->ID, 'author');
+$product_terms = wp_get_object_terms($post->ID, 'edition');
 if(!empty($product_terms)){
   if(!is_wp_error( $product_terms )){
      
     foreach($product_terms as $term){
-      echo '<h2>Essays by '.$term->name.'</h2>' ; 
-       
-      $author_bio = get_tax_meta($term->term_id,'author_bio');
-echo  '<div class="author-bio">'.$author_bio.'</div>';
+            echo '<span class="edition-link">Edition: <a href="'.get_term_link($term->slug, 'edition').'">
+            '.$term->name.'</a></span>'; 
+
     }
   
   }
 }
 
 
- 
-if (have_posts()) {
+/* the_excerpt(); */
 
+/*
+the_time('F j, Y');
 
+the_category(', ');
 
-	echo '<ul>';
-	while (have_posts()) {
-		the_post();
-		
-				
+comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
+
+*/
 ?>
-	<li>
-	
-<?php
-	
-		
-cfct_template_file('excerpt', 'tax-author.php');?>
-	</li>
-<?php
-	}
-	echo '</ul>';
-}
-
-?>
-
-</div>
+</div><!-- .excerpt -->
