@@ -23,12 +23,11 @@ define('CFCT_DEBUG', false);
 define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
 
 include_once(CFCT_PATH.'carrington-core/carrington.php');
+
 include_once(CFCT_PATH.'functions/sidebars.php');
+
 include_once(CFCT_PATH."Tax-meta-class/Tax-meta-class.php");
  
 include_once(CFCT_PATH.'functions/morningsidereview.php');
-
-
-
 
 ?>

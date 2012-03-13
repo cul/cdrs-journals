@@ -320,10 +320,6 @@ function register_taxonomy_edition() {
 
 }
 
-
-
-
-
 include_once CFCT_PATH.'wpalchemy/metaboxes/setup.php';
 
 $custom_works_cited = new WPAlchemy_MetaBox(array
@@ -335,6 +331,14 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE 
 )); 
 
+$custom_taxonomy_edition = new WPAlchemy_MetaBox(array
+(
+	'id' => '_edition',
+	'title' => 'Editions',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-edition.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
 
 
 //recreate the default filters on the_content
@@ -369,7 +373,7 @@ $config = array(
    'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
    'fields' => array(),                             // list of meta fields (can be added by field arrays)
    'local_images' => true,                         // Use local or hosted images (meta box images for add/remove)
-   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+   'use_with_theme' => true                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
 );
  
 /*
