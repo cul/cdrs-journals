@@ -33,11 +33,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	}
 
- 
-
-
-
-
 /* begin adding custom post types and taxonomies */
 
 add_action( 'init', 'register_cpt_essay' );
@@ -63,8 +58,8 @@ function register_cpt_essay() {
         'labels' => $labels,
         'hierarchical' => true,
         
-        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'page-attributes' ),
-        'taxonomies' => array( 'category', 'post_tag', 'author', '','Editions' ),
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'post-formats' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'Editions' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -77,7 +72,7 @@ function register_cpt_essay() {
         'query_var' => true,
         'can_export' => true,
         'rewrite' => true,
-        'capability_type' => 'page'
+        'capability_type' => 'post'
     );
 
     register_post_type( 'essay', $args );
@@ -110,7 +105,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -142,7 +137,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -175,7 +170,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -207,7 +202,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -240,7 +235,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -273,7 +268,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -307,7 +302,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => true,
+        'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -340,6 +335,59 @@ $custom_taxonomy_edition = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE
 ));
 
+$custom_taxonomy_author = new WPAlchemy_MetaBox(array
+(
+	'id' => '_author',
+	'title' => 'Authors',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-author.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
+
+$custom_taxonomy_progression = new WPAlchemy_MetaBox(array
+(
+	'id' => '_progression',
+	'title' => 'Progressions',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-progression.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
+
+$custom_taxonomy_source = new WPAlchemy_MetaBox(array
+(
+	'id' => '_source',
+	'title' => 'Sources',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
+
+$custom_taxonomy_topic = new WPAlchemy_MetaBox(array
+(
+	'id' => '_topic',
+	'title' => 'Topics',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-topic.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
+
+$custom_taxonomy_strategy = new WPAlchemy_MetaBox(array
+(
+	'id' => '_strategy',
+	'title' => 'Strategies',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-strategy.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
+
+$custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
+(
+	'id' => '_assignment',
+	'title' => 'Assignments',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-assignment.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
 
 //recreate the default filters on the_content
 add_filter( 'meta_content', 'wptexturize'        );

@@ -33,7 +33,7 @@ cfct_template_file('header', 'header-essay.php');
 
 
   foreach($terms as $term) { 
-  if($term->slug!='current'){  echo '<li><a href="' . get_term_link( $term->slug, 'edition' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>';}
+    echo '<li><a href="' . get_term_link( $term->slug, 'edition' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>';
       } 
 
  ?>
