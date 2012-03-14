@@ -63,8 +63,8 @@ function register_cpt_essay() {
         'labels' => $labels,
         'hierarchical' => true,
         
-        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'post-formats' ),
-        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'Editions' ),
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'page-attributes' ),
+        'taxonomies' => array( 'category', 'post_tag', 'author', '','Editions' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -77,7 +77,7 @@ function register_cpt_essay() {
         'query_var' => true,
         'can_export' => true,
         'rewrite' => true,
-        'capability_type' => 'post'
+        'capability_type' => 'page'
     );
 
     register_post_type( 'essay', $args );
