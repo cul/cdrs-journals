@@ -24,7 +24,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="span-14 prepend-6">
 
-<?
+<?php
 
 
 $product_terms = wp_get_object_terms($post->ID, 'author');

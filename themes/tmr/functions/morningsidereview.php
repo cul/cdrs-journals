@@ -320,10 +320,6 @@ function register_taxonomy_edition() {
 
 }
 
-
-
-
-
 include_once CFCT_PATH.'wpalchemy/metaboxes/setup.php';
 
 $custom_works_cited = new WPAlchemy_MetaBox(array
@@ -335,6 +331,14 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE 
 )); 
 
+$custom_taxonomy_edition = new WPAlchemy_MetaBox(array
+(
+	'id' => '_edition',
+	'title' => 'Editions',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-edition.php',
+	'types' => array('essay', 'Essay'),
+	'autosave' => TRUE
+));
 
 
 //recreate the default filters on the_content

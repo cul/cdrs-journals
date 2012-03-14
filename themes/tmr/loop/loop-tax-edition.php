@@ -31,7 +31,6 @@ if (have_posts()) {
 
 <?php
 
-
 $args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'name');
 
 $authors = get_the_terms( $post->ID, 'author' );

@@ -16,43 +16,22 @@
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
-if (CFCT_DEBUG) { cfct_banner(__FILE__); }
-
- global $post;
-
-$product_terms = wp_get_object_terms($post->ID, 'author');
-if(!empty($product_terms)){
-  if(!is_wp_error( $product_terms )){
-     
-    foreach($product_terms as $term){
-      echo '<h2>Essays by '.$term->name.'</h2>' ; 
-    }
-  
-  }
-}
-
-
- 
+if (CFCT_DEBUG) { cfct_banner(__FILE__); }?>
+		<section id="content" role="main" class="span-21 prepend-2">
+<?
 if (have_posts()) {
-
-
-
-	echo '<ul>';
+	echo '<ol>';
 	while (have_posts()) {
 		the_post();
-		
-				
 ?>
 	<li>
-	
 <?php
-	
-			cfct_excerpt();
+		cfct_excerpt();
 ?>
 	</li>
 <?php
 	}
-	echo '</ul>';
+	echo '</ol>';
 }
 
 ?>

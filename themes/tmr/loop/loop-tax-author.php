@@ -18,22 +18,19 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+if (have_posts()) {
+	echo '<ol>';
+	while (have_posts()) {
+		the_post();
 ?>
-<div>
-
-<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-	
+	<li>
 <?php
-
-the_excerpt();
-
-/*
-the_time('F j, Y');
-
-the_category(', ');
-
-comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
-
-*/
+		cfct_excerpt();
 ?>
-</div><!-- .excerpt -->
+	</li>
+<?php
+	}
+	echo '</ol>';
+}
+
+?>
