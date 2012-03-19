@@ -18,26 +18,41 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+ global $post;
+
+$product_terms = wp_get_object_terms($post->ID, 'author');
+if(!empty($product_terms)){
+  if(!is_wp_error( $product_terms )){
+     
+    foreach($product_terms as $term){
+      echo '<h2>Essays by '.$term->name.'</h2>' ; 
+    }
+  
+  }
+}
+
+
+ 
+if (have_posts()) {
+
+
+
+	echo '<ul>';
+	while (have_posts()) {
+		the_post();
+		
+				
 ?>
-<div>
-
-<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-
+	<li>
+	
 <?php
-
-the_content(); 
-
-wp_link_pages();
-
-/*
-the_date();
-
-the_author();
-
-comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
-
-edit_post_link(__('Edit This', 'carrington-jam'), '', '');
-*/
+	
+			cfct_excerpt();
+?>
+	</li>
+<?php
+	}
+	echo '</ul>';
+}
 
 ?>
-</div>

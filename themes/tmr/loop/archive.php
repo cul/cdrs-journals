@@ -18,21 +18,13 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-?>
-
-
-<div class="span-18 prepend-4">
-
-<?
-
 global $term;
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
 
 $tax = $term->taxonomy;
 $name= $term->name;
-echo "Morningside Review Content by ". $tax;
+echo($tax);
  
-/*
 switch ($tax) {
     case "source":
         echo "<h1>Essays based on ".$name."</h1>";
@@ -48,13 +40,10 @@ switch ($tax) {
         break;
 }
  
-*/
 
-echo "<h1>".$name."</h1>";
 
- 
 if (have_posts()) {
-	echo '<ul>';
+	echo '<ol>';
 	while (have_posts()) {
 		the_post();
 ?>
@@ -65,9 +54,7 @@ if (have_posts()) {
 	</li>
 <?php
 	}
-	echo '</ul>';
+	echo '</ol>';
 }
 
 ?>
-
-</div>

@@ -33,6 +33,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	}
 
+ 
+
+
+
+
 /* begin adding custom post types and taxonomies */
 
 add_action( 'init', 'register_cpt_essay' );
@@ -105,7 +110,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -137,7 +142,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -170,7 +175,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -202,7 +207,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -235,7 +240,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -268,7 +273,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -302,7 +307,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
@@ -315,6 +320,10 @@ function register_taxonomy_edition() {
 
 }
 
+
+
+
+
 include_once CFCT_PATH.'wpalchemy/metaboxes/setup.php';
 
 $custom_works_cited = new WPAlchemy_MetaBox(array
@@ -326,68 +335,7 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE 
 )); 
 
-$custom_taxonomy_edition = new WPAlchemy_MetaBox(array
-(
-	'id' => '_edition',
-	'title' => 'Editions',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-edition.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
 
-$custom_taxonomy_author = new WPAlchemy_MetaBox(array
-(
-	'id' => '_author',
-	'title' => 'Authors',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-author.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
-
-$custom_taxonomy_progression = new WPAlchemy_MetaBox(array
-(
-	'id' => '_progression',
-	'title' => 'Progressions',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-progression.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
-
-$custom_taxonomy_source = new WPAlchemy_MetaBox(array
-(
-	'id' => '_source',
-	'title' => 'Sources',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
-
-$custom_taxonomy_topic = new WPAlchemy_MetaBox(array
-(
-	'id' => '_topic',
-	'title' => 'Topics',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-topic.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
-
-$custom_taxonomy_strategy = new WPAlchemy_MetaBox(array
-(
-	'id' => '_strategy',
-	'title' => 'Strategies',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-strategy.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
-
-$custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
-(
-	'id' => '_assignment',
-	'title' => 'Assignments',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-assignment.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
-));
 
 //recreate the default filters on the_content
 add_filter( 'meta_content', 'wptexturize'        );
@@ -421,7 +369,7 @@ $config = array(
    'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
    'fields' => array(),                             // list of meta fields (can be added by field arrays)
    'local_images' => true,                         // Use local or hosted images (meta box images for add/remove)
-   'use_with_theme' => true                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
 );
  
 /*
