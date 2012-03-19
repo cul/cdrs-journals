@@ -722,7 +722,7 @@ p.numbered_para a.numbered-item:hover
 	background: #efefef;
 }
 #access li:hover > a,
-#access a:focus {
+#access a:focus, #access li.current-menu-item, li.current-page-ancestor {
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
