@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div>
 
-<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+<!-- <a href="<?php the_permalink() ?>"><?php the_title() ?></a> -->
 
 <?php
 
