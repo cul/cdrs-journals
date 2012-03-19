@@ -450,5 +450,14 @@ $my_meta->addWysiwyg('author_bio',array('name'=> 'Author Bio '));
 //Finish Taxonomy Extra fields Deceleration
 $my_meta->Finish();
 
+ 
+/* Remove "Categories" and "Tags" Taxonomy */
+function unregister_taxonomy(){
+    register_taxonomy('post_tag', array());
+    register_taxonomy('category', array());
+}
+add_action('init', 'unregister_taxonomy');
+
+ 
 
 ?>

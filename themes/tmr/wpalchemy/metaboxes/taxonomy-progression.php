@@ -20,10 +20,12 @@ for($checkP=0; $checkP<sizeof($getProgression); $checkP++) {
 <select>
 	<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
 		if ($getFullProgression[$loopP] == $checkedP) { ?>
-			<option value="progression<?php.$loopP if()?>" selected><?php echo "$getFullProgression[$loopP]"; ?></option>
+ 
+			<option value="progression<?php.$loopP?>" selected><?php echo $getFullProgression[$loopP]; ?></option>
 		<?php }
 		else { ?>
-			<option value="progression<?php.$loopE if()?>"><?php echo "$getFullProgression[$loopP]"; ?></option>
+			<option value="progression<?php.$loopP?>"><?php echo $getFullProgression[$loopP]; ?></option>
+ 
 		<?php }
 	} ?>
 </select>

@@ -20,10 +20,12 @@ for($checkA=0; $checkA<sizeof($getAssignment); $checkA++) {
 <select>
 	<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
 		if ($getFullAssignment[$loopA] == $checkedA) { ?>
-			<option value="edition<?php.$loopA if()?>" selected><?php echo "$getFullAssignment[$loopA]"; ?></option>
+ 
+			<option value="edition<?php.$loopA?>" selected><?php echo $getFullAssignment[$loopA]; ?></option>
 		<?php }
 		else { ?>
-			<option value="edition<?php.$loopA if()?>"><?php echo "$getFullAssignment[$loopA]"; ?></option>
+			<option value="edition<?php.$loopA?>"><?php echo $getFullAssignment[$loopA]; ?></option>
+ 
 		<?php }
 	} ?>
 </select>

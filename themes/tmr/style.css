@@ -173,9 +173,7 @@ body {   background-color: #e6e6e6;}
 	line-height: 1.6;
 	font-family: "Sorts Mill Goudy";
 }
-/*#content p{
-	margin-bottom: 1em;
-}*/
+ 
 
 
 
@@ -288,8 +286,10 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 }
 
 h1{
+ 
 	 
 	font-size: 1.6em;
+ 
 }
 
 #content div blockquote {
@@ -722,7 +722,10 @@ p.numbered_para a.numbered-item:hover
 	background: #efefef;
 }
 #access li:hover > a,
+ 
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
+ 
+ 
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
@@ -743,6 +746,8 @@ p.numbered_para a.numbered-item:hover
 a#skip {
 	display: none;
 }
+ 
 .container p{
 	margin-bottom: 1em;
 }
+ 
