@@ -16,28 +16,28 @@
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
+if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-load_theme_textdomain('carrington-jam');
-
-define('CFCT_DEBUG', false);
-define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
-
-include_once(CFCT_PATH.'carrington-core/carrington.php');
-<<<<<<< HEAD
-include_once(CFCT_PATH.'functions/sidebars.php');
-=======
-
-include_once(CFCT_PATH.'functions/sidebars.php');
-
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-include_once(CFCT_PATH."Tax-meta-class/Tax-meta-class.php");
- 
-include_once(CFCT_PATH.'functions/morningsidereview.php');
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 ?>
+<div>
+
+<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+
+<?php
+
+the_content(); 
+
+wp_link_pages();
+
+/*
+the_date();
+
+the_author();
+
+comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
+
+edit_post_link(__('Edit This', 'carrington-jam'), '', '');
+*/
+
+?>
+</div>

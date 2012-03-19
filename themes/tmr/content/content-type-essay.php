@@ -36,7 +36,11 @@ global $post;
 
 <h1> <?php the_title() ?> </h1>
  
+<<<<<<< HEAD
 <?
+=======
+<?php
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 
 $author_terms = wp_get_object_terms($post->ID, 'author');
 if(!empty($author_terms)){
@@ -62,14 +66,22 @@ if(!empty($author_terms)){
  
  if ($theBio) { ?><div class="author-feature"><h3>About the Author </h3>
  
+<<<<<<< HEAD
  <? if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+=======
+ <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
   the_post_thumbnail();
 } 
 ?>
  
  <p>
  
+<<<<<<< HEAD
  <?
+=======
+ <?php
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
  
   foreach ( $theBio as $key => $value ) {
     echo "$value "; 
@@ -79,7 +91,11 @@ if(!empty($author_terms)){
 
  </div>
 
+<<<<<<< HEAD
 <? }
+=======
+<?php }
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 
 /* end author bio and photo */
 
@@ -159,7 +175,11 @@ if ($pdfs) {
 
 the_content(); ?>
 </div>
+<<<<<<< HEAD
 <?
+=======
+<?php
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 /* testing wordpress alchemy custom meta box */
 
 global $custom_works_cited;
@@ -167,9 +187,15 @@ global $custom_works_cited;
 $wc = $custom_works_cited->the_meta();
 ?>
 <div id="work_cited">
+<<<<<<< HEAD
 <h1><? echo($wc['title']); ?></h1>
 
 <? 
+=======
+<h1><?php echo($wc['title']); ?></h1>
+
+<?php 
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
  
 
 echo apply_filters('meta_content', $wc['citation']);

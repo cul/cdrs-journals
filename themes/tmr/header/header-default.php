@@ -82,4 +82,8 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 			 	
 			 	
 			 	
+<<<<<<< HEAD
 <?			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
+=======
+<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597

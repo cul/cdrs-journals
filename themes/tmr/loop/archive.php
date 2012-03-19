@@ -18,13 +18,29 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+<<<<<<< HEAD
+=======
+?>
+
+
+<div class="span-18 prepend-4">
+
+<?
+
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 global $term;
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
 
 $tax = $term->taxonomy;
 $name= $term->name;
+<<<<<<< HEAD
 echo($tax);
  
+=======
+echo "Morningside Review Content by ". $tax;
+ 
+/*
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 switch ($tax) {
     case "source":
         echo "<h1>Essays based on ".$name."</h1>";
@@ -40,10 +56,20 @@ switch ($tax) {
         break;
 }
  
+<<<<<<< HEAD
 
 
 if (have_posts()) {
 	echo '<ol>';
+=======
+*/
+
+echo "<h1>".$name."</h1>";
+
+ 
+if (have_posts()) {
+	echo '<ul>';
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 	while (have_posts()) {
 		the_post();
 ?>
@@ -54,7 +80,16 @@ if (have_posts()) {
 	</li>
 <?php
 	}
+<<<<<<< HEAD
 	echo '</ol>';
 }
 
 ?>
+=======
+	echo '</ul>';
+}
+
+?>
+
+</div>
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597

@@ -14,30 +14,48 @@
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 // **********************************************************************
-
+global $post;
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
+if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-load_theme_textdomain('carrington-jam');
-
-define('CFCT_DEBUG', false);
-define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
-
-include_once(CFCT_PATH.'carrington-core/carrington.php');
-<<<<<<< HEAD
-include_once(CFCT_PATH.'functions/sidebars.php');
-=======
-
-include_once(CFCT_PATH.'functions/sidebars.php');
-
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-include_once(CFCT_PATH."Tax-meta-class/Tax-meta-class.php");
- 
-include_once(CFCT_PATH.'functions/morningsidereview.php');
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 ?>
+
+<ul class="edition-list">
+<?
+if (have_posts()) {
+	 
+	while (have_posts()) {
+		the_post();
+?>
+<li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+
+<?php
+
+
+$args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'name');
+
+$authors = get_the_terms( $post->ID, 'author' );
+
+if($authors){
+
+foreach($authors as $term){
+      echo '<a class="author" href="'.get_term_link($term->slug, 'author').'">'.$term->name.'</a>'; 
+
+}
+
+}
+?>
+
+</li>
+
+<? 
+ 
+}
+	}
+	 
+	
+	
+ 
+?>
+
+</ul>

@@ -173,9 +173,15 @@ body {   background-color: #e6e6e6;}
 	line-height: 1.6;
 	font-family: "Sorts Mill Goudy";
 }
+<<<<<<< HEAD
 /*#content p{
 	margin-bottom: 1em;
 }*/
+=======
+#content p{
+	margin-bottom: 1em;
+}
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 
 
 
@@ -288,8 +294,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 }
 
 h1{
+<<<<<<< HEAD
 	 
 	font-size: 1.6em;
+=======
+	size: 2em;
+	font-size: 2em;
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 }
 
 #content div blockquote {
@@ -595,7 +606,11 @@ ul.edition-list li{
 	margin-bottom: 1em;
 }
 li.essay h1 a {
+<<<<<<< HEAD
  
+=======
+font-size: .8em;
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
  
 margin: 0;
 color: #56494f;
@@ -722,7 +737,11 @@ p.numbered_para a.numbered-item:hover
 	background: #efefef;
 }
 #access li:hover > a,
+<<<<<<< HEAD
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
+=======
+#access a:focus {
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
@@ -743,6 +762,9 @@ p.numbered_para a.numbered-item:hover
 a#skip {
 	display: none;
 }
+<<<<<<< HEAD
 .container p{
 	margin-bottom: 1em;
 }
+=======
+>>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
