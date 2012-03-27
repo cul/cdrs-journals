@@ -31,7 +31,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
+				
+<!--
 		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+-->
+		
+		
+		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		
 		<title>
 
 	 <?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ); ?></title>
@@ -67,6 +76,18 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </head>
 
 <body <?php body_class(); ?>><div class="container">
+
+
+
+
+		
+		<nav id="access" role="navigation" class="clearfix span-20 prepend-1">
+		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+			 	
+			 	
+			 	
+<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->
 		<header role="banner">
 		
 		<div id="cu-writing"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"> </div>
@@ -75,11 +96,3 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		</header>
 		
 		
-		
-		<nav id="access" role="navigation" class="clearfix span-18 prepend-6">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			 	
-			 	
-			 	
-<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->

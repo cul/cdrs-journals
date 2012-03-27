@@ -93,6 +93,7 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/morningsidereview/style.css
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/carrington-jam-1.4/style.css
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/tmr/style.css
+	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
 */
 
 /** START HTML5 Boilerplate CSS **/
@@ -136,7 +137,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body{
-	font-family: 'Sorts Mill Goudy';
+	 font-family: 'Cantarell', sans-serif;
 }
 blockquote, q { quotes: none; }
 
@@ -167,11 +168,15 @@ body {   background-color: #e6e6e6;}
 
 }
 
+header {
+	
+}
+
 
 #content{
 	color: #101111;
-	line-height: 1.6;
-	font-family: "Sorts Mill Goudy";
+	/*line-height: 1.6;
+	font-family: "Sorts Mill Goudy";*/
 }
  
 
@@ -179,7 +184,7 @@ body {   background-color: #e6e6e6;}
 
 
 header h1 a {
-	text-indent: -1000px;
+	text-indent: -10000px;
 	display: block;
 	background: url(img/themorningsidereview.png) no-repeat;
 	height: 130px;
@@ -188,7 +193,7 @@ header h1 a {
 	
 }
 header h1{
-	padding-top: 1em; 
+	padding-top: 2em; 
 }
 
 
@@ -287,8 +292,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 
 h1{
  
-	 
-	font-size: 1.6em;
+	 font-weight: 700;
+	font-size: 2em;
  
 }
 
@@ -298,8 +303,10 @@ h1{
 }
 
 nav#access {
-		font-family: "Futura Medium", futura;
- 
+		/*font-family: "Futura Medium", futura;*/
+ font-family: 'Cantarell', sans-serif;
+ font-weight: 700;
+ font-size: 18px;
  
 		
 }
@@ -665,11 +672,11 @@ p.numbered_para a.numbered-item:hover
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;*/
-	clear: both;
+	/*clear: both;
 	display: block;
 	float: left;
 	margin: 0 auto 6px;
-	width: 100%;
+	width: 100%;*/
 }
 #access ul {
  
