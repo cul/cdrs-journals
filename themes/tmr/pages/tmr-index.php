@@ -40,7 +40,7 @@ cfct_template_file('header', 'header-essay.php');
  
 </div>
 <div class="span-17" id="academic-tax">
- <ul class="clearfix">
+ <ul class="clearfix	">
  <li class='tax-nav'><a href='#' id=''>Progression</a></li>
  <li class='tax-nav'><a href='#' id=''>Sources</a></li>
  <li class='tax-nav'><a href='#' id=''>Strategy</a></li>
