@@ -78,13 +78,6 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <body <?php body_class(); ?>><div class="container">
 		
-		<nav id="access" class="span-22 prepend-1 clearfix" role="navigation">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			 	
-			 	
-			 	
-<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
 		
 		<header role="banner">
 		<div id="cu-writing"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"> </div>
@@ -96,6 +89,13 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		
 		
 		
+		<nav id="access" class="span-17 prepend-6 clearfix" role="navigation">
+		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+			 	
+			 	
+			 	
+<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
 		
 		
 		
