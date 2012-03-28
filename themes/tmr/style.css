@@ -167,10 +167,12 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 body {  
 }
-.container{
+#main.container{
 	 
 	background-image: url(img/background.png);
-
+   margin-top: 20px;
+   min-height: 600px;
+   padding-bottom: 50px;
 }
 
 
@@ -185,12 +187,13 @@ body {
 
 h3.flyer {
 	color: #f9b120;
+	margin-bottom: -1.5em;
 }
  
 
 header h1 {
 	
-margin-top: -27px;
+margin-top: -44px;
 	
 }
 
@@ -314,9 +317,9 @@ h1{
 
 nav#access {
 		/*font-family: "Futura Medium", futura;*/
- font-family: 'Cantarell', sans-serif;
- font-weight: 40000;
- font-size: 18px;
+ /*font-family: 'Cantarell', sans-serif;*/
+ 
+  margin-bottom: 10px;
  
 		
 }
@@ -557,13 +560,7 @@ float: right;
 	margin-right: .5em;}
 
 div#essay-meta {
-	padding-top: 20px;
-	padding-bottom: 20px;
  
-	margin-bottom: 10px;
- 
-	border-bottom-style: groove;
-	border-bottom-width: 2px;
 }
 
 #essay-meta div.author-feature img {
@@ -578,13 +575,10 @@ img#meta-toggle {
 	margin-right: -11px;
 }
 
-div.container{
-	margin-top: 1em;
-	min-height: 600px;
-}
+ 
 
 div#cu-writing {
-  padding-top: 10px;
+  padding-top: 28px;
 	margin-left: 647px;
 }
 
@@ -595,6 +589,31 @@ div#cu-writing {
 	list-style-type: none;
 	margin-left: 0;
 }
+
+#tmr-index ul#editions li{
+	font-size: 23px;
+	font-weight: bold;
+}
+
+#tmr-index h1 {
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.taxlist-toggle {
+ 	
+}
+
+li.tax-nav {
+float: left;
+margin-right: 15px;	
+text-transform: uppercase;
+font-weight: bold;
+	font-size: 13px;
+}
+
+ 
 
 ul#author-index li{
 	float: left;
@@ -623,9 +642,9 @@ text-decoration: none;
 
 h1.edition-label {
 	font-size: 3em;
- 
+ 	margin-top: .5em;
 	margin-bottom: .5em;
-color: #844240;
+color: #7b877b;
 }
 a.author{
 	color: #844240;
@@ -666,6 +685,7 @@ p.numbered_para a.numbered-item
 	display:block;
 	color:#999;
 	text-decoration:none;
+	display: none; 
 }
 p.numbered_para a.numbered-item:hover
 {
@@ -771,7 +791,19 @@ a#skip {
 	margin-bottom: 1em;
 }
 
-* {
-	
+.sidebar{
+	text-align: right;
+}
+
+div.fb-like {
+ 
+	width: 110px;
+}
+
+#colophon{
+	text-align: center;
+	font: 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
  

@@ -75,23 +75,17 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>><div class="container">
+<body <?php body_class(); ?>><div class="container" id="main">
 
-
-
-
+<header role="banner" class="clearfix">		
+<div id="cu-writing">
+<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' >
+</div>
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+</header>
 		
-				<header role="banner">
-		
-		<div id="cu-writing"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"> </div>
-			<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			 
-		</header>
-		
-		<nav id="access" role="navigation" class="clearfix span-17 prepend-6">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			 	
-			 	
-			 	
-<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->
+<nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
+<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+	 	
+<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->
