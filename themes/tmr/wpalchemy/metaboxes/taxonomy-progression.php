@@ -7,7 +7,7 @@ Select the progression:
 <?php
 
 $getProgression = wp_get_object_terms($post->ID, 'progression', 'fields=names');
-$getFullProgression = get_terms('progression', 'fields=names&hide_empty=0');
+$getFullProgression = get_terms('progression', 'fields=names&hide_empty=0&orderby=id');
 
 for($checkP=0; $checkP<sizeof($getProgression); $checkP++) {
 	if (in_array($getProgression[$checkP], $getFullProgression)) {

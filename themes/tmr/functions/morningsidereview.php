@@ -140,7 +140,6 @@ function register_taxonomy_edition() {
         'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -170,15 +169,15 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
+        'show_in_menu' => true,
         'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
 
-    register_taxonomy( 'progression', array('essay'), $args );
+    register_taxonomy( 'progression', array('essay','nav_menu_item'), $args );
 
   $labels = array( 
         'name' => _x( 'Sources', 'source' ),
@@ -205,7 +204,6 @@ function register_taxonomy_edition() {
         'show_ui' => false,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -214,21 +212,21 @@ function register_taxonomy_edition() {
 
 
  $labels = array( 
-        'name' => _x( 'Topics', 'topic' ),
-        'singular_name' => _x( 'Topic', 'topic' ),
-        'search_items' => _x( 'Search Topics', 'topic' ),
-        'popular_items' => _x( 'Popular Topics', 'topic' ),
-        'all_items' => _x( 'All Topics', 'topic' ),
-        'parent_item' => _x( 'Parent Topic', 'topic' ),
-        'parent_item_colon' => _x( 'Parent Topic:', 'topic' ),
-        'edit_item' => _x( 'Edit Topic', 'topic' ),
-        'update_item' => _x( 'Update Topic', 'topic' ),
-        'add_new_item' => _x( 'Add New Topic', 'topic' ),
-        'new_item_name' => _x( 'New Topic Name', 'topic' ),
-        'separate_items_with_commas' => _x( 'Separate topics with commas', 'topic' ),
-        'add_or_remove_items' => _x( 'Add or remove topics', 'topic' ),
-        'choose_from_most_used' => _x( 'Choose from the most used topics', 'topic' ),
-        'menu_name' => _x( 'Topics', 'topic' ),
+        'name' => _x( 'Themes', 'theme' ),
+        'singular_name' => _x( 'Theme', 'theme' ),
+        'search_items' => _x( 'Search Themes', 'theme' ),
+        'popular_items' => _x( 'Popular Themes', 'theme' ),
+        'all_items' => _x( 'All Themes', 'theme' ),
+        'parent_item' => _x( 'Parent Theme', 'theme' ),
+        'parent_item_colon' => _x( 'Parent Theme:', 'theme' ),
+        'edit_item' => _x( 'Edit Theme', 'theme' ),
+        'update_item' => _x( 'Update Theme', 'theme' ),
+        'add_new_item' => _x( 'Add New Theme', 'theme' ),
+        'new_item_name' => _x( 'New Theme Name', 'theme' ),
+        'separate_items_with_commas' => _x( 'Separate theme with commas', 'theme' ),
+        'add_or_remove_items' => _x( 'Add or remove themes', 'theme' ),
+        'choose_from_most_used' => _x( 'Choose from the most used themes', 'theme' ),
+        'menu_name' => _x( 'Themes', 'theme' ),
     );
 
     $args = array( 
@@ -243,7 +241,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'topic', array('essay'), $args );
+    register_taxonomy( 'theme', array('essay'), $args );
 
 
  $labels = array( 
@@ -362,11 +360,11 @@ $custom_taxonomy_source = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE
 ));
 
-$custom_taxonomy_topic = new WPAlchemy_MetaBox(array
+$custom_taxonomy_theme = new WPAlchemy_MetaBox(array
 (
-	'id' => '_topic',
-	'title' => 'Topics',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-topic.php',
+	'id' => '_theme',
+	'title' => 'Themes',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-theme.php',
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE
 ));
@@ -458,6 +456,11 @@ function unregister_taxonomy(){
 }
 add_action('init', 'unregister_taxonomy');
 
- 
+function remove_artist_meta() {
+	remove_meta_box( 'tagsdiv-taxonomy-edition', 'post', 'side' );
+	remove_meta_box( 'tagsdiv-edition', 'post', 'side' );
+	remove_meta_box( 'tagsdiv-_edition', 'post', 'side' );
+}
 
+add_action( 'admin_menu' , 'remove_artist_meta' );
 ?>
