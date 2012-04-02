@@ -39,16 +39,18 @@ cfct_template_file('header', 'header-essay.php');
 </ul>
  
 </div>
-<div class="span-17" id="academic-tax">
- <ul class="clearfix	">
- <li class='tax-nav'><a href='#' id=''>Progression</a></li>
- <li class='tax-nav'><a href='#' id=''>Sources</a></li>
- <li class='tax-nav'><a href='#' id=''>Strategy</a></li>
- <li class='tax-nav'><a href='#' id=''>Assignment</a></li>
- <li class='tax-nav'><a href='#' id=''>Topics</a></li>
- </ul>
+<div   id="academic-tax">
 
-<div id='progression' class="taxlist-toggle">
+ 
+
+
+<!--  <li class='tax-nav'><a href='#' id=''>Strategy</a></li> -->
+
+<!--  <li class='tax-nav'><a href='#' id=''>Topics</a></li> -->
+ 
+
+<div id='progression' class="span-7 prepend-1">
+ <h1>Progression</h1>
 <ul id='sources'class='taxonomy-list clearfix'>
 <?php $terms = get_terms( 'progression', 'orderby=id' );
 
@@ -63,21 +65,10 @@ cfct_template_file('header', 'header-essay.php');
 </div>
 
 
-<div id='sources' class="taxlist-toggle">
-<ul id='sources' class='taxonomy-list clearfix'>
-<?php  $terms = get_terms( 'source' );
 
-  foreach($terms as $term) { 
-    echo '<li><a href="' . get_term_link( $term->slug, 'source' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>  ';
-      } 
-
-?>
-
-</ul>
-
-</div>
 
       
+<!--
 
  
 <div id='strategy' class="taxlist-toggle">
@@ -95,10 +86,12 @@ cfct_template_file('header', 'header-essay.php');
 
 </div>
 
+-->
   
 
  
- <div id='assignment' class="taxlist-toggle">
+ <div id='assignment' class="taxlist-toggle span-7 prepend-1 last">
+  <h1>Assignment</h1>
  <ul id='assignments'class='taxonomy-list clearfix'>
 <?php  $terms = get_terms( 'assignment' );
 
@@ -108,6 +101,22 @@ cfct_template_file('header', 'header-essay.php');
 </ul>
 </div>
 
+
+<div id='sources' class="span-16 prepend-1 taxlist-toggle">
+
+ <h1>Sources</h1>
+<ul id='sources' class='taxonomy-list clearfix'>
+<?php  $terms = get_terms( 'source' );
+
+  foreach($terms as $term) { 
+    echo '<li><a href="' . get_term_link( $term->slug, 'source' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>  ';
+      } 
+
+?>
+
+</ul>
+
+</div>
 
  
  <div id='topics' class="taxlist-toggle">
