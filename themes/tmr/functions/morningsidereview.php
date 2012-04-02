@@ -105,7 +105,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
 
