@@ -108,7 +108,6 @@ function register_taxonomy_edition() {
         'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -137,7 +136,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
         'rewrite' => true,
@@ -169,8 +168,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_in_menu' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
         'rewrite' => true,
@@ -201,7 +199,7 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
         'rewrite' => true,
@@ -233,10 +231,9 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -266,10 +263,9 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -300,10 +296,9 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-        'show_ui' => false,
+        'show_ui' => true,
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -456,11 +451,15 @@ function unregister_taxonomy(){
 }
 add_action('init', 'unregister_taxonomy');
 
-function remove_artist_meta() {
-	remove_meta_box( 'tagsdiv-taxonomy-edition', 'post', 'side' );
-	remove_meta_box( 'tagsdiv-edition', 'post', 'side' );
-	remove_meta_box( 'tagsdiv-_edition', 'post', 'side' );
+function remove_tax_metabox() {
+	remove_meta_box( 'editiondiv', 'essay', 'side' );
+	remove_meta_box( 'authordiv', 'essay', 'side' );
+	remove_meta_box( 'progressiondiv', 'essay', 'side' );
+	remove_meta_box( 'sourcediv', 'essay', 'side' );
+	remove_meta_box( 'themediv', 'essay', 'side' );
+	remove_meta_box( 'strategydiv', 'essay', 'side' );
+	remove_meta_box( 'assignmentdiv', 'essay', 'side' );
 }
 
-add_action( 'admin_menu' , 'remove_artist_meta' );
+add_action( 'admin_menu' , 'remove_tax_metabox' );
 ?>
