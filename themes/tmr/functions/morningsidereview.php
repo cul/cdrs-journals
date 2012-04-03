@@ -451,6 +451,7 @@ function unregister_taxonomy(){
 }
 add_action('init', 'unregister_taxonomy');
 
+/* Remove default WP taxonomy boxes */
 function remove_tax_metabox() {
 	remove_meta_box( 'editiondiv', 'essay', 'side' );
 	remove_meta_box( 'authordiv', 'essay', 'side' );
@@ -462,4 +463,11 @@ function remove_tax_metabox() {
 }
 
 add_action( 'admin_menu' , 'remove_tax_metabox' );
+
+/* Adding "Enter essay here" text into content editor for new essays */
+function my_default_content($content) {
+	$content = '<div style="font-family:sans-serif;color:#bbb;position:absolute;font-size:1.7em;padding:8px 10px;">Enter essay here</div>';
+	return $content;
+}
+add_filter( 'default_content', 'my_default_content' );
 ?>
