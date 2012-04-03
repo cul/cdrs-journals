@@ -591,14 +591,17 @@ div#cu-writing {
 }
 
 #tmr-index ul#editions li{
-	font-size: 23px;
+ 
 	font-weight: bold;
+	text-align: center;
 }
 
 #tmr-index h1 {
 	text-transform: uppercase;
 	text-align: center;
 	border-bottom: 1px solid #d6d6d6;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .taxlist-toggle {
@@ -619,7 +622,8 @@ ul#author-index li{
 	float: left;
 	width: 290px;
 	margin-right: 0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	text-align: center;
  
 }
 
