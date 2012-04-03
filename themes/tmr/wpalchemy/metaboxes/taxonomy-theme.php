@@ -6,28 +6,26 @@ Theme of the Article:
 
 <?php
 
-$getTopic = wp_get_object_terms($post->ID, 'theme', 'fields=names');
-$getFullTopic = get_terms('theme', 'fields=names&hide_empty=0');
+$getTheme = wp_get_object_terms($post->ID, 'theme', 'fields=names');
+$getFullTheme = get_terms('theme', 'fields=names&hide_empty=0');
 
-if(sizeof($getTheme) == NULL) {
-	?>
-	
-	<input type="text" />
-	
-	<?php
-}
-
-else {
-
-	for ($loopTh=0; $loopTh<sizeof($getTheme); $loopTh++) {
-	
-?>
-
-		<input type="text" size="20" value='<?php echo $getTheme[$loopTh]; ?>'/>
-
-<?php	
-
+for($checkTH=0; $checkTH<sizeof($getTheme); $checkTH++) {
+	if (in_array($getTheme[$checkTH], $getFullTheme)) {
+		$checkedTH = $getTheme[$checkTH];
 	}
 }
-	
+
 ?>
+
+<select>
+	<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
+		if ($getFullTheme[$loopTH] == $checkedTH) { ?>
+ 
+			<option value="progression<?php.$loopTH?>" selected><?php echo $getFullTheme[$loopTH]; ?></option>
+		<?php }
+		else { ?>
+			<option value="progression<?php.$loopTH?>"><?php echo $getFullTheme[$loopTH]; ?></option>
+ 
+		<?php }
+	} ?>
+</select>
