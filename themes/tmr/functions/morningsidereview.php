@@ -138,8 +138,11 @@ function register_taxonomy_edition() {
         'show_in_nav_menus' => true,
         'show_ui' => true,
         'show_tagcloud' => true,
-        'hierarchical' => true,
-        'rewrite' => true,
+ 
+        'hierarchical' => false,
+
+  
+         'rewrite' => true,
         'query_var' => true
     );
 
