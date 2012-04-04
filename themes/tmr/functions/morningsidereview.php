@@ -472,5 +472,5 @@ function my_default_content($content) {
 	$content = '<div style="font-family:sans-serif;color:#bbb;position:absolute;font-size:1.7em;padding:8px 10px;">Enter essay here</div>';
 	return $content;
 }
-//add_filter( 'default_content', 'my_default_content' );
+add_filter( 'default_content', 'my_default_content' );
 ?>
