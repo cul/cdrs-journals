@@ -181,21 +181,21 @@ function register_taxonomy_edition() {
     register_taxonomy( 'progression', array('essay','nav_menu_item'), $args );
 
   $labels = array( 
-        'name' => _x( 'Sources', 'source' ),
-        'singular_name' => _x( 'Source', 'source' ),
-        'search_items' => _x( 'Search Sources', 'source' ),
-        'popular_items' => _x( 'Popular Sources', 'source' ),
-        'all_items' => _x( 'All Sources', 'source' ),
-        'parent_item' => _x( 'Parent Source', 'source' ),
-        'parent_item_colon' => _x( 'Parent Source:', 'source' ),
-        'edit_item' => _x( 'Edit Source', 'source' ),
-        'update_item' => _x( 'Update Source', 'source' ),
-        'add_new_item' => _x( 'Add New Source', 'source' ),
-        'new_item_name' => _x( 'New Source Name', 'source' ),
-        'separate_items_with_commas' => _x( 'Separate sources with commas', 'source' ),
-        'add_or_remove_items' => _x( 'Add or remove sources', 'source' ),
-        'choose_from_most_used' => _x( 'Choose from the most used sources', 'source' ),
-        'menu_name' => _x( 'Sources', 'source' ),
+        'name' => _x( 'Highlighted Sources', 'source' ),
+        'singular_name' => _x( 'Highlighted Source', 'source' ),
+        'search_items' => _x( 'Search Highlighted Sources', 'source' ),
+        'popular_items' => _x( 'Popular Highlighted Sources', 'source' ),
+        'all_items' => _x( 'All Highlighted Sources', 'source' ),
+        'parent_item' => _x( 'Parent Highlighted Source', 'source' ),
+        'parent_item_colon' => _x( 'Parent Highlighted Source:', 'source' ),
+        'edit_item' => _x( 'Edit Highlighted Source', 'source' ),
+        'update_item' => _x( 'Update Highlighted Source', 'source' ),
+        'add_new_item' => _x( 'Add New Highlighted Source', 'source' ),
+        'new_item_name' => _x( 'New Highlighted Source Name', 'source' ),
+        'separate_items_with_commas' => _x( 'Separate highlighted sources with commas', 'source' ),
+        'add_or_remove_items' => _x( 'Add or remove highlighted sources', 'source' ),
+        'choose_from_most_used' => _x( 'Choose from the most used highlighted sources', 'source' ),
+        'menu_name' => _x( 'Highlighted Sources', 'source' ),
     );
 
     $args = array( 

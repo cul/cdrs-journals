@@ -104,7 +104,7 @@ cfct_template_file('header', 'header-essay.php');
 
 <div id='sources' class="span-16 prepend-1 taxlist-toggle">
 
- <h1>Sources</h1>
+ <h1>Highlighted Sources</h1>
 <ul id='sources' class='taxonomy-list clearfix'>
 <?php  $terms = get_terms( 'source' );
 
