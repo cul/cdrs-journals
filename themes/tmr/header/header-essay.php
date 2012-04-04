@@ -51,8 +51,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
 
-
 <?php
+
 function my_scripts_method() {
    
    wp_register_script('tinysort', get_template_directory_uri() .'/js/jquery.tinysort.min.js');
