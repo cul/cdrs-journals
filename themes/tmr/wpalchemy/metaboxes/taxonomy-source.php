@@ -7,25 +7,27 @@ Sources Used in Article:
 <?php
 
 $getSource = wp_get_object_terms($post->ID, 'source', 'fields=names');
-$getFullSource = get_terms('source', 'fields=names&hide_empty=0');
+$getFullSource = get_terms('source', 'fields=names&hide_empty=0&orderby=id');
+$getFullAlpha = get_terms('source', 'fields=names&hide_empty=0&orderby=name');
 
-for($checkS=0; $checkS<sizeof($getSource); $checkS++) {
-	if (in_array($getSource[$checkS], $getFullSource)) {
-		$checkedS = $getSource[$checkS];
+if (sizeof($getSource)!=0) {
+	for($checkS=0; $checkS<sizeof($getSource); $checkS++) {
+		if (in_array($getSource[$checkS], $getFullSource)) {
+			$checkedS[] = $getSource[$checkS];
+		}
 	}
 }
+else {
+	$checkedS = $getFullSource[3];
+}
 
-?>
-
-<select>
-	<?php for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
-		if ($getFullSource[$loopS] == $checkedS) { ?>
- 
-			<option value="progression<?php.$loopS?>" selected><?php echo $getFullSource[$loopS]; ?></option>
-		<?php }
+for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
+		if ($getFullAlpha[$loopS] == $checkedS) { ?>
+ 			<input type="checkbox" name="sourceCheck" checked="yes" value="source<?php.$loopS?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
+		}
 		else { ?>
-			<option value="progression<?php.$loopS?>"><?php echo $getFullSource[$loopS]; ?></option>
- 
-		<?php }
-	} ?>
-</select>
+			<input type="checkbox" name="sourceCheck" value="source<?php.$loopS?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
+		}
+} ?>
+
+

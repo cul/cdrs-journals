@@ -349,7 +349,7 @@ $custom_taxonomy_progression = new WPAlchemy_MetaBox(array
 $custom_taxonomy_source = new WPAlchemy_MetaBox(array
 (
 	'id' => '_source',
-	'title' => 'Sources',
+	'title' => 'Highlighted Sources',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE
