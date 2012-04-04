@@ -339,7 +339,8 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'title' => 'Work Citation',
 	'template' =>  CFCT_PATH.'wpalchemy/metaboxes/simple-meta.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE 
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 )); 
 
  
@@ -349,7 +350,8 @@ $custom_taxonomy_edition = new WPAlchemy_MetaBox(array
 	'title' => 'Editions',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-edition.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_author = new WPAlchemy_MetaBox(array
@@ -358,7 +360,8 @@ $custom_taxonomy_author = new WPAlchemy_MetaBox(array
 	'title' => 'Authors',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-author.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_progression = new WPAlchemy_MetaBox(array
@@ -367,7 +370,8 @@ $custom_taxonomy_progression = new WPAlchemy_MetaBox(array
 	'title' => 'Progressions',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-progression.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_source = new WPAlchemy_MetaBox(array
@@ -376,7 +380,8 @@ $custom_taxonomy_source = new WPAlchemy_MetaBox(array
 	'title' => 'Highlighted Sources',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_theme = new WPAlchemy_MetaBox(array
@@ -385,7 +390,8 @@ $custom_taxonomy_theme = new WPAlchemy_MetaBox(array
 	'title' => 'Themes',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-theme.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_strategy = new WPAlchemy_MetaBox(array
@@ -394,7 +400,8 @@ $custom_taxonomy_strategy = new WPAlchemy_MetaBox(array
 	'title' => 'Strategies',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-strategy.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
 
 $custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
@@ -403,7 +410,8 @@ $custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
 	'title' => 'Assignments',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-assignment.php',
 	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE
+	'autosave' => TRUE,
+	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
  
 

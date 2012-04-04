@@ -17,19 +17,16 @@ for($checkE=0; $checkE<sizeof($getEdition); $checkE++) {
 
 ?>
 
+<div class="my_meta_control">
 <select>
 	<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 		if ($getFullEdition[$loopE] == $checkedE) { ?>
- 
-			<option value="edition<?php.$loopE  ?>" selected><?php echo "$getFullEdition[$loopE]"; ?></option>
-		<?php }
-		else { ?>
-			<option value="edition<?php.$loopE ?>"><?php echo "$getFullEdition[$loopE]"; ?></option>
  
 			<option value="edition<?php.$loopE?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
 		<?php }
 		else { ?>
 			<option value="edition<?php.$loopE?>"><?php echo $getFullEdition[$loopE]; ?></option>
- 		<?php }
+		<?php }
 	} ?>
 </select>
+</div>
