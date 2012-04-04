@@ -24,8 +24,8 @@ get_header();
 
 ?>
 
-<div class="span-12 prepend-6">
- <h3>Current Edition</h3>
+<div class="span-17 prepend-6 content">
+ <h3 class="flyer">Current Edition</h3>
 
 <ul class="edition-list">
 <?
@@ -38,7 +38,7 @@ foreach ($editions as $edition){
 
 
 $editionName = get_term_by('id', $edition, 'edition');
-echo '<h1>'.$editionName->name.'</h1>';
+echo '<h1 class="edition-label">'.$editionName->name.'</h1>';
 
 }
 if (have_posts()) {
@@ -46,7 +46,7 @@ if (have_posts()) {
 	while ($query->have_posts()) {
 		$query->the_post();
 ?>
-<li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+<li class="essay"><h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
 <?php
 

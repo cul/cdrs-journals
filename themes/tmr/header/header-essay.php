@@ -29,11 +29,17 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	<head>
 	
-		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
+<!--
 		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-		<title>
+		<link href='http://fonts.googleapis.com/css?family=Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+-->
 
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+
+
+	<title>
 	 <?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ); ?></title>
 
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'carrington-jam' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
@@ -42,11 +48,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	
 
-		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
-
+	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
 
 <?php
+
 function my_scripts_method() {
    
    wp_register_script('tinysort', get_template_directory_uri() .'/js/jquery.tinysort.min.js');
@@ -65,46 +71,27 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 	
 	 
 	
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
+
 </head>
 
-<body <?php body_class(); ?>><div class="container">
+<body <?php body_class(); ?>><div class="container" id="main">
 		
 		
 		<header role="banner">
-		<div id="cu-writing"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"> </div>
+		<div id="cu-writing"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></div>
 		
-			<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			 
 		</header>
 		
+		<nav id="access" class="span-17 prepend-6 clearfix" role="navigation">
 		
+		<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 		
-		<nav id="access" class="span-18 prepend-6 clearfix" role="navigation">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			 	
-			 	
-			 	
-<<<<<<< HEAD
-<?			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
-=======
-<?php			 	 wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-		
-		
-		
-		
-
-
-
+		<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
  
-		
-		
-				
+<?php	wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
  
-	
-	
-	

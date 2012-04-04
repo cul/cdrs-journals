@@ -20,17 +20,16 @@ for($checkE=0; $checkE<sizeof($getEdition); $checkE++) {
 <select>
 	<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 		if ($getFullEdition[$loopE] == $checkedE) { ?>
-<<<<<<< HEAD
+ 
 			<option value="edition<?php.$loopE  ?>" selected><?php echo "$getFullEdition[$loopE]"; ?></option>
 		<?php }
 		else { ?>
 			<option value="edition<?php.$loopE ?>"><?php echo "$getFullEdition[$loopE]"; ?></option>
-=======
+ 
 			<option value="edition<?php.$loopE?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
 		<?php }
 		else { ?>
 			<option value="edition<?php.$loopE?>"><?php echo $getFullEdition[$loopE]; ?></option>
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-		<?php }
+ 		<?php }
 	} ?>
 </select>

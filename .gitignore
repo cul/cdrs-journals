@@ -3,8 +3,14 @@ themes/twentyten/
 themes/annotum/
 .DS_Store*
 <<<<<<< HEAD
+<<<<<<< HEAD
 .svn
 uploads/
 =======
 .svn
 >>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+=======
+.svn
+uploads/
+ 
+>>>>>>> a5a88727988a1c6f3e19b1633395b2a94d02f09c

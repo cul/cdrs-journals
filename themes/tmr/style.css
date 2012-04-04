@@ -93,6 +93,7 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/morningsidereview/style.css
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/carrington-jam-1.4/style.css
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/tmr/style.css
+	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
 */
 
 /** START HTML5 Boilerplate CSS **/
@@ -136,7 +137,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body{
-	font-family: 'Sorts Mill Goudy';
+	 font-family: 'Cantarell', sans-serif;
 }
 blockquote, q { quotes: none; }
 
@@ -160,44 +161,62 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
  * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
  */
 
-body {   background-color: #e6e6e6;}
-.container{
+
+ body{background:url(data:image/png;base64,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) repeat #cfcfcf}
+
+
+body {  
+}
+#main.container{
 	 
 	background-image: url(img/background.png);
-
+   margin-top: 20px;
+   min-height: 600px;
+   padding-bottom: 50px;
 }
 
 
-#content{
+
+
+.content{
 	color: #101111;
-	line-height: 1.6;
-	font-family: "Sorts Mill Goudy";
+	margin-top: 18px;
+	/*line-height: 1.6;
+	font-family: "Sorts Mill Goudy";*/
 }
-<<<<<<< HEAD
+ 
 /*#content p{
 	margin-bottom: 1em;
 }*/
-=======
+ 
 #content p{
 	margin-bottom: 1em;
 }
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
 
+h3.flyer {
+	color: #f9b120;
+	margin-bottom: -1.5em;
+}
+ 
 
+header h1 {
+	
+margin-top: -44px;
+	
+}
 
 
 header h1 a {
-	text-indent: -1000px;
+	text-indent: -10000px;
 	display: block;
 	background: url(img/themorningsidereview.png) no-repeat;
 	height: 130px;
 	width: 400px;
-	margin-left: 100px;
+	margin-left: 117px;
 	
 }
-header h1{
-	padding-top: 1em; 
-}
+
 
 
 
@@ -294,13 +313,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 }
 
 h1{
-<<<<<<< HEAD
+ 
 	 
 	font-size: 1.6em;
-=======
-	size: 2em;
-	font-size: 2em;
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
+ 
+ 
+	 font-weight: 700;
+
+ 
+ 
 }
 
 #content div blockquote {
@@ -309,8 +331,10 @@ h1{
 }
 
 nav#access {
-		font-family: "Futura Medium", futura;
+		/*font-family: "Futura Medium", futura;*/
+ /*font-family: 'Cantarell', sans-serif;*/
  
+  margin-bottom: 10px;
  
 		
 }
@@ -406,7 +430,9 @@ nav#access li a:hover{
 
 }/*/mediaquery*/
 
-
+a{
+	text-decoration: none;
+}
 
 /**
  * Print styles.
@@ -416,7 +442,7 @@ nav#access li a:hover{
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
   -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
-  a, a:visited { color: #444 !important; text-decoration: underline; }
+
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
@@ -549,13 +575,7 @@ float: right;
 	margin-right: .5em;}
 
 div#essay-meta {
-	padding-top: 20px;
-	padding-bottom: 20px;
  
-	margin-bottom: 10px;
- 
-	border-bottom-style: groove;
-	border-bottom-width: 2px;
 }
 
 #essay-meta div.author-feature img {
@@ -570,15 +590,11 @@ img#meta-toggle {
 	margin-right: -11px;
 }
 
-div.container{
-	margin-top: 1em;
-	min-height: 600px;
-}
+ 
 
 div#cu-writing {
-	margin-top:1em;
-	margin-right: 1em;
-	float: right;
+  padding-top: 28px;
+	margin-left: 647px;
 }
 
 
@@ -589,11 +605,40 @@ div#cu-writing {
 	margin-left: 0;
 }
 
+#tmr-index ul#editions li{
+ 
+	font-weight: bold;
+	text-align: center;
+}
+
+#tmr-index h1 {
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.taxlist-toggle {
+ 	
+}
+
+li.tax-nav {
+float: left;
+margin-right: 15px;	
+text-transform: uppercase;
+font-weight: bold;
+	font-size: 13px;
+}
+
+ 
+
 ul#author-index li{
 	float: left;
 	width: 290px;
 	margin-right: 0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	text-align: center;
  
 }
 
@@ -606,11 +651,10 @@ ul.edition-list li{
 	margin-bottom: 1em;
 }
 li.essay h1 a {
-<<<<<<< HEAD
  
-=======
+ 
 font-size: .8em;
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
  
 margin: 0;
 color: #56494f;
@@ -620,17 +664,19 @@ text-decoration: none;
 
 h1.edition-label {
 	font-size: 3em;
-	margin-top: .5em;
+ 	margin-top: .5em;
 	margin-bottom: .5em;
-	color: #4e5051;
+color: #7b877b;
 }
 a.author{
 	color: #844240;
 	text-decoration: none;
+ 
 }
 a.author:before{
-	content: "by ";
-	color: #a6a1a2;}
+	content:"\2014\a0";
+	color: #844240;
+	}
 	
 	p.numbered_para
 {
@@ -661,6 +707,7 @@ p.numbered_para a.numbered-item
 	display:block;
 	color:#999;
 	text-decoration:none;
+	display: none; 
 }
 p.numbered_para a.numbered-item:hover
 {
@@ -680,11 +727,11 @@ p.numbered_para a.numbered-item:hover
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;*/
-	clear: both;
+	/*clear: both;
 	display: block;
 	float: left;
 	margin: 0 auto 6px;
-	width: 100%;
+	width: 100%;*/
 }
 #access ul {
  
@@ -699,8 +746,8 @@ p.numbered_para a.numbered-item:hover
 #access a {
  
 	display: block;
-	line-height: 3.333em;
-	padding: 0 1.2125em;
+ 
+	padding: 0 1em;
 	text-decoration: none;
 }
 #access ul ul {
@@ -711,7 +758,7 @@ p.numbered_para a.numbered-item:hover
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 3.333em;
+	 
 	left: 0;
 	width: 188px;
 	z-index: 99999;
@@ -737,11 +784,14 @@ p.numbered_para a.numbered-item:hover
 	background: #efefef;
 }
 #access li:hover > a,
-<<<<<<< HEAD
+ 
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
-=======
+ 
 #access a:focus {
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
+ 
+#access a:focus, #access li.current-menu-item, li.current-page-ancestor {
+ 
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
@@ -762,9 +812,28 @@ p.numbered_para a.numbered-item:hover
 a#skip {
 	display: none;
 }
-<<<<<<< HEAD
+ 
 .container p{
 	margin-bottom: 1em;
 }
-=======
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
+ 
+.container p{
+	margin-bottom: 1em;
+}
+
+.sidebar{
+	text-align: right;
+}
+
+div.fb-like {
+ 
+	width: 110px;
+}
+
+#colophon{
+	text-align: center;
+	font: 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}

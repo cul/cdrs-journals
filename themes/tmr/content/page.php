@@ -21,12 +21,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div>
 
-<<<<<<< HEAD
+ 
 <!-- <a href="<?php the_permalink() ?>"><?php the_title() ?></a> -->
-=======
-<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-
+ 
+ 
 <?php
 
 the_content(); 

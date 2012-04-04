@@ -33,14 +33,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	}
 
-<<<<<<< HEAD
  
-
-
-
-
-=======
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 /* begin adding custom post types and taxonomies */
 
 add_action( 'init', 'register_cpt_essay' );
@@ -113,14 +106,15 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+
         'show_ui' => true,
-=======
+
         'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+
+        'show_ui' => true,
+
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -149,15 +143,16 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
-        'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-        'show_tagcloud' => true,
-        'hierarchical' => true,
 
-        'rewrite' => true,
+        'show_ui' => true,
+
+
+        'show_tagcloud' => true,
+ 
+        'hierarchical' => false,
+
+  
+         'rewrite' => true,
         'query_var' => true
     );
 
@@ -186,50 +181,45 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+ 
         'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
+ 
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
 
-    register_taxonomy( 'progression', array('essay'), $args );
+    register_taxonomy( 'progression', array('essay','nav_menu_item'), $args );
 
   $labels = array( 
-        'name' => _x( 'Sources', 'source' ),
-        'singular_name' => _x( 'Source', 'source' ),
-        'search_items' => _x( 'Search Sources', 'source' ),
-        'popular_items' => _x( 'Popular Sources', 'source' ),
-        'all_items' => _x( 'All Sources', 'source' ),
-        'parent_item' => _x( 'Parent Source', 'source' ),
-        'parent_item_colon' => _x( 'Parent Source:', 'source' ),
-        'edit_item' => _x( 'Edit Source', 'source' ),
-        'update_item' => _x( 'Update Source', 'source' ),
-        'add_new_item' => _x( 'Add New Source', 'source' ),
-        'new_item_name' => _x( 'New Source Name', 'source' ),
-        'separate_items_with_commas' => _x( 'Separate sources with commas', 'source' ),
-        'add_or_remove_items' => _x( 'Add or remove sources', 'source' ),
-        'choose_from_most_used' => _x( 'Choose from the most used sources', 'source' ),
-        'menu_name' => _x( 'Sources', 'source' ),
+        'name' => _x( 'Highlighted Sources', 'source' ),
+        'singular_name' => _x( 'Highlighted Source', 'source' ),
+        'search_items' => _x( 'Search Highlighted Sources', 'source' ),
+        'popular_items' => _x( 'Popular Highlighted Sources', 'source' ),
+        'all_items' => _x( 'All Highlighted Sources', 'source' ),
+        'parent_item' => _x( 'Parent Highlighted Source', 'source' ),
+        'parent_item_colon' => _x( 'Parent Highlighted Source:', 'source' ),
+        'edit_item' => _x( 'Edit Highlighted Source', 'source' ),
+        'update_item' => _x( 'Update Highlighted Source', 'source' ),
+        'add_new_item' => _x( 'Add New Highlighted Source', 'source' ),
+        'new_item_name' => _x( 'New Highlighted Source Name', 'source' ),
+        'separate_items_with_commas' => _x( 'Separate highlighted sources with commas', 'source' ),
+        'add_or_remove_items' => _x( 'Add or remove highlighted sources', 'source' ),
+        'choose_from_most_used' => _x( 'Choose from the most used highlighted sources', 'source' ),
+        'menu_name' => _x( 'Highlighted Sources', 'source' ),
     );
 
     $args = array( 
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+ 
         'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -238,40 +228,36 @@ function register_taxonomy_edition() {
 
 
  $labels = array( 
-        'name' => _x( 'Topics', 'topic' ),
-        'singular_name' => _x( 'Topic', 'topic' ),
-        'search_items' => _x( 'Search Topics', 'topic' ),
-        'popular_items' => _x( 'Popular Topics', 'topic' ),
-        'all_items' => _x( 'All Topics', 'topic' ),
-        'parent_item' => _x( 'Parent Topic', 'topic' ),
-        'parent_item_colon' => _x( 'Parent Topic:', 'topic' ),
-        'edit_item' => _x( 'Edit Topic', 'topic' ),
-        'update_item' => _x( 'Update Topic', 'topic' ),
-        'add_new_item' => _x( 'Add New Topic', 'topic' ),
-        'new_item_name' => _x( 'New Topic Name', 'topic' ),
-        'separate_items_with_commas' => _x( 'Separate topics with commas', 'topic' ),
-        'add_or_remove_items' => _x( 'Add or remove topics', 'topic' ),
-        'choose_from_most_used' => _x( 'Choose from the most used topics', 'topic' ),
-        'menu_name' => _x( 'Topics', 'topic' ),
+        'name' => _x( 'Themes', 'theme' ),
+        'singular_name' => _x( 'Theme', 'theme' ),
+        'search_items' => _x( 'Search Themes', 'theme' ),
+        'popular_items' => _x( 'Popular Themes', 'theme' ),
+        'all_items' => _x( 'All Themes', 'theme' ),
+        'parent_item' => _x( 'Parent Theme', 'theme' ),
+        'parent_item_colon' => _x( 'Parent Theme:', 'theme' ),
+        'edit_item' => _x( 'Edit Theme', 'theme' ),
+        'update_item' => _x( 'Update Theme', 'theme' ),
+        'add_new_item' => _x( 'Add New Theme', 'theme' ),
+        'new_item_name' => _x( 'New Theme Name', 'theme' ),
+        'separate_items_with_commas' => _x( 'Separate theme with commas', 'theme' ),
+        'add_or_remove_items' => _x( 'Add or remove themes', 'theme' ),
+        'choose_from_most_used' => _x( 'Choose from the most used themes', 'theme' ),
+        'menu_name' => _x( 'Themes', 'theme' ),
     );
 
     $args = array( 
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+ 
         'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-        'show_tagcloud' => true,
+         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
 
-    register_taxonomy( 'topic', array('essay'), $args );
+    register_taxonomy( 'theme', array('essay'), $args );
 
 
  $labels = array( 
@@ -296,14 +282,11 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+ 
         'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -334,14 +317,11 @@ function register_taxonomy_edition() {
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
-<<<<<<< HEAD
+ 
         'show_ui' => true,
-=======
-        'show_ui' => false,
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
         'show_tagcloud' => true,
         'hierarchical' => true,
-
         'rewrite' => true,
         'query_var' => true
     );
@@ -350,14 +330,7 @@ function register_taxonomy_edition() {
 
 
 }
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
 include_once CFCT_PATH.'wpalchemy/metaboxes/setup.php';
 
 $custom_works_cited = new WPAlchemy_MetaBox(array
@@ -369,9 +342,7 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE 
 )); 
 
-<<<<<<< HEAD
-
-=======
+ 
 $custom_taxonomy_edition = new WPAlchemy_MetaBox(array
 (
 	'id' => '_edition',
@@ -402,17 +373,17 @@ $custom_taxonomy_progression = new WPAlchemy_MetaBox(array
 $custom_taxonomy_source = new WPAlchemy_MetaBox(array
 (
 	'id' => '_source',
-	'title' => 'Sources',
+	'title' => 'Highlighted Sources',
 	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE
 ));
 
-$custom_taxonomy_topic = new WPAlchemy_MetaBox(array
+$custom_taxonomy_theme = new WPAlchemy_MetaBox(array
 (
-	'id' => '_topic',
-	'title' => 'Topics',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-topic.php',
+	'id' => '_theme',
+	'title' => 'Themes',
+	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-theme.php',
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE
 ));
@@ -434,7 +405,7 @@ $custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE
 ));
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
 
 //recreate the default filters on the_content
 add_filter( 'meta_content', 'wptexturize'        );
@@ -468,11 +439,10 @@ $config = array(
    'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
    'fields' => array(),                             // list of meta fields (can be added by field arrays)
    'local_images' => true,                         // Use local or hosted images (meta box images for add/remove)
-<<<<<<< HEAD
-   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
-=======
+ 
+ 
    'use_with_theme' => true                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
 );
  
 /*
@@ -501,8 +471,7 @@ $my_meta->addWysiwyg('author_bio',array('name'=> 'Author Bio '));
 //Finish Taxonomy Extra fields Deceleration
 $my_meta->Finish();
 
-<<<<<<< HEAD
-=======
+ 
 /* Remove "Categories" and "Tags" Taxonomy */
 function unregister_taxonomy(){
     register_taxonomy('post_tag', array());
@@ -510,6 +479,25 @@ function unregister_taxonomy(){
 }
 add_action('init', 'unregister_taxonomy');
 
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
+/* Remove default WP taxonomy boxes */
+function remove_tax_metabox() {
+	remove_meta_box( 'editiondiv', 'essay', 'side' );
+	remove_meta_box( 'authordiv', 'essay', 'side' );
+	remove_meta_box( 'progressiondiv', 'essay', 'side' );
+	remove_meta_box( 'sourcediv', 'essay', 'side' );
+	remove_meta_box( 'themediv', 'essay', 'side' );
+	remove_meta_box( 'strategydiv', 'essay', 'side' );
+	remove_meta_box( 'assignmentdiv', 'essay', 'side' );
+}
+ 
 
+add_action( 'admin_menu' , 'remove_tax_metabox' );
+
+/* Adding "Enter essay here" text into content editor for new essays */
+function my_default_content($content) {
+	$content = '<div style="font-family:sans-serif;color:#bbb;position:absolute;font-size:1.7em;padding:8px 10px;">Enter essay here</div>';
+	return $content;
+}
+add_filter( 'default_content', 'my_default_content' );
 ?>

@@ -810,16 +810,21 @@ class Tax_Meta_Class {
 	 * @access public
 	 */
 	public function show_field_wysiwyg( $field, $meta ) {
+		//$meta = wpautop($meta);
+		
 		$this->show_field_begin( $field, $meta );
 		// Add TinyMCE script for WP version < 3.3
 		global $wp_version;
+		
+		$meta = filter_var($meta, FILTER_SANITIZE_STRING);
 
 		if ( version_compare( $wp_version, '3.2.1' ) < 1 ) {
 			echo "<textarea class='at-wysiwyg theEditor large-text' name='{$field['id']}' id='{$field['id']}' cols='60' rows='10'>{$meta}</textarea>";
 		}else{
 			// Use new wp_editor() since WP 3.3
-			wp_editor( stripslashes(html_entity_decode($meta)), $field['id'], array( 'editor_class' => 'at-wysiwyg' ) );
+			wp_editor( stripslashes(html_entity_decode($meta,ENT_COMPAT,"UTF-8")), $field['id'], array( 'editor_class' => 'at-wysiwyg' ) );
 		}
+		
 		$this->show_field_end( $field, $meta );
 	}
 	
@@ -1138,7 +1143,7 @@ class Tax_Meta_Class {
 	 * @access public 
 	 */
 	public function save_field_wysiwyg( $term_id, $field, $old, $new ) {
-		$this->save_field( $term_id, $field, $old, $new );
+		$this->save_field( $term_id, $field, $old, wpautop($new) );
 	}
 	
 	/**
