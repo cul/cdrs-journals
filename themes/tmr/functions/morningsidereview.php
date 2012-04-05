@@ -380,7 +380,7 @@ function register_taxonomy_edition() {
  
 include_once CFCT_PATH.'wpalchemy/metaboxes/setup.php';
 
-$custom_works_cited = new WPAlchemy_MetaBox(array
+/*$custom_works_cited = new WPAlchemy_MetaBox(array
 (
 	'id' => '_works_cited',
 	'title' => 'Work Citation',
@@ -460,6 +460,7 @@ $custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
 	'autosave' => TRUE,
 	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
+*/
  
 
 //recreate the default filters on the_content
@@ -549,12 +550,12 @@ function remove_tax_metabox() {
 }
  
 
-add_action( 'admin_menu' , 'remove_tax_metabox' );
+//add_action( 'admin_menu' , 'remove_tax_metabox' );
 
 /* Adding "Enter essay here" text into content editor for new essays */
 function my_default_content($content) {
 	$content = '<div style="font-family:sans-serif;color:#bbb;position:absolute;font-size:1.7em;padding:8px 10px;">Enter essay here</div>';
 	return $content;
 }
-add_filter( 'default_content', 'my_default_content' );
+//add_filter( 'default_content', 'my_default_content' );
 ?>
