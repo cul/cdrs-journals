@@ -81,7 +81,9 @@ function register_cpt_essay() {
 
 //// end essay
 
-  $labels = array( 
+//// setup for from the directors note's
+
+	  $labels = array( 
         'name' => _x( 'Notes', 'note' ),
         'singular_name' => _x( 'Note', 'note' ),
         'add_new' => _x( 'Add New', 'note' ),
@@ -119,10 +121,55 @@ function register_cpt_essay() {
 
     register_post_type( 'note', $args );
 
+/// end directors notes
+
+
+/// start 
+
+  $labels = array( 
+        'name' => _x( 'Homepage Features', 'hp-feature' ),
+        'singular_name' => _x( 'Homepage Feature', 'hp-feature' ),
+        'add_new' => _x( 'Add New', 'hp-feature' ),
+        'add_new_item' => _x( 'Add New Homepage Feature', 'hp-feature' ),
+        'edit_item' => _x( 'Edit Homepage Feature', 'hp-feature' ),
+        'new_item' => _x( 'New Homepage Feature', 'hp-feature' ),
+        'view_item' => _x( 'View Homepage Feature', 'hp-feature' ),
+        'search_items' => _x( 'Search Homepage Features', 'hp-feature' ),
+        'not_found' => _x( 'No hp-features found', 'hp-feature' ),
+        'not_found_in_trash' => _x( 'No hp-features found in Trash', 'hp-feature' ),
+        'parent_item_colon' => _x( 'Parent Homepage Feature:', 'hp-feature' ),
+        'menu_name' => _x( 'Homepage Features', 'hp-feature' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => true,
+        
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'post-formats' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'Editions' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'hp-feature', $args );
 
 
 
-//// setup for from the directors
+
+
+
+
 
 }
 

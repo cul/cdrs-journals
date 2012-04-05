@@ -18,26 +18,21 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-
-/*
-query_posts( 'post_type=note&tag=homepage');
-
-if (have_posts()) {
-	while (have_posts()) {
-		the_post();
-		cfct_content();
-	}
-}
-*/
-
-
-
-query_posts( 'post_type=hp-feature');
-
-if (have_posts()) {
-	while (have_posts()) {
-		the_post();
-cfct_template_file('content', 'hp-feature');	}
-}
-
 ?>
+<div>
+
+<h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+
+<?php
+
+ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+  the_post_thumbnail();
+} 
+
+
+the_content(); 
+
+ 
+?>
+
+</div>
