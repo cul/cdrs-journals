@@ -196,7 +196,7 @@ function register_taxonomy_edition() {
 
         'show_tagcloud' => true,
  
-        'hierarchical' => false,
+        'hierarchical' => true,
 
   
          'rewrite' => true,
