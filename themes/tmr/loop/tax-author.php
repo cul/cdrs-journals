@@ -24,73 +24,38 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="span-14 prepend-6">
 
-<<<<<<< HEAD
-<?
-=======
 <?php
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 
 
 $product_terms = wp_get_object_terms($post->ID, 'author');
 if(!empty($product_terms)){
   if(!is_wp_error( $product_terms )){
      
-<<<<<<< HEAD
     foreach($product_terms as $term){
-      echo '<h2>Essays by '.$term->name.'</h2>' ; 
        
       $author_bio = get_tax_meta($term->term_id,'author_bio');
-echo  '<div class="author-bio">'.$author_bio.'</div>';
-=======
- 
-     
-    foreach($product_terms as $term){
-     
-       
-      $author_bio = get_tax_meta($term->term_id,'author_bio');
-echo  '<div class="author-bio">'.$author_bio.'</div>';
+		echo  '<div class="author-bio">'.$author_bio.'</div>';
 
-	$author_photo = get_tax_meta($term->term_id, 'author_image');
-	 if($author_photo != ''){
-	echo '<img class="author-photo" src="'.$author_photo['src'].'">';
-	
-	
-	
-	 echo '<h2>Essays by '.$term->name.'</h2>' ; 
-    }
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+		$author_photo = get_tax_meta($term->term_id, 'author_image');
+	 	if($author_photo != ''){
+			echo '<img class="author-photo" src="'.$author_photo['src'].'">';
+			echo '<h2>Essays by '.$term->name.'</h2>' ; 
+    	}
     }
   
   }
 }
 
 
- 
-<<<<<<< HEAD
-=======
-
-
-
- 
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
 if (have_posts()) {
-
-
-
 	echo '<ul>';
 	while (have_posts()) {
 		the_post();
-		
-				
-?>
+	?>
 	<li>
-	
-<?php
-	
-		
-cfct_template_file('excerpt', 'tax-author.php');?>
+		<?php cfct_template_file('excerpt', 'tax-author.php');?>
 	</li>
-<?php
+	<?php
 	}
 	echo '</ul>';
 }
