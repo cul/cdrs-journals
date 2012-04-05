@@ -40,6 +40,7 @@ add_action( 'init', 'register_cpt_essay' );
 
 function register_cpt_essay() {
 
+///setup for essay 
     $labels = array( 
         'name' => _x( 'Essays', 'essay' ),
         'singular_name' => _x( 'Essay', 'essay' ),
@@ -77,6 +78,52 @@ function register_cpt_essay() {
     );
 
     register_post_type( 'essay', $args );
+
+//// end essay
+
+  $labels = array( 
+        'name' => _x( 'Notes', 'note' ),
+        'singular_name' => _x( 'Note', 'note' ),
+        'add_new' => _x( 'Add New', 'note' ),
+        'add_new_item' => _x( 'Add New Note', 'note' ),
+        'edit_item' => _x( 'Edit Note', 'note' ),
+        'new_item' => _x( 'New Note', 'note' ),
+        'view_item' => _x( 'View Note', 'note' ),
+        'search_items' => _x( 'Search Notes', 'note' ),
+        'not_found' => _x( 'No notes found', 'note' ),
+        'not_found_in_trash' => _x( 'No notes found in Trash', 'note' ),
+        'parent_item_colon' => _x( 'Parent Note:', 'note' ),
+        'menu_name' => _x( 'Notes', 'note' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => true,
+        
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', 'post-formats' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'Editions' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'note', $args );
+
+
+
+
+//// setup for from the directors
+
 }
 
 
@@ -119,7 +166,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'edition', array('essay'), $args );
+    register_taxonomy( 'edition', array('essay', 'note'), $args );
 
  $labels = array( 
         'name' => _x( 'Authors', 'author' ),
@@ -156,7 +203,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'author', array('essay'), $args );
+    register_taxonomy( 'author', array('essay', 'note'), $args );
     
     
      $labels = array( 
@@ -224,7 +271,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'source', array('essay'), $args );
+    register_taxonomy( 'source', array('essay', 'note'), $args );
 
 
  $labels = array( 
@@ -257,7 +304,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'theme', array('essay'), $args );
+    register_taxonomy( 'theme', array('essay', 'note'), $args );
 
 
  $labels = array( 
@@ -291,7 +338,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'strategy', array('essay'), $args );
+    register_taxonomy( 'strategy', array('essay', 'note'), $args );
     
     
     
@@ -326,7 +373,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'assignment', array('essay'), $args );
+    register_taxonomy( 'assignment', array('essay', 'note'), $args );
 
 
 }
