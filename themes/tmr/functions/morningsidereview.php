@@ -481,11 +481,13 @@ $my_meta->Finish();
 
  
 /* Remove "Categories" and "Tags" Taxonomy */
+/*
 function unregister_taxonomy(){
     register_taxonomy('post_tag', array());
     register_taxonomy('category', array());
 }
 add_action('init', 'unregister_taxonomy');
+*/
 
  
 /* Remove default WP taxonomy boxes */
