@@ -14,18 +14,16 @@
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 // **********************************************************************
-<<<<<<< HEAD
+ 
 global $post;
-=======
-
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
+ 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 <div>
 
-<<<<<<< HEAD
+ 
 <a href="<?php the_permalink() ?>"><?php the_title(); ?></a><br>
 <?php 
 
@@ -57,14 +55,15 @@ if(!empty($product_terms)){
 
 
 /* the_excerpt(); */
-=======
+
+?>
+ 
 <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 	
 <?php
 
 the_excerpt();
->>>>>>> dee42723254fcc49c539c5869aa12823ae9b0597
-
+ 
 /*
 the_time('F j, Y');
 

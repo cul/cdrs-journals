@@ -184,15 +184,6 @@ body {
 	/*line-height: 1.6;
 	font-family: "Sorts Mill Goudy";*/
 }
- 
-/*#content p{
-	margin-bottom: 1em;
-}*/
- 
-#content p{
-	margin-bottom: 1em;
-}
- 
 
 h3.flyer {
 	color: #f9b120;
@@ -314,14 +305,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 
 h1{
  
-	 
-	font-size: 1.6em;
- 
- 
- 
 	 font-weight: 700;
 
- 
  
 }
 
@@ -653,9 +638,6 @@ ul.edition-list li{
 li.essay h1 a {
  
  
-font-size: .8em;
- 
- 
 margin: 0;
 color: #56494f;
 text-decoration: none;
@@ -787,10 +769,6 @@ p.numbered_para a.numbered-item:hover
  
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
  
-#access a:focus {
- 
- 
-#access a:focus, #access li.current-menu-item, li.current-page-ancestor {
  
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
@@ -816,11 +794,6 @@ a#skip {
 .container p{
 	margin-bottom: 1em;
 }
- 
- 
-.container p{
-	margin-bottom: 1em;
-}
 
 .sidebar{
 	text-align: right;
@@ -837,3 +810,4 @@ div.fb-like {
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+ 
