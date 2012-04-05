@@ -1,4 +1,3 @@
-
 <?php
 
 // This file is part of the Carrington JAM Theme for WordPress
@@ -19,16 +18,9 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-
-
-
-
 cfct_template_file('header', 'header-essay.php');
- 
 
 cfct_template_file('loop', 'loop-type-essay.php');
-
-
 
 get_footer();
 

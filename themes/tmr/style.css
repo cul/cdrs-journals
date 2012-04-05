@@ -170,7 +170,7 @@ body {
 #main.container{
 	 
 	background-image: url(img/background.png);
-   margin-top: 20px;
+   margin-top: 0px;
    min-height: 600px;
    padding-bottom: 50px;
 }
@@ -809,5 +809,12 @@ div.fb-like {
 	font: 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	padding-bottom: 10px;
 	padding-top: 10px;
+}
+
+label.assistive-text {
+display: none;	
+}
+div#search-form{
+	text-align: right;
 }
  

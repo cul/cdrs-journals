@@ -18,14 +18,11 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-get_header();
-
-cfct_loop();
-
-cfct_misc('nav-posts');
-
-/* get_sidebar(); */
-
-get_footer();
+if (have_posts()) {
+	while (have_posts()) {
+		the_post();
+		cfct_content();
+	}
+}
 
 ?>

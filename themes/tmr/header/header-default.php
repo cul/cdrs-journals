@@ -75,8 +75,15 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>><div class="container" id="main">
+<body <?php body_class(); ?>>
+<div class="container">
 
+<div class="span-24" id='search-form'>
+<?php get_search_form(); ?>
+</div>
+</div>
+
+<div class="container" id="main">
 <header role="banner" class="clearfix">		
 <div id="cu-writing">
 <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' >
@@ -88,5 +95,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 <a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 	 	
-<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); ?>	</nav><!-- #access -->
+<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); 	
+
+ ?></nav><!-- #access -->
  
