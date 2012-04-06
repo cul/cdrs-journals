@@ -18,7 +18,8 @@ if(sizeof($getAuthor) == NULL) {
 }
 
 else {
-
+	
+	
 	for ($loopA=0; $loopA<sizeof($getAuthor); $loopA++) {
 	
 ?>
