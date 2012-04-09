@@ -817,4 +817,8 @@ display: none;
 div#search-form{
 	text-align: right;
 }
+
+#essay h2 {
+	margin-left: 5em;
+}
  
