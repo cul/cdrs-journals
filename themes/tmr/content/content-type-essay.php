@@ -53,32 +53,34 @@ if(!empty($author_terms)){
     }
    
   }
-} ?>
+} 
  
- $theBio = get_post_custom_values('author bio');
+ $theBio = get_post_custom_values('author_bio');
  
- if ($theBio) { ?><div class="author-feature"><h3>About the Author </h3>
+ if ($theBio) { ?><div class="author-feature"><h3>About the Author </h3> <? }
  
  
- <? if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
  
   
   the_post_thumbnail();
 } 
 ?>
  
- <p>
+
  
  
  <?php
  
+/*
   foreach ( $theBio as $key => $value ) {
     echo "$value "; 
   }
+*/
  
  
  
-<?php }
+
  /* end author bio and photo */
 
 /* begin academics metadata */

@@ -77,7 +77,15 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 </head>
 
-<body <?php body_class(); ?>><div class="container" id="main">
+<body <?php body_class(); ?>>
+
+<div class="container">
+
+<div class="span-24" id='search-form'>
+<?php get_search_form(); ?>
+</div>
+</div>
+<div class="container" id="main">
 		
 		
 		<header role="banner">
