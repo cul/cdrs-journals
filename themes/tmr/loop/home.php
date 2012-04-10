@@ -32,6 +32,8 @@ if (have_posts()) {
 
 
 
+
+
 query_posts( 'post_type=hp-feature');
 
 if (have_posts()) {

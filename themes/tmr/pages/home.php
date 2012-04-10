@@ -22,8 +22,16 @@ get_header();
 
 ?>
 
-<div class="span-12 prepend-6 content">
+<div class="span-10 prepend-1 content">
 
+<h1>From The Director</h1>
+ 
+<p>
+
+Welcome to the inaugural edition of <em>The Morningside Review</em> formerly <em>the Journal of the Undergraduate Writing Program at Columbia University</em>. In an introductory note for this edition, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Undergraduate Writing Program Director Nicole Wallach discusses the impact and value of youth in writing.</a>
+</p>
+
+<h1>Featured Contributors</h1>
 <?
 
 
@@ -39,6 +47,17 @@ cfct_template_file('content', 'hp-feature');	}
 ?>
 
 </div>
+
+
+<div class="span-10">
+
+ 
+
+
+</div>
+
+
+
 
 <?
 /* comments_template(); */

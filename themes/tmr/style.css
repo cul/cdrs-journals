@@ -823,4 +823,21 @@ div#search-form{
 #essay h2 {
 	margin-left: 5em;
 }
+
+div.hp-feature img {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	
+}
+
+  div.hp-feature p {
+	margin-top: 10px;
+	
+}
+
+div.hp-feature {
+ 
+}
  
