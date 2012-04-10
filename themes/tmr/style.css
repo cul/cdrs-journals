@@ -645,7 +645,7 @@ text-decoration: none;
 }
 
 h1.edition-label {
-	font-size: 3em;
+	font-size: 2em;
  	margin-top: .5em;
 	margin-bottom: .5em;
 color: #7b877b;
@@ -659,10 +659,16 @@ a.author:before{
 	content:"\2014\a0";
 	color: #844240;
 	}
-	
-	p.numbered_para
+
+.container p{
+	margin-bottom: 1em;
+}
+
+p.numbered_para
 {
 	padding-left:5em;
+	text-indent: 1em;
+	margin-bottom: .5em;
 }
 
 div.wp-caption.alignleft {
@@ -789,10 +795,6 @@ p.numbered_para a.numbered-item:hover
 
 a#skip {
 	display: none;
-}
- 
-.container p{
-	margin-bottom: 1em;
 }
 
 .sidebar{
