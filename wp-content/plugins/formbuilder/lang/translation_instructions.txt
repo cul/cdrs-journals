@@ -1,2 +1,0 @@
-Detailed instructions regarding translating FormBuilder into a new language can be found at:
-http://truthmedia.com/wordpress/formbuilder/documentation/translating-formbuilder/
