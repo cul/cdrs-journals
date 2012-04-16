@@ -132,14 +132,23 @@ wp_tag_cloud('taxonomy="topics"');
 <div class="span-22 prepend-1">
 <h1>Authors</h1>
 <ul id='author-index'class='taxonomy-list clearfix'>
-<?php $terms = get_terms( 'author' );
+<?php 
 
-  foreach($terms as $term) {
+
+
+$terms = get_terms( 'author', 'orderby=name');
+
+$columnLength = round(count($terms)/3);
+
+foreach($terms as $term) {
   
-  $nameArray = explode(" ",$term->name);
-  $sortValue = array_pop($nameArray);
+/* names are stored in DB Last, First, the following two lines extracts the last name to use in create ID for LI */
+  $nameArray = explode(",",$term->name);
+  $sortValue = array_pop(array_reverse($nameArray));
+
+
    
-    echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $term->slug, 'author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>';
+    echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $term->slug, 'author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'	</a></li>';
       } 
 
   

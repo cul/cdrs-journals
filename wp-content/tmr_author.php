@@ -15,8 +15,8 @@ function to_camel_case($str) {
    return $str;
 }
 
-$connect = mysql_connect("","","");
-$chooseDB = mysql_select_db("wp_tmr",$connect);
+$connect = mysql_connect("127.0.0.1","root","");
+$chooseDB = mysql_select_db("tmr",$connect);
 
 if (!$connect) {
 	die("Could not connect: ".mysql_error());
