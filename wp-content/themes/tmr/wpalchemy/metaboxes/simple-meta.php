@@ -27,7 +27,7 @@ $settings = array(
  
 
 
-$val = html_entity_decode($mb->get_the_value() );
+$val = html_entity_decode($mb->get_the_value(), ENT_COMPAT,"UTF-8" );
  
 $id = $mb->get_the_name();
 
