@@ -143,16 +143,16 @@ foreach ($terms as $term) {
 
 //echo print_r($terms)."<br><br>";
 
-echo "number of terms: ".sizeof($terms)."<br><br>";
+/* echo "number of terms: ".sizeof($terms)."<br><br>"; */
 
 $columnLength = round(count($terms)/3);
 
-echo "columnLength: ".$columnLength."<br><br>";
+/* echo "columnLength: ".$columnLength."<br><br>"; */
 
 $count = 0;
 
 for ($iCol=0; $iCol<3; $iCol++) {
-	echo "<div> ";
+	echo "<div class='authors-column'>";
 	echo "<ul id='author-index' class='taxonomy-list clearfix'>";
 	
 	if ($iCol==0) {
@@ -168,9 +168,9 @@ for ($iCol=0; $iCol<3; $iCol++) {
 		$finish = count($terms);
 	}
 	
-	echo "iCol: ".$iCol."<br>";
-	echo "start: ".$start."<br>";
-	echo "finish: ".$finish."<br><br><br>";	
+/* 	echo "iCol: ".$iCol."<br>"; */
+/* 	echo "start: ".$start."<br>"; */
+/* 	echo "finish: ".$finish."<br><br><br>";	 */
 	
 	for ($i=$start; $i<$finish; $i++) {
 		$nameArray = explode(",",$name[$i]);
