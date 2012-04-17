@@ -29,7 +29,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 global $term;
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
 
-$tax = $term->taxonomy;
+$tax = ucfirst($term->taxonomy);
 $name= $term->name;
  
  

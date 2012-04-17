@@ -56,13 +56,7 @@ if(!empty($product_terms)){
 
 /* the_excerpt(); */
 
-?>
  
-<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-	
-<?php
-
-the_excerpt();
  
 /*
 the_time('F j, Y');

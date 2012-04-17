@@ -39,18 +39,34 @@ global $post;
 <div id="essay-meta">
  
  
-<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail();
-} 
- 
+<?php
+
+
+
+
+
 
 $author_terms = wp_get_object_terms($post->ID, 'author');
 if(!empty($author_terms)){
   if(!is_wp_error( $author_terms )){
    
+   
+   
     foreach($author_terms as $term){
+   
+       $auth_photo = get_tax_meta($term,'author_image',true);
+       
+       if($auth_photo){
+echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
+   }
+   
       echo '<h2><a href="'.get_term_link($term->slug, 'author').'">'.$term->name.'</a></h2>'; 
     }
+    
+    
+
+    
+    
    
   }
 } 
@@ -126,12 +142,18 @@ if ($pdfs) {
 
 
 ?>
+
+<div class="social-media">
+
 <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div> <br>
 
 
 
  <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
 
 </div>
 
