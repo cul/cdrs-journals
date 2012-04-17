@@ -619,9 +619,9 @@ font-weight: bold;
  
 
 ul#author-index li{
-	float: left;
+	/*float: left;
 	width: 290px;
-	margin-right: 0;
+	margin-right: 0;*/
 	/*text-transform: uppercase;*/
 	text-align: center;
  
