@@ -22,25 +22,29 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 
-<div class="span-14 prepend-6">
+<div class="span-17 prepend-6">
+<h3>Author Archive</h3>
 
 <?php
 
 
-$product_terms = wp_get_object_terms($post->ID, 'author');
-if(!empty($product_terms)){
-  if(!is_wp_error( $product_terms )){
-     
-    foreach($product_terms as $term){
+$essay_terms = wp_get_object_terms($post->ID, 'author');
+if(!empty($essay_terms)){
+  if(!is_wp_error( $essay_terms )){
+   
+    foreach($essay_terms as $term){
+       echo '<h1>'.formatName($term->name).'</h1>';
        
+       	$author_photo = get_tax_meta($term->term_id, 'author_image');
+	 	if($author_photo != ''){
+			echo '<img class="author-photo alignright" width="150px" src="'.$author_photo['src'].'">'; }
+			
       $author_bio = get_tax_meta($term->term_id,'author_bio');
 		echo  '<div class="author-bio">'.$author_bio.'</div>';
 
-		$author_photo = get_tax_meta($term->term_id, 'author_image');
-	 	if($author_photo != ''){
-			echo '<img class="author-photo" src="'.$author_photo['src'].'">';
-			echo '<h2>Essays by '.$term->name.'</h2>' ; 
-    	}
+	
+			echo '<h2>Essays by '.formatName($term->name).'</h2>' ; 
+    	
     }
   
   }
