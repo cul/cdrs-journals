@@ -42,7 +42,7 @@ if(($checkedS[0] == "None") && (sizeof($checkedS)==1) || ($stringCheck==FALSE)) 
 			//do nothing
 		}
 		else {
-			?><input type="checkbox" name="sourceCheck" value="source<?php.$loopS?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
+			?><input type="checkbox" name="sourceCheck" value="source<?php .echo $loopS ?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
 		}
 	}
 }
@@ -51,14 +51,14 @@ else {
 	
 	for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
 		if (in_array($getFullAlpha[$loopS], $checkedS)) { ?>
- 			<input type="checkbox" name="sourceCheck" checked="yes" value="source<?php.$loopS?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
+ 			<input type="checkbox" name="sourceCheck" checked="yes" value="source<?php .echo $loopS ?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
 		}
 		else { 
 			if ($getFullAlpha[$loopS] == "None") {
 				//do nothing
 			}
 			else { ?>
-				<input type="checkbox" name="sourceCheck" value="source<?php.$loopS?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
+				<input type="checkbox" name="sourceCheck" value="source<?php .echo $loopS ?>" /> <?php echo $getFullAlpha[$loopS]."<br>";
 			}
 		}
 	}

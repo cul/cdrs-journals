@@ -608,74 +608,13 @@ function works_cited() {
 	add_meta_box('workscited', __('Works Cited'),'workscitied_layout','essay');
 }
 
-function edition_meta() {
-	remove_meta_box( 'editiondiv', 'essay', 'side' );
-	add_meta_box('edition', __('Editions'),'edition_layout','essay');
+include("custom_metaboxes.php");
+
+function formatName($name) {	
+	$nameSep = explode(",",$name);
+	$nameFL = $nameSep[1] . " " . $nameSep[0];
+	
+	return $nameFL;
 }
-
-function edition_layout($post) {
-	echo '<input type="hidden" name="edition_nonce" id="edition_nonce" value="' . 
-    		wp_create_nonce( 'tax-edition' ) . '" />';
-
-	echo "Select the Edition:<br>";
-
-	$getEdition = wp_get_object_terms($post->ID, 'edition', 'fields=names');
-	$getFullEdition = get_terms('edition', 'fields=names&hide_empty=0');
-
-	for($checkE=0; $checkE<sizeof($getEdition); $checkE++) {
-		if (in_array($getEdition[$checkE], $getFullEdition)) {
-			$checkedE = $getEdition[$checkE];
-		}
-	}
-	?>
-
-	<div class="post_edition">
-	<select name="post_edition" id="post_edition">
-		<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
-			if ($getFullEdition[$loopE] == $checkedE) { ?>
-				<option value="edition<?php.$loopE?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
-			<?php }
-			else { ?>
-				<option value="edition<?php.$loopE?>"><?php echo $getFullEdition[$loopE]; ?></option>
-			<?php }
-		} ?>
-	</select>
-	</div>
-<?php }
-
-function save_edition($post_id) {
-	// verify this came from our screen and with proper authorization.
- 
- 	if ( !wp_verify_nonce( $_POST['edition_nonce'], 'tax-edition' )) {
-    	return $post_id;
-  	}
- 
-  	// verify if this is an auto save routine. If it is our form has not been submitted, so we dont want to do anything
-  	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
-    	return $post_id;
- 
- 
-  	// Check permissions
-  	if ( 'page' == $_POST['post_type'] ) {
-    	if ( !current_user_can( 'edit_page', $post_id ) )
-      		return $post_id;
-  	} else {
-    	if ( !current_user_can( 'edit_post', $post_id ) )
-      	return $post_id;
-  	}
- 
-  	// OK, we're authenticated: we need to find and save the data
-	$post = get_post($post_id);
-	if (($post->post_type == 'post') || ($post->post_type == 'page')) { 
-           // OR $post->post_type != 'revision'
-           $edition = $_POST['post_edition'];
-	   wp_set_object_terms( $post_id, $edition, 'edition' );
-        }
-	return $edition;
- 
-}
-
-add_action('admin_menu', 'edition_meta');
-add_action('save_post', 'save_edition');
 
 ?>
