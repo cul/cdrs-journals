@@ -305,7 +305,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 
 h1{
  
-	 font-weight: 700;
+ font-size: 2em;
+ margin-top: .5em;
 
  
 }
@@ -619,9 +620,9 @@ font-weight: bold;
  
 
 ul#author-index li{
-	float: left;
+	/*float: left;
 	width: 290px;
-	margin-right: 0;
+	margin-right: 0;*/
 	/*text-transform: uppercase;*/
 	text-align: center;
  
