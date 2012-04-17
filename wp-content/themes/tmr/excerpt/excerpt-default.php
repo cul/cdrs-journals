@@ -27,12 +27,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <a href="<?php the_permalink() ?>"><?php the_title(); ?></a><br>
 <?php 
 
-$product_terms = wp_get_object_terms($post->ID, 'author');
-if(!empty($product_terms)){
-  if(!is_wp_error( $product_terms )){
+$essay_terms = wp_get_object_terms($post->ID, 'author');
+if(!empty($essay_terms)){
+  if(!is_wp_error( $essay_terms )){
      
-    foreach($product_terms as $term){
-            echo '<span class="author-link">by <a href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a></span>'; 
+    foreach($essay_terms as $term){
+            echo '<span class="author-link"><a href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a></span> '; 
 
     }
   
@@ -40,11 +40,11 @@ if(!empty($product_terms)){
 }
 
 
-$product_terms = wp_get_object_terms($post->ID, 'edition');
-if(!empty($product_terms)){
-  if(!is_wp_error( $product_terms )){
+$essay_terms = wp_get_object_terms($post->ID, 'edition');
+if(!empty($essay_terms)){
+  if(!is_wp_error( $essay_terms )){
      
-    foreach($product_terms as $term){
+    foreach($essay_terms as $term){
             echo '<span class="edition-link">Edition: <a href="'.get_term_link($term->slug, 'edition').'">
             '.$term->name.'</a></span>'; 
 

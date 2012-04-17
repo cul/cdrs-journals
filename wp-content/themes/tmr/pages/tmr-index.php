@@ -27,7 +27,7 @@ cfct_template_file('header', 'header-essay.php');
 <div class="span-5 prepend-1"> 
 <h1>Editions</h1>
 <ul id='editions'class='taxonomy-list clearfix'> 
-<?php $terms = get_terms( 'edition','order=desc' );
+<?php $terms = get_terms( 'edition','order=desc&hide_empty=1' );
 
 
 
