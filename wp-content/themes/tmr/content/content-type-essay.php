@@ -36,7 +36,7 @@ global $post;
 <div class="span-6 sidebar">
 
 
-<div id='essay-meta'>
+<div id="essay-meta">
  
  
 <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -57,7 +57,7 @@ if(!empty($author_terms)){
  
  $theBio = get_post_custom_values('author_bio');
  
- if ($theBio) { ?><div class="author-feature"><h3>About the Author </h3> <? }
+ if ($theBio) { ?><div class="author-feature"><h3>About the Author </h3> <?php }
  
  
  if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -65,21 +65,6 @@ if(!empty($author_terms)){
   
   the_post_thumbnail();
 } 
-?>
- 
-
- 
- 
- <?php
- 
-/*
-  foreach ( $theBio as $key => $value ) {
-    echo "$value "; 
-  }
-*/
- 
- 
- 
 
  /* end author bio and photo */
 
