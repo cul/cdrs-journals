@@ -799,6 +799,7 @@ a#skip {
 
 .sidebar{
 	text-align: right;
+	z-index: 9;
 }
 
 div.fb-like {
