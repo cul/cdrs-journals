@@ -604,14 +604,18 @@ function my_default_content($content) {
 }
 //add_filter( 'default_content', 'my_default_content' );
 
+function works_cited() {
+	add_meta_box('workscited', __('Works Cited'),'workscitied_layout','essay');
+}
+
 function edition_meta() {
 	remove_meta_box( 'editiondiv', 'essay', 'side' );
 	add_meta_box('edition', __('Editions'),'edition_layout','essay');
 }
 
 function edition_layout($post) {
-	echo '<input type="hidden" name="edition_noncename" id="edition_noncename" value="' . 
-    		wp_create_nonce( 'taxonomy_edition' ) . '" />';
+	echo '<input type="hidden" name="edition_nonce" id="edition_nonce" value="' . 
+    		wp_create_nonce( 'tax-edition' ) . '" />';
 
 	echo "Select the Edition:<br>";
 
@@ -625,8 +629,8 @@ function edition_layout($post) {
 	}
 	?>
 
-	<div class="my_meta_control">
-	<select>
+	<div class="post_edition">
+	<select name="post_edition" id="post_edition">
 		<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 			if ($getFullEdition[$loopE] == $checkedE) { ?>
 				<option value="edition<?php.$loopE?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
@@ -642,7 +646,7 @@ function edition_layout($post) {
 function save_edition($post_id) {
 	// verify this came from our screen and with proper authorization.
  
- 	if ( !wp_verify_nonce( $_POST['edition_noncename'], 'taxonomy_edition' )) {
+ 	if ( !wp_verify_nonce( $_POST['edition_nonce'], 'tax-edition' )) {
     	return $post_id;
   	}
  
@@ -671,7 +675,7 @@ function save_edition($post_id) {
  
 }
 
-//add_action('admin_menu', 'edition_meta');
-//add_action('save_post', 'save_edition');
+add_action('admin_menu', 'edition_meta');
+add_action('save_post', 'save_edition');
 
 ?>

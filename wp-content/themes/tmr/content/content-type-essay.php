@@ -36,7 +36,7 @@ global $post;
 <div class="span-6 sidebar">
 
 
-<div id='essay-meta'  >
+<div id='essay-meta'>
  
  
 <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -180,7 +180,7 @@ $wc = $custom_works_cited->the_meta();
 ?>
 <div id="work_cited">
  
-<h1><? echo($wc['title']); ?></h1>
+<h1><?php echo($wc['title']); ?></h1>
 
   
 
