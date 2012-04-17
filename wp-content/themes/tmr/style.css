@@ -187,7 +187,7 @@ body {
 
 h3.flyer {
 	color: #f9b120;
-	margin-bottom: -1.5em;
+	margin-bottom: -1em;
 }
  
 
@@ -646,9 +646,10 @@ text-decoration: none;
 
 h1.edition-label {
 	font-size: 2em;
- 	margin-top: .5em;
+ 	margin-top: 1.5em;
 	margin-bottom: .5em;
 color: #7b877b;
+ 
 }
 a.author{
 	color: #844240;
