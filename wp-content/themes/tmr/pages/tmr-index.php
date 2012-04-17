@@ -131,32 +131,59 @@ wp_tag_cloud('taxonomy="topics"');
 
 <div class="span-22 prepend-1">
 <h1>Authors</h1>
-<ul id='author-index'class='taxonomy-list clearfix'>
 <?php 
 
-
-
+//$terms = get_terms('author', 'fields=names&hide_empty=0&orderby=name');
 $terms = get_terms( 'author', 'orderby=name');
+
+foreach ($terms as $term) {
+	$slug[] = $term->slug;
+	$name[] = $term->name;
+}
+
+//echo print_r($terms)."<br><br>";
+
+echo "number of terms: ".sizeof($terms)."<br><br>";
 
 $columnLength = round(count($terms)/3);
 
-foreach($terms as $term) {
-  
-/* names are stored in DB Last, First, the following two lines extracts the last name to use in create ID for LI */
-  $nameArray = explode(",",$term->name);
-  $sortValue = array_pop(array_reverse($nameArray));
+echo "columnLength: ".$columnLength."<br><br>";
 
+$count = 0;
 
-   
-    echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $term->slug, 'author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'	</a></li>';
-      } 
+for ($iCol=0; $iCol<3; $iCol++) {
+	echo "<div> ";
+	echo "<ul id='author-index' class='taxonomy-list clearfix'>";
+	
+	if ($iCol==0) {
+		$start = 0;
+		$finish = $columnLength;
+	}
+	elseif ($iCol==1) {
+		$start = $columnLength;
+		$finish = $columnLength + $columnLength;
+	}
+	elseif ($iCol==2) {
+		$start = $columnLength + $columnLength;
+		$finish = count($terms);
+	}
+	
+	echo "iCol: ".$iCol."<br>";
+	echo "start: ".$start."<br>";
+	echo "finish: ".$finish."<br><br><br>";	
+	
+	for ($i=$start; $i<$finish; $i++) {
+		$nameArray = explode(",",$name[$i]);
+		$sortValue = array_pop(array_reverse($nameArray));
+		
+		echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $slug[$i], 'author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $name[$i] ) . '" ' . '>' . $name[$i].'	</a></li>';
+		
+	}
+	echo "</ul>";
+	echo "</div>";
+}
 
-  
- 
- 
 ?>
-</ul>
- 
 
 
 </div>
