@@ -608,7 +608,7 @@ function works_cited() {
 	add_meta_box('workscited', __('Works Cited'),'workscitied_layout','essay');
 }
 
-include("custom_metaboxes.php");
+//include("custom_metaboxes.php");
 
 function formatName($name) {	
 	$nameSep = explode(",",$name);
