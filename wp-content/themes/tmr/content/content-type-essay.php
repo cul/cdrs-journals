@@ -169,7 +169,7 @@ if ($pdfs) {
  
  
 
-<div id="essay">
+<div id="essay"class="clearfix">
 <?php
 the_content(); ?>
 </div>

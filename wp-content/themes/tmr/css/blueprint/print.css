@@ -27,3 +27,18 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .hide {display:none;}
 a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline;}
 a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+
+.social-media{
+	display: none;
+}
+
+nav#access{
+	display: none;
+}
+
+p.numbered_para
+{
+	padding-left:5em;
+	text-indent: 1em;
+	margin-bottom: .5em;
+}

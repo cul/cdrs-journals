@@ -53,7 +53,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
-
+		<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/print.css"/>
 <?php
 
 function my_scripts_method() {
