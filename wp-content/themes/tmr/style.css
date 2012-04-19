@@ -234,7 +234,19 @@ a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
-ul, ol { margin-left: 2em; }
+ul, ol { margin-left: 2em; list-style-type: none;}
+
+ul.home-nav {
+	margin-left: 0;
+}
+
+ul.home-nav li a {
+display: block;
+text-transform: uppercase;
+background-color: #c2c8c5;
+font-weight: 700;
+padding: 5px;
+}
 ol { list-style-type: decimal; }
 
 /* Remove margins for navigation lists */
@@ -865,5 +877,13 @@ div.authors-column {
 	float: left;
 	width: 33%;
 	
+}
+
+ 
+img.attachment-post-thumbnail{
+	float: left;
+	margin-right: 1em;
+	margin-top: .5em;
+	border-radius: 70px;
 }
  

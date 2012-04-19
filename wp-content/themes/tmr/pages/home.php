@@ -60,33 +60,32 @@ wp_reset_postdata();
 
 
 
-<div class="span-10">
+<div class="span-9 prepend-1">
 
-<ul>
+<ul class="home-nav">
 <li>
 <a href="<?php home_url('/')  ?>?page_id=123">
-Current Issue
-</a>
+Current Edition</a> <p>Read the Current Issue of TMR</p>
 </li>
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=131">
 Archive
-</a>
+</a> <p>View the Complete Contents</p>
 </li>
 
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=129">
 About
-</a>
+</a><p>Learn more about the journal.</p>
 </li>
 
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=133">
 Submit Your Essay
-</a>
+</a><p>Eligible students may submit their work for publication.</p>
 </li>
 
 </ul>
