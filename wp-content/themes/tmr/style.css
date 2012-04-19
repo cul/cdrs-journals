@@ -193,6 +193,7 @@ h3.flyer {
 header h1 {
 	
 margin-top: -44px;
+margin-left: 13%;
 	
 }
 
@@ -203,7 +204,7 @@ header h1 a {
 	background: url(img/themorningsidereview.png) no-repeat;
 	height: 130px;
 	width: 400px;
-	margin-left: 117px;
+ 
 	
 }
 
@@ -611,6 +612,12 @@ div#cu-writing {
 	margin-left: 647px;
 }
 
+span.author-credit {
+	font-size: 150%;
+	text-align: right;
+	display: block;
+}
+
 
 /*tmr index*/
 
@@ -675,8 +682,8 @@ text-decoration: none;
 
 h1.edition-label {
 	font-size: 2em;
- 	margin-top: 1.5em;
-	margin-bottom: .5em;
+ 	 margin-top: 0;
+ 
 color: #7b877b;
  
 }
@@ -697,7 +704,7 @@ a.author:before{
 p.numbered_para
 {
 	padding-left:5em;
-	text-indent: 1em;
+	text-indent: 8%;
 	margin-bottom: .5em;
 }
 
@@ -713,9 +720,7 @@ div#essay{
 	padding-left: 5em;
 }
 
-#work_cited{
-	padding-left: 5em;
-}
+ 
 p.numbered_para a.numbered-item
 {
 	position:absolute;
@@ -828,8 +833,13 @@ a#skip {
 }
 
 .sidebar{
-	text-align: right;
-	z-index: 9;
+	margin-top: 100px;
+ 
+}
+
+img.essay-thumb {
+	float: left;
+	margin-right: 1em;
 }
 
 div.fb-like {
@@ -885,5 +895,10 @@ img.attachment-post-thumbnail{
 	margin-right: 1em;
 	margin-top: .5em;
 	border-radius: 70px;
+}
+
+a.meta-link {
+	display: block;
+	font-size: 100%;
 }
  

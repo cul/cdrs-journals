@@ -92,7 +92,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		<header role="banner">
 		<div id="cu-writing"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></div>
 		
-		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"> </a></h1>
 			 
 		</header>
 		

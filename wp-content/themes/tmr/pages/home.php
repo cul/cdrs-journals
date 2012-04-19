@@ -27,12 +27,7 @@ cfct_template_file('header', 'home.php');
 <h1>From The Director</h1>
  
 <p>
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at molestie nulla. Vestibulum accumsan interdum neque at sagittis. Vestibulum quis neque metus. Sed faucibus libero nec est facilisis eu cursus nisl commodo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
- <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364"> Nullam euismod convallis diam, nec mattis nisi aliquet et. Aenean id laoreet tellus.
-</a>
+<a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
  
 </p>
 
@@ -89,6 +84,8 @@ Submit Your Essay
 </li>
 
 </ul>
+
+<?php get_search_form(); ?>
 
 <h1>Featured Content</h1>
 <?php
