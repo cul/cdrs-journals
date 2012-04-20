@@ -63,14 +63,14 @@ function author_layout($post) {
 	
 	$getAuthor = wp_get_object_terms($post->ID, 'author', 'fields=names');
 	$getFullAuthor = get_terms('author', 'fields=names&hide_empty=0');
-
+	
 	if(sizeof($getAuthor) == NULL) { ?>
-		<input name="tax_author" type="text" value="" />
+		<input name="tax_author" id="tags" type="text" value="" />
 	<?php }
 
 	else {
 		for ($loopA=0; $loopA<sizeof($getAuthor); $loopA++) { ?>
-			<input name="tax_author" type="text" size="20" value='<?php echo $getAuthor[$loopA]; ?>' />
+			<input name="tax_author" id="tags" type="text" size="20" value='<?php echo $getAuthor[$loopA]; ?>' />
 	<?php	}
 	}
 }
@@ -132,23 +132,26 @@ function source_layout($post) {
 	else {
 		$checkedS[0] = $none;
 	}
-
-	//check if the values in $checkedS array are strings
-	for ($string=0; $string<sizeof($checkedS); $string++) {
-		$stringCheck = is_string($checkedS[$string]);
+	
+	//check if "None" is in the checked array
+	if (in_array("None",$checkedS)) {
+		$checkNone = TRUE;
+	}
+	else {
+		$checkNone = FALSE;
 	}
 
 	//check if None or not a string 
 	// if true, None checkbox at the top already checked and then list out the rest of the sources
-	if(($checkedS[0] == "None") && (sizeof($checkedS)==1) || ($stringCheck==FALSE)) {
-		?><input type="checkbox" name="tax_source[]" checked="yes" value='<?php echo $getFullAlpha[$none]; ?>' /> <?php echo $getFullAlpha[$none]."<br>";
+	if(($checkedS[0] == "None") && (sizeof($checkedS)==1) || ($checkNone == TRUE)) { ?>
+		<input type="checkbox" name="tax_source[]" checked="yes" value='<?php echo $getFullAlpha[$none]; ?>' /> <?php echo $getFullAlpha[$none]."<br>";
 
 		for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
 			if ($getFullAlpha[$loopS] == "None") {
 				//do nothing
 			}
-			else {
-				?><input type="checkbox" name="tax_source[]" value='<?php echo $getFullAlpha[$loopS]; ?>' /> <?php echo $getFullAlpha[$loopS]."<br>";
+			else { ?>
+				<input type="checkbox" name="tax_source[]" value='<?php echo $getFullAlpha[$loopS]; ?>' /> <?php echo $getFullAlpha[$loopS]."<br>";
 			}
 		}
 	}

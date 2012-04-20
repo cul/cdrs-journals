@@ -24,7 +24,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="span-18 prepend-4">
 
-<?
+<?php
  
 global $term;
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
@@ -77,11 +77,8 @@ if (have_posts()) {
 	</li>
 <?php
 	}
- 
- 
 	echo '</ul>';
 }
-
 ?>
 
 </div>
