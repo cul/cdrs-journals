@@ -78,9 +78,11 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <body <?php body_class(); ?>>
 <div class="container">
 
+<!--
 <div class="span-24" id='search-form'>
 <?php get_search_form(); ?>
 </div>
+-->
 </div>
 
 <div class="container" id="main">
@@ -90,6 +92,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </div>
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 </header>
+<!--
 		
  <nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
@@ -97,5 +100,6 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 	 	
 <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); 	
 
- ?></nav><!-- #access -->
+ ?></nav>
+-->
  

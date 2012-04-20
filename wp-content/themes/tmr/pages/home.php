@@ -18,41 +18,93 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-get_header();
+cfct_template_file('header', 'home.php'); 
 
 ?>
 
 <div class="span-10 prepend-1 content">
 
-<h1>From The Director</h1>
+<h1 class="homepage-label">From The Director</h1>
  
 <p>
-
-Welcome to the inaugural edition of <em>The Morningside Review</em> formerly <em>the Journal of the Undergraduate Writing Program at Columbia University</em>. In an introductory note for this edition, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Undergraduate Writing Program Director Nicole Wallach discusses the impact and value of youth in writing.</a>
+<a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
+ 
 </p>
 
-<h1>Featured Contributors</h1>
+<h1 class="homepage-label" >Featured Contributors</h1>
 <?
 
+$the_query = new WP_Query('post_type=hp-feature');
 
-query_posts( 'post_type=hp-feature');
+// The Loop
+while ( $the_query->have_posts() ) : $the_query->the_post();
+cfct_template_file('content', 'hp-feature');
+endwhile;
 
-if (have_posts()) {
-	while (have_posts()) {
-		the_post();
-cfct_template_file('content', 'hp-feature');	}
-}
+// Reset Post Data
+wp_reset_postdata();
 
+
+
+
+ 
 
 ?>
 
 </div>
 
 
-<div class="span-10">
 
- 
+<div class="span-9 prepend-1">
 
+<ul class="home-nav">
+<li>
+<a href="<?php home_url('/')  ?>?page_id=123">
+Current Edition</a> <p>Read the Current Issue of TMR</p>
+</li>
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=131">
+Archive
+</a> <p>View the Complete Contents</p>
+</li>
+
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=129">
+About
+</a><p>Learn more about the journal.</p>
+</li>
+
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=133">
+Submit Your Essay
+</a><p>Eligible students may submit their work for publication.</p>
+</li>
+
+</ul>
+
+<?php get_search_form(); ?>
+
+<h1 class="homepage-label">Featured Content</h1>
+<?php
+
+cfct_loop();
+
+?> 
+
+
+<!--
+<h2>Read Essays</h2>
+
+￼￼Browse essays by category or do a keyword search. You can also view the complete TMR index in Archive.
+Assignment type
+Citation
+Progression
+Year	 
+
+-->
 
 </div>
 

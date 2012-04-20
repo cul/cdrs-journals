@@ -26,4 +26,69 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .quiet {color:#999;}
 .hide {display:none;}
 a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline;}
-a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+/*a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}*/
+
+.social-media{
+	display: none;
+}
+
+nav#access{
+	display: none;
+}
+
+p.numbered_para
+{
+	padding-left:5em;
+	text-indent: 1em;
+	margin-bottom: .5em;
+}
+
+p.numbered_para a.numbered-item
+{
+	position:absolute;
+	left:0;
+	width:5em;
+	text-align:center;
+	display:block;
+	color:#999;
+	text-decoration:none;
+ 
+}
+
+
+#search-form{
+	display: none;
+}
+
+.sidebar{
+	display: none;
+}
+
+header h1 {
+	
+margin-top: -44px;
+margin-left: 13%;
+	
+}
+
+#cu-writing {
+  padding-top: 28px;
+	margin-left: 647px;
+}
+
+#essay-meta{
+	display: none;
+}
+
+
+span.author-credit {
+	font-size: 200%;
+	text-align: right;
+	display: block;
+}
+
+span.author-credit a {
+text-decoration: none;
+color: black;
+
+}
