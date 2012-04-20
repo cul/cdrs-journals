@@ -186,7 +186,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 h3.flyer {
 	color: #f9b120;
-	margin-bottom: -1em;
+ 
 }
  
 
@@ -239,6 +239,7 @@ ul, ol { margin-left: 2em; list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
+	margin-top: 30px;
 }
 
 ul.home-nav li a {
@@ -317,8 +318,10 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 
 h1{
  
- font-size: 2em;
+ font-size: 1.6em;
  margin-top: .5em;
+ margin-bottom: .5em;
+ text-transform: uppercase;
 
  
 }
@@ -614,8 +617,9 @@ div#cu-writing {
 
 span.author-credit {
 	font-size: 150%;
-	text-align: right;
+	text-align: left;
 	display: block;
+	margin-bottom: .5em;
 }
 
 
