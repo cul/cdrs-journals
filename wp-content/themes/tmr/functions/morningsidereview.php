@@ -435,80 +435,7 @@ $custom_works_cited = new WPAlchemy_MetaBox(array
 	'types' => array('essay', 'Essay'),
 	'autosave' => TRUE,
 	'mode' => WPALCHEMY_MODE_EXTRACT
-)); 
-
- 
-/*$custom_taxonomy_edition = new WPAlchemy_MetaBox(array
-(
-	'id' => '_edition',
-	'title' => 'Editions',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-edition.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_author = new WPAlchemy_MetaBox(array
-(
-	'id' => '_author',
-	'title' => 'Authors',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-author.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_progression = new WPAlchemy_MetaBox(array
-(
-	'id' => '_progression',
-	'title' => 'Progressions',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-progression.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_source = new WPAlchemy_MetaBox(array
-(
-	'id' => '_source',
-	'title' => 'Highlighted Sources',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-source.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_theme = new WPAlchemy_MetaBox(array
-(
-	'id' => '_theme',
-	'title' => 'Themes',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-theme.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_strategy = new WPAlchemy_MetaBox(array
-(
-	'id' => '_strategy',
-	'title' => 'Strategies',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-strategy.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-$custom_taxonomy_assignment = new WPAlchemy_MetaBox(array
-(
-	'id' => '_assignment',
-	'title' => 'Assignments',
-	'template' => CFCT_PATH.'wpalchemy/metaboxes/taxonomy-assignment.php',
-	'types' => array('essay', 'Essay'),
-	'autosave' => TRUE,
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-*/
- 
+));  
 
 //recreate the default filters on the_content
 add_filter( 'meta_content', 'wptexturize'        );
@@ -583,13 +510,6 @@ function unregister_taxonomy(){
 }
 add_action('init', 'unregister_taxonomy');
 */
-
-/* Adding "Enter essay here" text into content editor for new essays */
-function my_default_content($content) {
-	$content = '<div style="font-family:sans-serif;color:#bbb;position:absolute;font-size:1.7em;padding:8px 10px;">Enter essay here</div>';
-	return $content;
-}
-//add_filter( 'default_content', 'my_default_content' );
 
 function works_cited() {
 	add_meta_box('workscited', __('Works Cited'),'workscitied_layout','essay');
