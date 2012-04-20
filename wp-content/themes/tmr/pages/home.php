@@ -24,14 +24,14 @@ cfct_template_file('header', 'home.php');
 
 <div class="span-10 prepend-1 content">
 
-<h1>From The Director</h1>
+<h1 class="homepage-label">From The Director</h1>
  
 <p>
 <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
  
 </p>
 
-<h1>Featured Contributors</h1>
+<h1 class="homepage-label" >Featured Contributors</h1>
 <?
 
 $the_query = new WP_Query('post_type=hp-feature');
@@ -87,7 +87,7 @@ Submit Your Essay
 
 <?php get_search_form(); ?>
 
-<h1>Featured Content</h1>
+<h1 class="homepage-label">Featured Content</h1>
 <?php
 
 cfct_loop();

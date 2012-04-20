@@ -246,8 +246,18 @@ ul.home-nav li a {
 display: block;
 text-transform: uppercase;
 background-color: #c2c8c5;
-font-weight: 700;
+ 
 padding: 5px;
+font-size: 150%;
+
+
+
+ 
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
 }
 ol { list-style-type: decimal; }
 
@@ -325,6 +335,13 @@ h1{
 
  
 }
+ H1.homepage-label{
+	font-size: 1.2em;
+	border-bottom: 1px solid #acacac;
+	border-top: 1px solid #acacac;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 
 #content div blockquote {
 	margin-left: 3em;
@@ -340,6 +357,9 @@ nav#access {
 		
 }
 
+body.home div#main{
+	margin-top: 1.5em;
+}
 /*nav#access li{
 	float: left;
 	margin-left: 2em;
