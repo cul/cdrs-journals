@@ -94,6 +94,7 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/carrington-jam-1.4/style.css
 	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/tmr/style.css
 	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
+	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
 */
 
 /** START HTML5 Boilerplate CSS **/
@@ -891,8 +892,7 @@ div#search-form{
 
 div.hp-feature img {
 	float: left;
-	width: 100px;
-	height: 100px;
+
 	margin: 10px;
 	
 }
