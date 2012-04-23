@@ -32,9 +32,11 @@ cfct_template_file('header', 'home.php');
 </p>
 
 <h1 class="homepage-label" >Featured Contributors</h1>
-<?
+<?php
 
-$the_query = new WP_Query('post_type=hp-feature');
+$the_query = new WP_Query('post_type=hp-feature&posts_per_page=3&orderby=rand');
+
+//$the_query = shuffle($the_query);
 
 // The Loop
 while ( $the_query->have_posts() ) : $the_query->the_post();

@@ -34,12 +34,13 @@ if (have_posts()) {
 
 
 
-query_posts( 'post_type=hp-feature');
+query_posts( 'post_type=hp-feature' );
 
 if (have_posts()) {
 	while (have_posts()) {
 		the_post();
-cfct_template_file('content', 'hp-feature');	}
+		cfct_template_file('content', 'hp-feature');	
+	}
 }
 
 ?>
