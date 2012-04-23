@@ -63,6 +63,14 @@ if (have_posts()) {
 
 echo "<h1>".$name."</h1>";
 
+
+
+ 
+$termDiscription = term_description( '', get_query_var( 'taxonomy' ) );
+if($termDiscription != ''){
+echo'<div class="tag-desc">'.  $termDiscription .' </div>';
+ 
+}
  
 if (have_posts()) {
 	echo '<ul>';
