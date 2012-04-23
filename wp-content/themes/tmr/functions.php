@@ -30,7 +30,7 @@ include_once(CFCT_PATH."Tax-meta-class/Tax-meta-class.php");
  
 include_once(CFCT_PATH.'functions/morningsidereview.php');
 
-add_action('wp_footer', 'add_googleanalytics');
+//add_action('wp_footer', 'add_googleanalytics');
 function add_googleanalytics() { ?>
 	<script type="text/javascript"> 
 
