@@ -27,7 +27,7 @@ cfct_template_file('header', 'home.php');
 <h1 class="homepage-label">From The Director</h1>
  
 <p>
-<a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
+<a href="?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
  
 </p>
 
