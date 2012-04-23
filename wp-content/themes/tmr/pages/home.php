@@ -68,7 +68,7 @@ Current Edition</a> <p>Read the Current Issue of TMR</p>
 <li>
 <a href="<?php home_url('/')  ?>?page_id=131">
 Archive
-</a> <p>View the Complete Contents</p>
+</a> <p>Browse essays by Assignment type, Citation, Progression, Year and more.</p>
 </li>
 
 
