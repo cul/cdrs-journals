@@ -143,9 +143,7 @@ function source_layout($post) {
 
 	//check if None or not a string 
 	// if true, None checkbox at the top already checked and then list out the rest of the sources
-	if(($checkedS[0] == "None") && (sizeof($checkedS)==1) || ($checkNone == TRUE)) { ?>
-		<input type="checkbox" name="tax_source[]" checked="yes" value='<?php echo $getFullAlpha[$none]; ?>' /> <?php echo $getFullAlpha[$none]."<br>";
-
+	if(($checkedS[0] == "None") && (sizeof($checkedS)==1) || ($checkNone == TRUE)) {
 		for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
 			if ($getFullAlpha[$loopS] == "None") {
 				//do nothing
@@ -157,8 +155,6 @@ function source_layout($post) {
 	}
 	// else None checkbox at the top not checked and then list out the sources (with the appropriate source checked if included in $checkedS array)
 	else {
-		?><input type="checkbox" name="tax_source[]" value='<?php echo $getFullAlpha[$none]; ?>' /> <?php echo $getFullAlpha[$none]."<br>";
-	
 		for($loopS=0; $loopS<sizeof($getFullSource); $loopS++) {
 			if (in_array($getFullAlpha[$loopS], $checkedS)) { ?>
  				<input type="checkbox" name="tax_source[]" checked="yes" value='<?php echo $getFullAlpha[$loopS]; ?>' /> <?php echo $getFullAlpha[$loopS] ."<br>";
