@@ -88,6 +88,11 @@ Submit Your Essay
 </ul>
 
 <?php get_search_form(); ?>
+<h1 class="homepage-label">Connect With TMR</h1>
+
+<a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
+<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<? bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
+<img src="<? bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
 
 <h1 class="homepage-label">Featured Content</h1>
 <?php
