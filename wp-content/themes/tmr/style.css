@@ -914,11 +914,11 @@ div.authors-column {
 }
 
  
-img.attachment-post-thumbnail{
+img.attachment-post-thumbnail,img.attachment-thumbnail{
 	float: left;
 	margin-right: 1em;
 	margin-top: .5em;
-	border-radius: 70px;
+	border-radius: 75px;
 }
 
 a.meta-link {
