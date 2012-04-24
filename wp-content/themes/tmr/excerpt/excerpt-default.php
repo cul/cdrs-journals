@@ -21,10 +21,10 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-<div>
+ 
 
  
-<a href="<?php the_permalink() ?>"><?php the_title(); ?></a><br>
+<a class='title-link' href="<?php the_permalink() ?>"><?php the_title(); ?></a> 
 <?php 
 
 $essay_terms = wp_get_object_terms($post->ID, 'author');
@@ -45,7 +45,7 @@ if(!empty($essay_terms)){
   if(!is_wp_error( $essay_terms )){
      
     foreach($essay_terms as $term){
-            echo '<span class="edition-link">Edition: <a href="'.get_term_link($term->slug, 'edition').'">
+            echo '<span class="edition-link"><a href="'.get_term_link($term->slug, 'edition').'">
             '.$term->name.'</a></span>'; 
 
     }
@@ -67,4 +67,4 @@ comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrin
 
 */
 ?>
-</div><!-- .excerpt -->
+ <!-- .excerpt -->

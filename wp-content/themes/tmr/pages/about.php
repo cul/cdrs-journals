@@ -24,6 +24,16 @@ get_header();
 
 <div class="span-12 prepend-6 content">
 
+<h1>About</h1>
+
+<ul class="about-nav">
+<li><a href="<?php home_url('/')  ?>?page_id=364">From The Director</a></li>
+<li><a href="<?php home_url('/')  ?>?page_id=369">University Writing</a></li>
+<li><a href="<?php home_url('/')  ?>?page_id=135">Masthead</a></li>
+
+
+</ul>
+
 <?
 
 cfct_loop();

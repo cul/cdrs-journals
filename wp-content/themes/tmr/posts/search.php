@@ -31,6 +31,8 @@ else {
 
 ?>
 
+<div class="span-12 prepend-6">
+
 <h1><?php printf(__('Search Results for: %s', 'carrington-jam'), $search_title); ?></h1>
 
 <?php
@@ -38,7 +40,10 @@ cfct_loop();
 cfct_misc('nav-posts');
 
 /* get_sidebar(); */
+?>
+</div>
 
+<?php
 get_footer();
 
 ?>

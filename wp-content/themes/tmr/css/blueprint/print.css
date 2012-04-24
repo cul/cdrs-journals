@@ -77,7 +77,7 @@ margin-left: 13%;
 }
 
 #essay-meta{
-	display: none;
+ 
 }
 
 
@@ -91,4 +91,15 @@ span.author-credit a {
 text-decoration: none;
 color: black;
 
+}
+
+#colophon{
+	
+	margin-top: 3em;
+	text-align: center;
+}
+
+#colophon a{
+	text-decoration: none;
+	color: black;
 }

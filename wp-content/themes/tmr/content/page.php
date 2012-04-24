@@ -27,7 +27,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  
 <?php
  if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail();
+  the_post_thumbnail('thumbnail');
 } 
 
 

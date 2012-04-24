@@ -712,12 +712,34 @@ h1.edition-label {
 color: #7b877b;
  
 }
-a.author{
+a.author, .author-link a{
 	color: #844240;
 	text-decoration: none;
  
 }
-a.author:before{
+
+/*.author-link a:before{
+	content: "by";
+}*/
+
+ul.archive-list li{
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #d8cfc7;
+}
+
+a.title-link {
+	
+	display: block;
+	font-size: 150%;
+	
+}
+
+span.edition-link {
+	float: right;
+	margin-right: 300px;
+	
+}
+a.author:before,.author-link a:before {
 	content:"\2014\a0";
 	color: #844240;
 	}

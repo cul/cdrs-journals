@@ -73,7 +73,7 @@ echo'<div class="tag-desc">'.  $termDiscription .' </div>';
 }
  
 if (have_posts()) {
-	echo '<ul>';
+	echo '<ul  class="archive-list">';
  
 	while (have_posts()) {
 		the_post();
