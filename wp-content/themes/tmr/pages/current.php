@@ -46,7 +46,7 @@ if (have_posts()) {
 	while ($query->have_posts()) {
 		$query->the_post();
 ?>
-<li class="essay"><h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 <?php
 
