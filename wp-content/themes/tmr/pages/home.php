@@ -59,7 +59,7 @@ wp_reset_postdata();
 
 
 <div class="span-7 prepend-1 content">
-<h1 class="homepage-label">Featured Content</h1>
+<h1 class="homepage-label">On Writing</h1>
 <?php
 
 cfct_loop();
@@ -84,7 +84,7 @@ Year
 <h1 class="homepage-label">From The Director</h1>
  
 <p>
-<a href="?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
+Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a>
  
 </p>
 
