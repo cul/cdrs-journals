@@ -65,12 +65,12 @@ function my_scripts_method() {
    
    wp_enqueue_script('tmr_js');
 }
-add_action('wp_enqueue_scripts', 'my_scripts_method');
+//add_action('wp_enqueue_scripts', 'my_scripts_method');
 ?>
 	
 	 
 	
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 
 	<?php wp_head(); ?>
 </head>
@@ -78,28 +78,53 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <body <?php body_class(); ?>>
 <div class="container">
 
-<!--
-<div class="span-24" id='search-form'>
-<?php get_search_form(); ?>
-</div>
--->
+
 </div>
 
 <div class="container" id="main">
-<header role="banner" class="clearfix">		
-<div id="cu-writing">
-<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' >
-</div>
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-</header>
-<!--
-		
- <nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
-<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-	 	
-<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' )); 	
 
- ?></nav>
--->
+<header role="banner" class="span-14 prepend-1">		
+
+		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"> </a></h1>
+</header>
  
+ <div class="span-7 prepend-1  last">
+ 
+ 	<div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> 
+
+<ul class="home-nav">
+<li>
+<a href="<?php home_url('/')  ?>?page_id=123">
+Current Edition</a>
+ 
+ 
+<p>Read the Current Issue of TMR</p>
+</li>
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=131">
+Archive
+</a>
+<p>Browse essays by Assignment type, Citation, Progression, Year and more.</p>
+</li>
+
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=129">
+About
+</a>
+<p>Learn more about the journal.</p>
+</li>
+
+
+<li>
+<a href="<?php home_url('/')  ?>?page_id=133">
+Submit Your Essay
+</a>
+<p>Eligible students may submit their work for publication.</p>
+</li>
+
+</ul>
+
+
+ </div>

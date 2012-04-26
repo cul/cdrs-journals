@@ -220,6 +220,6 @@ if(!empty($source_terms)){
 </div>
 
 
-<A HREF="javascript:window.print()">Click to Print Essay</A>
+<A HREF="javascript:window.print()">Click to Print</A>
 
 </div>

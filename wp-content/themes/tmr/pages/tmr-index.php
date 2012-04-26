@@ -17,6 +17,7 @@
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
+
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 cfct_template_file('header', 'header-essay.php');
@@ -25,7 +26,9 @@ cfct_template_file('header', 'header-essay.php');
 
 
 <div class="span-5 prepend-1"> 
-<h1>Editions</h1>
+
+<h1>Edition</h1>
+
 <ul id='editions'class='taxonomy-list clearfix'> 
 <?php $terms = get_terms( 'edition','order=desc&hierarchical=0&hide_empty=1' );
 
@@ -50,8 +53,9 @@ cfct_template_file('header', 'header-essay.php');
  
 
 <div id='progression' class="span-7 prepend-1">
- <h1>Progression</h1>
-<ul id='sources'class='taxonomy-list clearfix'>
+<h1>Progression</h1>
+<ul id='sources' class='taxonomy-list clearfix'>
+
 <?php $terms = get_terms( 'progression', 'orderby=id' );
 
   foreach($terms as $term) { 
@@ -104,7 +108,7 @@ cfct_template_file('header', 'header-essay.php');
 
 <div id='sources' class="span-16 prepend-1 taxlist-toggle">
 
- <h1>Highlighted Sources</h1>
+ <h1>Highlighted Source</h1>
 <ul id='sources' class='taxonomy-list clearfix'>
 <?php  $terms = get_terms( 'source' );
 
@@ -130,7 +134,7 @@ wp_tag_cloud('taxonomy="topics"');
  
 
 <div class="span-22 prepend-1">
-<h1>Authors</h1>
+<h1>Author</h1>
 <?php 
 
 //$terms = get_terms('author', 'fields=names&hide_empty=0&orderby=name');

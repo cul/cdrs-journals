@@ -4,7 +4,7 @@ Theme Name: the Morningside Review
 Theme URI: http://cdrs.columbia.edu
 Description: Custom theme for The Morningside Review by Columbia University Center for Digital Research and Scholarship 
 Version: 0.9
-Author: Jackson Harvell based on carrington JAM 1.4
+Author: CDRS based on carrington JAM 1.4
 Author URI: http://cdrs.columbia.edu
 Tags: cdrs
 
@@ -197,7 +197,20 @@ margin-top: -44px;
 margin-left: 13%;
 	
 }
+body.home p{
+	font-size: 80%;
+}
+body.home header h1 {
+	
+ margin-top: 160px;
+margin-left: 13%;
+}
 
+  ul.home-nav li p {
+	 margin-bottom: 0;
+ 
+ 
+}
 
 header h1 a {
 	text-indent: -10000px;
@@ -240,25 +253,22 @@ ul, ol { margin-left: 2em; list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
-	margin-top: 30px;
+
 }
 
 ul.home-nav li a {
 display: block;
 text-transform: uppercase;
-background-color: #c2c8c5;
  
-padding: 5px;
-font-size: 150%;
+ 
+
+font-size: 140%;
+color: #f9c82f;
 
 
 
  
-	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+
 }
 ol { list-style-type: decimal; }
 
@@ -337,11 +347,12 @@ h1{
  
 }
  H1.homepage-label{
-	font-size: 1.2em;
+ 
 	border-bottom: 1px solid #acacac;
 	border-top: 1px solid #acacac;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	font-size: 1em;
 }
 
 #content div blockquote {
@@ -629,7 +640,16 @@ img#meta-toggle {
 	margin-right: -11px;
 }
 
- 
+body.home div#cu-writing {
+  padding-top: 0px;
+	margin-left: 0px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+body.home div#main.container {
+	margin-top: 18px;
+}
 
 div#cu-writing {
   padding-top: 28px;
@@ -919,10 +939,12 @@ div.hp-feature img {
 	
 }
 
-  div.hp-feature p {
-	margin-top: 10px;
-	
+  div.hp-feature p{
+ 
 }
+
+ 
+
 
 div.hp-feature {
  
@@ -941,6 +963,8 @@ img.attachment-post-thumbnail,img.attachment-thumbnail{
 	margin-right: 1em;
 	margin-top: .5em;
 	border-radius: 75px;
+	width: 100px;
+	height: 100px;
 }
 
 a.meta-link {

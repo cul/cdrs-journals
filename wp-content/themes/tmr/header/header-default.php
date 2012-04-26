@@ -65,7 +65,7 @@ function my_scripts_method() {
    
    wp_enqueue_script('tmr_js');
 }
-add_action('wp_enqueue_scripts', 'my_scripts_method');
+//add_action('wp_enqueue_scripts', 'my_scripts_method');
 ?>
 	
 	 
@@ -86,12 +86,12 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <div class="container" id="main">
 <header role="banner" class="clearfix">		
 <div id="cu-writing">
-<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' >
+<a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' ></a>
 </div>
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 </header>
 		
- <nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
+<nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 <a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 	 	

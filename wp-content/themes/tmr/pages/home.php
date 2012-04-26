@@ -22,14 +22,8 @@ cfct_template_file('header', 'home.php');
 
 ?>
 
-<div class="span-10 prepend-1 content">
+<div class="span-6 prepend-1 content">
 
-<h1 class="homepage-label">From The Director</h1>
- 
-<p>
-<a href="?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
- 
-</p>
 
 <h1 class="homepage-label" >Featured Contributors</h1>
 <?php
@@ -57,43 +51,14 @@ wp_reset_postdata();
 
 
 
-<div class="span-9 prepend-1">
-
-<ul class="home-nav">
-<li>
-<a href="<?php home_url('/')  ?>?page_id=123">
-Current Edition</a> <p>Read the Current Issue of TMR</p>
-</li>
-
-<li>
-<a href="<?php home_url('/')  ?>?page_id=131">
-Archive
-</a> <p>Browse essays by Assignment type, Citation, Progression, Year and more.</p>
-</li>
 
 
-<li>
-<a href="<?php home_url('/')  ?>?page_id=129">
-About
-</a><p>Learn more about the journal.</p>
-</li>
 
 
-<li>
-<a href="<?php home_url('/')  ?>?page_id=133">
-Submit Your Essay
-</a><p>Eligible students may submit their work for publication.</p>
-</li>
 
-</ul>
 
-<?php get_search_form(); ?>
-<h1 class="homepage-label">Connect With TMR</h1>
 
-<a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
-<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<? bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
-<img src="<? bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
-
+<div class="span-7 prepend-1 content">
 <h1 class="homepage-label">Featured Content</h1>
 <?php
 
@@ -114,7 +79,25 @@ Year
 -->
 
 </div>
+<div class="span-7 prepend-1 content last">
 
+<h1 class="homepage-label">From The Director</h1>
+ 
+<p>
+<a href="?page_id=364">Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.</a>
+ 
+</p>
+
+<h1 class="homepage-label">Connect With TMR</h1>
+
+<a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
+<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<? bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
+<img src="<? bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
+
+<br>
+
+<?php get_search_form(); ?>
+</div>
 
 
 
