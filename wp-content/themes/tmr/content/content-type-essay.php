@@ -34,7 +34,7 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-12 prepend-6">
+<div id="content" role="main" class="span-17 prepend-6">
 
 <h1 class="edition-label"> <?php the_title() ?> </h1>
 
@@ -53,30 +53,12 @@ if(!empty($author_terms)){
    }
    }
  
- 
-
- /* end author bio and photo */
-
-/* begin academics metadata */
-
-  
+  ?>
 
 
+</div>
 
-/* end academics metadata */
-
-
-/* begin tags */
-
-
-the_tags('<dl><dt>Tags:</dt><dd>', '</dd><dd> ', '</dd></dl>');  
-
-/* end tags */
-
-?>
-
-
-
+<div  class="span-12 prepend-6">
  
 
 
@@ -114,7 +96,9 @@ echo apply_filters('meta_content', $wc['citation']);
 </div>
 
 
+ 
 
+<h1>about the essay</h1>
 
 <?php
 
@@ -200,26 +184,31 @@ if(!empty($source_terms)){
 
 
 ?>
-
 </div>
+ 
+ 
 
 
 
 </div>
 
 <div class="span-5 prepend-1 last sidebar">
+
+
 <div class="social-media">
 
-<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div> <br>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div> <br>
 
 
 
 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br/>
 
+<A HREF="javascript:window.print()">Click to Print</A>
 </div>
 
 
-<A HREF="javascript:window.print()">Click to Print</A>
+
 
 </div>

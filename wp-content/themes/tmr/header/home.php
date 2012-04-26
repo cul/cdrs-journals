@@ -1,4 +1,3 @@
-
 <?php
 
 // This file is part of the Carrington JAM Theme for WordPress
@@ -27,9 +26,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie ie8 lte8 lte9"><![endif]-->
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-	<head>
-	
-		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<head>
+
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 				
 <!--
@@ -85,19 +84,19 @@ function my_scripts_method() {
 
 <header role="banner" class="span-14 prepend-1">		
 
-		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"> </a></h1>
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+
 </header>
  
- <div class="span-7 prepend-1  last">
+<div class="span-7 prepend-1  last">
  
- 	<div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> 
+<div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> 
 
 <ul class="home-nav">
+
 <li>
 <a href="<?php home_url('/')  ?>?page_id=123">
 Current Edition</a>
- 
- 
 <p>Read the Current Issue of TMR</p>
 </li>
 
@@ -108,14 +107,12 @@ Archive
 <p>Browse essays by Assignment type, Citation, Progression, Year and more.</p>
 </li>
 
-
 <li>
 <a href="<?php home_url('/')  ?>?page_id=129">
 About
 </a>
 <p>Learn more about the journal.</p>
 </li>
-
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=133">
@@ -126,5 +123,4 @@ Submit Your Essay
 
 </ul>
 
-
- </div>
+</div>

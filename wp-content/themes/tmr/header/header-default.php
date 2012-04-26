@@ -70,9 +70,10 @@ function my_scripts_method() {
 	
 	 
 	
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -86,7 +87,7 @@ function my_scripts_method() {
 <div class="container" id="main">
 <header role="banner" class="clearfix">		
 <div id="cu-writing">
-<a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' ></a>
+<a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' ></a>
 </div>
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 </header>
