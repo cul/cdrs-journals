@@ -89,12 +89,12 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <div class="container" id="main">
 		
 		
-		<header role="banner">
-		<div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div>
+		<div id="header" class="span-22 prepend-1" role="banner">
+		<!-- <div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 		
-		<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"> </a></h1>
-			 
-		</header>
+	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
+			 <div id="cu-writing"  ><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
+		</div>
 		
 		<nav id="access" class="span-17 prepend-6 clearfix" role="navigation">
 		

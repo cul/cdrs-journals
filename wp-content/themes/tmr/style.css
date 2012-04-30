@@ -88,14 +88,12 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 	Comment blocks indicate where each begins and ends, like this, for example...
 */
 
-/* @override 
-	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/boilerplate/style.css
-	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/morningsidereview/style.css
-	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/carrington-jam-1.4/style.css
-	http://webdev.cdrs.columbia.edu/~jackson/tmr/www/wp-content/themes/tmr/style.css
+/* @override  
 	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
 	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
 */
+
+
 
 /** START HTML5 Boilerplate CSS **/
 
@@ -275,8 +273,13 @@ div#cu-writing {
 	text-align: right;
  }
  
+div#header div#cu-writing{
+	float: right;
+	margin-top: -130px;
+}
+ 
 div#cu-writing img{
-	margin-right: 30px;
+ 
 }
 
 ul.home-nav li a {
@@ -700,7 +703,7 @@ body.home div#main.container {
 }
 
  
-body.home #cu-writing {
+body.home div#header #cu-writing {
  float: right;
 	margin-top: -53px;
 	 
@@ -1028,5 +1031,18 @@ img.attachment-post-thumbnail,img.attachment-thumbnail{
 a.meta-link {
 	display: block;
 	font-size: 100%;
+}
+
+
+ul.about-nav {
+margin-left: 0;	
+}
+
+ul.about-nav li{
+	float: left;
+	width: 32%;
+	  text-align: center;
+	   height: 35px;
+	padding-top: 9px;
 }
  

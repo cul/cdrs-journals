@@ -22,7 +22,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 
-<div class="span-18 prepend-4">
+<div class="span-17 prepend-6">
 
 <?php
  

@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 
-<div id="cu-writing" class="span-24"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
+
 <?php
 
 wp_footer();

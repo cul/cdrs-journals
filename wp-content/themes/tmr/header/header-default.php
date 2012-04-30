@@ -85,11 +85,11 @@ function my_scripts_method() {
 </div>
 
 <div class="container" id="main">
-<div id='header' role="banner" class="span-15 prepend-1">		
+<div id='header' role="banner" class="span-22 prepend-1">		
 
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
 
-
+<div id="cu-writing" class="span-24"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
 
 </div>
 
