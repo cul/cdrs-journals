@@ -180,7 +180,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 .content{
 	color: #101111;
-	margin-top: 18px;
+ 
 	/*line-height: 1.6;
 	font-family: "Sorts Mill Goudy";*/
 }
@@ -200,9 +200,8 @@ body.home p{
 
 
   ul.home-nav li p {
-	 margin-bottom: 0;
- 
- 
+	margin-left: 17px;
+	margin-bottom: 0;
 }
 
  div#header h1{
@@ -214,9 +213,9 @@ body.home p{
 	line-height: 50px;
 	margin-right: 0;
 	margin-bottom: 0;
-	padding-left: 198px;
-	padding-bottom: 85px;
-	padding-top: 0;
+	padding-left: 182px;
+	padding-bottom: 69px;
+	padding-top: 21px;
 	margin-top: 33px;
 	font-weight: 700;
 }
@@ -255,7 +254,21 @@ ul, ol { margin-left: 2em; list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
-	margin-top: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	list-style-type: disc;
+	list-style-position: inside;
+	}
+
+ul.home-nav li {
+ 
+ 
+}
+
+ul.home-nav li a {
+	/*border-left-style: solid;
+	border-left-width: 10px;
+	padding-left: 5px;*/
 }
 
 div#cu-writing {
@@ -686,15 +699,15 @@ body.home div#main.container {
 	margin-top: 18px;
 }
 
-body.home div#cu-writing {
-  padding-top: 28px;
-	margin-left: 647px;
-}
+ 
 body.home #cu-writing {
  float: right;
-	margin-right: 8px;
-	margin-top: -82px;
-	padding-right: 10px;
+	margin-top: -53px;
+	 
+}
+
+body.home #cu-writing img{
+	margin-right: 16px;
 }
 
 div.span-8.center.content {
