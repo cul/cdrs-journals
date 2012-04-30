@@ -92,7 +92,7 @@ function my_scripts_method() {
 
 
 </div>
-<div class="span-8 last"><div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div></div>
+
  
 
 		

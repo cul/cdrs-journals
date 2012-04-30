@@ -210,14 +210,15 @@ body.home p{
  
 	background: url(img/lion.png) no-repeat 0 10px;
   	color: #f9d244;
-	font-size: 50px;
+	font-size: 45px;
 	line-height: 50px;
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 198px;
 	padding-bottom: 85px;
 	padding-top: 0;
-	margin-top: 21px;
+	margin-top: 33px;
+	font-weight: 700;
 }
 
  div#header h1 a{
@@ -258,8 +259,11 @@ ul.home-nav {
 }
 
 div#cu-writing {
-	margin-top: 152px;
-	margin-left: 52px;
+	text-align: right;
+ }
+ 
+div#cu-writing img{
+	margin-right: 30px;
 }
 
 ul.home-nav li a {
