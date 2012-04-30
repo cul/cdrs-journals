@@ -109,6 +109,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, augue a
 /* comments_template(); */
 
 /* get_sidebar(); */
-get_footer();
+
+cfct_template_file('footer', 'page-home.php'); 
 
 ?>
