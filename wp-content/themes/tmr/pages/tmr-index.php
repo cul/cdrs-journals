@@ -107,6 +107,28 @@ cfct_template_file('header', 'header-essay.php');
 
 
 <div id='sources' class="span-16 prepend-1 taxlist-toggle">
+<h1>On Writing</h1>
+
+<ul id='on-writing' class='taxonomy-list clearfix'>
+<?php  $ow_essays = new WP_Query( 'category_name=on-writing&post_type=essay' );
+
+ 
+
+while ( $ow_essays->have_posts() ) : $ow_essays->the_post();
+	 ?> <li><a href="<? the_permalink() ?>"> <? the_title()?></a></li> <?php
+	 
+	 endwhile;
+
+ 
+wp_reset_postdata();
+
+
+ 
+
+?>
+
+</ul>
+
 
  <h1>Highlighted Source</h1>
 <ul id='sources' class='taxonomy-list clearfix'>
