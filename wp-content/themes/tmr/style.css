@@ -191,24 +191,13 @@ h3.flyer {
 }
  
 
-header h1 {
-	
-margin-top: -44px;
-margin-left: 13%;
-	
-}
+ 
 body.home p{
 	font-size: 80%;
-}
-body.home header h1 {
-	
- margin-top: 105px;
-margin-left: 13%;
+	margin-right: 20px;
 }
 
-body.home #cu-writing a img {
-	width: 200px;
-}
+
 
   ul.home-nav li p {
 	 margin-bottom: 0;
@@ -216,16 +205,24 @@ body.home #cu-writing a img {
  
 }
 
-header h1 a {
-	text-indent: -10000px;
-	display: block;
-	background: url(img/themorningsidereview.png) no-repeat;
-	height: 130px;
-	width: 400px;
+ div#header h1{
+
  
-	
+	background: url(img/lion.png) no-repeat 0 10px;
+  	color: #f9d244;
+	font-size: 50px;
+	line-height: 50px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 198px;
+	padding-bottom: 85px;
+	padding-top: 0;
+	margin-top: 21px;
 }
 
+ div#header h1 a{
+	 	color: #f9d244;
+}
 
 
 
@@ -257,7 +254,12 @@ ul, ol { margin-left: 2em; list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
+	margin-top: 40px;
+}
 
+div#cu-writing {
+	margin-top: 152px;
+	margin-left: 52px;
 }
 
 ul.home-nav li a {
@@ -303,6 +305,15 @@ pre {
    3) Set font-size to match <body>'s, and font-family to sans-serif
    4) Align to baseline */
 button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+body.home #searchsubmit {
+	float: right;
+	margin-top: 9px;
+}
+
+body.home input#s.field {
+	width: 200px;
+}
 
 /* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
    2) Align to text-top */
@@ -357,6 +368,7 @@ h1{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 1em;
+	margin-right: 19px;
 }
 
 #content div blockquote {
@@ -369,8 +381,7 @@ nav#access {
  /*font-family: 'Cantarell', sans-serif;*/
  
   margin-bottom: 1em;
- 
-		
+	margin-top: -26px;
 }
 
 body.home div#main{
@@ -385,6 +396,7 @@ nav#access li a{
  
 	text-transform: uppercase;
 	text-decoration: none;
+	color: #f8a12d;
 }
 
 nav#access li a:hover{
@@ -664,22 +676,25 @@ img#meta-toggle {
 	margin-right: -11px;
 }
 
-body.home div#cu-writing {
-  padding-top: 0px;
-	margin-left: 0px;
-	margin-top: 40px;
-	margin-bottom: 10px;
-}
+
 
 body.home div#main.container {
 	margin-top: 18px;
 }
 
-div#cu-writing {
+body.home div#cu-writing {
   padding-top: 28px;
 	margin-left: 647px;
 }
+body.home #cu-writing {
+ float: right;
+	margin-right: 8px;
+	margin-top: -82px;
+	padding-right: 10px;
+}
 
+div.span-8.center.content {
+}
 span.author-credit {
 	font-size: 150%;
 	text-align: left;

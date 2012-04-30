@@ -75,22 +75,21 @@ function my_scripts_method() {
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container">
-
-
-</div>
+ 
 
 <div class="container" id="main">
 
-<header role="banner" class="span-14 prepend-1">		
+<div id='header' role="banner" class="span-15 prepend-1">		
 
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/themorningsidereview.png" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
 
-</header>
+<div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
+
+</div>
  
-<div class="span-7 prepend-1  last">
+<div class="span-8 last">
  
-<div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> 
+
 
 <ul class="home-nav">
 

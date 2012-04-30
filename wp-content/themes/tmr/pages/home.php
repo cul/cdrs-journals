@@ -22,7 +22,7 @@ cfct_template_file('header', 'home.php');
 
 ?>
 
-<div class="span-6 prepend-1 content">
+<div class="span-7 prepend-1 content">
 
 
 <h1 class="homepage-label" >Featured Contributors</h1>
@@ -58,7 +58,15 @@ wp_reset_postdata();
 
 
 
-<div class="span-7 prepend-1 content">
+<div class="span-8 center content">
+<h1 class="homepage-label">From The Director</h1>
+ 
+<p>
+Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a>
+ 
+</p>
+
+
 <h1 class="homepage-label">On Writing</h1>
 <?php
 
@@ -79,22 +87,18 @@ Year
 -->
 
 </div>
-<div class="span-7 prepend-1 content last">
-
-<h1 class="homepage-label">From The Director</h1>
- 
+<div class="span-7 content last">
 <p>
-Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a>
- 
-</p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, augue aliquet porttitor placerat, mi dui fringilla metus, ac feugiat lacus justo non quam. Nulla pulvinar egestas pretium. Donec cursus pulvinar libero in lacinia. Phasellus rhoncus pellentesque odio quis tempus.   </p>
 
+<p>Donec sit amet bibendum dui. Aenean et lacus libero. Nam vitae orci eros, non pretium urna. Fusce metus risus, fermentum ut sollicitudin vitae, mattis eget erat.  </p>
 <h1 class="homepage-label">Connect With TMR</h1>
 
 <a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
 <a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<? bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
 <img src="<? bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
 
-<br>
+<h1 class="homepage-label">Search</h1>
 
 <?php get_search_form(); ?>
 </div>

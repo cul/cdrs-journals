@@ -85,12 +85,16 @@ function my_scripts_method() {
 </div>
 
 <div class="container" id="main">
-<header role="banner" class="clearfix">		
-<div id="cu-writing">
-<a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png" title='Selected Essasys from the Undergraduate Writing Program at Columbia University' alt='Selected Essasys from the Undergraduate Writing Program at Columbia University' ></a>
+<div id='header' role="banner" class="span-15 prepend-1">		
+
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
+
+
+
 </div>
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-</header>
+<div class="span-8 last"><div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div></div>
+ 
+
 		
 <nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
