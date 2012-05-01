@@ -204,7 +204,7 @@ body.home p{
 
  
 
-div#header h1{
+body.home div#header h1{
 
  
 	background: url(img/lion.png) no-repeat 0 10px;
@@ -219,9 +219,21 @@ div#header h1{
 	margin-bottom: 0;
 	padding-bottom: 29px;
 	padding-top: 10px;
+		margin-top: 70px;
 }
 div#header h1{
-	margin-top: 70px;
+
+	background: url(img/lion.png) no-repeat 0 10px;
+  	color: #f9d244;
+	font-size: 40px;
+	padding-left: 100px;
+	font-weight: 700;
+	line-height: 38px;
+	text-shadow: #f8c03f 1px 1px 1px;
+	margin-left: -100px;
+	padding-bottom: 17px;
+	padding-top: 8px;
+	margin-top: 20px;
 }
 span.y {
 		color: #f9ed45;
@@ -279,17 +291,16 @@ ul.home-nav li a {
 	padding-left: 5px;*/
 }
 
-div#cu-writing {
-	text-align: right;
- }
  
-div#header div#cu-writing{
+ 
+body.home div#header div#cu-writing{
 	float: right;
 	margin-top: -53px;
 }
  
-div#cu-writing img{
- 
+div#cu-writing {
+ float: right;
+	margin-top: -84px;
 }
 
 ul.home-nav li a {
