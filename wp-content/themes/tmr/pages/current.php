@@ -24,7 +24,7 @@ get_header();
 
 ?>
 
-<div class="span-17 prepend-6 content clearfix">
+<div class="span-16 prepend-6 content clearfix">
  <h3 class="flyer">Current Edition</h3>
 
 <ul class="edition-list">
