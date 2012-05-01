@@ -39,7 +39,7 @@ $authors = get_the_terms( $post->ID, 'author' );
 if($authors){
 
 foreach($authors as $term){
-      echo '<a class="author" href="'.get_term_link($term->slug, 'author').'">'.$term->name.'</a>'; 
+      echo '<a class="author" href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a>'; 
 
 }
 
