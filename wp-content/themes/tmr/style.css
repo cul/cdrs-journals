@@ -185,6 +185,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 h3.flyer {
 	color: #f9b120;
+	text-transform: uppercase;
  
 }
  
@@ -237,7 +238,9 @@ div#header h1{
 }
 
 li.essay h1 {
-margin-bottom: 0;	
+margin-bottom: 0;
+	font-size: 20px;
+	line-height: 20px;
 }
 span.y {
 		 
@@ -271,8 +274,8 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
+a, a:active, a:visited { color: #8d5d41; }
+a.title-link:hover, a:hover { color: #a33420; }
 
 ul, ol { margin-left: 2em; list-style-type: none;}
 
@@ -806,7 +809,7 @@ li.essay h1 a {
 margin: 0;
 color: #56494f;
 text-decoration: none;
-	line-height: 0;
+ 
 }
 
 h1.edition-label {
@@ -834,8 +837,10 @@ ul.archive-list li{
 a.title-link {
 	
 	display: block;
-	font-size: 150%;
-	
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	color: #56494f;
 }
 
 span.edition-link {
