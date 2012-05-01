@@ -50,7 +50,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
-			<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/print.css"/>
+	<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/print.css"/>
 
 <?php
 
@@ -89,7 +89,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <div class="container" id="main">
 		
 		
-		<div id="header" class="span-22 prepend-1" role="banner">
+		<div id="header" class="span-16 prepend-6" role="banner">
 		<!-- <div id="cu-writing"><a href="http://www.columbia.edu/itc/uwp/journal/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 		
 	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
