@@ -34,7 +34,7 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-17 prepend-6">
+<div id="content" role="main" class="span-15 prepend-6">
 
 <h1 class="edition-label"> <?php the_title() ?> </h1>
 
