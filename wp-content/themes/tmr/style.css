@@ -198,24 +198,33 @@ body.home p{
 
 
   ul.home-nav li p {
-	margin-left: 17px;
+ 
 	margin-bottom: 0;
 }
 
- div#header h1{
+ 
+
+div#header h1{
 
  
 	background: url(img/lion.png) no-repeat 0 10px;
   	color: #f9d244;
-	font-size: 45px;
-	line-height: 50px;
-	margin-right: 0;
-	margin-bottom: 0;
-	padding-left: 182px;
-	padding-bottom: 69px;
-	padding-top: 21px;
-	margin-top: 33px;
+	font-size: 40px;
+	padding-left: 100px;
 	font-weight: 700;
+	line-height: 38px;
+	text-shadow: #f8c03f 1px 1px 1px;
+	margin-right: 0;
+	margin-left: 35px;
+	margin-bottom: 0;
+	padding-bottom: 29px;
+	padding-top: 10px;
+}
+div#header h1{
+	margin-top: 70px;
+}
+span.y {
+		color: #f9ed45;
 }
 
  div#header h1 a{
@@ -254,9 +263,10 @@ ul.home-nav {
 	margin-left: 0;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	list-style-type: disc;
+	 
 	list-style-position: inside;
-	}
+	color: #f8aa1f;
+}
 
 ul.home-nav li {
  
@@ -275,7 +285,7 @@ div#cu-writing {
  
 div#header div#cu-writing{
 	float: right;
-	margin-top: -130px;
+	margin-top: -53px;
 }
  
 div#cu-writing img{
@@ -289,7 +299,7 @@ text-transform: uppercase;
  
 
 font-size: 140%;
-color: #f9c82f;
+color: #f15a22;
 
 
 
@@ -383,7 +393,7 @@ h1{
 }
  H1.homepage-label{
  
-	border-bottom: 1px solid #acacac;
+	border-bottom: 2px dotted #acacac;
 	border-top: 1px solid #acacac;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -399,9 +409,8 @@ h1{
 nav#access {
 		/*font-family: "Futura Medium", futura;*/
  /*font-family: 'Cantarell', sans-serif;*/
- 
+  margin-top:1em;
   margin-bottom: 1em;
-	margin-top: -26px;
 }
 
 body.home div#main{
@@ -705,8 +714,7 @@ body.home div#main.container {
  
 body.home div#header #cu-writing {
  float: right;
-	margin-top: -53px;
-	 
+	margin-top: 0;
 }
 
 body.home #cu-writing img{
