@@ -392,13 +392,15 @@ h1{
  
 }
  H1.homepage-label{
- 
-	border-bottom: 2px dotted #acacac;
-	border-top: 1px solid #acacac;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 1em;
 	margin-right: 19px;
+color: #f8aa1f;
+	border-bottom-style: dotted;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-top-width: 1px;
 }
 
 #content div blockquote {
