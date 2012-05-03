@@ -28,7 +28,7 @@ get_header();
  <h3 class="flyer">Current Edition</h3>
 
 <ul class="edition-list">
-<?
+<?php
 
 $term = get_term_by('slug', 'current', 'edition');
 
@@ -67,7 +67,7 @@ foreach($authors as $term){
 
 </li>
 
-<? 
+<?php
  
 }
 	}
@@ -80,7 +80,7 @@ foreach($authors as $term){
 </ul>
 </div>
 
-<?
+<?php
 /* comments_template(); */
 
 /* get_sidebar(); */

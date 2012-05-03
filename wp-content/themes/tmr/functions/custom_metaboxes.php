@@ -33,25 +33,60 @@ function edition_layout($post) {
 
 	$getEdition = wp_get_object_terms($post->ID, 'edition', 'fields=names');
 	$getFullEdition = get_terms('edition', 'fields=names&hide_empty=0');
+	
+	//find position of none in edition taxonomy list
+	$noneE = array_search("None",$getFullEdition);
+	
+	//find position of current in edition taxonomy list
+	$currentE = array_search("Current",$getFullEdition); 
 
+	//find the checked edition
 	for($checkE=0; $checkE<sizeof($getEdition); $checkE++) {
 		if (in_array($getEdition[$checkE], $getFullEdition)) {
 			$checkedE = $getEdition[$checkE];
 		}
 	}
-	?>
-
-	<select name="post_edition">
-		<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
-			if ($getFullEdition[$loopE] == $checkedE) { ?>
-				<option value="<?php echo $getFullEdition[$loopE]; ?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
-			<?php }
-			else { ?>
-				<option value="<?php echo $getFullEdition[$loopE]; ?>"><?php echo $getFullEdition[$loopE]; ?></option>
-			<?php }
-		} ?>
-	</select>
-<?php }
+	
+	if($checkedE == "None") { ?>
+		<select name="post_edition">
+			<option value="<?php echo $getFullEdition[$noneE]; ?>" selected><?php echo $getFullEdition[$noneE]; ?></option>
+			
+			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
+				if ($loopE == $noneE) {
+					//do nothing
+				}
+				if ($loopE == $currentE) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullEdition[$loopE]; ?>"><?php echo $getFullEdition[$loopE]; ?></option>
+				<?php }
+			} ?>
+			<option value="<?php echo $getFullEdition[$currentE]; ?>"><?php echo $getFullEdition[$currentE]; ?></option>
+		</select>
+	<?php }
+	else { ?>
+		<select name="post_edition">
+			<option value="<?php echo $getFullEdition[$noneE]; ?>"><?php echo $getFullEdition[$noneE]; ?></option>
+			
+			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
+				if ($getFullEdition[$loopE] == $checkedE) { ?>
+					<option value="<?php echo $getFullEdition[$loopE]; ?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
+				<?php }
+				elseif($loopE==$noneE) {
+					//do nothing
+				}
+				elseif($loopE==$currentE) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullEdition[$loopE]; ?>"><?php echo $getFullEdition[$loopE]; ?></option>
+				<?php }
+			} ?>
+			<option value="<?php echo $getFullEdition[$currentE]; ?>"><?php echo $getFullEdition[$currentE]; ?></option>
+		</select>
+	<?php }
+}
 
 /*
 CUSTOM METABOX FOR AUTHOR
@@ -59,7 +94,7 @@ CUSTOM METABOX FOR AUTHOR
 function author_layout($post) {
 	wp_nonce_field(__FILE__,'author_nonce');
 	
-	echo "Enter the Author Name:<br>";
+	echo "Enter the Author Name <em>(Last,First)</em>:<br>";
 	
 	$getAuthor = wp_get_object_terms($post->ID, 'author', 'fields=names');
 	$getFullAuthor = get_terms('author', 'fields=names&hide_empty=0');
@@ -85,26 +120,48 @@ function progression_layout($post) {
 
 	$getProgression = wp_get_object_terms($post->ID, 'progression', 'fields=names');
 	$getFullProgression = get_terms('progression', 'fields=names&hide_empty=0&orderby=id');
+	
+	//find position of none in edition taxonomy list
+	$noneP = array_search("None",$getFullProgression);
 
 	for($checkP=0; $checkP<sizeof($getProgression); $checkP++) {
 		if (in_array($getProgression[$checkP], $getFullProgression)) {
 			$checkedP = $getProgression[$checkP];
 		}
 	}
-
-	?>
-
-	<select name="post_progression">
-		<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
-			if ($getFullProgression[$loopP] == $checkedP) { ?>
-				<option value="<?php echo $getFullProgression[$loopP]; ?>" selected><?php echo $getFullProgression[$loopP]; ?></option>
-			<?php }
-			else { ?>
-				<option value="<?php echo $getFullProgression[$loopP];?>"><?php echo $getFullProgression[$loopP]; ?></option>
-			<?php }
-		} ?>
-	</select>
-<?php }
+	
+	if($checkedP == "None") { ?>
+		<select name="post_progression">
+			<option value="<?php echo $getFullProgression[$noneP]; ?>" selected><?php echo $getFullProgression[$noneP]; ?></option>
+			
+			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
+				if ($loopP == $noneP) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullProgression[$loopP];?>"><?php echo $getFullProgression[$loopP]; ?></option>
+				<?php }
+			} ?>
+		</select>
+	<?php }
+	else { ?>
+		<select name="post_progression">
+			<option value="<?php echo $getFullProgression[$noneP]; ?>"><?php echo $getFullProgression[$noneP]; ?></option>
+			
+			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
+				if ($getFullProgression[$loopP] == $checkedP) { ?>
+					<option value="<?php echo $getFullProgression[$loopP]; ?>" selected><?php echo $getFullProgression[$loopP]; ?></option>
+				<?php }
+				elseif ($loopP == $noneP) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullProgression[$loopP];?>"><?php echo $getFullProgression[$loopP]; ?></option>
+				<?php }
+			} ?>
+		</select>	
+	<?php }
+}
 
 /*
 CUSTOM METABOX FOR SOURCE
@@ -181,24 +238,48 @@ function theme_layout($post) {
 
 	$getTheme = wp_get_object_terms($post->ID, 'theme', 'fields=names');
 	$getFullTheme = get_terms('theme', 'fields=names&hide_empty=0');
+	
+	//find position of none in edition taxonomy list
+	$noneTH = array_search("None",$getFullTheme);
 
 	for($checkTH=0; $checkTH<sizeof($getTheme); $checkTH++) {
 		if (in_array($getTheme[$checkTH], $getFullTheme)) {
 			$checkedTH = $getTheme[$checkTH];
 		}
-	} ?>
-
-	<select name="tax_theme">
-		<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
-			if ($getFullTheme[$loopTH] == $checkedTH) { ?>
- 				<option value="<?php echo $getFullTheme[$loopTH]; ?>" selected><?php echo $getFullTheme[$loopTH]; ?></option>
-			<?php }
-			else { ?>
-				<option value="<?php echo $getFullTheme[$loopTH]; ?>"><?php echo $getFullTheme[$loopTH]; ?></option>
- 			<?php }
-		} ?>
-	</select>
-<?php }
+	}
+	
+	if($checkedTH == "None") { ?>
+		<select name="tax_theme">
+			<option value="<?php echo $getFullTheme[$noneTH]; ?>" selected><?php echo $getFullTheme[$noneTH]; ?></option>
+		
+			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
+				if ($loopTH == $noneTH) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullTheme[$loopTH]; ?>"><?php echo $getFullTheme[$loopTH]; ?></option>
+				<?php }
+ 			} ?>
+		</select>
+	<?php }
+	else { ?>
+		<select name="tax_theme">
+			<option value="<?php echo $getFullTheme[$noneTH]; ?>"><?php echo $getFullTheme[$noneTH]; ?></option>
+			
+			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
+				if ($getFullTheme[$loopTH] == $checkedTH) { ?>
+					<option value="<?php echo $getFullTheme[$loopTH]; ?>" selected><?php echo $getFullTheme[$loopTH]; ?></option>
+				<?php }
+				elseif ($loopTH == $noneTH) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullTheme[$loopTH];?>"><?php echo $getFullTheme[$loopTH]; ?></option>
+				<?php }
+			} ?>
+		</select>	
+	<?php }
+}
 
 /*
 CUSTOM METABOX FOR STRATEGY
@@ -211,23 +292,47 @@ function strategy_layout($post) {
 	$getStrategy = wp_get_object_terms($post->ID, 'strategy', 'fields=names');
 	$getFullStrategy = get_terms('strategy', 'fields=names&hide_empty=0');
 	
+	//find position of none in edition taxonomy list
+	$noneS = array_search("None",$getFullStrategy);
+	
 	for($checkS=0; $checkS<sizeof($getStrategy); $checkS++) {
 		if (in_array($getStrategy[$checkS], $getFullStrategy)) {
-			$checkedS = $getTheme[$checkS];
+			$checkedS = $getStrategy[$checkS];
 		}
-	} ?>
-
-	<select name="tax_strategy">
-		<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
-			if ($getFullStrategy[$loopS] == $checkedS) { ?>
- 				<option value="<?php echo $getFullStrategy[$loopS]; ?>" selected><?php echo $getFullStrategy[$loopS]; ?></option>
-			<?php }
-			else { ?>
-				<option value="<?php echo $getFullStrategy[$loopS]; ?>"><?php echo $getFullStrategy[$loopS]; ?></option>
- 			<?php }
-		} ?>
-	</select>
-<?php }
+	}
+	
+	if($checkedS == "None") { ?>
+		<select name="tax_strategy">
+			<option value="<?php echo $getFullStrategy[$noneS]; ?>" selected><?php echo $getFullStrategy[$noneS]; ?></option>
+		
+			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
+				if ($loopS == $noneS) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullStrategy[$loopS]; ?>"><?php echo $getFullStrategy[$loopS]; ?></option>
+				<?php }
+ 			} ?>
+		</select>
+	<?php }
+	else { ?>
+		<select name="tax_strategy">
+			<option value="<?php echo $getFullStrategy[$noneS]; ?>"><?php echo $getFullStrategy[$noneS]; ?></option>
+			
+			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
+				if ($getFullStrategy[$loopS] == $checkedS) { ?>
+					<option value="<?php echo $getFullStrategy[$loopS]; ?>" selected><?php echo $getFullStrategy[$loopS]; ?></option>
+				<?php }
+				elseif ($loopS == $noneS) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullStrategy[$loopS];?>"><?php echo $getFullStrategy[$loopS]; ?></option>
+				<?php }
+			} ?>
+		</select>	
+	<?php }
+}
 
 /*
 CUSTOM METABOX FOR ASSIGNMENT
@@ -239,24 +344,48 @@ function assignment_layout($post) {
 
 	$getAssignment = wp_get_object_terms($post->ID, 'assignment', 'fields=names');
 	$getFullAssignment = get_terms('assignment', 'fields=names&hide_empty=0');
+	
+	//find position of none in edition taxonomy list
+	$noneA = array_search("None",$getFullAssignment);
 
 	for($checkA=0; $checkA<sizeof($getAssignment); $checkA++) {
 		if (in_array($getAssignment[$checkA], $getFullAssignment)) {
 			$checkedA = $getAssignment[$checkA];
 		}
-	} ?>
-
-	<select name="tax_assignment">
-		<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
-			if ($getFullAssignment[$loopA] == $checkedA) { ?>
- 				<option value="<?php echo $getFullAssignment[$loopA]; ?>" selected><?php echo $getFullAssignment[$loopA]; ?></option>
-			<?php }
-			else { ?>
-				<option value="<?php echo $getFullAssignment[$loopA]; ?>"><?php echo $getFullAssignment[$loopA]; ?></option>
-			<?php }
-		} ?>
-	</select>
-<?php }
+	}
+	
+	if($checkedA == "None") { ?>
+		<select name="tax_assignment">
+			<option value="<?php echo $getFullAssignment[$noneA]; ?>" selected><?php echo $getFullAssignment[$noneA]; ?></option>
+			
+			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
+				if ($loopA == $noneA) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullAssignment[$loopA];?>"><?php echo $getFullAssignment[$loopA]; ?></option>
+				<?php }
+			} ?>
+		</select>
+	<?php }
+	else { ?>
+		<select name="tax_assignment">
+			<option value="<?php echo $getFullAssignment[$noneA]; ?>"><?php echo $getFullAssignment[$noneA]; ?></option>
+			
+			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
+				if ($getFullAssignment[$loopA] == $checkedA) { ?>
+					<option value="<?php echo $getFullAssignment[$loopA]; ?>" selected><?php echo $getFullAssignment[$loopA]; ?></option>
+				<?php }
+				elseif ($loopA == $noneA) {
+					//do nothing
+				}
+				else { ?>
+					<option value="<?php echo $getFullAssignment[$loopA];?>"><?php echo $getFullAssignment[$loopA]; ?></option>
+				<?php }
+			} ?>
+		</select>	
+	<?php }
+}
 
 
 /*

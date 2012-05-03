@@ -94,9 +94,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, augue a
 <p>Donec sit amet bibendum dui. Aenean et lacus libero. Nam vitae orci eros, non pretium urna. Fusce metus risus, fermentum ut sollicitudin vitae, mattis eget erat.  </p>
 <h1 class="homepage-label">Connect With TMR</h1>
 
-<a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
-<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<? bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
-<img src="<? bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
+<a href="http://twitter.com/MorningsideRev"><img src="<?php bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
+<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872"><img src="<?php bloginfo('stylesheet_directory') ?>/img/facebook_dark.png "></a>
+<img src="<?php bloginfo('stylesheet_directory') ?>/img/rss_dark.png ">
 
 <h1 class="homepage-label">Search</h1>
 
@@ -105,7 +105,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, augue a
 
 
 
-<?
+<?php
 /* comments_template(); */
 
 /* get_sidebar(); */
