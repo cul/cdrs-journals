@@ -95,7 +95,7 @@ Year
 
 <a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
 <a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
-<a href="mailto:morningsidereview@gmail.com" class="home-social" id="email">email</a>
+<a href="mailto:uwp@columbia.edu" class="home-social" id="email">email</a>
 
 <h1 class="homepage-label">Search</h1>
 
