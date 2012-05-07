@@ -1105,4 +1105,35 @@ ul.about-nav li{
 ul.archive-list {
 	margin-left: 0;
 }
+
+a.home-social {
+display: inline-block;
+width: 32px;
+height: 32px;
+text-indent: -1000px;
+}
+
+#facebook {
+	background: url(img/facebook.png) no-repeat 0 0;
+}
+
+#facebook:hover {
+	background: url(img/facebook.png) no-repeat 0 -33px;
+}
+
+#twitter {
+	background: url(img/twitter.png) no-repeat 0 0;
+}
+
+#twitter:hover {
+	background: url(img/twitter.png) no-repeat 0 -33px;
+}
+
+#email {
+	background: url(img/email.png) no-repeat 0 0;
+}
+
+#email:hover {
+	background: url(img/email.png) no-repeat 0 -33px;
+}
  
