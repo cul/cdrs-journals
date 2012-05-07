@@ -24,9 +24,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <a href="<?php the_permalink() ?>"><?php the_title(); ?></a><br>
 <?php 
 
- 
- 
-
 $product_terms = wp_get_object_terms($post->ID, 'edition');
 if(!empty($product_terms)){
   if(!is_wp_error( $product_terms )){

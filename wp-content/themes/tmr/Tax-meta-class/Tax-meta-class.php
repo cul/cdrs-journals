@@ -822,7 +822,7 @@ class Tax_Meta_Class {
 			echo "<textarea class='at-wysiwyg theEditor large-text' name='{$field['id']}' id='{$field['id']}' cols='60' rows='10'>{$meta}</textarea>";
 		}else{
 			// Use new wp_editor() since WP 3.3
-			wp_editor( stripslashes(html_entity_decode($meta,ENT_COMPAT,"UTF-8")), $field['id'], array( 'editor_class' => 'at-wysiwyg' ) );
+			wp_editor( stripslashes(html_entity_decode(wpautop($meta),ENT_COMPAT,"UTF-8")), $field['id'], array( 'editor_class' => 'at-wysiwyg' ) );
 		}
 		
 		$this->show_field_end( $field, $meta );
@@ -1143,7 +1143,7 @@ class Tax_Meta_Class {
 	 * @access public 
 	 */
 	public function save_field_wysiwyg( $term_id, $field, $old, $new ) {
-		$this->save_field( $term_id, $field, $old, wpautop($new) );
+		$this->save_field( $term_id, $field, $old, stripslashes(wpautop($new)) );
 	}
 	
 	/**
