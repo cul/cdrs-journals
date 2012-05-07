@@ -1,3 +1,5 @@
+/* @override http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css */
+
 /*
 
 Theme Name: the Morningside Review
@@ -25,8 +27,12 @@ Tags: cdrs
 
 NOTE: This file is not used in this theme but is included for WordPress theme expected format compatibility - it's standard to use the css/ dir for actual theme CSS in a Carrington-based theme.
 
+ 
+/* @override 
+	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
+	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
+ 
 */
-
 
 /* including for compatibility */
 
@@ -72,26 +78,7 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 
 
 
-/*
-	Theme Name: Morningsidereivew
-	Theme URI: http://cdrs.columbia.edu
-	Description: Custom theme for The Morningside Review developed by the Center for Digtial Research and Scholarship at Columbia Univeristy.
-	Author: Jackson Harvell for CDRS (Based on the work of Aaron T. Grogg, Paul Irish, Divya Manian, and Elliot Jay Stocks)
-	Author URI:  
-	Version:  1.0
-	Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
-
-	License: GNU General Public License v2.0
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-	This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
-	Comment blocks indicate where each begins and ends, like this, for example...
-*/
-
-/* @override  
-	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
-	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
-*/
+ 
 
 
 
@@ -212,7 +199,7 @@ body.home div#header h1{
 	font-size: 40px;
 	padding-left: 100px;
 	font-weight: 700;
-	line-height: 33px;
+ 
 
 	margin-right: 0;
 	margin-left: 35px;
@@ -224,16 +211,24 @@ body.home div#header h1{
 div#header h1{
 
 	background: url(img/lion.png) no-repeat 0 10px;
-  	color: #f9d244;
 	font-size: 40px;
 	padding-left: 100px;
 	font-weight: 700;
-	line-height: 38px;
+	line-height: 35px;
  
 	margin-left: -100px;
 	padding-bottom: 17px;
 	padding-top: 8px;
 	margin-top: 20px;
+	letter-spacing: -2px;
+}
+
+#colophon a {
+	color: #002b7f;
+}
+#colophon a:hover {
+	color: #0038a8;
+	text-decoration: underline;
 }
 
 li.essay h1 {
@@ -245,15 +240,22 @@ span.y {
 		 
 }
 
- div#header h1 a{
-	 	color: #3e6068;
-	 		text-shadow: #cadde6 2px 1px 2px;
+span.light {
+	 font-size: 30px;
+ 
+	line-height: 25px;
+	letter-spacing: 1px;
+	 
+	font-weight: 400;
 }
 
-span.light {
-	font-weight: 400;
-	 font-size: 35px;
+span.bottom {
  
+}
+
+div#header h1 a{
+	 	color: #3e6068;
+	 		text-shadow: #cadde6 2px 1px 2px;
 }
 
 
@@ -357,11 +359,11 @@ button, input, select, textarea { width: auto; overflow: visible; margin: 0; fon
 
 body.home #searchsubmit {
 	float: right;
-	margin-top: 9px;
+	margin-top: 7px;
 }
 
 body.home input#s.field {
-	width: 180px;
+	width: 198px;
 }
 
 /* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
