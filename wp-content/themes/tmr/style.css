@@ -209,11 +209,10 @@ body.home div#header h1{
 
  
 	background: url(img/lion.png) no-repeat 0 10px;
-  	color: #5c5d5d;
 	font-size: 40px;
 	padding-left: 100px;
 	font-weight: 700;
-	line-height: 38px;
+	line-height: 33px;
 
 	margin-right: 0;
 	margin-left: 35px;
@@ -247,8 +246,14 @@ span.y {
 }
 
  div#header h1 a{
-	 	color: #667176;
-	 		text-shadow: #cadde6 1px 1px 1px;
+	 	color: #3e6068;
+	 		text-shadow: #cadde6 2px 1px 2px;
+}
+
+span.light {
+	font-weight: 400;
+	 font-size: 35px;
+ 
 }
 
 
@@ -274,8 +279,8 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-a, a:active, a:visited { color: #8d5d41; }
-a.title-link:hover, a:hover { color: #a33420; }
+a, a:active, a:visited { color: #9b534d; }
+a.title-link:hover, a:hover { color: #ce3525; }
 
 ul, ol { margin-left: 2em; list-style-type: none;}
 
@@ -318,12 +323,7 @@ text-transform: uppercase;
  
 
 font-size: 140%;
- 
-
-
-
- 
-
+	color: #9b534d;
 }
 ol { list-style-type: decimal; }
 
@@ -361,7 +361,7 @@ body.home #searchsubmit {
 }
 
 body.home input#s.field {
-	width: 200px;
+	width: 180px;
 }
 
 /* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
@@ -445,13 +445,14 @@ nav#access li a{
  
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #f8a12d;
+	color: #9b534d;
 }
 
 nav#access li a:hover{
  
-	text-transform: uppercase;
-	text-decoration: underline;
+ 
+	
+	color: #ce3525;
 }
 
 
@@ -812,6 +813,19 @@ text-decoration: none;
  
 }
 
+
+li.essay h1 a:hover {
+ 
+ 
+margin: 0;
+	
+	color: #ce3525;
+text-decoration: none;
+ 
+}
+
+
+
 h1.edition-label {
 	font-size: 2em;
  	 margin-top: 0;
@@ -923,6 +937,10 @@ p.numbered_para a.numbered-item:hover
 #access li {
 	float: left;
 	position: relative;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	
+		/* optional rounded corners for browsers that support it */
 }
 #access a {
  
@@ -964,17 +982,23 @@ p.numbered_para a.numbered-item:hover
 #access a:focus {
 	background: #efefef;
 }
-#access li:hover > a,
+ 
  
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
- 
- 
-	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
- 
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #3e6068;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-bottom-style: none;
+	
+		-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
 }
 #access ul li:hover > ul {
 	display: block;
@@ -983,7 +1007,7 @@ p.numbered_para a.numbered-item:hover
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-	/*font-weight: bold;*/
+	color: #3e6068;
 }
 
 a#skip {

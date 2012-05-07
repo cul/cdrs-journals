@@ -89,9 +89,8 @@ Year
 </div>
 <div class="span-7 content last">
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, augue aliquet porttitor placerat, mi dui fringilla metus, ac feugiat lacus justo non quam. Nulla pulvinar egestas pretium. Donec cursus pulvinar libero in lacinia. Phasellus rhoncus pellentesque odio quis tempus.   </p>
 
-<p>Donec sit amet bibendum dui. Aenean et lacus libero. Nam vitae orci eros, non pretium urna. Fusce metus risus, fermentum ut sollicitudin vitae, mattis eget erat.  </p>
+<p><em>The Morningside Review</em> is an online journal published by <a href='http://www.college.columbia.edu/core/uwp'>Undergraduate Writing Program at Columbia University</a>. It features exemplary essays written by first-year undergraduates in the Core Curriculum course, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=369">University Writing</a>. Hundreds of students voluntarily submit their essays to TMR for possible publication and approximately ten are chosen each year by an editorial advisory board made up of University Writing instructors.</p> <!-- <p>Since these essays serve as vivid examples of peer work, they are commonly assigned in University Writing. Students may be prompted by their instructors to identify the rhetorical strategies employed in an essay, contemplate their effectiveness, and attempt to emulate those they admire in their own work. Thus, Columbia University students may make their imprint on University Writing long after they have completed the course.</p> -->
 <h1 class="homepage-label">Connect With TMR</h1>
 
 <a href="http://twitter.com/MorningsideRev"><img src="<? bloginfo('stylesheet_directory') ?>/img/twitter02_dark.png "></a>
