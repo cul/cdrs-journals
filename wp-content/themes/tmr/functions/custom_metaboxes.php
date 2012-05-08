@@ -49,7 +49,7 @@ function edition_layout($post) {
 	
 	if($checkedE == "None") { ?>
 		<select name="post_edition">
-			<option value="" selected><?php echo $getFullEdition[$noneE]; ?></option>
+			<option value="" selected>None</option>
 			
 			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 				if ($loopE == $noneE) {
@@ -67,15 +67,12 @@ function edition_layout($post) {
 	<?php }
 	else { ?>
 		<select name="post_edition">
-			<option value=""><?php echo $getFullEdition[$noneE]; ?></option>
+			<option value="">None</option>
 			
 			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 				if ($getFullEdition[$loopE] == $checkedE) { ?>
 					<option value="<?php echo $getFullEdition[$loopE]; ?>" selected><?php echo $getFullEdition[$loopE]; ?></option>
 				<?php }
-				elseif($loopE==$noneE) {
-					//do nothing
-				}
 				elseif($loopE==$currentE) {
 					//do nothing
 				}
@@ -132,7 +129,7 @@ function progression_layout($post) {
 	
 	if($checkedP == "None") { ?>
 		<select name="post_progression">
-			<option value="" selected><?php echo $getFullProgression[$noneP]; ?></option>
+			<option value="" selected>None</option>
 			
 			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
 				if ($loopP == $noneP) {
@@ -146,15 +143,11 @@ function progression_layout($post) {
 	<?php }
 	else { ?>
 		<select name="post_progression">
-			<option value=""><?php echo $getFullProgression[$noneP]; ?></option>
-			
+			<option value="">None</option>
 			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
 				if ($getFullProgression[$loopP] == $checkedP) { ?>
 					<option value="<?php echo $getFullProgression[$loopP]; ?>" selected><?php echo $getFullProgression[$loopP]; ?></option>
 				<?php }
-				elseif ($loopP == $noneP) {
-					//do nothing
-				}
 				else { ?>
 					<option value="<?php echo $getFullProgression[$loopP];?>"><?php echo $getFullProgression[$loopP]; ?></option>
 				<?php }
@@ -250,7 +243,7 @@ function theme_layout($post) {
 	
 	if($checkedTH == "None") { ?>
 		<select name="tax_theme">
-			<option value="" selected><?php echo $getFullTheme[$noneTH]; ?></option>
+			<option value="" selected>None</option>
 		
 			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
 				if ($loopTH == $noneTH) {
@@ -264,15 +257,12 @@ function theme_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_theme">
-			<option value=""><?php echo $getFullTheme[$noneTH]; ?></option>
+			<option value="">None</option>
 			
 			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
 				if ($getFullTheme[$loopTH] == $checkedTH) { ?>
 					<option value="<?php echo $getFullTheme[$loopTH]; ?>" selected><?php echo $getFullTheme[$loopTH]; ?></option>
 				<?php }
-				elseif ($loopTH == $noneTH) {
-					//do nothing
-				}
 				else { ?>
 					<option value="<?php echo $getFullTheme[$loopTH];?>"><?php echo $getFullTheme[$loopTH]; ?></option>
 				<?php }
@@ -303,7 +293,7 @@ function strategy_layout($post) {
 	
 	if($checkedS == "None") { ?>
 		<select name="tax_strategy">
-			<option value="" selected><?php echo $getFullStrategy[$noneS]; ?></option>
+			<option value="" selected>None</option>
 		
 			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
 				if ($loopS == $noneS) {
@@ -317,15 +307,12 @@ function strategy_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_strategy">
-			<option value=""><?php echo $getFullStrategy[$noneS]; ?></option>
+			<option value="">None</option>
 			
 			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
 				if ($getFullStrategy[$loopS] == $checkedS) { ?>
 					<option value="<?php echo $getFullStrategy[$loopS]; ?>" selected><?php echo $getFullStrategy[$loopS]; ?></option>
 				<?php }
-				elseif ($loopS == $noneS) {
-					//do nothing
-				}
 				else { ?>
 					<option value="<?php echo $getFullStrategy[$loopS];?>"><?php echo $getFullStrategy[$loopS]; ?></option>
 				<?php }
@@ -356,7 +343,7 @@ function assignment_layout($post) {
 	
 	if($checkedA == "None") { ?>
 		<select name="tax_assignment">
-			<option value="" selected><?php echo $getFullAssignment[$noneA]; ?></option>
+			<option value="" selected>None</option>
 			
 			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
 				if ($loopA == $noneA) {
@@ -370,15 +357,12 @@ function assignment_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_assignment">
-			<option value=""><?php echo $getFullAssignment[$noneA]; ?></option>
+			<option value="">None</option>
 			
 			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
 				if ($getFullAssignment[$loopA] == $checkedA) { ?>
 					<option value="<?php echo $getFullAssignment[$loopA]; ?>" selected><?php echo $getFullAssignment[$loopA]; ?></option>
 				<?php }
-				elseif ($loopA == $noneA) {
-					//do nothing
-				}
 				else { ?>
 					<option value="<?php echo $getFullAssignment[$loopA];?>"><?php echo $getFullAssignment[$loopA]; ?></option>
 				<?php }
