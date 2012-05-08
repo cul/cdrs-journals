@@ -49,7 +49,7 @@ function edition_layout($post) {
 	
 	if($checkedE == "None") { ?>
 		<select name="post_edition">
-			<option value="<?php echo $getFullEdition[$noneE]; ?>" selected><?php echo $getFullEdition[$noneE]; ?></option>
+			<option value="" selected><?php echo $getFullEdition[$noneE]; ?></option>
 			
 			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 				if ($loopE == $noneE) {
@@ -67,7 +67,7 @@ function edition_layout($post) {
 	<?php }
 	else { ?>
 		<select name="post_edition">
-			<option value="<?php echo $getFullEdition[$noneE]; ?>"><?php echo $getFullEdition[$noneE]; ?></option>
+			<option value=""><?php echo $getFullEdition[$noneE]; ?></option>
 			
 			<?php for($loopE=0; $loopE<sizeof($getFullEdition); $loopE++) {
 				if ($getFullEdition[$loopE] == $checkedE) { ?>
@@ -132,7 +132,7 @@ function progression_layout($post) {
 	
 	if($checkedP == "None") { ?>
 		<select name="post_progression">
-			<option value="<?php echo $getFullProgression[$noneP]; ?>" selected><?php echo $getFullProgression[$noneP]; ?></option>
+			<option value="" selected><?php echo $getFullProgression[$noneP]; ?></option>
 			
 			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
 				if ($loopP == $noneP) {
@@ -146,7 +146,7 @@ function progression_layout($post) {
 	<?php }
 	else { ?>
 		<select name="post_progression">
-			<option value="<?php echo $getFullProgression[$noneP]; ?>"><?php echo $getFullProgression[$noneP]; ?></option>
+			<option value=""><?php echo $getFullProgression[$noneP]; ?></option>
 			
 			<?php for($loopP=0; $loopP<sizeof($getFullProgression); $loopP++) {
 				if ($getFullProgression[$loopP] == $checkedP) { ?>
@@ -250,7 +250,7 @@ function theme_layout($post) {
 	
 	if($checkedTH == "None") { ?>
 		<select name="tax_theme">
-			<option value="<?php echo $getFullTheme[$noneTH]; ?>" selected><?php echo $getFullTheme[$noneTH]; ?></option>
+			<option value="" selected><?php echo $getFullTheme[$noneTH]; ?></option>
 		
 			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
 				if ($loopTH == $noneTH) {
@@ -264,7 +264,7 @@ function theme_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_theme">
-			<option value="<?php echo $getFullTheme[$noneTH]; ?>"><?php echo $getFullTheme[$noneTH]; ?></option>
+			<option value=""><?php echo $getFullTheme[$noneTH]; ?></option>
 			
 			<?php for($loopTH=0; $loopTH<sizeof($getFullTheme); $loopTH++) {
 				if ($getFullTheme[$loopTH] == $checkedTH) { ?>
@@ -303,7 +303,7 @@ function strategy_layout($post) {
 	
 	if($checkedS == "None") { ?>
 		<select name="tax_strategy">
-			<option value="<?php echo $getFullStrategy[$noneS]; ?>" selected><?php echo $getFullStrategy[$noneS]; ?></option>
+			<option value="" selected><?php echo $getFullStrategy[$noneS]; ?></option>
 		
 			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
 				if ($loopS == $noneS) {
@@ -317,7 +317,7 @@ function strategy_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_strategy">
-			<option value="<?php echo $getFullStrategy[$noneS]; ?>"><?php echo $getFullStrategy[$noneS]; ?></option>
+			<option value=""><?php echo $getFullStrategy[$noneS]; ?></option>
 			
 			<?php for($loopS=0; $loopS<sizeof($getFullStrategy); $loopS++) {
 				if ($getFullStrategy[$loopS] == $checkedS) { ?>
@@ -356,7 +356,7 @@ function assignment_layout($post) {
 	
 	if($checkedA == "None") { ?>
 		<select name="tax_assignment">
-			<option value="<?php echo $getFullAssignment[$noneA]; ?>" selected><?php echo $getFullAssignment[$noneA]; ?></option>
+			<option value="" selected><?php echo $getFullAssignment[$noneA]; ?></option>
 			
 			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
 				if ($loopA == $noneA) {
@@ -370,7 +370,7 @@ function assignment_layout($post) {
 	<?php }
 	else { ?>
 		<select name="tax_assignment">
-			<option value="<?php echo $getFullAssignment[$noneA]; ?>"><?php echo $getFullAssignment[$noneA]; ?></option>
+			<option value=""><?php echo $getFullAssignment[$noneA]; ?></option>
 			
 			<?php for($loopA=0; $loopA<sizeof($getFullAssignment); $loopA++) {
 				if ($getFullAssignment[$loopA] == $checkedA) { ?>
