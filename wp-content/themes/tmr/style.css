@@ -1,3 +1,5 @@
+/* @override http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css */
+
 /*
 
 Theme Name: the Morningside Review
@@ -25,8 +27,12 @@ Tags: cdrs
 
 NOTE: This file is not used in this theme but is included for WordPress theme expected format compatibility - it's standard to use the css/ dir for actual theme CSS in a Carrington-based theme.
 
+ 
+/* @override 
+	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
+	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
+ 
 */
-
 
 /* including for compatibility */
 
@@ -72,26 +78,7 @@ NOTE: This file is not used in this theme but is included for WordPress theme ex
 
 
 
-/*
-	Theme Name: Morningsidereivew
-	Theme URI: http://cdrs.columbia.edu
-	Description: Custom theme for The Morningside Review developed by the Center for Digtial Research and Scholarship at Columbia Univeristy.
-	Author: Jackson Harvell for CDRS (Based on the work of Aaron T. Grogg, Paul Irish, Divya Manian, and Elliot Jay Stocks)
-	Author URI:  
-	Version:  1.0
-	Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
-
-	License: GNU General Public License v2.0
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-	This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
-	Comment blocks indicate where each begins and ends, like this, for example...
-*/
-
-/* @override  
-	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
-	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
-*/
+ 
 
 
 
@@ -209,11 +196,10 @@ body.home div#header h1{
 
  
 	background: url(img/lion.png) no-repeat 0 10px;
-  	color: #5c5d5d;
 	font-size: 40px;
 	padding-left: 100px;
 	font-weight: 700;
-	line-height: 38px;
+ 
 
 	margin-right: 0;
 	margin-left: 35px;
@@ -225,16 +211,24 @@ body.home div#header h1{
 div#header h1{
 
 	background: url(img/lion.png) no-repeat 0 10px;
-  	color: #f9d244;
 	font-size: 40px;
 	padding-left: 100px;
 	font-weight: 700;
-	line-height: 38px;
+	line-height: 35px;
  
 	margin-left: -100px;
 	padding-bottom: 17px;
 	padding-top: 8px;
 	margin-top: 20px;
+	letter-spacing: -2px;
+}
+
+#colophon a {
+	color: #002b7f;
+}
+#colophon a:hover {
+	color: #0038a8;
+	text-decoration: underline;
 }
 
 li.essay h1 {
@@ -246,9 +240,22 @@ span.y {
 		 
 }
 
- div#header h1 a{
-	 	color: #667176;
-	 		text-shadow: #cadde6 1px 1px 1px;
+span.light {
+	 font-size: 30px;
+ 
+	line-height: 25px;
+	letter-spacing: 1px;
+	 
+	font-weight: 400;
+}
+
+span.bottom {
+ 
+}
+
+div#header h1 a{
+	 	color: #3e6068;
+	 		text-shadow: #cadde6 2px 1px 2px;
 }
 
 
@@ -274,8 +281,8 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-a, a:active, a:visited { color: #8d5d41; }
-a.title-link:hover, a:hover { color: #a33420; }
+a, a:active, a:visited { color: #9b534d; }
+a.title-link:hover, a:hover { color: #ce3525; }
 
 ul, ol { margin-left: 2em; list-style-type: none;}
 
@@ -318,12 +325,7 @@ text-transform: uppercase;
  
 
 font-size: 140%;
- 
-
-
-
- 
-
+	color: #9b534d;
 }
 ol { list-style-type: decimal; }
 
@@ -357,11 +359,11 @@ button, input, select, textarea { width: auto; overflow: visible; margin: 0; fon
 
 body.home #searchsubmit {
 	float: right;
-	margin-top: 9px;
+	margin-top: 7px;
 }
 
 body.home input#s.field {
-	width: 200px;
+	width: 198px;
 }
 
 /* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
@@ -445,13 +447,14 @@ nav#access li a{
  
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #f8a12d;
+	color: #9b534d;
 }
 
 nav#access li a:hover{
  
-	text-transform: uppercase;
-	text-decoration: underline;
+ 
+	
+	color: #ce3525;
 }
 
 
@@ -812,6 +815,19 @@ text-decoration: none;
  
 }
 
+
+li.essay h1 a:hover {
+ 
+ 
+margin: 0;
+	
+	color: #ce3525;
+text-decoration: none;
+ 
+}
+
+
+
 h1.edition-label {
 	font-size: 2em;
  	 margin-top: 0;
@@ -923,6 +939,10 @@ p.numbered_para a.numbered-item:hover
 #access li {
 	float: left;
 	position: relative;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	
+		/* optional rounded corners for browsers that support it */
 }
 #access a {
  
@@ -964,17 +984,23 @@ p.numbered_para a.numbered-item:hover
 #access a:focus {
 	background: #efefef;
 }
-#access li:hover > a,
+ 
  
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
- 
- 
-	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
- 
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #3e6068;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-bottom-style: none;
+	
+		-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
 }
 #access ul li:hover > ul {
 	display: block;
@@ -983,7 +1009,7 @@ p.numbered_para a.numbered-item:hover
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-	/*font-weight: bold;*/
+	color: #3e6068;
 }
 
 a#skip {
@@ -1078,5 +1104,36 @@ ul.about-nav li{
 
 ul.archive-list {
 	margin-left: 0;
+}
+
+a.home-social {
+display: inline-block;
+width: 32px;
+height: 32px;
+text-indent: -1000px;
+}
+
+#facebook {
+	background: url(img/facebook.png) no-repeat 0 0;
+}
+
+#facebook:hover {
+	background: url(img/facebook.png) no-repeat 0 -33px;
+}
+
+#twitter {
+	background: url(img/twitter.png) no-repeat 0 0;
+}
+
+#twitter:hover {
+	background: url(img/twitter.png) no-repeat 0 -33px;
+}
+
+#email {
+	background: url(img/email.png) no-repeat 0 0;
+}
+
+#email:hover {
+	background: url(img/email.png) no-repeat 0 -33px;
 }
  
