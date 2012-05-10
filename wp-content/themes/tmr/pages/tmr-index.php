@@ -25,7 +25,7 @@ cfct_template_file('header', 'header-essay.php');
 <section id="tmr-index" role="main" class="content">
 
 
-<div class="span-5 prepend-1"> 
+<div class="span-6 prepend-3" id="index-left-col"> 
 
 <h1>Edition</h1>
 
@@ -40,19 +40,8 @@ cfct_template_file('header', 'header-essay.php');
 
  ?>
 </ul>
- 
-</div>
-<div   id="academic-tax">
 
  
-
-
-<!--  <li class='tax-nav'><a href='#' id=''>Strategy</a></li> -->
-
-<!--  <li class='tax-nav'><a href='#' id=''>Topics</a></li> -->
- 
-
-<div id='progression' class="span-7 prepend-1">
 <h1>Progression</h1>
 <ul id='sources' class='taxonomy-list clearfix'>
 
@@ -66,7 +55,7 @@ cfct_template_file('header', 'header-essay.php');
 ?>
 
 </ul>
-</div>
+ 
 
 
 
@@ -94,7 +83,7 @@ cfct_template_file('header', 'header-essay.php');
   
 
  
- <div id='assignment' class="taxlist-toggle span-7 prepend-1 last">
+ 
   <h1>Assignment</h1>
  <ul id='assignments'class='taxonomy-list clearfix'>
 <?php  $terms = get_terms( 'assignment' );
@@ -103,10 +92,21 @@ cfct_template_file('header', 'header-essay.php');
     echo '<li><a href="' . get_term_link( $term->slug, 'assignment' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>  ';
       } ?>
 </ul>
+ 
 </div>
 
+<div id="academic-tax">
 
-<div id='sources' class="span-16 prepend-1 taxlist-toggle">
+ 
+
+
+<!--  <li class='tax-nav'><a href='#' id=''>Strategy</a></li> -->
+
+<!--  <li class='tax-nav'><a href='#' id=''>Topics</a></li> -->
+ 
+
+
+<div id='sources' class="span-11 prepend-1 taxlist-toggle">
 <h1>On Writing</h1>
 
 <ul id='on-writing' class='taxonomy-list clearfix'>

@@ -765,18 +765,21 @@ span.author-credit {
 	margin-left: 0;
 }
 
-#tmr-index ul#editions li{
+#index-left-col ul li{
  
-	font-weight: bold;
+	 
 	text-align: center;
 }
 
 #tmr-index h1 {
 	text-transform: uppercase;
 	text-align: center;
-	border-bottom: 1px solid #d6d6d6;
+	border-bottom: 1px dotted #f9b120;
 	margin-top: 20px;
 	margin-bottom: 10px;
+	font-size: 18px;
+	
+	color: #b92d0c;
 }
 
 .taxlist-toggle {

@@ -29,8 +29,7 @@ if (have_posts()) {
 		
  
 
- 
-		cfct_template_file('content', 'content-type-essay.php'); 
+ cfct_content();
 	}
 }
 
