@@ -22,7 +22,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <div>
 
  
-<!-- <a href="<?php the_permalink() ?>"><?php the_title() ?></a> -->
+<h1 class="page-title"> <?php the_title() ?> </h1>
  
  
 <?php

@@ -92,7 +92,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		<div id="header" class="span-16 prepend-6" role="banner">
 		<!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 		
-	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">The<br/>Morningside<br/>Review</a></h1>
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
 			 <div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
 		</div>
 		
