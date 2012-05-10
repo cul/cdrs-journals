@@ -40,31 +40,15 @@ endwhile;
 // Reset Post Data
 wp_reset_postdata();
 
-
-
-
- 
-
 ?>
 
 </div>
 
-
-
-
-
-
-
-
-
-
 <div class="span-8 center content">
+
 <h1 class="homepage-label">From The Director</h1>
  
-<p>
-Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a>
- 
-</p>
+<p>Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a></p>
 
 
 <h1 class="homepage-label">On Writing</h1>
