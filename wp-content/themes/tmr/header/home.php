@@ -39,6 +39,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		
 		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
 		
+		<link rel="icon" type="image/png" href="<?php bloginfo( 'stylesheet_directory' ); ?>/icon.png">
+
 		
 		<title>
 
