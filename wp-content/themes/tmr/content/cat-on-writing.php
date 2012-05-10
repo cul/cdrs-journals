@@ -99,7 +99,6 @@ echo apply_filters('meta_content', $wc['citation']);
  
 
  
-</div>
  
  
 

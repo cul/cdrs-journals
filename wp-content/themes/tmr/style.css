@@ -448,7 +448,7 @@ body.home div#main{
  }*/
 
 nav#access li a{
- 
+    text-align: left;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #9b534d;
@@ -774,7 +774,7 @@ span.author-credit {
 #tmr-index h1 {
 	text-transform: uppercase;
 	text-align: center;
-	border-bottom: 1px dotted #f9b120;
+	border-bottom: 1px dotted #27827b;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	font-size: 18px;
@@ -946,7 +946,8 @@ p.numbered_para a.numbered-item:hover
 #access li {
 	float: left;
 	position: relative;
-  
+	margin-right: 1.5em;
+      
 	
 		/* optional rounded corners for browsers that support it */
 }
@@ -954,7 +955,7 @@ p.numbered_para a.numbered-item:hover
  
 	display: block;
  
-	padding: 0 1em;
+     
 	text-decoration: none;
 }
 #access ul ul {
@@ -994,21 +995,8 @@ p.numbered_para a.numbered-item:hover
  
  
 #access a:focus, #access li.current-menu-item, li.current-page-ancestor {
-	border-top-style: solid;
-	border-top-width: 1px;
 	color: #3e6068;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-	
-	-moz-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-
+	border-bottom: 3px solid #1a6284;
 }
 #access ul li:hover > ul {
 	display: block;
