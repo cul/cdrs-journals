@@ -289,7 +289,9 @@ a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #1a6284;
  
 }
-a.title-link:hover, a:hover { color: #3931b7; }
+a.title-link:hover, a:hover { color: #b81f0f;
+	border-bottom: 1px dotted #36a6ff;
+}
 
 ul, ol { margin-left: 2em; list-style-type: none;}
 
@@ -825,6 +827,15 @@ text-decoration: none;
  
 }
 
+li.essay h1 a:hover {
+ 
+  
+color: #56494f;
+text-decoration: underline;
+border-bottom: none;
+ 
+}
+
 
 li.essay h1 a:hover {
  
@@ -1001,6 +1012,12 @@ p.numbered_para a.numbered-item:hover
 	color: #3e6068;
 	border-bottom: 3px solid #1a6284;
 }
+#access a:focus:hover, #access li.current-menu-item:hover, li.current-page-ancestor:hover {
+	color: #3e6068;
+	border-bottom: 3px solid #1a6284;
+	  
+}
+
 #access ul li:hover > ul {
 	display: block;
 }
