@@ -18,39 +18,32 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-get_header();
-
 ?>
+<div>
 
-
-<div class="span-9 prepend-6 content">
-
-<!-- <h1>About</h1> -->
-
-
-
-<?
-
-cfct_loop();
-
-?>
-
-</div>
-
-<div class="span-5 last">
- <ul class="about-nav">
-<li><a href="<?php home_url('/')  ?>?page_id=364">From The Director</a></li>
-<li><a href="<?php home_url('/')  ?>?page_id=369">University Writing</a></li>
-<li><a href="<?php home_url('/')  ?>?page_id=135">Masthead</a></li>
-</ul>
  
+ 
+ 
+ 
+<?php
+ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+  the_post_thumbnail('thumbnail');
+} 
 
-</div>
 
-<?
-/* comments_template(); */
+the_content(); 
 
-/* get_sidebar(); */
-get_footer();
+wp_link_pages();
+
+/*
+the_date();
+
+the_author();
+
+comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrington-jam'), __('% comments', 'carrington-jam'));
+
+edit_post_link(__('Edit This', 'carrington-jam'), '', '');
+*/
 
 ?>
+</div>
