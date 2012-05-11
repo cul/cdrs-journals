@@ -88,17 +88,6 @@ function my_scripts_method() {
 </div>
 
 <div class="container" id="main">
-<div id='header' role="banner" class="span-16 prepend-6">		
-
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
-
-<div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
-
-</div>
-
- 
-
-		
 <nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 <a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
@@ -107,3 +96,16 @@ function my_scripts_method() {
 
  ?></nav><!-- #access -->
  
+
+
+<div id='header' role="banner" class="span-16 prepend-6">		
+
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
+
+<!-- <div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> -->
+
+</div>
+
+ 
+
+		

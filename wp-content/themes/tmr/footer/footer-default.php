@@ -35,7 +35,7 @@ if (CFCT_DEBUG) {
 }
 
 ?>
-
+<div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
 </div>
 <div class="container" id='colophon'>
 Powered by the <a href='http://cdrs.columbia.edu'>Center for Digital Research and Scholarship</a> at <a href='http://libraries.columbia.edu'>Columbia University Libraries</a>.
