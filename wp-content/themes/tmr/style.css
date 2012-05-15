@@ -1175,7 +1175,7 @@ a.home-social {
 display: inline-block;
 width: 32px;
 height: 32px;
-text-indent: -1000px;
+text-indent: -10000px;
 }
 
 #facebook {
