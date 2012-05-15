@@ -26,17 +26,16 @@ get_header();
  
 
 <div class="span-5 prepend-1">
-<? 
+ <ul class="about-nav">
+<li><a href="<?php home_url('/')  ?>?page_id=364">From The Director</a></li>
+<li><a href="<?php home_url('/')  ?>?page_id=369">University Writing</a></li>
+<li><a href="<?php home_url('/')  ?>?page_id=135">Masthead</a></li>
+</ul>
+ 
 
- wp_nav_menu( array('menu' => 'about subnav')); 
+</div><div class="span-12 content">
 
-
- ?>
-
-</div>
-
-<div class="span-12 content">
-
+<!-- <h1>About</h1> -->
 
 
 

@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: ;
 
 }
 
-h1{
+h1, h2{
  
  font-size: 1.4em;
  margin-top: .5em;
@@ -1087,9 +1087,7 @@ div#search-form{
 	text-align: right;
 }
 
-#essay h2 {
-	margin-left: 5em;
-}
+
 
 div.hp-feature img {
 	float: left;
@@ -1142,7 +1140,7 @@ margin-top: 80px;
  
 
 
- ul.about-nav li a {
+ ul#menu-about-subnav li a {
  
 	border-bottom: 1px dotted #ddd;
  	display: block;
@@ -1152,7 +1150,12 @@ margin-top: 80px;
 	text-align: right;
 	margin-right: 1em;
 	margin-bottom: 1em;
+	color: #9b534d;
 
+}
+
+ ul#menu-about-subnav li.current_page_item a {
+	color: #1a6284;
 }
 
 
@@ -1234,4 +1237,14 @@ div.aligncenter {
 	padding: 0 4px 5px;
 	margin: 0;
 }
-/* End captions */ 
+/* End captions */
+
+ul#menu-about-subnav  {
+	text-align: right;
+	text-transform: uppercase;
+	 
+	margin-left: 0; 
+}
+ 
+
+ 

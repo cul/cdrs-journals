@@ -19,39 +19,12 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
-
-?>
-
-
  
-
-<div class="span-5 prepend-1">
-<? 
-
- wp_nav_menu( array('menu' => 'about subnav')); 
-
-
- ?>
-
-</div>
-
-<div class="span-12 content">
-
-
-
-
-<?
 
 cfct_loop();
 
-?>
-
-</div>
-
-<?
-/* comments_template(); */
-
-/* get_sidebar(); */
+ 
+ 
 get_footer();
 
 ?>

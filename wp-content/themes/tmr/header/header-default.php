@@ -32,13 +32,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 				
-<!--
-		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+<!-- 		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'> -->
 		<link href='https://fonts.googleapis.com/css?family=Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
--->
 		
 		
-		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+<!-- 		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'> -->
 		
 		<link rel="icon" type="image/png" href="<?php bloginfo( 'stylesheet_directory' ); ?>/icon.png">
 		

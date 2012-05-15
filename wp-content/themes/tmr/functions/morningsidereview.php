@@ -23,7 +23,8 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 
 function mytheme_addmenus() {
 
-	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
+	register_nav_menu( 'primary', 'Primary Menu'  );
+		register_nav_menu( 'about-nav', 'About Subnav'  );
 
 }
 

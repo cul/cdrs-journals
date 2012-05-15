@@ -25,18 +25,11 @@ get_header();
 
  
 
-<div class="span-5 prepend-1">
-<? 
-
- wp_nav_menu( array('menu' => 'about subnav')); 
+ 
 
 
- ?>
 
-</div>
-
-<div class="span-12 content">
-
+ 
 
 
 
@@ -46,12 +39,10 @@ cfct_loop();
 
 ?>
 
-</div>
+ 
 
 <?
-/* comments_template(); */
-
-/* get_sidebar(); */
+ 
 get_footer();
 
 ?>
