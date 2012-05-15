@@ -1115,7 +1115,7 @@ div.authors-column {
 }
 
  
-img.attachment-post-thumbnail,img.attachment-thumbnail{
+body.home img.attachment-post-thumbnail, body.home img.attachment-thumbnail{
 	float: left;
 	margin-right: 1em;
 	margin-top: .5em;
