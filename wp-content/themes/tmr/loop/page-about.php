@@ -14,23 +14,25 @@
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 // **********************************************************************
-
+global $post;
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-get_header();
+?>
 
+ 
  
 
 
- 
 
 
-cfct_template_file('loop', 'page-about.php'); 
- 
-/* comments_template(); */
-
-/* get_sidebar(); */
-get_footer();
+<?
+if (have_posts()) {
+	while (have_posts()) {
+		the_post();
+		
+cfct_template_file('content', 'page-about.php'); 	}
+}
 
 ?>
+ 
