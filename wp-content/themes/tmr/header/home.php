@@ -97,7 +97,7 @@ function my_scripts_method() {
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=123">
-Current Edition</a>
+Current</a>
 <p>Read the Current Issue of TMR</p>
 </li>
 
@@ -117,7 +117,7 @@ About
 
 <li>
 <a href="<?php home_url('/')  ?>?page_id=133">
-Submit Your Essay
+Submissions
 </a>
 <p>Eligible students may submit their work for publication.</p>
 </li>
