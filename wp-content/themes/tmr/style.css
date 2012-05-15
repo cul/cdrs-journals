@@ -1245,6 +1245,95 @@ ul#menu-about-subnav  {
 	 
 	margin-left: 0; 
 }
- 
+
+
+
+.format-gallery .gallery-thumb {
+	float: left;
+	display: block;
+	margin: .375em 1.625em 0 0;
+}
+
+
+dl.gallery-item {
+	margin: 0;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	color: #666;
+	font-family: Georgia, serif;
+	font-size: 12px;
+}
+#essay .gallery {
+	margin: 0 auto 1.625em;
+}
+#essay .gallery a img {
+	border: none;
+}
+#essay .gallery-columns-4 .gallery-item {
+	width: 23%;
+	padding-right: 2%;
+}
+#essay .gallery-columns-4 .gallery-item img {
+	width: 100%;
+	height: auto;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+	border: 1px solid #ddd;
+	padding: 6px;
+}
+a:focus img[class*="align"],
+a:hover img[class*="align"],
+a:active img[class*="align"],
+a:focus img[class*="wp-image-"],
+a:hover img[class*="wp-image-"],
+a:active img[class*="wp-image-"],
+#content .gallery .gallery-icon a:focus img,
+#content .gallery .gallery-icon a:hover img,
+#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+	background: #eee;
+	border-color: #bbb;
+}
+
+.format-gallery .gallery-thumb {
+	float: left;
+	display: block;
+	margin: .375em 1.625em 0 0;
+}
+	#essay .gallery-columns-3 .gallery-item {
+		width: 31%;
+		padding-right: 2%;
+	}
+	#essay .gallery-columns-3 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+	#essay .gallery-columns-2 .gallery-item {
+		width: 45%;
+		padding-right: 4%;
+	}
+	#essay .gallery-columns-2 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+	
+	
+	.gallery {
+                margin: auto;
+        }
+        .gallery-item {
+                float: left;
+                margin-top: 10px;
+                text-align: center;
+                width: 33%;
+        }
+        .gallery img {
+                border: 2px solid #cfcfcf;
+        }
+        .gallery-caption {
+                margin-left: 0;
+        }
 
  
