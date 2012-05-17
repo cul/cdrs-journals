@@ -114,17 +114,20 @@ if(!empty($author_terms)){
           
    $auth_bio = get_tax_meta($term, 'author_bio');
    
+      $auth_photo = get_tax_meta($term,'author_image',true);
+   
    if($auth_bio){
     echo ' <h1>about the author</h1>';
-    echo '<div class="author-bio">'.$auth_bio.'</div>';
-   }
-   
-   $auth_photo = get_tax_meta($term,'author_image',true);
-       
-       if($auth_photo){
+    if($auth_photo){
 		
 			echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
    }
+    echo '<div class="author-bio">'.$auth_bio.'</div>';
+   }
+   
+
+       
+       
 
    
    
