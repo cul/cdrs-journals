@@ -22,7 +22,7 @@ get_header();
 
 ?>
 
-<div class="span-12 prepend-6 content">
+<div class="span-12 prepend-7 content">
 
 <?
 

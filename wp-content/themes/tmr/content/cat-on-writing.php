@@ -34,9 +34,9 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-15 prepend-6">
+<div id="content" role="main" class="span-15 prepend-7">
 
-<h1 class="edition-label"> <?php the_title() ?> </h1>
+ 
 
 
 <?php
@@ -58,14 +58,14 @@ if(!empty($author_terms)){
 
 </div>
 
-<div  class="span-12 prepend-6">
+<div  class="span-12 prepend-7">
  
 
 
 
 
 
-<div id="essay" class="pull-2 clearfix">
+<div id="essay" >
 
 <?php
 
@@ -75,26 +75,9 @@ the_content();
 
 </div>
  
-<?php
-
-global $custom_works_cited;
-
-$wc = $custom_works_cited->the_meta();
-
-?>
-
-<div id="work_cited">
  
-<h1><?php echo($wc['title']); ?></h1>
 
-<?php  
-
-echo apply_filters('meta_content', $wc['citation']);
-
-?>
-
-</div>
-
+ 
 
  
 
@@ -106,8 +89,9 @@ echo apply_filters('meta_content', $wc['citation']);
 
 </div>
 
-<div class="span-5 prepend-1 last sidebar">
+<div class="span-4   last sidebar">
 
+<a class="print-button" HREF="javascript:window.print()">Print</a>
 
 <div class="social-media">
 
@@ -119,7 +103,7 @@ echo apply_filters('meta_content', $wc['citation']);
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <br/>
 
-<A HREF="javascript:window.print()">Click to Print</A>
+
 </div>
 
 

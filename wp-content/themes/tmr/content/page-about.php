@@ -19,15 +19,12 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
+<h1>&nbsp;</h1>
 
-
-<div class="span-12 prepend-6">
-
-<h1 class="page-title"> <?php the_title() ?> </h1>
-</div>
+<br style="clear:both"/>
  
 
-<div class="span-5 prepend-1">
+<div class="span-6 prepend-1">
 
 
 

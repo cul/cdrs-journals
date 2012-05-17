@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
    
 /*    $("ul#author-index>li").tsort({attr:"id"}); */
    
-  $("div#essay>p").numberParagraph();
+  $("div#essay>p").numberParagraph({	"itemroot":"numbered_para",	"padding":"0",
+		"tag":"span"});
    
 });

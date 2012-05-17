@@ -23,7 +23,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 cfct_template_file('header', 'header-essay.php');
   ?>
 <section id="tmr-index" role="main" class="content">
+<div class="span-14 prepend-7">
+<?
+cfct_loop();
 
+?>
+</div>
 
 <div class="span-6 prepend-3" id="index-left-col"> 
 
@@ -106,7 +111,7 @@ cfct_template_file('header', 'header-essay.php');
  
 
 
-<div id='sources' class="span-11 prepend-1 taxlist-toggle">
+<div id='sources' class="span-10 prepend-1 taxlist-toggle">
 <h1>On Writing</h1>
 
 <ul id='on-writing' class='taxonomy-list clearfix'>
@@ -155,7 +160,7 @@ wp_tag_cloud('taxonomy="topics"');
 
  
 
-<div class="span-22 prepend-1">
+<div class="span-17 prepend-3">
 <h1>Author</h1>
 <?php 
 

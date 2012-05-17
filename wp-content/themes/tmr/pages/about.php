@@ -20,12 +20,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
 
- 
-
-
- 
-
-
 cfct_template_file('loop', 'page-about.php'); 
  
 /* comments_template(); */

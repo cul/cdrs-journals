@@ -18,7 +18,18 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
+<div div id="footer" class="span-24">
 
+<div class="span-7" id='search-form'>
+<?php get_search_form(); ?>
+</div>
+<div class="span-16">
+
+<hr/>
+<p>copyright notice. address, phone. other footer content. goes right here.</p>
+</div>
+
+</div>
 
 
 <?php
@@ -35,7 +46,7 @@ if (CFCT_DEBUG) {
 }
 
 ?>
-<div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
+<!-- <div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> -->
 </div>
 <div class="container" id='colophon'>
 Powered by the <a href='http://cdrs.columbia.edu'>Center for Digital Research and Scholarship</a> at <a href='http://libraries.columbia.edu'>Columbia University Libraries</a>.

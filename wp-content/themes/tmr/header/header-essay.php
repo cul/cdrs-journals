@@ -58,12 +58,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 function my_scripts_method() {
    
-   wp_register_script('tinysort', get_template_directory_uri() .'/js/jquery.tinysort.min.js');
-   wp_register_script('pnumb', get_template_directory_uri() .'/js/jquery.numberedParagraphs.js');
+      wp_register_script('pnumb', get_template_directory_uri() .'/js/jquery.numberedParagraphs.js');
    
    wp_register_script('tmr_js',
        get_template_directory_uri() . '/js/tmr.js',
-       array('jquery', 'tinysort','pnumb'),
+       array('jquery',  'pnumb'),
        
        '1.0' );
    
@@ -81,16 +80,10 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </head>
 
 <body <?php body_class(); ?>>
-
-<div class="container">
-
-<div class="span-24" id='search-form'>
-<?php get_search_form(); ?>
-</div>
-</div>
+ 
 <div class="container" id="main">
 		
-		<nav id="access" class="span-17 prepend-6 clearfix" role="navigation">
+		<nav id="access" class="span-17 prepend-7 clearfix" role="navigation">
 		
 		<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 		
@@ -98,11 +91,13 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
  
 <?php	wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
  
-		<div id="header" class="span-16 prepend-6" role="banner">
+		<div id="header" class="span-16 prepend-7" role="banner">
 		<!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 		
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
-			 <div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
+			
 		</div>
+<div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>
+
 		
-		
+<div class="span-16"><h1 class="page-title"> <?php the_title() ?> </h1></div>

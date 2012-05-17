@@ -34,9 +34,9 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-15 prepend-6">
+<div id="content" role="main" class="span-15 prepend-7">
 
-<h1 class="edition-label"> <?php the_title() ?> </h1>
+ 
 
 
 <?php
@@ -58,14 +58,14 @@ if(!empty($author_terms)){
 
 </div>
 
-<div  class="span-12 prepend-6">
+<div  class="span-12 prepend-7">
  
 
 
 
 
 
-<div id="essay" class="pull-2 clearfix">
+<div id="essay" class="">
 
 <?php
 
@@ -98,7 +98,7 @@ echo apply_filters('meta_content', $wc['citation']);
 
  
 
-<h1>about the essay</h1>
+ <div id="essay-meta">
 
 <?php
 
@@ -110,24 +110,31 @@ if(!empty($author_terms)){
     foreach($author_terms as $term){
 
   
- echo '<div id="essay-meta">';
-       $auth_photo = get_tax_meta($term,'author_image',true);
+
+          
+   $auth_bio = get_tax_meta($term, 'author_bio');
+   
+   if($auth_bio){
+    echo ' <h1>about the author</h1>';
+    echo '<div class="author-bio">'.$auth_bio.'</div>';
+   }
+   
+   $auth_photo = get_tax_meta($term,'author_image',true);
        
        if($auth_photo){
 		
 			echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
    }
+
    
-   $auth_bio = get_tax_meta($term, 'author_bio');
-   
-   if($auth_bio){
-   
-    echo '<div class="author-bio">'.$auth_bio.'</div>';
-   }
    
    }
    
    }}
+   
+   ?>
+<h1>Academic taxonomies</h1>
+   <?
    
 	$progression_terms = wp_get_object_terms($post->ID, 'progression');
 if(!empty($progression_terms)){
@@ -192,8 +199,9 @@ if(!empty($source_terms)){
 
 </div>
 
-<div class="span-5 prepend-1 last sidebar">
+<div class="span-4   last sidebar">
 
+<a class="print-button" HREF="javascript:window.print()">Print</a>
 
 <div class="social-media">
 
@@ -205,7 +213,7 @@ if(!empty($source_terms)){
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <br/>
 
-<A HREF="javascript:window.print()">Click to Print</A>
+
 </div>
 
 

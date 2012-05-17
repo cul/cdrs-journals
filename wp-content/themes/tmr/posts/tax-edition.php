@@ -23,7 +23,7 @@ get_header();
 $tag_title =   single_tag_title('', false) ;
 
 ?>
-	<section id="content" role="main" class="span-15 prepend-6">
+	<section id="content" role="main" class="span-15 prepend-7">
 <h1 class="edition-label"><? echo $tag_title." Edition" ?></h1>
 
 <?php

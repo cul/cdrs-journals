@@ -78,15 +78,10 @@ function my_scripts_method() {
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container">
 
-<div class="span-24" id='search-form'>
-<?php get_search_form(); ?>
-</div>
-</div>
 
 <div class="container" id="main">
-<nav id="access" role="navigation" class="span-17 prepend-6 clearfix">
+<nav id="access" role="navigation" class="span-17 prepend-7 clearfix">
 <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 <a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 	 	
@@ -96,14 +91,15 @@ function my_scripts_method() {
  
 
 
-<div id='header' role="banner" class="span-16 prepend-6">		
+<div id='header' role="banner" class="span-16 prepend-7">		
 
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
 
-<!-- <div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> -->
+
 
 </div>
 
- 
+<div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>
 
 		
+<div class="span-16"><h1 class="page-title"> <?php the_title() ?> </h1></div>

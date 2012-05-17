@@ -158,13 +158,32 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 #main.container{
 	 
 	background-image: url(img/bgtex.jpg);
-   margin-top: 0px;
+   margin-top: 15px;
    min-height: 600px;
-   padding-bottom: 50px;
+   
 	border: 1px solid #9b958d;
 	-moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	box-shadow:         0 0 5px rgba(0,0,0,0.5);
+}
+
+a.print-button {
+	text-transform: uppercase;
+	padding: 0 5px;
+	border: 1px solid #d7d7d7;
+	background-color: #fffeff;
+	font-size: 13px;
+	margin-bottom: 8px;
+	display: block;
+	width: 42px;
+}
+
+
+a.print-button:hover {
+ -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow:         0 0 5px rgba(0,0,0,0.5);
+
 }
 
 
@@ -181,7 +200,7 @@ h3.flyer {
  
 	text-transform: uppercase;
 	letter-spacing: .2em;
-	margin-bottom: 1em;
+	color: #8f1b08;
 }
  
 
@@ -189,6 +208,10 @@ h3.flyer {
 body.home p{
 	font-size: 80%;
 	margin-right: 20px;
+}
+
+p.blurb {
+	margin-top: 25px;
 }
 
 
@@ -218,7 +241,6 @@ div#header h1{
 	padding-left: 109px;
 	font-weight: 700;
 	line-height: 35px;
-	letter-spacing: -2px;
 	margin-left: -114px;
 	padding-top: 16px;
 	margin-top: 0px;
@@ -226,7 +248,7 @@ div#header h1{
 }
 
 #colophon a {
-	color: #002b7f;
+	color: #131c55;
 }
 #colophon a:hover {
 	color: #0038a8;
@@ -258,11 +280,13 @@ span.bottom {
 
 div#header h1 a{
 	 	color: #3e6068;
-	 		text-shadow: #cadde6 2px 1px 2px;
-	 		border-bottom: none;
+	 		 	 
 }
 
+div#header h1 a:hover{
+		text-shadow: #cadde6 2px 1px 2px;
 
+}
 
  /* Hack retained to preserve specificity */
 
@@ -325,9 +349,10 @@ body.home div#header div#cu-writing{
 	position: relative;
 }
 div#cu-writing {
- position: absolute;
- bottom: 20px;
- right: 20px;
+float: left;
+margin-left: 20px;
+	margin-bottom: -57px;
+	margin-top: 9px;
 	 
 }
 
@@ -338,12 +363,25 @@ div#cu-writing {
 ul.home-nav li a {
 display: block;
 text-transform: uppercase;
- 
+width: 80%;
  
 
-font-size: 140%;
+font-size: 24px;
 	color: #9b534d;
 }
+
+ul.home-nav li a:hover{
+ 	color: white;
+ background-color:  #9b534d; 
+}
+
+ul.home-nav li:hover{
+ 
+}
+
+
+
+
 ol { list-style-type: decimal; }
 
 /* Remove margins for navigation lists */
@@ -374,13 +412,59 @@ pre {
    4) Align to baseline */
 button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
 
+#searchsubmit {
+	float: right;
+	margin-top: 8px;
+	width: 58px;
+	font-size: 11px;
+	margin-right: 3px;
+}
+
+div.footer {
+}
+
+#footer {
+	margin-top: 44px;
+	 
+}
+
+#footer hr {
+	
+	width: 90%;
+ 
+}
+
+
+
+
 body.home #searchsubmit {
 	float: right;
 	margin-top: 7px;
 }
 
+ input#s.field {
+	width: 146px;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+#footer  p {
+	font-size: 11px;
+	display: block;
+ 
+	margin-top: 7px;
+}
+
+
 body.home input#s.field {
 	width: 193px;
+	font-size: 14px;
+	line-height: 0;
+	margin-left: 0;
+}
+
+div.home-box {
+	margin-bottom: 1em;
 }
 
 /* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
@@ -745,7 +829,6 @@ body.home div#header #cu-writing {
 
 body.home #cu-writing img{
 	margin-right: 16px;
-	margin-top: 21px;
 }
 
 div.span-8.center.content {
@@ -755,6 +838,7 @@ span.author-credit {
 	text-align: left;
 	display: block;
 	margin-bottom: .5em;
+	text-transform: uppercase;
 }
 
 
@@ -763,6 +847,17 @@ span.author-credit {
 #tmr-index ul {
 	list-style-type: none;
 	margin-left: 0;
+	
+}
+
+#tmr-index li {
+	border-bottom: 1px dotted #cbcbcb;
+	line-height: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 #index-left-col ul li{
@@ -774,7 +869,7 @@ span.author-credit {
 #tmr-index h1 {
 	text-transform: uppercase;
 	text-align: center;
-	border-bottom: 1px dotted #27827b;
+	border-bottom: 1px solid #737b83;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	font-size: 18px;
@@ -846,10 +941,10 @@ text-decoration: none;
 h1.edition-label {
  
  	 margin-top: 0;
- font-size: 32px;
+ font-size: 40px;
 color: #b92d0c;
-	letter-spacing: 3px;
 		color: #56494f;
+	line-height: 40px;
 }
 a.author, .author-link a{
 	color: #844240;
@@ -886,14 +981,12 @@ a.author:before,.author-link a:before {
 	}
 
 .container p{
-	margin-bottom: 1em;
+	margin-bottom: 1.4em;
 }
 
-p.numbered_para
+span.numbered-item
 {
-	padding-left:5em;
-	text-indent: 8%;
-	margin-bottom: .5em;
+	display: none;	
 }
 
 div.wp-caption.alignleft {
@@ -901,32 +994,25 @@ div.wp-caption.alignleft {
 }
 
 div#essay{
-	position: relative;
+ 
+}
+
+#work_cited h1, #essay-meta h1 {
+	font-size: 26px;
+	border-top: 1px solid #bbb;
+	color: #2f5064;
+	margin-top: 44px;
 }
 
 #essay blockquote{
-	padding-left: 5em;
+	 
 }
 
  
 
  
-p.numbered_para a.numbered-item
-{
-	position:absolute;
-	left:0;
-	width:5em;
-	text-align:center;
-	display:block;
-	color:#999;
-	text-decoration:none;
-	display: none; 
-}
-p.numbered_para a.numbered-item:hover
-{
-	color:#00f;
-	text-decoration:underline;
-}
+ 
+ 
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -1084,7 +1170,7 @@ label.assistive-text {
 display: none;	
 }
 div#search-form{
-	text-align: right;
+	text-align: left;
 }
 
 
@@ -1162,7 +1248,7 @@ margin-top: 80px;
 h1.page-title {
  margin-top: 0;
 	
-		font-size: 32px;
+		font-size: 40px;
 	line-height: 40px;
 	color: #56494f;
 }
@@ -1243,7 +1329,12 @@ ul#menu-about-subnav  {
 	text-align: right;
 	text-transform: uppercase;
 	 
-	margin-left: 0; 
+	margin-left: 0;
+	margin-top: 40px;
+}
+
+body.page-id-129 ul#menu-about-subnav{
+	margin-top: 92px;
 }
 
 
@@ -1335,5 +1426,18 @@ a:active img[class*="wp-image-"],
         .gallery-caption {
                 margin-left: 0;
         }
+        
+body.page-id-129 h1.page-title, body.page-id-123 h1.page-title, body.archive h1.page-title{
+	display: none;
+}
+
+form#searchform {
+	width: 86%;
+	margin: auto;
+}
+
+body.home form#searchform{
+	width: 100%;
+}
 
  

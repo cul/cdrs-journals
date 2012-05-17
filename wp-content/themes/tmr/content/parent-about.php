@@ -21,13 +21,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 
-<div class="span-12 prepend-6">
-
-<h1 class="page-title"> <?php the_title() ?> </h1>
-</div>
+ 
  
 
-<div class="span-5 prepend-1">
+<div class="span-6 prepend-1">
 
 
 
@@ -40,18 +37,15 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 
-</div><div class="span-12 content">
+</div>
 
+<div class="span-12 content">
 
 <div>
- 
-
 
 <?php
 
 the_content(); 
-
- 
 
 /*
 the_date();
