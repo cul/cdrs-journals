@@ -109,4 +109,4 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>
 
 		
-<div class="span-16"><h1> <?php the_title() ?> </h1></div>
+<div class="span-16"><h1 class="page-title"> <?php the_title() ?> </h1></div>

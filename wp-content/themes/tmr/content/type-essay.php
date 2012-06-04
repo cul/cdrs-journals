@@ -204,7 +204,7 @@ if(!empty($source_terms)){
 
 <div class="span-4   last sidebar">
 
-<a class="print-button" HREF="javascript:window.print()">Print</a>
+<a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers">Print</a>
 
 <div class="social-media">
 

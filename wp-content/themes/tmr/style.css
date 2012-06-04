@@ -648,12 +648,7 @@ nav#access{
 	display: none;
 }
 
-p.numbered_para
-{
-	padding-left:5em;
-	text-indent: 1em;
-	margin-bottom: .5em;
-}
+ 
 
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
@@ -1464,4 +1459,6 @@ body.home #header {
 	height: 260px;
 }
 
- 
+#essay p{
+	text-indent: 4em;
+}
