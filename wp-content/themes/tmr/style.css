@@ -912,8 +912,7 @@ li.essay h1 a:hover {
  
  
 margin: 0;
-	
-	color: #ce3525;
+color: #ce3525;
 text-decoration: none;
  
 }
@@ -931,12 +930,11 @@ color: #b92d0c;
 a.author, .author-link a{
 	color: #844240;
 	text-decoration: none;
- 
+	text-transform: uppercase;
+	 
 }
 
-/*.author-link a:before{
-	content: "by";
-}*/
+ 
 
 ul.archive-list li{
 	margin-bottom: 20px;
@@ -957,10 +955,10 @@ span.edition-link {
 	margin-right: 300px;
 	
 }
-a.author:before,.author-link a:before {
+/*a.author:before,.author-link a:before {
 	content:"\2014\a0";
 	color: #844240;
-	}
+	}*/
 
 .container p{
 	margin-bottom: 1.4em;
