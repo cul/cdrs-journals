@@ -34,7 +34,7 @@ $name= $term->name;
  
  
  
-echo "Morningside Review Content by ". $tax;
+/* echo "Morningside Review Content by ". $tax; */
  
 /*
  
