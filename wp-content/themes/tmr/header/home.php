@@ -122,6 +122,11 @@ Submissions
 <p>Eligible students may submit their work for publication.</p>
 </li>
 
+<li>
+ 
+<?php get_search_form(); ?>
+</li>
+
 </ul>
 
 </div>

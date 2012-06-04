@@ -245,6 +245,7 @@ div#header h1{
 	padding-top: 16px;
 	margin-top: 0px;
 	padding-bottom: 17px;
+	text-transform: uppercase;
 }
 
 #colophon a {
@@ -272,6 +273,7 @@ span.light {
 	letter-spacing: 1px;
 	 
 	font-weight: 400;
+	text-transform: capitalize;
 }
 
 span.bottom {
@@ -418,6 +420,7 @@ button, input, select, textarea { width: auto; overflow: visible; margin: 0; fon
 	width: 58px;
 	font-size: 11px;
 	margin-right: 3px;
+	display: none;
 }
 
 div.footer {
@@ -509,7 +512,7 @@ h1, h2{
  font-size: 1.4em;
  margin-top: .5em;
  margin-bottom: .5em;
- text-transform: uppercase;
+ /*text-transform: uppercase;*/
 
  
 }
@@ -1179,6 +1182,34 @@ div#search-form{
 }
 
 
+#search {
+
+}
+
+#search-form input[type="text"] {
+    background: url(img/search-white.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search-form input[type="text"]:focus {
+    width: 200px;
+    }
+
 
 div.hp-feature img {
 	float: left;
@@ -1443,6 +1474,14 @@ form#searchform {
 
 body.home form#searchform{
 	width: 100%;
+}
+
+  ul.home-nav li p {
+	display: none;
+}
+
+body.home #header {
+	height: 260px;
 }
 
  

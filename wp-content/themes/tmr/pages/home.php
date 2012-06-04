@@ -22,7 +22,7 @@ cfct_template_file('header', 'home.php');
 
 ?>
 
-<div class="span-7 prepend-1 content">
+<div class="span-8 prepend-1 content">
 
 
 <h1 class="homepage-label" >Featured Contributors</h1>
@@ -44,12 +44,7 @@ wp_reset_postdata();
 
 </div>
 
-<div class="span-8 center content">
-
-<h1 class="homepage-label">From The Director</h1>
- 
-<p>Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a></p>
-
+<div class="span-7 center content">
 
 <h1 class="homepage-label">On Writing</h1>
  
@@ -62,10 +57,12 @@ wp_reset_postdata();
 the_content(); ?>
 
 
+
+
 <!--
 <h2>Read Essays</h2>
 
-￼￼Browse essays by category or do a keyword search. You can also view the complete TMR index in Archive.
+Browse essays by category or do a keyword search. You can also view the complete TMR index in Archive.
 Assignment type
 Citation
 Progression
@@ -75,9 +72,19 @@ Year
 
 </div>
 <div class="span-7 content last">
-<p>
 
-<p class="blurb"><em>The Morningside Review</em> is an online journal published by <a href='http://www.college.columbia.edu/core/uwp'>Undergraduate Writing Program at Columbia University</a>. It features exemplary essays written by first-year undergraduates in the Core Curriculum course, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=369">University Writing</a>.</p> <!-- <p>Since these essays serve as vivid examples of peer work, they are commonly assigned in University Writing. Students may be prompted by their instructors to identify the rhetorical strategies employed in an essay, contemplate their effectiveness, and attempt to emulate those they admire in their own work. Thus, Columbia University students may make their imprint on University Writing long after they have completed the course.</p> -->
+<h1 class="homepage-label">From The Director</h1>
+ 
+<p>Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a></p>
+
+
+
+
+ <!--
+
+
+<p class="blurb"><em>The Morningside Review</em> is an online journal published by <a href='http://www.college.columbia.edu/core/uwp'>Undergraduate Writing Program at Columbia University</a>. It features exemplary essays written by first-year undergraduates in the Core Curriculum course, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=369">University Writing</a>.</p>
+--> <!-- <p>Since these essays serve as vivid examples of peer work, they are commonly assigned in University Writing. Students may be prompted by their instructors to identify the rhetorical strategies employed in an essay, contemplate their effectiveness, and attempt to emulate those they admire in their own work. Thus, Columbia University students may make their imprint on University Writing long after they have completed the course.</p> -->
 <div class="home-box">
 <h1 class="homepage-label">Connect With TMR</h1>
 
@@ -87,9 +94,6 @@ Year
 </div>
 
  
-<h1 class="homepage-label">Search</h1>
-
-<?php get_search_form(); ?>
 </div>
 
 
