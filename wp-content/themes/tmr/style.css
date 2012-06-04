@@ -424,6 +424,10 @@ div.footer {
 	 
 }
 
+#tmr-index-content {
+	 min-height: 100px;
+}
+
 #footer hr {
  border: 0;
  
