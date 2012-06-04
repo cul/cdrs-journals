@@ -203,7 +203,7 @@ h3.flyer {
 	color: #8f1b08;
 }
 
-body.page-id-123 h1.page-title{
+body.page-id-123 h1.page-title, body.archive h1.page-title{
 	display: none;
 }
  
