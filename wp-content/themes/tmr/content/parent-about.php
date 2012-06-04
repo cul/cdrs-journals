@@ -20,7 +20,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 
-
  
  
 
@@ -39,7 +38,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 </div>
 
-<div class="span-12 content">
+<div class="span-12 content last">
 
 <div>
 

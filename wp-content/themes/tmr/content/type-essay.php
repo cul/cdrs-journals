@@ -85,7 +85,7 @@ $wc = $custom_works_cited->the_meta();
 
 <div id="work_cited">
  
-<h1><?php echo($wc['title']); ?></h1>
+<h1 class="meta-header"><?php echo($wc['title']); ?></h1>
 
 <?php  
 
@@ -117,7 +117,7 @@ if(!empty($author_terms)){
       $auth_photo = get_tax_meta($term,'author_image',true);
    
    if($auth_bio){
-    echo ' <h1>about the author</h1>';
+    echo ' <h1 class="meta-header">About the Author</h1>';
     if($auth_photo){
 		
 			echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
@@ -136,7 +136,7 @@ if(!empty($author_terms)){
    }}
    
    ?>
-<h1>Academic taxonomies</h1>
+<h1 class="meta-header">Academic Taxonomies</h1>
    <?
    
 	$progression_terms = wp_get_object_terms($post->ID, 'progression');

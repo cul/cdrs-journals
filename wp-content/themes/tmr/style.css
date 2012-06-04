@@ -202,6 +202,10 @@ h3.flyer {
 	letter-spacing: .2em;
 	color: #8f1b08;
 }
+
+body.page-id-123 h1.page-title{
+	display: none;
+}
  
 
  
@@ -982,6 +986,8 @@ div#essay{
 	border-top: 1px solid #bbb;
 	color: #2f5064;
 	margin-top: 44px;
+	line-height: 40px;
+	text-transform: uppercase;
 }
 
 #essay blockquote{
@@ -1267,13 +1273,13 @@ margin-top: 80px;
 
 
 h1.page-title {
- margin-top: 0;
-	
-		font-size: 40px;
+    margin-top: 0;
+    font-size: 40px;
 	line-height: 40px;
 	color: #56494f;
+ 
 }
-
+ 
 ul.archive-list {
 	margin-left: 0;
 }
@@ -1354,9 +1360,7 @@ ul#menu-about-subnav  {
 	margin-top: 40px;
 }
 
-body.page-id-129 ul#menu-about-subnav{
-	margin-top: 92px;
-}
+ 
 
 
 
@@ -1447,10 +1451,6 @@ a:active img[class*="wp-image-"],
         .gallery-caption {
                 margin-left: 0;
         }
-        
-body.page-id-129 h1.page-title, body.page-id-123 h1.page-title, body.archive h1.page-title{
-	display: none;
-}
 
  
 
