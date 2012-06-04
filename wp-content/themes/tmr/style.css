@@ -158,7 +158,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 #main.container{
 	 
 	background-image: url(img/bgtex.jpg);
-   margin-top: 15px;
+ 
    min-height: 600px;
    
 	border: 1px solid #9b958d;
@@ -232,7 +232,7 @@ body.home div#header h1{
 	font-weight: 700;
 	padding-bottom: 29px;
 	padding-top: 10px;
-	margin: 63px 0 0 54px;
+	margin: 48px 0 0 8px;
 }
 div#header h1{
 
@@ -414,14 +414,7 @@ pre {
    4) Align to baseline */
 button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
 
-#searchsubmit {
-	float: right;
-	margin-top: 8px;
-	width: 58px;
-	font-size: 11px;
-	margin-right: 3px;
-	display: none;
-}
+
 
 div.footer {
 }
@@ -432,24 +425,16 @@ div.footer {
 }
 
 #footer hr {
-	
-	width: 90%;
+ border: 0;
  
 }
 
 
 
 
-body.home #searchsubmit {
-	float: right;
-	margin-top: 7px;
-}
+ 
 
- input#s.field {
-	width: 146px;
-	margin-left: 15px;
-	font-size: 14px;
-}
+ 
 
 #footer  p {
 	font-size: 11px;
@@ -459,12 +444,7 @@ body.home #searchsubmit {
 }
 
 
-body.home input#s.field {
-	width: 193px;
-	font-size: 14px;
-	line-height: 0;
-	margin-left: 0;
-}
+ 
 
 div.home-box {
 	margin-bottom: 1em;
@@ -539,9 +519,7 @@ nav#access {
   margin-bottom: 1em;
 }
 
-body.home div#main{
-	margin-top: 1.5em;
-}
+ 
 /*nav#access li{
 	float: left;
 	margin-left: 2em;
@@ -819,10 +797,7 @@ img#meta-toggle {
 }
 
 
-
-body.home div#main.container {
-	margin-top: 18px;
-}
+ 
 
  
 body.home div#header #cu-writing {
@@ -1177,21 +1152,20 @@ div.fb-like {
 label.assistive-text {
 display: none;	
 }
-div#search-form{
-	text-align: left;
-}
+ 
 
 
 #search {
+	text-align: right;
 
 }
 
-#searchform input[type="text"], #search-form input[type="text"] {
+#searchform input[type="text"]{
     background: url(img/search-white.png) no-repeat 10px 6px #fcfcfc;
     border: 1px solid #d1d1d1;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: #bebebe;
-    width: 150px;
+    width: 100px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -1206,10 +1180,15 @@ div#search-form{
     transition: all 0.7s ease 0s;
     }
 
-#search-form input[type="text"]:focus {
+
+
+#searchform input[type="text"]:focus {
     width: 200px;
     }
-
+#searchsubmit {
+ 
+	display: none;
+}
 
 div.hp-feature img {
 	float: left;
@@ -1227,6 +1206,10 @@ div.hp-feature img {
 
 div.hp-feature {
  
+}
+
+#copyrights {
+	text-align: center;
 }
 
 div.authors-column {
@@ -1467,14 +1450,9 @@ body.page-id-129 h1.page-title, body.page-id-123 h1.page-title, body.archive h1.
 	display: none;
 }
 
-form#searchform {
-	width: 86%;
-	margin: auto;
-}
+ 
 
-body.home form#searchform{
-	width: 100%;
-}
+ 
 
   ul.home-nav li p {
 	display: none;

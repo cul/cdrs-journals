@@ -80,6 +80,15 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="container" id="search">
+
+<div class="span-24">
+
+<?php get_search_form(); ?>
+
+</div>
+</div>
  
 <div class="container" id="main">
 		

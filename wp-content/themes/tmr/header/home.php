@@ -46,10 +46,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	 <?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ); ?></title>
 
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'carrington-jam' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'carrington-jam' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
+ 
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<?php wp_get_archives('type=monthly&format=link'); ?>
+	 
 	
 
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
@@ -73,17 +72,28 @@ function my_scripts_method() {
 	
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
- 
+
+<div class="container" id="search">
+
+<div class="span-24">
+
+<?php get_search_form(); ?>
+
+</div>
+</div>
 
 <div class="container" id="main">
 
 <div id='header' role="banner" class="span-15 prepend-1">		
 
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
+<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/>
+
+<span class='bottom'>Review</span></a></h1>
 
 <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div>
 
@@ -121,12 +131,6 @@ Submissions
 </a>
 <p>Eligible students may submit their work for publication.</p>
 </li>
-
-<li>
- 
-<?php get_search_form(); ?>
-</li>
-
 </ul>
 
 </div>

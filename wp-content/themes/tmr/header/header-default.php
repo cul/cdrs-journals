@@ -78,7 +78,14 @@ function my_scripts_method() {
 </head>
 
 <body <?php body_class(); ?>>
+<div class="container" id="search">
 
+<div class="span-24">
+
+<?php get_search_form(); ?>
+
+</div>
+</div>
 
 <div class="container" id="main">
 <nav id="access" role="navigation" class="span-17 prepend-7 clearfix">

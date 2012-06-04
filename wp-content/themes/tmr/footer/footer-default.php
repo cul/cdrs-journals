@@ -20,14 +20,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div div id="footer" class="span-24">
 
-<div class="span-7" id='search-form'>
-<?php get_search_form(); ?>
-</div>
-<div class="span-16">
-
+ 
+<div class="span-22 prepend-1" id='copyrights'>
 <hr/>
 <p>copyright notice. address, phone. other footer content. goes right here.</p>
-</div>
+ </div>
 
 </div>
 
