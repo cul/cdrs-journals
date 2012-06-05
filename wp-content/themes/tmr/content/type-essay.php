@@ -47,11 +47,25 @@ if(!empty($author_terms)){
   
     foreach($author_terms as $term){
     
+    $auth_bio = get_tax_meta($term, 'author_bio');
+	$auth_photo = get_tax_meta($term,'author_image',true);
+   
+   if($auth_bio){
+
+    
+    
+    
+    
     echo '<span class="author-credit"><a href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a></span>'; 
    }
    
+   else{
+   
+   echo '<span class="author-credit">'.formatName($term->name).'</span>';
    }
+   
    }
+   }}
  
   ?>
 

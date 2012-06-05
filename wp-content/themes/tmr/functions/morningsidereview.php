@@ -457,15 +457,17 @@ add_filter( 'meta_content', 'prepend_attachment' );
 
 
 
-//include the main class file
-
- 
 /*
-* configure taxonomy custom fields
+begin adding custom fields to author taxonomy.. 
+
+the followign code block uses the TaxMeta Class included in functions php.
+
+for more information on the class see https://github.com/bainternet/Tax-Meta-Class
 */
-$config = array(
-   'id' => 'demo_meta_box',                         // meta box id, unique per meta box
-   'title' => 'Demo Meta Box',                      // meta box title
+
+ $config = array(
+   'id' => 'author_meta_box',                         // meta box id, unique per meta box
+   'title' => 'Author Meta Box',                      // meta box title
    'pages' => array('author'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
    'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
    'fields' => array(),                             // list of meta fields (can be added by field arrays)
@@ -476,32 +478,46 @@ $config = array(
  
 );
  
-/*
-* Initiate your taxonomy custom fields
-*/
- 
+  
 $my_meta = new Tax_Meta_Class($config);
- 
-/*
-* Add fields
-*/
- 
- 
-//Image field
+
 $my_meta->addImage('author_image',array('name'=> 'Author Image '));
  
-//wysiwyg field
 $my_meta->addWysiwyg('author_bio',array('name'=> 'Author Bio '));
-//taxonomy field
+  
  
  
- 
-/*
-* Don't Forget to Close up the meta box deceleration
-*/
-//Finish Taxonomy Extra fields Deceleration
 $my_meta->Finish();
 
+$config = array(
+   'id' => 'source_meta_box',                         // meta box id, unique per meta box
+   'title' => 'Source Meta Box',                      // meta box title
+   'pages' => array('source'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
+   'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
+   'fields' => array(),                             // list of meta fields (can be added by field arrays)
+   'local_images' => true,                         // Use local or hosted images (meta box images for add/remove)
+ 
+ 
+   'use_with_theme' => true                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+ 
+);
+ 
+  
+$my_meta = new Tax_Meta_Class($config);
+
+  
+$my_meta->addWysiwyg('source_citation',array('name'=> 'Citation'));
+  
+ 
+ 
+$my_meta->Finish();
+
+
+
+
+
+
+/* end code for TaxMeta Class */
  
 /* Remove "Categories" and "Tags" Taxonomy */
 /*
