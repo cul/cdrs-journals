@@ -47,30 +47,19 @@ wp_reset_postdata();
 <div class="span-7 center content">
 
 <h1 class="homepage-label">On Writing</h1>
+
+<?
+$the_query = new WP_Query('category_name=on-writing&post_type=essay');
  
-<?php
- if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail('thumbnail');
-} 
+while ( $the_query->have_posts() ) : $the_query->the_post();
+cfct_template_file('content', 'hp-ow-feature');
+endwhile;
 
 
-the_content(); ?>
-
-
-
-
-<!--
-<h2>Read Essays</h2>
-
-Browse essays by category or do a keyword search. You can also view the complete TMR index in Archive.
-Assignment type
-Citation
-Progression
-Year	 
-
--->
+?>
 
 </div>
+
 <div class="span-7 content last">
 
 <h1 class="homepage-label">From The Director</h1>
