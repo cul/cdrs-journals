@@ -31,7 +31,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 echo '<h2>'.the_title().'</h2>';
 
 
-the_content(); 
+the_excerpt(); 
 
  
 ?>
