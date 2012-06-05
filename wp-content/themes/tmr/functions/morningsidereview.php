@@ -33,7 +33,7 @@ add_action( 'init', 'mytheme_addmenus' );
 if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support( 'post-thumbnails' ); 
 	}
-
+add_post_type_support( 'page', 'excerpt' );
  
 /* begin adding custom post types and taxonomies */
 

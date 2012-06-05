@@ -64,16 +64,16 @@ endwhile;
 
 <h1 class="homepage-label">From The Director</h1>
  
-<p>Our university's first classes in 1754 were taught by an essayist: Samuel Johnson. The essaying tradition at Columbia has continued unbroken, but not untested, until today.<a href="?page_id=364">read more...</a></p>
+ <?
+$the_query = new WP_Query('page_id=364');
+ 
+while ( $the_query->have_posts() ) : $the_query->the_post();
+cfct_template_file('content', 'hp-ow-feature');
+endwhile;
 
 
-
-
- <!--
-
-
-<p class="blurb"><em>The Morningside Review</em> is an online journal published by <a href='http://www.college.columbia.edu/core/uwp'>Undergraduate Writing Program at Columbia University</a>. It features exemplary essays written by first-year undergraduates in the Core Curriculum course, <a href="http://webdev.cdrs.columbia.edu/tmr/?page_id=369">University Writing</a>.</p>
---> <!-- <p>Since these essays serve as vivid examples of peer work, they are commonly assigned in University Writing. Students may be prompted by their instructors to identify the rhetorical strategies employed in an essay, contemplate their effectiveness, and attempt to emulate those they admire in their own work. Thus, Columbia University students may make their imprint on University Writing long after they have completed the course.</p> -->
+?>
+ 
 <div class="home-box">
 <h1 class="homepage-label">Connect With TMR</h1>
 

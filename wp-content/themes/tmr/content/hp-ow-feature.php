@@ -21,8 +21,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div class="hp-feature clearfix">
 
- 
+<a href="<? the_permalink() ?>" 
 <?php
+
+
 
  if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
   the_post_thumbnail('medium');
@@ -35,5 +37,5 @@ the_excerpt();
 
  
 ?>
-
+</a>
 </div>

@@ -29,7 +29,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 } 
 
 
-the_content(); 
+the_excerpt(); 
 
  
 ?>
