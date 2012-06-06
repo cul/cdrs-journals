@@ -68,7 +68,8 @@ endwhile;
 $the_query = new WP_Query('page_id=364');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();
-cfct_template_file('content', 'hp-ow-feature');
+the_excerpt();
+echo '<a href="'.get_permalink().'">Read More...</a>';
 endwhile;
 
 

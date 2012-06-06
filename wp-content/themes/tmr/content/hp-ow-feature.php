@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div class="hp-feature clearfix">
 
-<a href="<? the_permalink() ?>" 
+ 
 <?php
 
 
@@ -36,6 +36,7 @@ echo '<h2>'.the_title().'</h2>';
 the_excerpt(); 
 
  
+ echo '<a href="'.get_permalink().'">Read More...</a>';
 ?>
-</a>
+ 
 </div>

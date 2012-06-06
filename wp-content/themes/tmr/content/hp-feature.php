@@ -19,8 +19,10 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-<div class="hp-feature clearfix">
 
+
+<div class="hp-feature clearfix">
+ 
 
 <?php
 
@@ -29,9 +31,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 } 
 
 
-the_excerpt(); 
+the_content(); 
 
- 
 ?>
-
+ 
 </div>
