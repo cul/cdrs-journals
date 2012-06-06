@@ -52,9 +52,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	
 
-		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
-		<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/print.css"/>
+		<link rel="stylesheet" type="text/css" media="screen"  href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
+		<link rel="stylesheet" type="text/css" media="screen, print" href="<?php bloginfo('stylesheet_url') ?>" />
+ 
 <?php
 
 function my_scripts_method() {
