@@ -326,7 +326,7 @@ ul, ol { margin-left: 2em; list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-bottom: 20px;
 	 
 	list-style-position: inside;
@@ -1277,6 +1277,15 @@ text-indent: -10000px;
 	background: url(img/email.png) no-repeat 0 0;
 }
 
+div.home-sm-icons {
+ 
+}
+
+div.hp-feature img.attachment-medium.wp-post-image {
+	margin: 0;
+ 
+}
+
 #email:hover {
 	background: url(img/email.png) no-repeat 0 -33px;
 }
@@ -1431,7 +1440,7 @@ body.home #header {
 }
 
 #essay p{
-	text-indent: 4em;
+	text-indent: 3em;
 }
 
 
@@ -1450,7 +1459,9 @@ nav#access{
 	display: none;
 }
 
- 
+#essay p{
+	margin: 1em 4em;
+}
 
   /*a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }*/
@@ -1477,10 +1488,9 @@ span.numbered-item
 {
 	float: left;
     display: block;
-     margin-left: -27px;
+     margin-left: -5em;
 	color: #a3a2a2;
-	font-size: 14px;
-	margin-top: 1px;
+ 
 	
 }
 
@@ -1493,21 +1503,41 @@ span.numbered-item
 	display: none;
 }
 
-#header h1:before 
+
+div#header h1{
+ 	font-size: 40px;
+	padding-left: 109px;
+	font-weight: 700;
+	line-height: 35px;
+	/*margin-left: 80px;*/
+ 
+
+	padding-bottom: 17px;
+	text-transform: uppercase;
+ 
+}
+
+
+div#header h1:before 
 {
-content:url(img/lion.png);
+/*content:url(img/lion.png);
+ 
+	margin-left: -100px;*/
+
+}
+ 
+
+#main{
+	margin: 0 10%;
 }
 
-#header img{
-	float: right;
-}
 
-#header h1{
-	margin-left: 50%;
-}
 
-#cu-writing {
- float: right;
+
+div#cu-writing {
+ position: absolute;
+ top: 0;
+ right: 0;
 }
  
 #essay-meta{
@@ -1538,4 +1568,10 @@ color: black;
 }
 
 
+}
+
+a.read-more {
+	display: block;
+	text-align: right;
+	margin-top: -10px;
 }

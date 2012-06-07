@@ -36,7 +36,7 @@ echo '<h2>'.the_title().'</h2>';
 the_excerpt(); 
 
  
- echo '<a href="'.get_permalink().'">Read More...</a>';
+echo '<a class="read-more" href="'.get_permalink().'">Read More...</a>';
 ?>
  
 </div>

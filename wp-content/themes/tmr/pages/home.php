@@ -69,7 +69,7 @@ $the_query = new WP_Query('page_id=364');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();
 the_excerpt();
-echo '<a href="'.get_permalink().'">Read More...</a>';
+echo '<a class="read-more" href="'.get_permalink().'">Read More...</a>';
 endwhile;
 
 
@@ -77,12 +77,12 @@ endwhile;
  
 <div class="home-box">
 <h1 class="homepage-label">Connect With TMR</h1>
-
+<div class="home-sm-icons">
 <a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
 <a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
 <a href="mailto:uwp@columbia.edu" class="home-social" id="email">email</a>
 </div>
-
+</div>
  
 </div>
 
