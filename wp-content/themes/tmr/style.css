@@ -1575,3 +1575,7 @@ a.read-more {
 	text-align: right;
 	margin-top: -10px;
 }
+
+div.content {
+	margin-bottom: 2em;
+}
