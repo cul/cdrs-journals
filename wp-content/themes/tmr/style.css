@@ -595,13 +595,17 @@ div.social-media {
 }
 
 #essay-meta h3 {
-	float: left;
- margin-top: 2px;
- margin-right: 5px;
+	margin-top: 9px;
+}
+
+#essay-meta h2 {
+	text-transform: uppercase;
+	margin-top: 0;
 }
 
 #essay-meta a.meta-link {
-	display: block;
+	 
+ 
 }
 
 #essay-meta h3:after {
@@ -789,7 +793,7 @@ span.author-credit {
 	font-size: 150%;
 	text-align: left;
 	display: block;
-	margin-bottom: .5em;
+	/*margin-bottom: .5em;*/
 	text-transform: uppercase;
 }
 
@@ -1545,10 +1549,7 @@ div#cu-writing {
 }
 
 
-span.author-credit {
  
- 
-}
 
 span.author-credit a {
 text-decoration: none;
@@ -1578,4 +1579,28 @@ a.read-more {
 
 div.content {
 	margin-bottom: 2em;
+}
+
+#meta-content {
+	
+	background: rgba(255,255,255,.5);
+	padding-top: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	width: 470px;
+}
+
+div#meta-toggle {
+	float: right;
+	text-transform: uppercase;
+	padding: 0 5px;
+	border: 1px solid #d7d7d7;
+	background-color: #fffeff;
+	font-size: 13px;
+	margin-bottom: 8px;
+	display: block;
+	width: 42px;
+	text-align: center;
+	margin-right: 15px;
+		color: #1a6284;
 }

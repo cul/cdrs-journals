@@ -34,7 +34,7 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-15 prepend-7">
+<div id="content" role="main" class="span-14 prepend-7">
 
  
 
@@ -69,6 +69,111 @@ if(!empty($author_terms)){
  
   ?>
 
+<div id='meta-toggle'>info</div>
+<div id='meta-content' style="display:none">
+<div id="essay-meta" >
+
+<?php
+
+
+$author_terms = wp_get_object_terms($post->ID, 'author');
+if(!empty($author_terms)){
+  if(!is_wp_error( $author_terms )){
+  
+    foreach($author_terms as $term){
+
+  
+
+          
+   $auth_bio = get_tax_meta($term, 'author_bio');
+   
+      $auth_photo = get_tax_meta($term,'author_image',true);
+   
+   if($auth_bio){
+/*     echo ' <h2>About the Author</h1>'; */
+    if($auth_photo){
+		
+			echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
+   }
+    echo '<div class="author-bio">'.$auth_bio.'</div>';
+   }
+   
+
+       
+       
+
+   
+   
+   }
+   
+   }}
+   
+   ?>
+<h2>Academic Taxonomies</h1>
+   <?
+   
+	$progression_terms = wp_get_object_terms($post->ID, 'progression');
+if(!empty($progression_terms)){
+  if(!is_wp_error( $progression_terms )){
+  echo '<h3>Progression</h3>';
+   
+    foreach($progression_terms as $term){
+      echo '<a class="meta-link"  href="'.get_term_link($term->slug, 'progression').'">'.$term->name.'</a> '; 
+    }
+   
+  }
+}
+
+$source_terms = wp_get_object_terms($post->ID, 'source');
+if(!empty($source_terms)){
+  if(!is_wp_error( $source_terms )){
+   echo '<h3>Source</h3>';
+    foreach($source_terms as $term){
+      echo '<a class="meta-link" href="'.get_term_link($term->slug, 'source').'">'.$term->name.'</a>'; 
+    }
+   
+  }
+}  
+
+$source_terms = wp_get_object_terms($post->ID, 'assignment');
+if(!empty($source_terms)){
+  if(!is_wp_error( $source_terms )){
+      echo '<h3>Assignment</h3>';
+    foreach($source_terms as $term){
+      echo '<a class="meta-link" href="'.get_term_link($term->slug, 'assignment').'">'.$term->name.'</a>'; 
+    }
+   
+  }
+}  
+
+
+$source_terms = wp_get_object_terms($post->ID, 'edition');
+if(!empty($source_terms)){
+  if(!is_wp_error( $source_terms )){
+      echo '<h3>Edition</h3>';
+    foreach($source_terms as $term){
+      echo '<a class="meta-link" href="'.get_term_link($term->slug, 'edition').'">'.$term->name.'</a>'; 
+    }
+   
+  }
+  
+  }
+
+	
+	
+			
+     
+  
+
+
+?>
+</div>
+
+
+
+</div>
+
+
 
 </div>
 
@@ -79,7 +184,7 @@ if(!empty($author_terms)){
 
 
 
-<div id="essay" class="">
+<div id="essay"  >
 
 <?php
 
@@ -112,7 +217,7 @@ echo apply_filters('meta_content', $wc['citation']);
 
  
 
- <div id="essay-meta">
+ <div id="essay-meta" class="hidden">
 
 <?php
 

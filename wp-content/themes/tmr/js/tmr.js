@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // $() will work as an alias for jQuery() inside of this function
-/*    $('#meta-toggle').click(function(){$('#essay-meta').toggle('blind');}); */
+  $('#meta-toggle').click(function(){$('#meta-content').slideToggle( );}); 
    
 /*    $("ul#author-index>li").tsort({attr:"id"}); */
    
