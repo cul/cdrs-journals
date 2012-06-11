@@ -30,13 +30,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
 
 $tax = ucfirst($term->taxonomy);
+$taxname = $term->taxonomy;
 $name= $term->name;
-$slug = $term->slug;
-
-//echo "TAX: ".$tax."<br><br>";
-//echo "SLUG: ".$slug."<br><br>";
-
- 
+$slug = $term->slug; 
  
 /* echo "Morningside Review Content by ". $tax; */
  
@@ -76,7 +72,7 @@ echo'<div class="tag-desc">'.  $termDiscription .' </div>';
  
 }
 
-$taxEdition = get_terms('edition', 'orderby=title&hide_empty&order=DESC');
+$taxEdition = get_terms('edition', 'orderby=slug&hide_empty&order=DESC');
 $edition = array();
 //var_dump($taxEdition);
 
@@ -91,45 +87,71 @@ foreach ($taxEdition as $ed) {
 
 //var_dump($edition);
 
-for ($edCount=0; $edCount<sizeof($edition); $edCount++) {
 
-	//$query = query_posts(array( $term->taxonomy=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' )); 
-	//$edQuery = new WP_Query(array('edition'=>$edition[$edCount])); 
+/*for ($edCount = 0; $edCount<sizeof($edition); $edCount++) {
 
-	$taxQuery = new WP_Query(array($term->taxonomy=>$slug));
-
-	//query_posts(array( $term->taxonomy=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' )); 
-
-	$eargs = array('issue'=>$edition[$edCount], 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' );
-
-	$post_e = get_posts($eargs);
-
-	//var_dump($post_e);
+	$multiArgs = array(
+		'tax_query' => array(
+			'relation' => 'AND',
+			array(
+				'taxonomy' => $taxname,
+				'terms' => array($slug),
+				'field' => 'slug'
+			),
+			array(
+				'taxonomy' => 'issue',
+				'terms' => $edition[$edCount],
+				'field' => 'slug'
+				
+			)
+		)
+	);
+	
  
-	if (have_posts()) {
+ 	$taxQuery = new WP_Query($multiArgs);
+ 	
 
-		echo '<ul  class="archive-list">';
- 
-		while (have_posts()) {
-			//$edQuery->the_post();
+}*/
 
+//var_dump($taxQuery);
+
+//$taxQuery = query_posts(array($taxname=>$slug, 'order'=>'ASC'));
+$taxQuery = query_posts(array($taxname=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC'));
+
+//echo "size of edition: ".sizeof($edition)."<br><br>";
+//var_dump($edition);
+
+//var_dump($taxQuery);
+
+
+if (have_posts()) {
+	
+	//echo "taxQuery has posts!<br><br>";
+	//	$edQuery = get_posts(array('issue'=>'20092010', 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC'));
+	//var_dump($edQuery);
+ 	
+	while (have_posts()) {
+		//for ($edCount=0; $edCount<sizeof($edition); $edCount++) {
+			//$edQuery = query_posts(array('issue'=>$edition[$edCount], 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC'));
+			
+			//var_dump($edQuery);
+			
+
+			echo '<ul class="archive-list">';
+				
 			the_post();
 			
 			echo "<li>";
 			cfct_excerpt();
 			echo "</li>";
 			
-		}
-		
-			//$editionyear = get_the_terms( $post->ID, 'edition' );
-			//var_dump($editionyear);
+		//}
 
 	}
-		echo '</ul>';
+	echo '</ul>';
 }
 
 
-wp_reset_query();
 ?>
 
 </div>
