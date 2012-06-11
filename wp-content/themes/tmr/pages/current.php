@@ -18,7 +18,7 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-$query = new WP_Query( array( 'edition' => 'current' ) );
+$query = new WP_Query(array( 'edition' => 'current', 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' ));
 
 get_header();
 
@@ -81,6 +81,8 @@ foreach($authors as $term){
 </div>
 
 <?php
+wp_reset_query();
+
 /* comments_template(); */
 
 /* get_sidebar(); */

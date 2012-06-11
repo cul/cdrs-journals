@@ -48,7 +48,7 @@ wp_reset_postdata();
 
 <h1 class="homepage-label">On Writing</h1>
 
-<?
+<?php
 $the_query = new WP_Query('category_name=on-writing&post_type=essay');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -64,7 +64,7 @@ endwhile;
 
 <h1 class="homepage-label">From The Director</h1>
  
- <?
+ <?php
 $the_query = new WP_Query('page_id=364');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();

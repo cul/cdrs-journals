@@ -26,12 +26,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <?php
  
-global $term;
+//global $term;
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
 
 $tax = ucfirst($term->taxonomy);
 $name= $term->name;
- 
+$slug = $term->slug;
+
+//echo "TAX: ".$tax."<br><br>";
+//echo "SLUG: ".$slug."<br><br>";
+
  
  
 /* echo "Morningside Review Content by ". $tax; */
@@ -71,23 +75,61 @@ if($termDiscription != ''){
 echo'<div class="tag-desc">'.  $termDiscription .' </div>';
  
 }
- 
-if (have_posts()) {
-	echo '<ul  class="archive-list">';
- 
-	while (have_posts()) {
-		the_post();
-?>
-	<li>
-<?php
-		cfct_excerpt();
-?>
-	</li>
-<?php
+
+$taxEdition = get_terms('edition', 'orderby=title&hide_empty&order=DESC');
+$edition = array();
+//var_dump($taxEdition);
+
+foreach ($taxEdition as $ed) {
+	if ($ed->slug == "current") {
+		// do nothing
 	}
-	echo '</ul>';
+	else {
+		$edition[] = $ed->slug;
+	}
 }
+
+//var_dump($edition);
+
+for ($edCount=0; $edCount<sizeof($edition); $edCount++) {
+
+	//$query = query_posts(array( $term->taxonomy=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' )); 
+	//$edQuery = new WP_Query(array('edition'=>$edition[$edCount])); 
+
+	$taxQuery = new WP_Query(array($term->taxonomy=>$slug));
+
+	//query_posts(array( $term->taxonomy=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' )); 
+
+	$eargs = array('issue'=>$edition[$edCount], 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' );
+
+	$post_e = get_posts($eargs);
+
+	//var_dump($post_e);
+ 
+	if (have_posts()) {
+
+		echo '<ul  class="archive-list">';
+ 
+		while (have_posts()) {
+			//$edQuery->the_post();
+
+			the_post();
+			
+			echo "<li>";
+			cfct_excerpt();
+			echo "</li>";
+			
+		}
+		
+			//$editionyear = get_the_terms( $post->ID, 'edition' );
+			//var_dump($editionyear);
+
+	}
+		echo '</ul>';
+}
+
+
+wp_reset_query();
 ?>
 
 </div>
- 

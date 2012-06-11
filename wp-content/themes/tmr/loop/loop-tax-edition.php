@@ -21,7 +21,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 <ul class="edition-list">
-<?
+<?php
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  
+$slug = $term->slug;
+
+
+$query = query_posts(array( 'edition'=>$slug, 'meta_key'=>'author', 'orderby'=>'meta_value', 'order'=>'ASC' ));
+
 if (have_posts()) {
 	 
 	while (have_posts()) {
@@ -30,10 +36,6 @@ if (have_posts()) {
 <li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 <?php
-
- 
-$args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'name');
-
 $authors = get_the_terms( $post->ID, 'author' );
 
 if($authors){
@@ -48,7 +50,7 @@ foreach($authors as $term){
 
 </li>
 
-<? 
+<?php
  
 }
 	}
