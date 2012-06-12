@@ -290,7 +290,7 @@ div#header h1 a{
 }
 
 div#header h1 a:hover{
-		text-shadow: #cadde6 2px 1px 2px;
+ 
 
 }
 
@@ -1323,7 +1323,7 @@ ul#menu-about-subnav  {
 	text-align: right;
 	text-transform: uppercase;
 	 
-	margin-left: 0;
+	margin-right: 5px;
  
 }
 
