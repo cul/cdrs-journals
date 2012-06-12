@@ -19,11 +19,8 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-<h1>&nbsp;</h1>
-
-<br style="clear:both"/>
+ <br style="clear:both" />
  
-
 <div class="span-6 prepend-1">
 
 

@@ -31,11 +31,7 @@ Tags: cdrs
 NOTE: This file is not used in this theme but is included for WordPress theme expected format compatibility - it's standard to use the css/ dir for actual theme CSS in a Carrington-based theme.
 
  
-/* @override 
-	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
-	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
  
-*/
 
 /* including for compatibility */
 
@@ -176,6 +172,9 @@ a.print-button {
 	margin-bottom: 8px;
 	display: block;
 	width: 42px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 
@@ -250,6 +249,7 @@ div#header h1{
 	margin-top: 0px;
 	padding-bottom: 17px;
 	text-transform: uppercase;
+	margin-bottom: 14px;
 }
 
 #colophon a {
@@ -355,10 +355,8 @@ body.home div#header div#cu-writing{
 	position: relative;
 }
 div#cu-writing {
-float: left;
-margin-left: 20px;
-	margin-bottom: -57px;
-	margin-top: 9px;
+ text-align: right;
+ 
 	 
 }
 
@@ -768,16 +766,6 @@ div#essay-meta {
 	margin-bottom: 10px;
 }
 
-img#meta-toggle {
-	float: right;
- 	margin-top: -20px;
-	margin-right: -11px;
-}
-
-
- 
-
- 
 body.home div#header #cu-writing {
  float: right;
 	margin-top: 0;
@@ -1101,7 +1089,7 @@ a#skip {
 }
 
 .sidebar{
- 
+ margin-top: 101px;
  
 }
 
@@ -1231,8 +1219,7 @@ margin-top: 80px;
  	line-height: 25px;
 	text-transform: uppercase;
 	text-align: right;
-	margin-right: 1em;
-	margin-bottom: 1em;
+ 
 	color: #9b534d;
 
 }
@@ -1336,7 +1323,7 @@ ul#menu-about-subnav  {
 	text-transform: uppercase;
 	 
 	margin-left: 0;
-	margin-top: 40px;
+ 
 }
 
  
@@ -1445,131 +1432,10 @@ body.home #header {
 
 #essay p{
 	text-indent: 3em;
-}
 
 
 
-@media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
-  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
-  
-  .social-media{
-	display: none;
-}
-
-
-
-nav#access{
-	display: none;
-}
-
-#essay p{
-	margin: 1em 4em;
-}
-
-  /*a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }*/
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote {  page-break-inside: avoid; }
-  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3{ page-break-after: avoid; }
-  
-  
-  
- 
-
-nav#access{
-	display: none;
-}
-
- 
-
-span.numbered-item
-{
-	float: left;
-    display: block;
-     margin-left: -5em;
-	color: #a3a2a2;
- 
-	
-}
-
-
-#searchform{
-	display: none;
-}
-
-.sidebar{
-	display: none;
-}
-
-
-div#header h1{
- 	font-size: 40px;
-	padding-left: 109px;
-	font-weight: 700;
-	line-height: 35px;
-	/*margin-left: 80px;*/
- 
-
-	padding-bottom: 17px;
-	text-transform: uppercase;
- 
-}
-
-
-div#header h1:before 
-{
-/*content:url(img/lion.png);
- 
-	margin-left: -100px;*/
-
-}
- 
-
-#main{
-	margin: 0 10%;
-}
-
-
-
-
-div#cu-writing {
- position: absolute;
- top: 0;
- right: 0;
-}
- 
-#essay-meta{
- display: none;
-}
-
-
- 
-
-span.author-credit a {
-text-decoration: none;
-color: black;
-
-}
-
-#colophon{
-	
-	margin-top: 3em;
-	text-align: center;
-}
-
-#colophon a{
-	text-decoration: none;
-	color: black;
-}
-
-
-}
+}  
 
 a.read-more {
 	display: block;
@@ -1590,8 +1456,8 @@ div.content {
 	width: 470px;
 }
 
-div#meta-toggle {
-	float: right;
+#meta-toggle {
+ 
 	text-transform: uppercase;
 	padding: 0 5px;
 	border: 1px solid #d7d7d7;
@@ -1602,5 +1468,136 @@ div#meta-toggle {
 	width: 42px;
 	text-align: center;
 	margin-right: 15px;
-		color: #1a6284;
+	color: #1a6284;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
 }
+
+div.essay-tools {
+	float: right;
+}
+
+#meta-toggle:hover {
+    -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow:         0 0 5px rgba(0,0,0,0.5);
+    color: red;
+}
+
+body.page div.content{
+	margin-top: -54px;
+}
+
+div.menu-about-subnav-container {
+	margin-top: 30px;
+}
+#print-header{
+	display: none;
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important;
+	/*font-family: Georgia, "Times New Roman", Times, serif !important;*/
+}
+ 
+ #print-header{
+	display: block;
+	max-width: 100%;
+}
+  .social-media, nav#access, #searchform, .sidebar, #essay-meta{
+	display: none;
+}
+
+ 
+ 
+
+ 
+  /*a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }*/
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {  page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ 		page-break-inside: avoid; 
+  				page-break-after: avoid; }
+  
+  
+  
+ 
+span.author-credit{
+	font-size: 12pt;
+}
+ 
+
+ #header{
+	display: none;
+}
+
+div#cu-writing{
+	display: none;
+}
+
+span.numbered-item
+{
+	float: right;
+    display:block;
+	color: #a3a2a2;
+     width: 20px;
+}
+
+
+
+div#header h1 a{
+	
+	color: black;
+}
+
+h1.page-title{
+	font-size: 24pt;
+	line-height: 24pt;
+}
+
+ 
+
+
+ 
+span.author-credit a {
+	text-decoration: none;
+	color: black;
+}
+
+#colophon{
+	
+	margin-top: 3em;
+	text-align: center;
+}
+
+#colophon a{
+	text-decoration: none;
+	color: black;
+}
+
+#main.container{
+  	margin: 0 10%;
+	border: none;
+	-moz-box-shadow:    none;
+	-webkit-box-shadow: none;
+	box-shadow:         none;
+}
+
+#meta-toggle{
+	display: none;
+}
+
+#essay p{
+ 
+	font-size: 12pt;
+	 
+}
+} /*//end print*/

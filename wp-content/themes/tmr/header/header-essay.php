@@ -28,7 +28,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	<head>
-	
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 <!--
@@ -88,7 +88,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </div>
  
 <div class="container" id="main">
-		
+		<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/print-header.png" width="100%"  id="print-header">
 		<nav id="access" class="span-17 prepend-7 clearfix" role="navigation">
 		
 		<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
@@ -104,6 +104,3 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 			
 		</div>
 <div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>
-
-		
-<div class="span-16"><h1 class="page-title"> <?php the_title() ?> </h1></div>

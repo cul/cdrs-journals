@@ -28,7 +28,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	<head>
-	
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 				
@@ -109,4 +109,4 @@ function my_scripts_method() {
 <div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>
 
 		
-<div class="span-16 header-title" ><h1 class="page-title"> <?php the_title() ?> </h1></div>
+<!-- <div class="span-16 header-title" ><h1 class="page-title"> <?php the_title() ?> </h1></div> -->

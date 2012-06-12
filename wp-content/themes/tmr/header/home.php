@@ -27,7 +27,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
-
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 				

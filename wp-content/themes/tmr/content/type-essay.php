@@ -34,10 +34,10 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-14 prepend-7">
+<div id="content" role="main" class="span-12">
 
- 
 
+<h1 class="page-title"> <?php the_title() ?> </h1>
 
 <?php
 
@@ -69,7 +69,20 @@ if(!empty($author_terms)){
  
   ?>
 
-<div id='meta-toggle'>info</div>
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+<div id="essay">
+
 <div id='meta-content' style="display:none">
 <div id="essay-meta" >
 
@@ -173,18 +186,6 @@ if(!empty($source_terms)){
 
 </div>
 
-
-
-</div>
-
-<div  class="span-12 prepend-7">
- 
-
-
-
-
-
-<div id="essay"  >
 
 <?php
 
@@ -304,24 +305,16 @@ if(!empty($source_terms)){
   }
   
   }
-
-	
-	
-			
-     
-  
-
-
 ?>
 </div>
- 
- 
-
-
-
 </div>
 
-<div class="span-4   last sidebar">
+<div class="span-4 sidebar">
+
+
+ 
+
+<div id='meta-toggle'>info</div>
 
 <a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers">Print</a>
 
@@ -337,8 +330,6 @@ if(!empty($source_terms)){
 
 
 </div>
-
-
-
+ 
 
 </div>
