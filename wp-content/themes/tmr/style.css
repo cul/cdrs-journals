@@ -356,8 +356,8 @@ body.home div#header div#cu-writing{
 }
 div#cu-writing {
  text-align: right;
- 
-	 
+	margin-top: 11px;
+	margin-right: 5px;
 }
 
 #tmr-index div#cu-writing{
@@ -935,10 +935,7 @@ div.wp-caption.alignleft {
 	margin-left: 5em;
 }
 
-div#essay{
  
-}
-
 #work_cited h1, #essay-meta h1 {
 	font-size: 26px;
 	border-top: 1px solid #bbb;
@@ -1089,8 +1086,13 @@ a#skip {
 }
 
 .sidebar{
- margin-top: 101px;
  
+ 
+}
+#essay  div.author-bio p {
+	 text-indent: 0;
+	font-size: 14px;
+	line-height: 19px;
 }
 
 img.essay-thumb {
