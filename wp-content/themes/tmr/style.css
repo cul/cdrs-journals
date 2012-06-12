@@ -1086,8 +1086,7 @@ a#skip {
 }
 
 .sidebar{
- 
- 
+ margin-top: 100px;
 }
 #essay  div.author-bio p {
 	 text-indent: 0;
@@ -1481,11 +1480,11 @@ div.essay-tools {
 	float: right;
 }
 
-#meta-toggle:hover {
+#meta-toggle:hover, #meta-toggle.active{
     -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	box-shadow:         0 0 5px rgba(0,0,0,0.5);
-    color: red;
+  color: #b81f0f;
 }
 
 body.page div.content{
