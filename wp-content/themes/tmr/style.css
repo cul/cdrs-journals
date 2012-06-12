@@ -1488,7 +1488,10 @@ div.essay-tools {
 }
 
 body.page div.content{
-	margin-top: -54px;
+	margin-top: -50px;
+}
+body.home div.content{
+	margin-top: 0;
 }
 
 div.menu-about-subnav-container {
