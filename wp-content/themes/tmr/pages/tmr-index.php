@@ -117,12 +117,10 @@ cfct_loop();
 <ul id='on-writing' class='taxonomy-list clearfix'>
 <?php  $ow_essays = new WP_Query( 'category_name=on-writing&post_type=essay' );
 
- 
-
 while ( $ow_essays->have_posts() ) : $ow_essays->the_post();
-	 ?> <li><a href="<?php 
-the_permalink() ?>"> <?php 
-the_title()?></a></li> <?php
+ 
+	 ?> <li><a href="<?php the_permalink() ?>"> <?php the_title()?></a></li> <?php
+ 
 	 
 	 endwhile;
 

@@ -49,7 +49,7 @@ wp_reset_postdata();
 <h1 class="homepage-label">On Writing</h1>
 
 <?php
-$the_query = new WP_Query('category_name=on-writing&post_type=essay');
+$the_query = new WP_Query('category_name=current-on-writing&post_type=essay');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();
 cfct_template_file('content', 'hp-ow-feature');
@@ -76,7 +76,7 @@ endwhile;
 ?>
  
 <div class="home-box">
-<h1 class="homepage-label">Connect With TMR</h1>
+<h1 class="homepage-label">Connect With <em>TMR</em></h1>
 <div class="home-sm-icons">
 <a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
 <a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
