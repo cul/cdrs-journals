@@ -24,7 +24,8 @@ $tag_title =   single_tag_title('', false) ;
 
 ?>
 	<div id="content" role="main" class="span-15 prepend-7">
-<h1 class="edition-label"><? echo $tag_title." Edition" ?></h1>
+<h1 class="edition-label"><?php 
+echo $tag_title." Edition" ?></h1>
 
 <?php
 
@@ -44,7 +45,7 @@ get_sidebar();
 
 </div>
 
-<?
+<?php
 
 get_footer();
 

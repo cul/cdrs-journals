@@ -27,7 +27,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 
 
-<? 
+<?php 
+
 
  wp_nav_menu( array('menu' => 'about subnav')); 
 

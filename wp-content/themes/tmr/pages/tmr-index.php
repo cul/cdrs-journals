@@ -24,7 +24,7 @@ cfct_template_file('header', 'header-essay.php');
   ?>
 <div id="tmr-index" role="main" class="content">
 <div class="span-14" id='tmr-index-content'>
-<?
+<?php
 cfct_loop();
 
 ?>
@@ -120,7 +120,9 @@ cfct_loop();
  
 
 while ( $ow_essays->have_posts() ) : $ow_essays->the_post();
-	 ?> <li><a href="<? the_permalink() ?>"> <? the_title()?></a></li> <?php
+	 ?> <li><a href="<?php 
+the_permalink() ?>"> <?php 
+the_title()?></a></li> <?php
 	 
 	 endwhile;
 
@@ -151,7 +153,7 @@ wp_reset_postdata();
 
  
  <div id='topics' class="taxlist-toggle">
-<?
+<?php
 wp_tag_cloud('taxonomy="topics"');     
 
 ?>
@@ -220,7 +222,7 @@ for ($iCol=0; $iCol<3; $iCol++) {
 </div>
 </div>
 
-<?
+<?php
 get_footer();
 
 ?>

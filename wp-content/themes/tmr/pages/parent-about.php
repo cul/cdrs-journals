@@ -39,7 +39,7 @@ get_header();
 
 
 
-<?
+<?php
 
 cfct_loop();
 
@@ -47,7 +47,7 @@ cfct_loop();
 
 </div>
 
-<?
+<?php
 /* comments_template(); */
 
 /* get_sidebar(); */

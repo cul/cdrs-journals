@@ -33,7 +33,7 @@ get_header();
 
 
 
-<?
+<?php
 
 cfct_loop();
 
@@ -41,7 +41,7 @@ cfct_loop();
 
  
 
-<?
+<?php
  
 get_footer();
 

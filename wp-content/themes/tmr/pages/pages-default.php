@@ -24,7 +24,7 @@ get_header();
 
 <div class="span-12 prepend-7 content last">
 
-<?
+<?php
 
 cfct_loop();
 
@@ -32,7 +32,7 @@ cfct_loop();
 
 </div>
 
-<?
+<?php
 /* comments_template(); */
 
 /* get_sidebar(); */

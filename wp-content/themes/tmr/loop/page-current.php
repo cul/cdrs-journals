@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 <ul class="edition-list">
-<?
+<?php
 if (have_posts()) {
 	 
 	while (have_posts()) {
@@ -45,7 +45,8 @@ foreach($authors as $term){
 
 </li>
 
-<? 
+<?php 
+
  
 }
 	}

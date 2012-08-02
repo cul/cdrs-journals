@@ -122,8 +122,9 @@ if(!empty($author_terms)){
    }}
    
    ?>
-<h2>Academic Taxonomies</h1>
-   <?
+<h3>Academic Taxonomies</h3>
+
+<?php
    
 	$progression_terms = wp_get_object_terms($post->ID, 'progression');
 if(!empty($progression_terms)){
@@ -257,7 +258,7 @@ if(!empty($author_terms)){
    
    ?>
 <h1 class="meta-header">Academic Taxonomies</h1>
-   <?
+   <?php
    
 	$progression_terms = wp_get_object_terms($post->ID, 'progression');
 if(!empty($progression_terms)){
