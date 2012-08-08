@@ -50,11 +50,24 @@ cfct_loop();
 <h1>Progression</h1>
 <ul id='sources' class='taxonomy-list clearfix'>
 
+
+
+
+
+
 <?php $terms = get_terms( 'progression', 'orderby=id' );
 
   foreach($terms as $term) { 
     echo '<li><a href="' . get_term_link( $term->slug, 'progression' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>  ';
+      
+
+      
       } 
+
+
+
+
+
 
  
 ?>
@@ -140,7 +153,15 @@ wp_reset_postdata();
 <?php  $terms = get_terms( 'source' );
 
   foreach($terms as $term) { 
-    echo '<li><a href="' . get_term_link( $term->slug, 'source' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' . $term->name.'</a></li>  ';
+  
+  
+        $citation = get_tax_meta($term->term_id,'source_citation');
+ 
+
+   
+  
+  
+    echo '<li><a href="' . get_term_link( $term->slug, 'source' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' .$citation.'</a></li>  ';
       } 
 
 ?>

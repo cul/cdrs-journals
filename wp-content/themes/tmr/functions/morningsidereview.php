@@ -512,7 +512,7 @@ $my_meta->addWysiwyg('source_citation',array('name'=> 'Citation'));
  
 $my_meta->Finish();
 
-
+	
 
 
 
