@@ -48,5 +48,13 @@ if (CFCT_DEBUG) {
 <div class="container" id='colophon'>
 Powered by the <a href='http://cdrs.columbia.edu'>Center for Digital Research and Scholarship</a> at <a href='http://libraries.columbia.edu'>Columbia University Libraries</a>.
 </div>
+
+<div class="container" id='print-colophon'>
+
+The Morningside Review is a partnership between the Undergratudate Writing Program and the Center for Digital Research and Scholarship at Columbia University Libraries.
+</div>
+
+
+
 </body>
 </html>

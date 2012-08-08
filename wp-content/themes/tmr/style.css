@@ -1427,6 +1427,11 @@ a:active img[class*="wp-image-"],
 	display: none;
 }
 
+#print-colophon{
+	
+	display: none;
+}
+
 body.home #header {
 	height: 260px;
 }
@@ -1513,7 +1518,11 @@ div.menu-about-subnav-container {
 #colophon a:hover {
 	color: #0038a8;
 	text-decoration: underline;
+
+
 }
+
+
 
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
@@ -1566,7 +1575,7 @@ span.numbered-item
 	float: right;
     display:block;
 	color: #a3a2a2;
-     width: 20px;
+     width: 40px;
 }
 
 
@@ -1619,4 +1628,13 @@ div.span-6.prepend-1{
 	font-size: 12pt;
 	 
 }
+#colophon{
+	display: none;
+}
+#print-colophon {
+	
+	display: block;
+	
+}
+
 } /*//end print*/
