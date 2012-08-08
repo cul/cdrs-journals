@@ -76,7 +76,7 @@ endwhile;
 ?>
  
 <div class="home-box">
-<h1 class="homepage-label">Connect With <em>TMR</em></h1>
+<h1 class="homepage-label">Connect with <em>TMR</em></h1>
 <div class="home-sm-icons">
 <a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
 <a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
