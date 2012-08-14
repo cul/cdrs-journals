@@ -154,14 +154,11 @@ wp_reset_postdata();
 
   foreach($terms as $term) { 
   
-  
-        $citation = get_tax_meta($term->term_id,'source_citation');
- 
+  $citation = get_tax_meta($term->term_id,'source_citation');
 
-   
-  
   
     echo '<li><a href="' . get_term_link( $term->slug, 'source' ) . '" title="' . sprintf( __( "View archive of %s content" ), $term->name ) . '" ' . '>' .$citation.'</a></li>  ';
+   
       } 
 
 ?>
