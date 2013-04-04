@@ -51,7 +51,7 @@ Powered by the <a href='http://cdrs.columbia.edu'>Center for Digital Research an
 
 <div class="container" id='print-colophon'>
 
-The Morningside Review is a partnership between the Undergratudate Writing Program and the Center for Digital Research and Scholarship at Columbia University Libraries.
+The Morningside Review is a partnership between the Undergraduate Writing Program and the Center for Digital Research and Scholarship at Columbia University Libraries.
 </div>
 
 
