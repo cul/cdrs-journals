@@ -58,14 +58,14 @@ if(!empty($author_terms)){
 
 </div>
 
-<div  class="span-12 prepend-7">
+<div  class="span-14 prepend-7">
  
 
 
 
 
 
-<div id="essay" >
+<div id="content-main" >
 
 <?php
 
@@ -89,7 +89,7 @@ the_content();
 
 </div>
 
-<div class="span-4   last sidebar">
+<div class="span-2   last sidebar">
 
 <a class="print-button" HREF="javascript:window.print()">Print</a>
 

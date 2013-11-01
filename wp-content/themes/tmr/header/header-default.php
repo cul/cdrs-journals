@@ -31,12 +31,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
-				
-<!-- 		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'> -->
-		<link href='https://fonts.googleapis.com/css?family=Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
 		
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>		
 		
-<!-- 		<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Cantarell:700,400,400italic,700italic' rel='stylesheet' type='text/css'> -->
 		
 		<link rel="shortcut icon" type="image/x-icon" href="http://morningsidereview-dev.cul.columbia.edu/wp-content/uploads/2012/06/icon.ico">
 		

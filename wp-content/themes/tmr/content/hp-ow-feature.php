@@ -20,17 +20,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 <div class="hp-feature clearfix">
-
  
 <?php
 
-
-
- if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail('full');
-}
-
-echo '<h2>'.the_title().'</h2>';
+echo '<h2><a href="'.get_permalink().'">'.get_the_title().'</a></h2>';
 
 
 the_excerpt(); 
@@ -38,5 +31,5 @@ the_excerpt();
  
 echo '<a class="read-more" href="'.get_permalink().'">Read More...</a>';
 ?>
- 
+<hr>	
 </div>

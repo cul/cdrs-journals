@@ -406,7 +406,7 @@ function save_taxboxes($post_id) {
    	$assignment = $_POST['tax_assignment'];
            
    	wp_set_object_terms( $post_id, $edition, 'edition' );
-   	wp_set_object_terms( $post_id, $author, 'author' );
+   	wp_set_post_terms( $post_id, $author, 'author' );
    	wp_set_object_terms( $post_id, $progression, 'progression' );
    	
    	for ($num=0; $num<sizeof($source); $num++) {

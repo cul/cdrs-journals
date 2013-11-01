@@ -48,8 +48,10 @@ wp_reset_postdata();
 
 <h1 class="homepage-label">On Writing</h1>
 
+ <?php echo get_the_post_thumbnail( 568, 'medium', $attr ); ?>
+
 <?php
-$the_query = new WP_Query('category_name=current-on-writing&post_type=essay');
+$the_query = new WP_Query('category_name=on-writing&post_type=essay&posts_per_page=2');
  
 while ( $the_query->have_posts() ) : $the_query->the_post();
 cfct_template_file('content', 'hp-ow-feature');

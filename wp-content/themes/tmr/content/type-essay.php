@@ -34,7 +34,7 @@ global $post;
 
 
 	
-<div id="content" role="main" class="span-12">
+<div id="content" role="main" class="span-14">
 
 
 <h1 class="page-title"> <?php the_title() ?> </h1>
@@ -310,7 +310,7 @@ if(!empty($source_terms)){
 </div>
 </div>
 
-<div class="span-4 sidebar">
+<div class="span-2 sidebar">
 
 
  
