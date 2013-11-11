@@ -32,7 +32,7 @@ if(!empty($essay_terms)){
   if(!is_wp_error( $essay_terms )){
      
     foreach($essay_terms as $term){
-            echo '<span class="author-link"><a href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a></span> '; 
+            echo '<span class="author-link"><a href="'.get_term_link($term->slug, 'tmr_author').'">'.formatName($term->name).'</a></span> '; 
 
     }
   
