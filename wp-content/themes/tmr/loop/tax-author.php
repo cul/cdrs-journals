@@ -28,7 +28,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <?php
 
 
-$essay_terms = wp_get_object_terms($post->ID, 'author');
+$essay_terms = wp_get_object_terms($post->ID, 'tmr_author');
 if(!empty($essay_terms)){
   if(!is_wp_error( $essay_terms )){
    

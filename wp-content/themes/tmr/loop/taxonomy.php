@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  global $post;
 
-$product_terms = wp_get_object_terms($post->ID, 'author');
+$product_terms = wp_get_object_terms($post->ID, 'tmr_author');
 if(!empty($product_terms)){
   if(!is_wp_error( $product_terms )){
      

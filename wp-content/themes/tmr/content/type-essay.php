@@ -41,7 +41,7 @@ global $post;
 
 <?php
 
-$author_terms = wp_get_object_terms($post->ID, 'author');
+$author_terms = wp_get_object_terms($post->ID, 'tmr_author');
 if(!empty($author_terms)){
   if(!is_wp_error( $author_terms )){
   
@@ -89,7 +89,7 @@ if(!empty($author_terms)){
 <?php
 
 
-$author_terms = wp_get_object_terms($post->ID, 'author');
+$author_terms = wp_get_object_terms($post->ID, 'tmr_author');
 if(!empty($author_terms)){
   if(!is_wp_error( $author_terms )){
   
@@ -224,7 +224,7 @@ echo apply_filters('meta_content', $wc['citation']);
 <?php
 
 
-$author_terms = wp_get_object_terms($post->ID, 'author');
+$author_terms = wp_get_object_terms($post->ID, 'tmr_author');
 if(!empty($author_terms)){
   if(!is_wp_error( $author_terms )){
   
