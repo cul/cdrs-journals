@@ -40,7 +40,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		
 		<title>
 
-	 <?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ); ?></title>
+	 <?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
 
  
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />

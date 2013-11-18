@@ -1,4 +1,4 @@
-Author of the Article:
+Author of the Article's mom:
 
 <?php $mb->the_field('authors'); ?> 
 

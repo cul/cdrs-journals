@@ -217,21 +217,21 @@ function register_taxonomy_edition() {
     register_taxonomy( 'edition', array('essay', 'note'), $args );
 
  $labels = array( 
-        'name' => _x( 'Authors', 'author' ),
-        'singular_name' => _x( 'Author', 'author' ),
-        'search_items' => _x( 'Search Authors', 'author' ),
-        'popular_items' => _x( 'Popular Authors', 'author' ),
-        'all_items' => _x( 'All Authors', 'author' ),
-        'parent_item' => _x( 'Parent Author', 'author' ),
-        'parent_item_colon' => _x( 'Parent Author:', 'author' ),
-        'edit_item' => _x( 'Edit Author', 'author' ),
-        'update_item' => _x( 'Update Author', 'author' ),
-        'add_new_item' => _x( 'Add New Author', 'author' ),
-        'new_item_name' => _x( 'New Author Name', 'author' ),
-        'separate_items_with_commas' => _x( 'Separate authors with commas', 'author' ),
-        'add_or_remove_items' => _x( 'Add or remove authors', 'author' ),
-        'choose_from_most_used' => _x( 'Choose from the most used authors', 'author' ),
-        'menu_name' => _x( 'Authors', 'author' ),
+        'name' => _x( 'Authors', 'tmr_author' ),
+        'singular_name' => _x( 'Author', 'tmr_author' ),
+        'search_items' => _x( 'Search Authors', 'tmr_author' ),
+        'popular_items' => _x( 'Popular Authors', 'tmr_author' ),
+        'all_items' => _x( 'All Authors', 'tmr_author' ),
+        'parent_item' => _x( 'Parent Author', 'tmr_author' ),
+        'parent_item_colon' => _x( 'Parent Author:', 'tmr_author' ),
+        'edit_item' => _x( 'Edit Author', 'tmr_author' ),
+        'update_item' => _x( 'Update Author', 'tmr_author' ),
+        'add_new_item' => _x( 'Add New Author', 'tmr_author' ),
+        'new_item_name' => _x( 'New Author Name', 'tmr_author' ),
+        'separate_items_with_commas' => _x( 'Separate tmr_authors with commas', 'tmr_author' ),
+        'add_or_remove_items' => _x( 'Add or remove tmr_authors', 'tmr_author' ),
+        'choose_from_most_used' => _x( 'Choose from the most used tmr_authors', 'tmr_author' ),
+        'menu_name' => _x( 'Authors', 'tmr_author' ),
     );
 
     $args = array( 
@@ -251,7 +251,7 @@ function register_taxonomy_edition() {
         'query_var' => true
     );
 
-    register_taxonomy( 'author', array('essay', 'note'), $args );
+    register_taxonomy( 'tmr_author', array('essay', 'note'), $args );
     
     
      $labels = array( 
@@ -468,7 +468,7 @@ for more information on the class see https://github.com/bainternet/Tax-Meta-Cla
  $config = array(
    'id' => 'author_meta_box',                         // meta box id, unique per meta box
    'title' => 'Author Meta Box',                      // meta box title
-   'pages' => array('author'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
+   'pages' => array('tmr_author'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
    'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
    'fields' => array(),                             // list of meta fields (can be added by field arrays)
    'local_images' => true,                         // Use local or hosted images (meta box images for add/remove)

@@ -51,11 +51,11 @@ if (have_posts()) {
 <li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 <?php
-
+global $post;
 
 $args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'name');
 
-$authors = get_the_terms( $post->ID, 'author' );
+$authors = get_the_terms( $post->ID, 'tmr_author' );
 
 if($authors){
 

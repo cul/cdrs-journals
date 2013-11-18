@@ -13,11 +13,13 @@ function add_taxboxes() {
 	remove_meta_box( 'sourcediv', 'essay', 'side' );
 	add_meta_box('source', __('Sources'),'source_layout','essay');
 	
+/*
 	remove_meta_box( 'themediv', 'essay', 'side' );
 	add_meta_box('theme', __('Themes'),'theme_layout','essay');
 	
 	remove_meta_box( 'strategydiv', 'essay', 'side' );
 	add_meta_box('strategy', __('Strategies'),'strategy_layout','essay');
+*/
 	
 	remove_meta_box( 'assignmentdiv', 'essay', 'side' );
 	add_meta_box('assignment', __('Assignments'),'assignment_layout','essay');
@@ -89,12 +91,14 @@ function edition_layout($post) {
 CUSTOM METABOX FOR AUTHOR
 */
 function author_layout($post) {
-	wp_nonce_field(__FILE__,'author_nonce');
+ 
 	
 	echo "Enter the Author Name <em>(Last,First)</em>:<br>";
 	
-	$getAuthor = wp_get_object_terms($post->ID, 'author', 'fields=names');
-	$getFullAuthor = get_terms('author', 'fields=names&hide_empty=0');
+	$getAuthor = wp_get_object_terms($post->ID, 'tmr_author', 'fields=names' );
+	
+
+	 
 	
 	if(sizeof($getAuthor) == NULL) { ?>
 		<input name="tax_author" id="tags" type="text" value="" />
@@ -102,7 +106,7 @@ function author_layout($post) {
 
 	else {
 		for ($loopA=0; $loopA<sizeof($getAuthor); $loopA++) { ?>
-			<input name="tax_author" id="tags" type="text" size="20" value='<?php echo $getAuthor[$loopA]; ?>' />
+			<input name="tax_author" id="tags" type="text" size="20" value='<?php echo $getAuthor[0]; ?>' />
 	<?php	}
 	}
 }
@@ -223,7 +227,7 @@ function source_layout($post) {
 
 /*
 CUSTOM METABOX FOR THEME
-*/
+
 function theme_layout($post) {	
    wp_nonce_field(__FILE__,'theme_nonce');
 
@@ -234,6 +238,8 @@ function theme_layout($post) {
 	
 	//find position of none in edition taxonomy list
 	$noneTH = array_search("None",$getFullTheme);
+	
+	
 
 	for($checkTH=0; $checkTH<sizeof($getTheme); $checkTH++) {
 		if (in_array($getTheme[$checkTH], $getFullTheme)) {
@@ -273,7 +279,7 @@ function theme_layout($post) {
 
 /*
 CUSTOM METABOX FOR STRATEGY
-*/
+
 function strategy_layout($post) {	
    wp_nonce_field(__FILE__,'strategy_nonce');
 
@@ -320,6 +326,8 @@ function strategy_layout($post) {
 		</select>	
 	<?php }
 }
+*/
+
 
 /*
 CUSTOM METABOX FOR ASSIGNMENT
@@ -377,7 +385,7 @@ FUNCTION THAT SAVES THE INFORMATION FROM THE NEW TAXONOMY BOXES.
 */
 function save_taxboxes($post_id) {
 	// verify this came from our screen and with proper authorization.
- 	if (!wp_verify_nonce($_POST['edition_nonce'], __FILE__) && !wp_verify_nonce($_POST['author_nonce'], __FILE__) && !wp_verify_nonce($_POST['progression_nonce'], __FILE__) && !wp_verify_nonce($_POST['source_nonce'], __FILE__) && !wp_verify_nonce($_POST['theme_nonce'], __FILE__) && !wp_verify_nonce($_POST['strategy_nonce'], __FILE__) && !wp_verify_nonce($_POST['assignment_nonce'], __FILE__)) {
+ 	if (!wp_verify_nonce($_POST['edition_nonce'], __FILE__)   && !wp_verify_nonce($_POST['progression_nonce'], __FILE__) && !wp_verify_nonce($_POST['source_nonce'], __FILE__) && !wp_verify_nonce($_POST['theme_nonce'], __FILE__) && !wp_verify_nonce($_POST['strategy_nonce'], __FILE__) && !wp_verify_nonce($_POST['assignment_nonce'], __FILE__)) {
     	return $post_id;
   	}
  

@@ -56,7 +56,7 @@ if(!empty($author_terms)){
     
     
     
-    echo '<span class="author-credit"><a href="'.get_term_link($term->slug, 'author').'">'.formatName($term->name).'</a></span>'; 
+    echo '<span class="author-credit"><a href="'.get_term_link($term->slug, 'tmr_author').'">'.formatName($term->name).'</a></span>'; 
    }
    
    else{

@@ -183,7 +183,7 @@ wp_tag_cloud('taxonomy="topics"');
 <?php 
 
 //$terms = get_terms('author', 'fields=names&hide_empty=0&orderby=name');
-$terms = get_terms( 'author', 'orderby=name');
+$terms = get_terms( 'tmr_author', 'orderby=name');
 
 foreach ($terms as $term) {
 	$slug[] = $term->slug;
@@ -225,7 +225,7 @@ for ($iCol=0; $iCol<3; $iCol++) {
 		$nameArray = explode(",",$name[$i]);
 		$sortValue = array_pop(array_reverse($nameArray));
 		
-		echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $slug[$i], 'author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $name[$i] ) . '" ' . '>' . $name[$i].'	</a></li>';
+		echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $slug[$i], 'tmr_author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $name[$i] ) . '" ' . '>' . $name[$i].'	</a></li>';
 		
 	}
 	echo "</ul>";
