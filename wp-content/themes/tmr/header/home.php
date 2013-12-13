@@ -87,7 +87,7 @@ function my_scripts_method() {
 
 <div id='header' role="banner" class="span-15 prepend-1 clearfix">		
 
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/>
+<h1 class="masthead"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/>
 
 <span class='bottom'>Review</span></a></h1>
 

@@ -21,8 +21,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  global $post;
 
 ?>
+</div>
 
-<div class="span-15 prepend-7">
+<div class="span-15">
 <h3>Author Archive</h3>
 
 <?php

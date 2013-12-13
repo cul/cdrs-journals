@@ -22,13 +22,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 cfct_template_file('header', 'header-essay.php');
   ?>
+  <br style="clear:both">
 <div id="tmr-index" role="main" class="content">
-<div class="span-14" id='tmr-index-content'>
-<?php
-cfct_loop();
-
-?>
-</div>
+ 
 
 <div class="span-6 prepend-3" id="index-left-col"> 
 

@@ -95,7 +95,51 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 		<div id="header" class="span-16 prepend-7" role="banner">
 		<!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 		
-<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
-			
+<h1 class="masthead"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
+</div>
+
+<div class="span-7">
+<div id="cu-writing">
+
+<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
+
+</div>
+</div>
+
+<div class="span-14 " id='essay-title'>
+
+<h1 class="page-title">
+<?php the_title() ?>
+</h1>
+
+<?php
+
+global $post;
+$author_terms = wp_get_object_terms($post->ID, 'tmr_author');
+if(!empty($author_terms)){
+  if(!is_wp_error( $author_terms )){
+  
+    foreach($author_terms as $term){
+    
+    $auth_bio = get_tax_meta($term, 'author_bio');
+	$auth_photo = get_tax_meta($term,'author_image',true);
+   
+   if($auth_bio){
+    
+    
+    
+    echo '<span class="author-credit"><a href="'.get_term_link($term->slug, 'tmr_author').'">'.formatName($term->name).'</a></span>'; 
+   }
+   
+   else{
+   
+   echo '<span class="author-credit">'.formatName($term->name).'</span>';
+   }
+   
+   }
+   }}
+ 
+  ?>
+
+
 		</div>
-<div class="span-6 prepend-1"><div id="cu-writing"  ><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png"></a></div> </div>

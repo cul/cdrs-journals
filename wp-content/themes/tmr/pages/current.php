@@ -23,8 +23,9 @@ $query = new WP_Query(array( 'edition' => 'current', 'meta_key'=>'author', 'orde
 get_header();
 
 ?>
+</div>
 
-<div class="span-16 prepend-7 content clearfix">
+<div class="span-16  content clearfix">
 
  
  <h3 class="flyer">Current Edition</h3>

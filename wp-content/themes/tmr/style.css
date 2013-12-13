@@ -247,7 +247,7 @@ body.home div#header h1{
 	padding-top: 10px;
 	margin: 48px 0 0 8px;
 }
-div#header h1{
+h1.masthead{
 
 	background: url(img/lion.png) no-repeat 0 10px;
 	font-size: 40px;
@@ -360,8 +360,11 @@ body.home div#header div#cu-writing{
 }
 div#cu-writing {
  text-align: right;
-	margin-top: 11px;
-	margin-right: 5px;
+ 	font-size: 18px;
+	line-height: 26px;
+	margin-top:  4px;
+  
+ 
 }
 
 #tmr-index div#cu-writing{
@@ -771,7 +774,7 @@ float: right;
 	margin-right: .5em;}
 
 div#essay-meta {
- 
+ padding: 1em;
 }
 
 #essay-meta div.author-feature img {
@@ -792,11 +795,14 @@ body.home #cu-writing img{
 div.span-8.center.content {
 }
 span.author-credit {
+
 	font-size: 150%;
-	text-align: left;
+	text-align: right;
 	display: block;
 	/*margin-bottom: .5em;*/
 	text-transform: uppercase;
+	margin-right: 1em;
+	margin-bottom: .5em;
 }
 
 
@@ -1101,7 +1107,7 @@ a#skip {
 }
 
 .sidebar{
- margin-top: 100px;
+/*  margin-top: 230px; */
 }
 #essay  div.author-bio p {
 	 text-indent: 0;
@@ -1114,10 +1120,7 @@ img.essay-thumb {
 	margin-right: 1em;
 }
 
-div.author-bio {
-	float: l;
-	
-}
+ 
 
 div.fb-like {
  
@@ -1254,6 +1257,7 @@ h1.page-title {
 	line-height: 45px;
 	color: #56494f;
 	font-weight: 300;
+	margin-bottom: .25em;
  
 }
  
@@ -1455,13 +1459,19 @@ body.home #header {
 	height: 260px;
 }
 
-#essay p{
-	text-indent: 1.5em;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 26px;
-	margin-bottom: .5em;
+  #essay p{
+	 
+ 
+ 
+	margin-bottom: 1em;
 	}  
+	
+.content p,	#content p{
+			font-weight: 300;
+				font-size: 18px;
+	line-height: 26px;
+		
+	}
 
 #essay blockquote p{
 	
@@ -1470,7 +1480,7 @@ body.home #header {
 	text-indent: 0;
 }
 
-p.wp-caption-text{
+#essay p.wp-caption-text{
 	
 		text-indent: 0;
 		text-align: left;
@@ -1495,7 +1505,7 @@ div.content {
 	padding-top: 10px;
 	padding-bottom: 15px;
 	margin-bottom: 25px;
-	width: 470px;
+
 }
 
 #meta-toggle {
@@ -1529,7 +1539,7 @@ div.essay-tools {
 }
 
 body.page div.content{
-	margin-top: -50px;
+ 
 }
 body.home div.content{
 	margin-top: 0;
@@ -1559,6 +1569,29 @@ div.menu-about-subnav-container {
 }
 
 
+#essay {
+	
+	padding-right: 1em;
+	text-align: justify;
+}
+
+#cu-writing img{
+	
+	max-width: 100%;
+}
+
+
+.content {
+	
+ 
+}
+
+img#selected-essays {
+	
+	width: 85%;
+	margin-right: 10px;
+	
+}
 
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
@@ -1585,7 +1618,7 @@ div.menu-about-subnav-container {
   thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
   tr, img { page-break-inside: avoid; }
   img { max-width: 100% !important; }
-  @page { margin: 5cm; }
+  @page { margin: 2cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ 		page-break-inside: avoid; 
   				page-break-after: avoid; }
@@ -1611,7 +1644,8 @@ span.numbered-item
 	float: right;
     display:block;
 	color: #a3a2a2;
-     width: 40px;
+     width: 50px;
+     margin-right: -55px;
 }
 
 
@@ -1647,8 +1681,11 @@ span.author-credit a {
 	box-shadow:         none;
 }
 
-#content.span-12{
+#content.span-14{
 	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
 }
 
 div.span-6.prepend-1{

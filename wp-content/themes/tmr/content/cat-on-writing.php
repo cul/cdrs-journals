@@ -31,12 +31,12 @@ global $post;
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-
+ 
 
 	
 <div id="content" role="main" class="span-15">
 
- <h1 class="page-title"> <?php the_title() ?> </h1>
+<!--  <h1 class="page-title"> <?php the_title() ?> </h1> -->
 
 
 <?php

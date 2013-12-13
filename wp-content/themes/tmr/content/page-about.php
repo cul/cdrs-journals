@@ -19,9 +19,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
- <br style="clear:both" />
- 
-<div class="span-6 prepend-1">
+
 
 
 
@@ -35,7 +33,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 
-</div><div class="span-12 content last">
+</div><div class="span-14	 content last">
 
 
 <div>

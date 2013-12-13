@@ -21,9 +21,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 
 ?>
+</div>
 
-<div class="span-12 prepend-7 content last">
-
+<div class="span-14 content">
 <?php
 
 cfct_loop();

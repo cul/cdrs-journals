@@ -50,3 +50,6 @@ comments_popup_link(__('No comments', 'carrington-jam'), __('1 comment', 'carrin
 */
 ?>
 </div><!-- .excerpt -->
+
+
+<br style="clear:both">

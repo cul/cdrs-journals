@@ -19,6 +19,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
+</div>
 <div>
 
 <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>

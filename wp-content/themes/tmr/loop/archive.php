@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 ?>
-
+</div>
 
 <div class="span-15">
 
@@ -66,7 +66,6 @@ echo "<h1>".$name."</h1>";
 
 
  
-/*
 $termDiscription = term_description( '', get_query_var( 'taxonomy' ) );
 if($termDiscription != ''){
 echo'<div class="tag-desc">'.  $termDiscription .' </div>';
@@ -85,7 +84,6 @@ foreach ($taxEdition as $ed) {
 		$edition[] = $ed->slug;
 	}
 }
-*/
 
 //var_dump($edition);
 
