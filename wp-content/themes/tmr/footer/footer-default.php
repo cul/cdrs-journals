@@ -22,8 +22,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 <div class="span-22 prepend-1" id='copyrights'>
+<!--
 <hr/>
 <p>Essays published in <a href="<?php home_url('/') ?>?page_id=129"><em>The Morningside Review</em></a> are protected by copyright, with all rights reserved by the author unless otherwise indicated. </p>
+-->
  </div>
 
 </div>

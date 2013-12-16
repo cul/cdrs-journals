@@ -20,6 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 global $post;
 ?>
 
+<!--
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -30,6 +31,7 @@ global $post;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+-->
 
 
 

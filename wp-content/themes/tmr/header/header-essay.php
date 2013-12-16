@@ -27,24 +27,23 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie ie8 lte8 lte9"><![endif]-->
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-	<head>
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
 	
-	<link rel="shortcut icon" type="image/x-icon" href="http://morningsidereview-dev.cul.columbia.edu/wp-content/uploads/2012/06/icon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/wp-content/uploads/2012/06/icon.ico">
 
+<title>
 
-	<title>
-	 <?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
+<?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
 
- 
-	 
-	
+<link rel="stylesheet" type="text/css" media="screen"  href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
 
-		<link rel="stylesheet" type="text/css" media="screen"  href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
-		<link rel="stylesheet" type="text/css" media="screen, print" href="<?php bloginfo('stylesheet_url') ?>" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="<?php bloginfo('stylesheet_url') ?>" />
 
 <?php
 
@@ -61,6 +60,7 @@ function my_scripts_method() {
    wp_enqueue_script('tmr_js');
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method');
+
 ?>
 	
 	 
@@ -73,44 +73,52 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <body <?php body_class(); ?>>
 
-<div class="container" id="search">
+<div class="container">
 
-<div class="span-24">
-
-<?php get_search_form(); ?>
-
-</div>
+ 
+<nav id="access" class="span-20 prepend-2 clearfix" role="navigation">
+		 
+ 
+<?php	wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	
+ <?php get_search_form(); ?>
+ 
+</nav><!-- #access -->
+ 
 </div>
  
 <div class="container" id="main">
-		<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/print-header.png" width="100%"  id="print-header">
-		<nav id="access" class="span-17 prepend-7 clearfix" role="navigation">
-		
-		<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-		
-		<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
- 
-<?php	wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	</nav><!-- #access -->
- 
-		<div id="header" class="span-16 prepend-7" role="banner">
-		<!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
-		
+
+<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/print-header.png" width="100%"  id="print-header">
+
+<div id="header" class="span-16 prepend-7" role="banner">
+
+<!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
+	 
 <h1 class="masthead"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
+
 </div>
 
-<div class="span-7">
+<div class="span-7 clearfix">
+
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
 
+<br>
+
+<span class="small">Published in Partnership with</span><br>
+CDRS
+
 </div>
+ 
 </div>
 
-<div class="span-14 " id='essay-title'>
-
-<h1 class="page-title">
+<div class="span-14 prepend-7" id='essay-title'>
+  <h1 class="page-title">
 <?php the_title() ?>
 </h1>
+
+
 
 <?php
 
@@ -140,6 +148,7 @@ if(!empty($author_terms)){
    }}
  
   ?>
+  
 
 
 		</div>

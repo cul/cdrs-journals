@@ -149,21 +149,24 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 
  body{
-	background: url(img/linen-dark.png) repeat;
+/* 	background: url(img/linen-dark.png) repeat; */
+	background-image: url(img/seamlesstexture29_500.jpg);
 }
 
 
 
 #main.container{
 	 
-	background-image: url(img/seamlesstexture29_500.jpg);
+/* 	background-image: url(img/seamlesstexture29_500.jpg); */
  
    min-height: 600px;
    
+/*
 	border: 1px solid #fbf9f7;
 	-moz-box-shadow:    0 0px 50px rgba(255,255,255,.5);
 	-webkit-box-shadow: 0 0px 50px rgba(255,255,255,.5);
 	box-shadow:         0 0px 50px rgba(255,255,255,.5);
+*/
 }
 
 a.print-button {
@@ -239,7 +242,7 @@ p.blurb {
 body.home div#header h1{
 
  
-	background: url(img/lion.png) no-repeat 0 10px;
+/* 	background: url(img/lion.png) no-repeat 0 10px; */
 	font-size: 40px;
 	padding-left: 110px;
 	font-weight: 700;
@@ -247,9 +250,10 @@ body.home div#header h1{
 	padding-top: 10px;
 	margin: 48px 0 0 8px;
 }
+
 h1.masthead{
 
-	background: url(img/lion.png) no-repeat 0 10px;
+
 	font-size: 40px;
 	padding-left: 109px;
 	font-weight: 700;
@@ -260,8 +264,23 @@ h1.masthead{
 	padding-bottom: 17px;
 	text-transform: uppercase;
 	margin-bottom: 14px;
+	
+	
+	 color: red;
+ -webkit-text-fill-color: transparent;
+ background: -webkit-linear-gradient(transparent, transparent),
+             url('img/tmr_header_bg.png') repeat;
+ background: -o-linear-gradient(transparent, transparent);
+ -webkit-background-clip: text;
+	
+	
 }
 
+#header {
+	
+		background: url(img/lion.png) no-repeat 150px 20px;
+	
+}
 
 
 li.essay h1 {
@@ -529,11 +548,7 @@ h1, h2{
 	border-top: 2px dotted #adbec5;
 }
 
-#content div blockquote {
-	margin-left: 3em;
-	margin-right: 3em;
-	color: #888;
-}
+
 
 nav#access {
 		/*font-family: "Futura Medium", futura;*/
@@ -800,8 +815,8 @@ span.author-credit {
 	text-align: right;
 	display: block;
 	/*margin-bottom: .5em;*/
-	text-transform: uppercase;
-	margin-right: 1em;
+	 
+  
 	margin-bottom: .5em;
 }
 
@@ -1253,10 +1268,10 @@ margin-top: 80px;
 
 h1.page-title {
     margin-top: 0;
-    font-size: 45px;
-	line-height: 45px;
+    font-size: 36px;
+	line-height: 42px;
 	color: #56494f;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: .25em;
  
 }
@@ -1463,21 +1478,32 @@ body.home #header {
 	 
  
  
-	margin-bottom: 1em;
+	margin-bottom: .5em;
+	text-indent: 2em;
+			
+		
 	}  
 	
-.content p,	#content p{
-			font-weight: 300;
-				font-size: 18px;
+ #content p{
+	 
+	font-weight: 300;
+	font-size: 18px;
 	line-height: 26px;
-		
-	}
+ 
+	 
+ }
 
 #essay blockquote p{
 	
 	
 	font-weight: 400;
 	text-indent: 0;
+ 
+	margin-left: 3em;
+	margin-right: 3em;
+	color: #888;
+ 
+	
 }
 
 #essay p.wp-caption-text{
@@ -1487,6 +1513,13 @@ body.home #header {
 		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 		font-size: 14px;
+	
+}
+
+#work_cited p{
+	
+	padding-left: 2em;
+	text-indent: -2em;
 	
 }
 a.read-more {
@@ -1575,6 +1608,11 @@ div.menu-about-subnav-container {
 	text-align: justify;
 }
 
+#cu-writing {
+	
+	position: fixed;
+	bottom:10px;
+}
 #cu-writing img{
 	
 	max-width: 100%;
