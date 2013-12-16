@@ -1611,9 +1611,19 @@ div.menu-about-subnav-container {
 #cu-writing {
 	
 	position: fixed;
-	bottom:10px;
+	bottom:60px;
+ 
 }
-#cu-writing img{
+
+#cdrs-id{
+	position: fixed;
+	bottom: 10px;
+	font-size: 10px;
+	padding-left: 35px;
+	background: url(img/cdrs-icon.png) no-repeat;
+	
+}
+div.colophon img{
 	
 	max-width: 100%;
 }

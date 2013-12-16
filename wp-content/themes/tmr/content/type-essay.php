@@ -266,8 +266,19 @@ if(!empty($source_terms)){
 
 
  
+<?php 
 
-<div id='meta-toggle'>info</div>
+if ( $auth_bio ) {
+
+?>
+<div id='meta-toggle'>About the Author</div>
+<?php
+
+}
+
+
+?>
+<div id="taxonomy-toggle">Taxonomies</div>
 
 <a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers">Print</a>
 

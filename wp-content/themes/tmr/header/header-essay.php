@@ -100,18 +100,25 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <div class="span-7 clearfix">
 
+<div class="colophon">
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
 
-<br>
+</div>
+<span class="small">Published in Partnership with</span>
+<div id="cdrs-id">
 
-<span class="small">Published in Partnership with</span><br>
-CDRS
+
+Center For Digital Research &amp; Scholarship<br>
+Columbia University Libraries / Information Services
+
+</div>
+
+</div>
 
 </div>
  
-</div>
 
 <div class="span-14 prepend-7" id='essay-title'>
   <h1 class="page-title">
