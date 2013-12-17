@@ -251,6 +251,7 @@ if(!empty($source_terms)){
 
 <div class="span-3 sidebar">
 
+<ul class="essay-functions">
 
  
 <?php 
@@ -258,7 +259,7 @@ if(!empty($source_terms)){
 if ( $auth_bio ) {
 
 ?>
-<div id='meta-toggle'><span class="glyphicon glyphicon-user"></span> Author Bio</div>
+<li><a href="#bio" id="bio-toggle"> <span class="glyphicon glyphicon-user"></span> Author Bio</a> </li>
 <?php
 
 }
@@ -266,10 +267,10 @@ if ( $auth_bio ) {
 ?>
 
 
-<div id="taxonomy-toggle"><span class="glyphicon glyphicon-list"></span> Taxonomy</div>
+<li><a href="#taxonomy" id="tax-toggle"><span class="glyphicon glyphicon-list"></span> Taxonomy</a></li>
 
-<a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> Print</a>
-
+<li><a href="#print" id="print-toggle"><a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> Print</a>
+ 
 <div class="social-media">
 
 <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div> <br>
