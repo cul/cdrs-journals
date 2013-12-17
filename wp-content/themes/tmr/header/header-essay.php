@@ -106,13 +106,18 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
 
 </div>
-<span class="small">Published in Partnership with</span>
+
+<div class="cdrs-colophon">
+<h6>Published in Partnership with</h6>
+
 <div id="cdrs-id">
 
+CDRS
+
+</div>
 
 Center For Digital Research &amp; Scholarship<br>
-Columbia University Libraries / Information Services
-
+<span class="small">Columbia University Libraries/Information Services</span>
 </div>
 
 </div>

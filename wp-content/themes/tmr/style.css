@@ -335,7 +335,11 @@ a.title-link:hover, a:hover { color: #b81f0f;
 	 
 }
 
-ul, ol { margin-left: 2em; list-style-type: none;}
+ul, ol {
+
+/*  margin-left: 2em; */
+ 
+  list-style-type: none;}
 
 ul.home-nav {
 	margin-left: 0;
@@ -1587,27 +1591,47 @@ div.menu-about-subnav-container {
 
 #essay {
 	
-	padding-right: 1em;
+/* 	padding-right: 1em; */
 	text-align: justify;
 }
 
 .colophon {
 	
 	position: fixed;
-	bottom:60px;
+	bottom:20px;
 	width: 230px;
  
 }
 
-#cdrs-id{
+.cdrs-colophon{
 /*
 	position: fixed;
 	bottom: 10px;
 */
-	font-size: 10px;
-	padding-left: 35px;
-	background: url(img/cdrs-icon.png) no-repeat;
+	font-size: 12px;
+
 	
+		
+}
+
+#cdrs-id{
+	font-size: 18px;
+	line-height: 30px;
+/* 	padding-left: 35px; */
+ 
+ 
+		text-align: center;
+
+	background: url(img/cdrs-icon.png) no-repeat 55px 0px;
+
+}
+
+.cdrs-colophon h6{
+	
+	font-weight: normal;
+	border-bottom: 1px solid #747576;
+	margin-bottom: 8px;
+	width: 96%;
 }
 div.colophon img{
 	
@@ -1622,11 +1646,16 @@ div.colophon img{
 
 img#selected-essays {
 	
-	width: 85%;
+	width: 97%;
 	margin-right: 10px;
+	margin-bottom: 50px;
 	
 }
 
+ul.essay-functions{
+	
+	padding-left: 0;
+}
 
 
 
