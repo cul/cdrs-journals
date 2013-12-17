@@ -34,9 +34,8 @@ global $post;
 -->
 
 
-
-	
-<div id="content" role="main" class="span-14 prepend-7">
+<div class="row">
+<div id="content" role="main" class="span-14 prepend-6">
 
 <div id="essay">
 
@@ -125,16 +124,9 @@ if(!empty($source_terms)){
   
   }
 
-	
-	
-			
-     
-  
-
 
 ?>
 </div>
-
 
 
 </div>
@@ -168,26 +160,21 @@ echo apply_filters('meta_content', $wc['citation']);
 
 </div>
 
-
- 
-
- <div id="essay-meta" class="hidden">
+<div id="essay-meta" class="hidden">
 
 <?php
 
 
 $author_terms = wp_get_object_terms($post->ID, 'tmr_author');
-if(!empty($author_terms)){
+  if(!empty($author_terms)){
+  
   if(!is_wp_error( $author_terms )){
   
-    foreach($author_terms as $term){
-
-  
-
-          
+  foreach($author_terms as $term){
+           
    $auth_bio = get_tax_meta($term, 'author_bio');
    
-      $auth_photo = get_tax_meta($term,'author_image',true);
+   $auth_photo = get_tax_meta($term,'author_image',true);
    
    if($auth_bio){
     echo ' <h1 class="meta-header">About the Author</h1>';
@@ -209,7 +196,7 @@ if(!empty($author_terms)){
    }}
    
    ?>
-<h1 class="meta-header">Academic Taxonomies</h1>
+ 
    <?php
    
 	$progression_terms = wp_get_object_terms($post->ID, 'progression');
@@ -262,7 +249,7 @@ if(!empty($source_terms)){
 </div>
 </div>
 
-<div class="span-2 sidebar">
+<div class="span-3 sidebar">
 
 
  
@@ -271,16 +258,17 @@ if(!empty($source_terms)){
 if ( $auth_bio ) {
 
 ?>
-<div id='meta-toggle'>About the Author</div>
+<div id='meta-toggle'><span class="glyphicon glyphicon-user"></span> Author Bio</div>
 <?php
 
 }
 
-
 ?>
-<div id="taxonomy-toggle">Taxonomies</div>
 
-<a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers">Print</a>
+
+<div id="taxonomy-toggle"><span class="glyphicon glyphicon-list"></span> Taxonomy</div>
+
+<a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> Print</a>
 
 <div class="social-media">
 
@@ -295,5 +283,5 @@ if ( $auth_bio ) {
 
 </div>
  
-
+</div>
 </div>

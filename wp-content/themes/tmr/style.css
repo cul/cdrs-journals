@@ -172,25 +172,15 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 a.print-button {
 	text-transform: uppercase;
 	padding: 0 5px;
-	border: 1px solid #d7d7d7;
-	background-color: #fffeff;
+ 
 	font-size: 13px;
 	margin-bottom: 8px;
 	display: block;
-	width: 42px;
-	-webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+ 
 }
 
 
-a.print-button:hover {
- -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-	box-shadow:         0 0 5px rgba(0,0,0,0.5);
-
-}
-
+ 
 
 
 
@@ -278,7 +268,7 @@ h1.masthead{
 
 #header {
 	
-		background: url(img/lion.png) no-repeat 150px 20px;
+		background: url(img/lion.png) no-repeat 120px 20px;
 	
 }
 
@@ -330,7 +320,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 /* 1) Always force a scrollbar in non-IE
    2) Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; 	font-family: "Sorts Mill Goudy"; }
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
 
 /* j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #FF5E99; }
@@ -385,6 +375,8 @@ div#cu-writing {
   
  
 }
+
+
 
 #tmr-index div#cu-writing{
 	display: none;
@@ -773,16 +765,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 
 
 
-
-#essay-meta a.pdf-link {
-padding-left: 20px;
-background-repeat: no-repeat;
-background-position: left center;
-background-position-y: top;
-background-image: url(img/pdficon_small.gif);
-display: block;
-float: right;
-}
+ 
 
 #essay-meta dl dt {
 	float: left;
@@ -1608,16 +1591,19 @@ div.menu-about-subnav-container {
 	text-align: justify;
 }
 
-#cu-writing {
+.colophon {
 	
 	position: fixed;
 	bottom:60px;
+	width: 230px;
  
 }
 
 #cdrs-id{
+/*
 	position: fixed;
 	bottom: 10px;
+*/
 	font-size: 10px;
 	padding-left: 35px;
 	background: url(img/cdrs-icon.png) no-repeat;
@@ -1639,6 +1625,47 @@ img#selected-essays {
 	width: 85%;
 	margin-right: 10px;
 	
+}
+
+
+
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('css/glyphicons-halflings-regular.eot');
+  src: url('css/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('css/glyphicons-halflings-regular.woff') format('woff'), url('css/glyphicons-halflings-regular.ttf') format('truetype'), url('css/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon:empty {
+  width: 1em;
+}
+
+
+
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+
+
+.glyphicon-print:before {
+  content: "\e045";
+}
+
+.glyphicon-list:before {
+  content: "\e056";
 }
 
 @media print {

@@ -90,7 +90,7 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/print-header.png" width="100%"  id="print-header">
 
-<div id="header" class="span-16 prepend-7" role="banner">
+<div id="header" class="span-16 prepend-6" role="banner">
 
 <!-- <div id="cu-writing"><a href="http://www.college.columbia.edu/core/uwp"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/columbia_university_writing.png"></a></div> -->
 	 
@@ -98,9 +98,9 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 </div>
 
-<div class="span-7 clearfix">
+<div class="span-6 clearfix">
+ <div class="colophon">
 
-<div class="colophon">
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
@@ -116,11 +116,12 @@ Columbia University Libraries / Information Services
 </div>
 
 </div>
+ 
 
 </div>
  
 
-<div class="span-14 prepend-7" id='essay-title'>
+<div class="span-14 prepend-6" id='essay-title'>
   <h1 class="page-title">
 <?php the_title() ?>
 </h1>
