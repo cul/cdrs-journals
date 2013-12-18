@@ -31,7 +31,7 @@ else {
 
 ?>
 
-<div class="span-12 prepend-7">
+<div class="span-14 prepend-6">
 
 <h1><?php printf(__('Search Results for: %s', 'carrington-jam'), $search_title); ?></h1>
 

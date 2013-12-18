@@ -1677,6 +1677,11 @@ img#selected-essays {
 	
 }
 
+body.page-id-131 img#selected-essays {
+
+display: none;
+}
+
 ul.tools{
 	
 	padding-left: 0;

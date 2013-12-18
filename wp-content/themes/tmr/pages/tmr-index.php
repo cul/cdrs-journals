@@ -22,7 +22,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 cfct_template_file('header', 'header-essay.php');
   ?>
-  <br style="clear:both">
+
+<br style="clear:both">
+
 <div id="tmr-index" role="main" class="content">
  
 

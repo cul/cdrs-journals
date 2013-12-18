@@ -19,13 +19,20 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
+?>
+<div class="span-14 prepend-6 content">
 
+
+<?php
 _e('Sorry, we\'re not sure what you\'re looking for here.', 'carrington-jam'); 
 
-cfct_form('search');
 
-get_sidebar();
+?>
 
+</div>
+
+<?php
+ 
 get_footer();
 
 ?>
