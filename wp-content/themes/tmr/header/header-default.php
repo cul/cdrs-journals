@@ -134,6 +134,7 @@ Center For Digital Research &amp; Scholarship<br>
 </h1>
 
 
+<!--
 
 <?php
 
@@ -164,6 +165,7 @@ if(!empty($author_terms)){
  
   ?>
   
+-->
 
 
 		</div>

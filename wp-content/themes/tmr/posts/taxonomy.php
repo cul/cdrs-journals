@@ -23,7 +23,7 @@ get_header();
 $tag_title = '<a href="'.get_tag_link(intval(get_query_var('tag_id'))).'" title="">'.single_tag_title('', false).'</a>';
 
 ?>
-
+<div class="span-14 prepend-6">
 <h1><?php printf(__('Tag Archives: %s', 'carrington-jam'), $tag_title); ?></h1>
 
 <?php
@@ -31,8 +31,11 @@ $tag_title = '<a href="'.get_tag_link(intval(get_query_var('tag_id'))).'" title=
 cfct_loop();
 cfct_misc('nav-posts');
 
-/* get_sidebar(); */
+?>
 
+</div>
+
+<?php
 get_footer();
 
 ?>

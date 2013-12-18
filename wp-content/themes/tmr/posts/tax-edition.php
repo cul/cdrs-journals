@@ -24,7 +24,7 @@ $tag_title =   single_tag_title('', false) ;
 
 ?>
  
-	<div id="content" role="main" class="span-15 prepend-7">
+	<div id="content" role="main" class="span-15 prepend-6">
 <h1 class="edition-label"><?php 
 echo $tag_title." Edition" ?></h1>
 
