@@ -108,6 +108,8 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </div>
 
 <!--
+
+
 <div class="cdrs-colophon">
 <h6>Published in Partnership with</h6>
 

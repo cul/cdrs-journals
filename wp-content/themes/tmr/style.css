@@ -1457,6 +1457,9 @@ a:active img[class*="wp-image-"],
 
 body.home #header {
 	height: 260px;
+	
+	background: url(img/lion.png) no-repeat 43px 68px;
+
 }
 
   #essay p{

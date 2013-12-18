@@ -58,7 +58,7 @@ if(!empty($author_terms)){
 
 </div>
 
-<div  class="span-14 prepend-7">
+<div  class="span-14 prepend-6">
  
 
 

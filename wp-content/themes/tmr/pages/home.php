@@ -42,6 +42,20 @@ wp_reset_postdata();
 
 ?>
 
+<div class="cdrs-colophon">
+<h6>Published in Partnership with</h6>
+
+<div id="cdrs-id">
+
+CDRS
+
+</div>
+
+Center for Digital Research &amp; Scholarship<br>
+<span class="small">Columbia University Libraries/Information Services</span>
+</div>
+
+
 </div>
 
 <div class="span-7 center content">
@@ -64,6 +78,13 @@ endwhile;
 
 <div class="span-7 content last">
 
+<div class="home-box">
+<h1 class="homepage-label">Connect with <em>TMR</em></h1>
+<div class="home-sm-icons">
+<a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
+<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
+<a href="mailto:uwp@columbia.edu" class="home-social" id="email">email</a>
+</div>
 <h1 class="homepage-label">From The Director</h1>
  
  <?php
@@ -77,13 +98,7 @@ endwhile;
 
 ?>
  
-<div class="home-box">
-<h1 class="homepage-label">Connect with <em>TMR</em></h1>
-<div class="home-sm-icons">
-<a href="http://twitter.com/MorningsideRev" class="home-social" id="twitter">twitter</a>
-<a href="https://www.facebook.com/pages/The-Morningside-Review/172928982807872" class="home-social" id="facebook">facebook</a>
-<a href="mailto:uwp@columbia.edu" class="home-social" id="email">email</a>
-</div>
+
 </div>
  
 </div>

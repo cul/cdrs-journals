@@ -74,14 +74,7 @@ function my_scripts_method() {
 
 <body <?php body_class(); ?>>
 
-<div class="container" id="search">
-
-<div class="span-24">
-
-<?php get_search_form(); ?>
-
-</div>
-</div>
+ 
 
 <div class="container" id="main">
 
@@ -126,6 +119,10 @@ About
 Submissions
 </a>
 <p>Eligible students may submit their work for publication.</p>
+</li>
+
+<li>
+<?php get_search_form(); ?>
 </li>
 </ul>
 
