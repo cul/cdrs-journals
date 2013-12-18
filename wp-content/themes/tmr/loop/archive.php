@@ -20,9 +20,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 ?>
-</div>
+ 
 
-<div class="span-15">
+<div class="span-14 prepend-6">
 
 <?php
  

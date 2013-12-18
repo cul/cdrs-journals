@@ -34,7 +34,7 @@ global $post;
  
 
 	
-<div id="content" role="main" class="span-15">
+<div id="content" role="main" class="span-14 prepend-6">
 
 <!--  <h1 class="page-title"> <?php the_title() ?> </h1> -->
 
@@ -74,18 +74,6 @@ the_content();
 ?>
 
 </div>
- 
- 
-
- 
-
- 
-
- 
- 
- 
-
-
 
 </div>
 
