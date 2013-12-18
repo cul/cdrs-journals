@@ -19,8 +19,9 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-</div>
-<div>
+<div class="row">
+<div id="content" role="main" class="span-14 prepend-6">
+
 
 <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
 
@@ -44,4 +45,5 @@ edit_post_link(__('Edit This', 'carrington-jam'), '', '');
 
 ?>
 
+</div>
 </div>

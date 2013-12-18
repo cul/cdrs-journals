@@ -68,11 +68,9 @@ Center For Digital Research &amp; Scholarship<br>
 </div>
 
 <div class="span-14">
-<!--
 <div class="copy-warn">
 <span class="copy-sign">&copy;</span> Essays published in <em>The Morningside Review</em> are protected by copyright, with all rights reserved by the author unless otherwise indicated.
 </div>
--->
 </div>
 
  

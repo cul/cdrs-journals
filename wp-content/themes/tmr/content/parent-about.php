@@ -19,13 +19,10 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
- 
- 
- 
-
- 
 
 
+<div class="row">
+<div id="content" role="main" class="span-14 prepend-6">
 
 <?php 
 
@@ -37,16 +34,18 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 
-</div>
+ 
 
-
-<div class="span-15 content last">
 
 <div>
+ 
+
 
 <?php
 
 the_content(); 
+
+ 
 
 /*
 the_date();

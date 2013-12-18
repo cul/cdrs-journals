@@ -250,8 +250,9 @@ if(!empty($source_terms)){
 </div>
 
 <div class="span-3 sidebar">
+<div class="page-nav">
 
-<ul class="essay-functions">
+<ul class="essay tools">
 
  
 <?php 
@@ -259,7 +260,7 @@ if(!empty($source_terms)){
 if ( $auth_bio ) {
 
 ?>
-<li><a href="#bio" id="bio-toggle"> <span class="glyphicon glyphicon-user"></span> Author Bio</a> </li>
+<li><a href="#bio" id="bio-toggle"> <span class="glyphicon glyphicon-user"></span> &nbsp;&nbsp;Author Bio</a> </li>
 <?php
 
 }
@@ -267,20 +268,22 @@ if ( $auth_bio ) {
 ?>
 
 
-<li><a href="#taxonomy" id="tax-toggle"><span class="glyphicon glyphicon-list"></span> Taxonomy</a></li>
+<li><a href="#taxonomy" id="tax-toggle"><span class="glyphicon glyphicon-list"></span> &nbsp;&nbsp; Taxonomy</a></li>
 
-<li><a href="#print" id="print-toggle"><a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> Print</a>
+<li><a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> &nbsp;&nbsp; Print</a>
+</ul>
+<ul class="social tools">
  
-<div class="social-media">
-
-<div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div> <br>
+ <li><a href="https://facebook.com/sharer.php?u=<?php the_permalink(); ?>">Facebook</a> </li>
 
 
+<li><a id='twitter button' href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&via=MorningsideRev">Twitter</a></li>
+<li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>">Google+</a></li>
+</ul>
 
-<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<br/>
 
+
+ 
 
 </div>
  

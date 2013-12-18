@@ -21,7 +21,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 
-
+<div class="row">
+<div id="content" role="main" class="span-14 prepend-6">
 
 <?php 
 
@@ -33,7 +34,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
  
 
-</div><div class="span-14	 content last">
+ 
 
 
 <div>

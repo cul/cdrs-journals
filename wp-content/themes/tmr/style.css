@@ -151,6 +151,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
  body{
 /* 	background: url(img/linen-dark.png) repeat; */
 	background-image: url(img/seamlesstexture29_500.jpg);
+ 
 }
 
 
@@ -158,7 +159,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 #main.container{
 	 
 /* 	background-image: url(img/seamlesstexture29_500.jpg); */
- 
+ 	padding-top: 40px;
    min-height: 600px;
    
 /*
@@ -169,15 +170,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 */
 }
 
-a.print-button {
-	text-transform: uppercase;
-	padding: 0 5px;
  
-	font-size: 13px;
-	margin-bottom: 8px;
-	display: block;
- 
-}
 
 
  
@@ -549,8 +542,14 @@ h1, h2{
 nav#access {
 		/*font-family: "Futura Medium", futura;*/
  /*font-family: 'Cantarell', sans-serif;*/
-  margin-top:1em;
-  margin-bottom: 1em;
+  padding-top:.5em;
+  padding-bottom: .5em;
+ 
+  
+ position: fixed;
+ background-image: url(img/seamlesstexture29_500.jpg);
+ z-index: 100;
+
 }
 
  
@@ -1130,13 +1129,12 @@ div.fb-like {
 }
 
 #colophon{
-	text-align: center;
-	font: 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	
 	padding-bottom: 10px;
 	padding-top: 10px;
 		
 	margin-top: 3em;
-	text-align: center;
+ 
 }
 
 label.assistive-text {
@@ -1255,8 +1253,8 @@ margin-top: 80px;
 
 h1.page-title {
     margin-top: 0;
-    font-size: 36px;
-	line-height: 42px;
+    font-size: 32px;
+	line-height: 120%;
 	color: #56494f;
 	font-weight: 400;
 	margin-bottom: .25em;
@@ -1547,10 +1545,7 @@ div.content {
 	cursor: pointer;
 }
 
-div.essay-tools {
-	float: right;
-}
-
+ 
 #meta-toggle:hover, #meta-toggle.active{
     -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
@@ -1573,8 +1568,7 @@ div.menu-about-subnav-container {
 }
 
 #colophon{
-	color: white;
-}
+	 }
 
 #colophon a{
 	text-decoration: underline;
@@ -1588,6 +1582,33 @@ div.menu-about-subnav-container {
 
 }
 
+span.copy-sign{
+	
+	display: block;
+	float: left;
+	font-size: 36px;
+	font-weight: 300;	
+	border-right: 1px solid #ccc;
+	 
+		margin-right: 10px;
+		padding-right: 10px;
+		 
+}
+
+div.copy-warn{
+	
+	border: 1px solid #d9b2b2;
+	background: rgba(255,255,255,.4);
+	padding: 15px;
+	font-size: 14px;
+	text-align: left;
+	margin-top: 15px;
+
+	
+	
+	
+	
+}
 
 #essay {
 	
@@ -1609,6 +1630,8 @@ div.menu-about-subnav-container {
 	bottom: 10px;
 */
 	font-size: 12px;
+	line-height: 10px;
+	color: #555555;
 
 	
 		
@@ -1632,6 +1655,8 @@ div.menu-about-subnav-container {
 	border-bottom: 1px solid #747576;
 	margin-bottom: 8px;
 	width: 96%;
+	line-height: 14px;
+		color: #555555;
 }
 div.colophon img{
 	
@@ -1646,19 +1671,24 @@ div.colophon img{
 
 img#selected-essays {
 	
-	width: 97%;
+ 
 	margin-right: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	
 }
 
-ul.essay-functions{
+ul.tools{
 	
 	padding-left: 0;
 }
 
 
-
+ul.tools a {
+	
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+}
 
 @font-face {
   font-family: 'Glyphicons Halflings';
