@@ -1706,6 +1706,12 @@ ul.tools a {
 	font-weight: 500;
 }
 
+body.home div.cdrs-colophon{
+	
+	
+	margin-top: 50px;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('css/glyphicons-halflings-regular.eot');
