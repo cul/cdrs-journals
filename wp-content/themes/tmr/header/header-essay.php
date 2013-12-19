@@ -98,14 +98,9 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 </div>
 
-<div class="span-6 clearfix">
- <div class="colophon">
 
-<div id="cu-writing">
-
-<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
-
-</div>
+ 
+ 
 
 <!--
 
@@ -124,10 +119,10 @@ Center For Digital Research &amp; Scholarship<br>
 </div>
 
 -->
-</div>
+
  
 
-</div>
+ 
  
 
 <div class="span-14 prepend-6" id='essay-title'>

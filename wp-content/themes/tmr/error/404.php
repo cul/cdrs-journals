@@ -23,12 +23,8 @@ get_header();
 <div class="span-14 prepend-6 content">
 
 
-<?php
-_e('Sorry, we\'re not sure what you\'re looking for here.', 'carrington-jam'); 
-
-
-?>
-
+<H1>Page Not Found Error</h1>
+<p>Our server encountered an error: Code 404 Page not found.</p>
 </div>
 
 <?php

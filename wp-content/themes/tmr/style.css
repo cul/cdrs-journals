@@ -1476,7 +1476,8 @@ body.home #header {
 	 
 	font-weight: 300;
 	font-size: 18px;
-	line-height: 26px;
+	line-height: 28px;
+	text-rendering: optimizelegibility;
  
 	 
  }
@@ -1675,8 +1676,8 @@ div.colophon img{
 img#selected-essays {
 	
  
-	margin-right: 10px;
-	margin-bottom: 80px;
+ max-width: 100%;
+ 
 	
 }
 
@@ -1690,7 +1691,14 @@ ul.tools{
 	padding-left: 0;
 }
 
-
+ul.social{
+	
+	padding-left: 22px;
+	
+	margin-top: .5em;
+	padding-top: .5em;
+	border-top: 1px dotted #ccc;
+}
 ul.tools a {
 	
 	text-transform: uppercase;

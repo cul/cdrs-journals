@@ -23,7 +23,17 @@ get_header();
 $tag_title = '<a href="'.get_tag_link(intval(get_query_var('tag_id'))).'" title="">'.single_tag_title('', false).'</a>';
 
 ?>
-<div class="span-14 prepend-6">
+
+<div class="span-6">
+
+<div id="cu-writing">
+
+<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
+
+</div>
+
+</div>
+<div class="span-14">
 <h1><?php printf(__('Tag Archives: %s', 'carrington-jam'), $tag_title); ?></h1>
 
 <?php
