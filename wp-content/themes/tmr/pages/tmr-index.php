@@ -24,6 +24,7 @@ cfct_template_file('header', 'header-essay.php');
   ?>
 
 <br style="clear:both">
+<div id="content">
 
 <div id="tmr-index" role="main" class="content">
  
@@ -221,7 +222,8 @@ for ($iCol=0; $iCol<3; $iCol++) {
 	
 	for ($i=$start; $i<$finish; $i++) {
 		$nameArray = explode(",",$name[$i]);
-		$sortValue = array_pop(array_reverse($nameArray));
+		$lastFirst = array_reverse($nameArray);
+		$sortValue = array_pop($lastFirst);
 		
 		echo '<li id="'.$sortValue.'"><a href="' . get_term_link( $slug[$i], 'tmr_author' ) . '" title="' . sprintf( __( "View archive of %s content" ), $name[$i] ) . '" ' . '>' . $name[$i].'	</a></li>';
 		
@@ -233,6 +235,7 @@ for ($iCol=0; $iCol<3; $iCol++) {
 ?>
 
 
+</div>
 </div>
 </div>
 

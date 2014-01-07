@@ -37,7 +37,7 @@ global $post;
 <div class="row">
 
 <div class="span-6">
-
+&nbsp;
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
@@ -49,9 +49,8 @@ global $post;
 
 <div id="essay">
 
-<div id='meta-content' style="display:none">
+ 
 
-<div id="essay-meta" >
 
 <?php
 
@@ -60,6 +59,11 @@ $author_terms = wp_get_object_terms($post->ID, 'tmr_author');
 
 if(!empty($author_terms)){
   if(!is_wp_error( $author_terms )){
+  
+  ?>
+  
+  <div id='author-meta' class="essay-meta" title="Author Bio">
+  <?php
   
     foreach($author_terms as $term){
               
@@ -78,12 +82,24 @@ if(!empty($author_terms)){
 
    }
    
+   ?>
+   
+  </div>
+   <?php
+   
    }}
 
 
 ?>
 
-<h3>Classification</h3>
+
+
+ 
+
+<div id="tax-meta" class="essay-meta" title="Classification">
+
+
+ 
 
 <?php
    
@@ -138,9 +154,7 @@ if(!empty($source_terms)){
 ?>
 </div>
 
-
-</div>
-
+ 
 
 <?php
 

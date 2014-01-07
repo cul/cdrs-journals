@@ -24,10 +24,10 @@ get_header();
 
 ?>
 <div class="span-6">
-
+&nbsp;
 <div id="cu-writing">
 
-<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
+<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" width="230px" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
 
 </div>
 </div>

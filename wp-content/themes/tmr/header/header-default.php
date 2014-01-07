@@ -53,7 +53,7 @@ function my_scripts_method() {
    
    wp_register_script('tmr_js',
        get_template_directory_uri() . '/js/tmr.js',
-       array('jquery',  'pnumb'),
+       array('jquery',  'pnumb', 'jquery-ui-dialog', 'jquery-effects-slide'),
        
        '1.0' );
    
@@ -75,15 +75,19 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <div class="container">
 
- 
-<nav id="access" class="span-20 prepend-2 clearfix" role="navigation">
+ <div class="span-18 prepend-3" id='super' >
+ <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/lion.png" id="nav-lion-icon" style='display:none' width=40 >
+<nav id="access" role="navigation">
+
+
+
 		 
  
 <?php	wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>	
  <?php get_search_form(); ?>
  
 </nav><!-- #access -->
- 
+ </div>
 </div>
  
 <div class="container" id="main">
@@ -92,16 +96,46 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 <div id="header" class="span-16 prepend-6" role="banner">
 
- 
 	 
 <h1 class="masthead"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></a></h1>
 
 </div>
+
+
+ 
  
 
-<div class="span-18 prepend-6" id='essay-title'>
+<!--
+
+
+<div class="cdrs-colophon">
+<h6>Published in Partnership with</h6>
+
+<div id="cdrs-id">
+
+CDRS
+
+</div>
+
+Center For Digital Research &amp; Scholarship<br>
+<span class="small">Columbia University Libraries/Information Services</span>
+</div>
+
+-->
+
+ 
+
+ 
+ 
+
+<div class="span-14 prepend-6" id='essay-title'>
   <h1 class="page-title">
 <?php the_title() ?>
 </h1>
+
+
+
+   
+
 
 		</div>

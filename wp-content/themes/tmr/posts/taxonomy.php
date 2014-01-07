@@ -25,7 +25,7 @@ $tag_title = '<a href="'.get_tag_link(intval(get_query_var('tag_id'))).'" title=
 ?>
 
 <div class="span-6">
-
+&nbsp; 
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>

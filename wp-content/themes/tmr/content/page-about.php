@@ -24,16 +24,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <div class="row">
 <div class="span-6">
 
-<?php 
 
 
- wp_nav_menu( array('menu' => 'about subnav')); 
-
-
- ?>
-
-
-
+&nbsp;
 <div id="cu-writing">
 
 <a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
@@ -46,12 +39,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 </div>
 
 
-<div id="content" role="main" class="span-14">
+<div id="content" role="main" class="span-12">
 
  
 
 
-<div>
+ 
  
 
 
@@ -72,6 +65,16 @@ edit_post_link(__('Edit This', 'carrington-jam'), '', '');
 */
 
 ?>
+</div>
+
+<div class="span-4">
+<?php 
+
+
+ wp_nav_menu( array('menu' => 'about subnav')); 
+
+
+ ?>
 </div>
 
 </div> 

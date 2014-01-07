@@ -24,7 +24,14 @@ $tag_title =   single_tag_title('', false) ;
 
 ?>
  
-	<div id="content" role="main" class="span-15 prepend-6">
+ 
+<div class="span-6">
+&nbsp;
+<div id="cu-writing">
+<a href="http://www.college.columbia.edu/core/uwp"><img id="selected-essays" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program"></a>
+</div>
+</div>
+<div id="content" role="main" class="span-15">
 <h1 class="edition-label"><?php 
 echo $tag_title." Edition" ?></h1>
 
