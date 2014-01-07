@@ -33,7 +33,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 		
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
 	
 <link rel="shortcut icon" type="image/x-icon" href="/wp-content/uploads/2012/06/icon.ico">
 

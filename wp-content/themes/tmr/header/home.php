@@ -33,7 +33,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				
 		
 		
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic,700' rel='stylesheet' type='text/css'>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="http://morningsidereview-dev.cul.columbia.edu/wp-content/uploads/2012/06/icon.ico">
 
@@ -76,7 +76,7 @@ function my_scripts_method() {
 
  
 
-<div class="container" id="main">
+<div class="container">
 
 <div id='header' role="banner" class="span-15 prepend-1 clearfix">		
 
