@@ -1137,6 +1137,11 @@ display: none;
 	
 }
 
+body.home #searchform{
+	float: none;
+	margin-top: .8em;
+}
+
 #searchform input#s{
 	margin: 0;
 }
