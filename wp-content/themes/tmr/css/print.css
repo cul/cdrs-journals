@@ -1,0 +1,212 @@
+* { background: transparent !important;  text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important;
+	/*font-family: Georgia, "Times New Roman", Times, serif !important;*/
+}
+
+
+body{
+	 font-family: 'Lato', sans-serif;
+	 color: black;
+}
+
+div.super{
+	
+	display: none !important;
+}
+ 
+ #print-header{
+	display: block;
+	max-width: 80%;
+	 
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+  .social-media, nav#access, #searchform, .sidebar, #essay-meta{
+	display: none; 
+}
+
+img#print-cuwp{
+	
+	float: right;
+	width: 140px;
+}
+
+img#print-lion-icon{
+	
+	float: left;
+	margin-right: 10px;
+
+}
+
+h1.masthead{
+ 	color: #3e6068;
+ 	text-transform: uppercase;
+}
+
+span.light{
+	
+	text-transform: capitalize;
+}
+ 
+#essay-title{
+	
+		width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+ 
+  /*a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }*/
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {  page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100%;}
+  @page { margin: 2cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ 		page-break-inside: avoid; 
+  				page-break-after: avoid; }
+  
+  
+  
+ 
+span.author-credit{
+	font-size: 14pt;
+}
+ 
+
+ #header{
+	display: none;
+}
+
+div#cu-writing{
+	display: none;
+}
+
+span.numbered-item
+{
+	float: right;
+    display:block;
+	color: #ccc;
+     width: 50px;
+     margin-right: -70px;
+     
+}
+
+
+
+div#header h1 a{
+	
+	color: black;
+}
+
+h1.page-title{
+	font-size: 20pt;
+	line-height: 24pt;
+}
+
+ 
+
+
+ 
+span.author-credit a {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+#main.container{
+	width: 100%;
+  	/*margin: 0 10%;*/
+	border: none;
+	-moz-box-shadow:    none;
+	-webkit-box-shadow: none;
+	box-shadow:         none;
+}
+
+#content.span-14{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding-bottom: 1em;
+	border-bottom: 4px double #ccc;
+	margin-bottom: 1em;
+}
+
+div.span-6.prepend-1{
+	display: none;
+}
+
+#meta-toggle{
+	display: none;
+}
+
+#essay p{
+ 
+	font-size: 12pt;
+	line-height: 18pt;
+	padding-right: 60px; 
+	 
+}
+
+#essay blockquote p{
+	
+	font-size: 10pt;
+	line-height: 14pt;
+}
+#colophon{
+	 width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+ 
+
+
+
+.cdrs-colophon{
+/*
+	position: fixed;
+	bottom: 10px;
+*/
+	font-size: 12px;
+	line-height: 14px;
+	color: #555555;
+	width: 270px;
+	
+		
+}
+
+#cdrs-id{
+
+
+	font-size: 18px;
+	line-height: 30px;
+/* 	padding-left: 35px; */
+ 
+ 
+		text-align: center;
+
+	background: url(../../img/cdrs-icon.png);
+
+}
+
+.cdrs-colophon h6{
+	
+	font-weight: normal;
+	border-bottom: 1px solid #747576;
+	margin-bottom: 8px;
+	width: 96%;
+	line-height: 14px;
+		color: #555555;
+}
+
+
+div.copy-warn{
+	margin-top: 2em;
+	font-size: 10pt;
+}

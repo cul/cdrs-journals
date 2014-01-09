@@ -41,9 +41,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
 
+
 <link rel="stylesheet" type="text/css" media="screen"  href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/blueprint/screen.css" />
 
-<link rel="stylesheet" type="text/css" media="screen, print" href="<?php bloginfo('stylesheet_url') ?>" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url') ?>" />
+
+<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/print.css"/>
 
 <?php
 
@@ -91,8 +94,17 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 </div>
  
 <div class="container" id="main">
+<div id="print-header">
 
-<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/print-header.png" width="100%"  id="print-header">
+
+ <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/lion.png" id="print-lion-icon"  >
+
+<img id="print-cuwp" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/selected-essays-home.png" alt="Selected Essays from the Columbia University Undergraduate Writing Program">
+<h1 class="masthead"> <span class='light'>The</span><br/>Morningside<br/><span class='bottom'>Review</span></h1>
+ 
+
+</div>
+ 
 
 <div id="header" class="span-16 prepend-6" role="banner">
 

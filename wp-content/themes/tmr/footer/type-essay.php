@@ -73,11 +73,7 @@ Center For Digital Research &amp; Scholarship<br>
 </div>
 </div>
 
-<div class="container" id='print-colophon'>
 
-The Morningside Review is a partnership between the Undergraduate Writing Program and the Center for Digital Research and Scholarship at Columbia University Libraries.
-
-</div>
 
 </body>
 
