@@ -3,3 +3,8 @@
 	 
 	
 }
+
+#essay p.no-indent{
+	
+	text-indent: 0;
+}

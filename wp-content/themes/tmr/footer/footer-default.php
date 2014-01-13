@@ -52,9 +52,9 @@ if (CFCT_DEBUG) {
 <div class="container" id='colophon'>
 
 <div class="span-6">
-<div class="cdrs-colophon">
+<div id="cdrs-colophon">
 <h6>Published in Partnership with</h6>
-
+<a href="https://cdrs.columbia.edu" target="_blank">
 <div id="cdrs-id">
 
 CDRS
@@ -64,7 +64,7 @@ CDRS
 Center For Digital Research &amp; Scholarship<br>
 <span class="small">Columbia University Libraries/Information Services</span>
 </div>
-
+</a>
 </div>
 
 <div class="span-14">

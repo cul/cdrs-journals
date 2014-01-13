@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 		"tag":"span"});
 
 
-	$("#tax-meta, #author-meta").dialog({ autoOpen: false, width:500, buttons: [ { text: "Close", click: function() { $( this ).dialog( "close" ); } } ] });
+	$("#tax-meta, #author-meta").dialog({ autoOpen: false, width:500 });
 	
  	 
  
@@ -30,7 +30,13 @@ jQuery(document).ready(function($) {
   
   $('#content').waypoint(function(){
    $('img#nav-lion-icon').toggle("slide");
+   
+   
+   
+ 
 });
+
+$('a#share-show').click(function(){ $('ul#share-list').slideToggle();});
 
    
 });

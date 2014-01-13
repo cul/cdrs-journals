@@ -42,9 +42,9 @@ wp_reset_postdata();
 
 ?>
 
-<div class="cdrs-colophon">
+<div id="cdrs-colophon">
 <h6>Published in Partnership with</h6>
-
+<a href="http://cdrs.columbia.edu">
 <div id="cdrs-id">
 
 CDRS
@@ -53,6 +53,7 @@ CDRS
 
 Center for Digital Research &amp; Scholarship<br>
 <span class="small">Columbia University Libraries/Information Services</span>
+</a>
 </div>
 
 

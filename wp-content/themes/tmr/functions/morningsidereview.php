@@ -587,10 +587,35 @@ function tuts_mce_before_init( $settings ) {
 
     $style_formats = array(
         array(
-            'title' => 'Inside Blockquote',
+            'title' => 'Interior Blockquote',
             'selector' => 'blockquote',
             'classes' => 'inside'
-            )
+            ), 
+        array(
+        
+         	'title' => 'No Indent',
+		 	'selector' => 'p',
+            'classes' => 'no-indent'
+
+        ),
+         array(
+        
+         	'title' => 'Top Quote',
+		 	'selector' => 'blockquote',
+            'classes' => 'top-quote'
+
+        ),
+        
+         array(
+        
+         	'title' => 'Top Quote Attribution',
+		 	'selector' => 'p',
+            'classes' => 'quote-attribution'
+
+        )
+           
+           
+            
                          
          
     );

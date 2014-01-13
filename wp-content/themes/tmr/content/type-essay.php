@@ -72,12 +72,12 @@ if(!empty($author_terms)){
    $auth_photo = get_tax_meta($term,'author_image',true);
    
    if($auth_bio){
-/*     echo ' <h2>About the Author</h1>'; */
+
     if($auth_photo){
 		
 			echo '<img class="essay-thumb" width="150" src="'.$auth_photo['src'].'">';
    }
-    echo '<div class="author-bio">'.$auth_bio.'</div>';
+    echo '<div class="author-bio" title="About the Author">'.$auth_bio.'</div>';
    }
 
    }
@@ -96,7 +96,7 @@ if(!empty($author_terms)){
 
  
 
-<div id="tax-meta" class="essay-meta" title="Classification">
+<div id="tax-meta" class="essay-meta" title="Academic Taxonomy">
 
 
  
@@ -294,15 +294,24 @@ if ( $auth_bio ) {
 
 <li><a href="#taxonomy" id="tax-toggle"><span class="glyphicon glyphicon-list"></span> &nbsp;&nbsp; Taxonomy</a></li>
 
+<hr>
+
 <li><a class="print-button" HREF="javascript:window.print()" title="Click to Print Essay with Paragraph Numbers"><span class="glyphicon glyphicon-print"></span> &nbsp;&nbsp; Print</a>
 </ul>
-<ul class="social tools">
+
+<hr>
+
+<a href="#" id="share-show"><span class="glyphicon glyphicon-share"></span>&nbsp;&nbsp; Share</a>
+<ul class="social tools" id='share-list' style="display:none">
+
+<li><a HREF="mailto:?subject=<?php the_title()?>&body=An essay from The Morningside Review: <?php the_permalink(); ?>">E-mail</a></li>
  
  <li><a href="https://facebook.com/sharer.php?u=<?php the_permalink(); ?>">Facebook</a> </li>
 
 
 <li><a id='twitter button' href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&via=MorningsideRev">Twitter</a></li>
 <li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>">Google+</a></li>
+<li>
 </ul>
 
 

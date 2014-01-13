@@ -56,7 +56,7 @@ function my_scripts_method() {
    
    wp_register_script('tmr_js',
        get_template_directory_uri() . '/js/tmr.js',
-       array('jquery',  'pnumb', 'jquery-ui-dialog', 'jquery-effects-slide'),
+       array('jquery',  'pnumb', 'jquery-ui-dialog', 'jquery-effects-slide', 'jquery-effects-blind'),
        
        '1.0' );
    
