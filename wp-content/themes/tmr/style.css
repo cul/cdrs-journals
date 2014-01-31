@@ -237,19 +237,19 @@ body.home div#header h1{
 h1.masthead{
 
 
-	font-size: 40px;
+	font-size: 44px;
 	padding-left: 109px;
 	font-weight: 700;
-	line-height: 40px;
+	line-height: 100%;
 	margin-left: -114px;
 	padding-top: 14px;
 	margin-top: 0px;
-	padding-bottom: 17px;
+	padding-bottom: 8px;
 	text-transform: uppercase;
-	margin-bottom: 14px;
+ 
 	
 	
-	 color: red;
+	 color: #1a6284;
  -webkit-text-fill-color: transparent;
  background: -webkit-linear-gradient(transparent, transparent),
              url('img/tmr_header_bg.png') repeat;
@@ -257,6 +257,16 @@ h1.masthead{
  -webkit-background-clip: text;
 	
 	
+}
+
+h1.page-title {
+    margin-top: 0;
+    font-size: 28px;
+	line-height: 32px;
+	color: #56494f;
+	font-weight: 400;
+ 
+ 
 }
 
 #header {
@@ -365,7 +375,10 @@ body.home div#header div#cu-writing{
 	position: relative;
 }
 div#cu-writing {
-position: fixed;
+
+margin-top: 200px;
+ 
+
   
  
 }
@@ -812,15 +825,38 @@ body.home #cu-writing img{
 
 div.span-8.center.content {
 }
-span.author-credit {
 
-	font-size: 150%;
-	text-align: right;
-	display: block;
+span.author-credit:before{
+	
+	content: 'By ';
+}
+
+
+h2.author-edition{
+	text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+
 	/*margin-bottom: .5em;*/
 	 
   
 	margin-bottom: .5em;
+}
+
+blockquote.top-quote{
+	
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: none;
+	
+	
+}
+
+p.quote-attribution{
+	
+	text-align: right;
 }
 
 
@@ -933,11 +969,13 @@ color: #b92d0c;
 	line-height: 40px;
 }
 a.author, .author-link a{
-	color: #844240;
+	color: #1a6284;
 	text-decoration: none;
 	text-transform: uppercase;
 	 
 }
+
+ 
 
  
 
@@ -948,17 +986,22 @@ ul.archive-list li{
 
 a.title-link {
 	
-	display: block;
-	font-size: 20px;
-	line-height: 20px;
+ 
+	font-size: 22px;
+	line-height: 22px;
 	margin-bottom: 5px;
 	color: #56494f;
 }
 
 span.edition-link {
-	float: right;
-	margin-right: 300px;
+	float: right; 
+ 
 	
+}
+
+span.edition-link:before{
+	
+	content: "Edition ";
 }
 /*a.author:before,.author-link a:before {
 	content:"\2014\a0";
@@ -990,8 +1033,25 @@ div.wp-caption.alignleft {
  
 
  
- 
- 
+#essay p.descender:first-letter,span.descendertwo {
+font-size:4em;
+line-height:.8em;
+margin-right:4px;
+margin-top:5px;
+display:block;
+float:left;
+text-indent: 0em;
+font-weight: 400;
+}
+
+#essay p.descender{
+	
+	text-indent: 0;
+}
+
+.glyphicon-share-alt:before {
+    content: "\e095"
+}
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -1260,15 +1320,7 @@ margin-top: 80px;
 }
 
 
-h1.page-title {
-    margin-top: 0;
-    font-size: 32px;
-	line-height: 120%;
-	color: #56494f;
-	font-weight: 400;
-	margin-bottom: .25em;
- 
-}
+
  
 ul.archive-list {
 	margin-left: 0;
@@ -1476,7 +1528,7 @@ body.home #header {
  
  
 	margin-bottom: .5em;
-	text-indent: 2em;
+	text-indent: 2.3em;
 			
 		
 	}  
@@ -1497,9 +1549,10 @@ body.home #header {
 	font-weight: 300;
 	text-indent: 0;
 	font-size: 16px;
-    line-height: 24px;
-	margin-left: 3em;
-	margin-right: 2em;
+    line-height: 26px;
+	margin-left: 2.6em;
+	margin-right: 2.6em;
+	font-style: normal;
 	 
  
 	
@@ -1652,6 +1705,12 @@ div.page-nav{
 	bottom:20px;
 	width: 230px;
  
+}
+
+body.home #cdrs-colophon{
+	
+	margin-top: 50px;
+	
 }
 
 #cdrs-colophon{

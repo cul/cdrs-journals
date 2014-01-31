@@ -612,7 +612,16 @@ function tuts_mce_before_init( $settings ) {
 		 	'selector' => 'p',
             'classes' => 'quote-attribution'
 
+        ),
+        
+         array(
+        
+         	'title' => 'Drop Cap Paragraph',
+		 	'selector' => 'p',
+            'classes' => 'descender'
+
         )
+
            
            
             

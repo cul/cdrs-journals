@@ -145,7 +145,7 @@ Center For Digital Research &amp; Scholarship<br>
 <?php the_title() ?>
 </h1>
 
-
+<h2 class="author-edition">
 
 <?php
 
@@ -176,6 +176,6 @@ if(!empty($author_terms)){
  
   ?>
   
-
+</h2>
 
 		</div>

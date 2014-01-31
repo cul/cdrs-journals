@@ -301,7 +301,7 @@ if ( $auth_bio ) {
 
 <hr>
 
-<a href="#" id="share-show"><span class="glyphicon glyphicon-share"></span>&nbsp;&nbsp; Share</a>
+<a href="#" id="share-show"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;&nbsp; Share</a>
 <ul class="social tools" id='share-list' style="display:none">
 
 <li><a HREF="mailto:?subject=<?php the_title()?>&body=An essay from The Morningside Review: <?php the_permalink(); ?>">E-mail</a></li>

@@ -150,6 +150,7 @@ div.span-6.prepend-1{
 	font-size: 12pt;
 	line-height: 18pt;
 	padding-right: 60px; 
+	text-indent: 2em;
 	 
 }
 
@@ -195,6 +196,13 @@ div.span-6.prepend-1{
 
 }
 
+.colophon {
+	
+ 
+	width: 230px;
+ 
+}
+
 .cdrs-colophon h6{
 	
 	font-weight: normal;
@@ -210,3 +218,42 @@ div.copy-warn{
 	margin-top: 2em;
 	font-size: 10pt;
 }
+
+
+#work_cited p{
+	
+	padding-left: 2em;
+	text-indent: -2em;
+	
+}
+
+#nav-lion-icon{
+	
+	display: none;
+}
+#cdrs-colophon{
+/*
+	position: fixed;
+	bottom: 10px;
+*/
+	font-size: 12px;
+	line-height: 10px;
+	color: #555555;
+
+	
+		
+}
+
+
+#cdrs-id{
+	font-size: 18px;
+	line-height: 30px;
+/* 	padding-left: 35px; */
+ 
+ width: 230px;
+		text-align: center;
+
+	background: url(img/cdrs-icon.png) no-repeat 55px 0px;
+
+}
+

@@ -57,7 +57,7 @@ if (have_posts()) {
 		$query->the_post();
 ?>
 <li class="essay"><h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-
+<h2 class="author-edition">
 <?php
 global $post;
 
@@ -68,13 +68,13 @@ $authors = get_the_terms( $post->ID, 'tmr_author' );
 if($authors){
 
 foreach($authors as $term){
-      echo '<a class="author" href="'.get_term_link($term->slug, 'tmr_author').'">'.formatName($term->name).'</a>'; 
+      echo '<span class="author-credit"><a class="author" href="'.get_term_link($term->slug, 'tmr_author').'">'.formatName($term->name).'</a></span>'; 
 
 }
 
 }
 ?>
-
+</h2>
 </li>
 
 <?php
