@@ -387,12 +387,9 @@ function user_author_save(){
 	
 }
 
-//adding Ajax
-function your_function_name() 
-{
-	wp_localize_script( 'journals', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	wp_enqueue_script( 'journals', get_stylesheet_directory_uri().'assets/js/journals.js', 'jquery', true);
-}
+wp_localize_script( 'journals', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+wp_enqueue_script( 'journals', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
+
 
 add_action("wp_ajax_nopriv_user_author_save", "user_author_save");
 
