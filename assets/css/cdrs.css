@@ -1,0 +1,5 @@
+h3.toggle:before {
+	content: 'show ';
+	
+  }
+
