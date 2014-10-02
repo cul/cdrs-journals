@@ -363,40 +363,97 @@ function user_author_meta_box( $object, $box ) { ?>
   <p>
     <label for="user_author_class">Create an Author</label></br>
     <br />
-	First Name: <input type="text" name="first_name" value="<?php echo $first_name;?>"></br>
-	Last Name: <input type="text" name="last_name" value="<?php echo $last_name;?>"></br>
-	Display Name: <input type="text" name="display_name" value="<?php echo $display_name;?>"></br>
-	User Name: <input type="text" name="user_name" value="<?php echo $user_name;?>"></br>
-	Password: <input type="text" name="user_pass" value="<?php echo $user_pass;?>"></br>
+	First Name: <input type="text" id='first_name' name="first_name" value=""></br>
+	Last Name: <input type="text" id='last_name' name="last_name" value=""></br>
+	Display Name: <input type="text" id='user_display' name="display_name" value=""></br>
+	User Name: <input type="text" id='user_name'name="user_name" value=""></br>
+	Password: <input type="text" id='user_pass' name="user_pass" value=""></br>
 	<div id="make_my_user">
 	<input type="button" id="user_author" class="button" value="Add">
   	</div>
   </p>
 <?php }
 
+//saving a new user as author
 function user_author_save(){
-	$userdata = array(
-    'user_login'  =>  $_POST["user_name"],
-    'user_pass'   =>  $_POST["user_pass"],
-    'first_name' => $_POST["first_name"],
-    'last_name' => $_POST["last_name"],
-    'display_name' => $_POST["display_name"] ,
-    'role' => 'author' 
+	$args = array(
+	"fist_name" => $_POST['first_name'],
+	"last_name" => $_POST['last_name'],
+	"display_name" => $_POST['display_name'],
+	"user_login" => $_POST['user_name'],
+	"user_pass" => $_POST['user_pass'],
+	"role" => "author"
 	);
-	$new_user = wp_insert_user( $userdata ) ;
-	
+	wp_insert_user($args);
+
 }
 
-wp_localize_script( 'journals', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-wp_enqueue_script( 'journals', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
+wp_enqueue_script( 'function', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
+wp_localize_script( 'function', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
+add_action("wp_ajax_user_author_save", "user_author_save");
 
-add_action("wp_ajax_nopriv_user_author_save", "user_author_save");
+//adding term meta to an issue
+  require_once('Tax-Meta-Class/Tax-meta-class/Tax-meta-class.php');
 
-add_action('template_redirect', 'your_function_name');
+$config_issues = array(
+   'id' => 'issues_print_date',
+   'title' => 'Print Date ',                      // meta box title
+   'pages' => array('issues'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
+   'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
+   'fields' => array(),                             // list of meta fields (can be added by field arrays)
+   'local_images' => false,                         // Use local or hosted images (meta box images for add/remove)
+   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+);
 
+$my_meta = new Tax_Meta_Class($config_issues);
+$my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
+$my_meta->Finish();
 
+//add doi meta box to article page
+add_action( 'load-post.php', 'doi_setup' );
+add_action( 'load-post-new.php', 'doi_setup' );
 
+function doi_setup() {
+  add_action( 'add_meta_boxes', 'doi_meta_boxes' );
+  add_action( 'save_post', 'doi_save', 10, 2 );
+}
 
+function doi_meta_boxes() {
+
+  add_meta_box(
+    'doi_box',      // Unique ID
+    esc_html__( 'DOI', 'DOI' ),    // Title
+    'doi_meta_box',   // Callback function
+    'article',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+}
+
+function doi_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'doi_class_nonce' ); ?>
+
+  <p>
+	 <input type="text" id="doi_add" name="doi_add" value=""></br>
+  </p>
+<?php }
+
+//saving a new user as author
+function doi_save($post_id){
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+if ( ! isset( $_POST['doi_add'] ) ) {
+		return;
+	}
+
+	// Sanitize user input.
+	$my_data = sanitize_text_field( $_POST['doi_add'] );
+
+	// Update the meta field in the database.
+	update_post_meta( $post_id, 'doi', $my_data );
+}
 
 

@@ -52,17 +52,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <!-- 	hide/show abstract, or just show depending on if article, or post -->
 	<div class="entry-content">
-	  <?php if( get_post_type() == 'article' && get_the_content() != ""): ?>
-	  <h3 class='toggle show'>abstract</h3>
-		  <div class="entry-content abstract-toggle">
-
-			<?php
-				the_excerpt();
-			?>
-				  </div>
-	  <?php else: ?>
+	  
 	    <?php the_excerpt(); ?>
-	  <? endif; ?>
+
 	</div>
 	
 </article><!-- .post -->

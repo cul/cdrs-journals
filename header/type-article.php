@@ -37,6 +37,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	
 	<?php if(get_post_type() == 'article'): ?>
 	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
+	<meta name="citation_publisher" content="Center for Research and Digital Scholarship, Columbia University"/>
+	<meta name="citation_journal_title" content="<?php echo get_bloginfo(); ?>" />
+	<?php $options = get_option( 'my-theme-options' ); 
+		$print = $options['print_issn'];
+		echo '<meta name="citation_issn" content="'. $print .'"/>';
+	?>
+
 	<?php 
 		$authors =  wp_get_post_terms($post->ID, 'aauthor', array("fields" => "all")); 
 		foreach ( $authors as $author ) {
@@ -50,11 +57,19 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         }	
 		$volumes = get_the_terms($post->ID, 'issues');
 		  foreach($volumes as $volume){
-	 		echo '<meta name="citation_volume" content="'. $volume->name .'">';  
+				echo '<meta name="citation_volume" content="'. $volume->name .'">'; 
+				$print_date = get_tax_meta($volume->term_id ,'print_date'); 
+				echo '<meta name="citation_publication_date" content="'. $print_date .'">';
+	 		}
+	 	$custom_doi = get_post_custom($post->ID);
+  		$the_doi = $custom_doi['doi'];
+  		foreach ( $the_doi as $doi ) {
+  			echo '<meta name="citation_doi" content="'. $doi .'">'; 
+		} 
 
-		}  
 	?>
 	<meta name="citation_online_date" content="<?php echo get_the_date('Y/m/d', $POST->ID); ?>" />
+	<meta name="citation_date" content="<?php echo date('Y/m/d'); ?>" />
 	<?php endif; ?>
 	
 	<?php wp_head(); ?>

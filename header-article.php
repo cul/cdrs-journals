@@ -33,7 +33,33 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico"  type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<!-- 	adding meta tags  -->
+	
+	<?php if(get_post_type() == 'article'): ?>
+	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
+	<meta name="citation_publisher" content="Center for Research and Digital Scholarship, Columbia University"/>
+	<?php 
+		$authors =  wp_get_post_terms($post->ID, 'aauthor', array("fields" => "all")); 
+		foreach ( $authors as $author ) {
+			echo '<meta name="citation_author" content="' . $author->name . '">';  
+		};
+		$attachments = get_posts(array('post_type' => 'attachment','numberposts' => null,'post_status' => null,'post_parent' => $post->ID));
+		if ($attachments) {
+          foreach ($attachments as $attachment) {
+             echo '<meta name="citation_pdf_url" content="'.wp_get_attachment_link($attachment->ID).'"/>'; 
+          }
+        }	
+		$volumes = get_the_terms($post->ID, 'issues');
+		  foreach($volumes as $volume){
+	 		echo '<meta name="citation_volume" content="'. $volume->name .'">';  
 
+		}  
+		$t_id = get_queried_object()->term_id;
+		$term_meta = get_option( "taxonomy_$t_id" );
+		echo '<meta name="citation_publication_date" content="' . $term_meta['custom_term_meta'] . '">';  
+	?>
+	<meta name="citation_online_date" content="<?php echo get_the_date('Y/m/d', $POST->ID); ?>" />
+	<?php endif; ?>
 	
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->
