@@ -19,8 +19,26 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 if (have_posts()) {
 	while (have_posts()) {
-		the_post();
-		cfct_excerpt();
+	$term_array = array();
+	$terms = get_the_terms( $post->ID, 'sections' );
+		if($terms ){
+				foreach($terms as $term){
+					$last_term = array_pop($term_array);
+					if ($term->name !== $last_term){
+						echo '<h1>'. $term->name . '</h1>'; 
+						array_push($term_array, $term->name);
+					}
+				}
+		} else{
+				$last_term = array_pop($term_array);
+				if ("Articles" !== $last_term){
+					echo '<h1> Articles </h1>';
+					array_push($term_array, "Articles"); 
+				}
+		}
+		
+			the_post();
+			cfct_excerpt();
 		
 	}
 }

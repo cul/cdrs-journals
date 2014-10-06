@@ -32,14 +32,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     		// The $term is an object, so we don't need to specify the $taxonomy.
     		$term_link = get_term_link( $author );
    
-    		// If there was an error, continue to the next term.
-    		if ( is_wp_error( $term_link ) ) {
-        		continue;
-    		}
 
     		// We successfully got a link. Print it out.
     		//array_push( $moreAuthors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
-    		$more_authors[] = '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>';
+    		$more_authors[] =  $author->name ;
 		}
 		echo implode(', ', $more_authors);
    }?>
@@ -52,9 +48,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <!-- 	hide/show abstract, or just show depending on if article, or post -->
 	<div class="entry-content">
-	  
-	    <?php the_excerpt(); ?>
-
+	  	<?php if('article' != get_post_type()){
+	    	 the_excerpt(); 
+		}?>
 	</div>
 	
 </article><!-- .post -->

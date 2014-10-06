@@ -36,13 +36,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <!-- 	adding meta tags  -->
 	
 	<?php if(get_post_type() == 'article'): ?>
-	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
 	<meta name="citation_publisher" content="Center for Research and Digital Scholarship, Columbia University"/>
 	<meta name="citation_journal_title" content="<?php echo get_bloginfo(); ?>" />
 	<?php $options = get_option( 'my-theme-options' ); 
 		$print = $options['print_issn'];
 		echo '<meta name="citation_issn" content="'. $print .'"/>';
 	?>
+	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
 
 	<?php 
 		$authors =  wp_get_post_terms($post->ID, 'aauthor', array("fields" => "all")); 
@@ -57,7 +57,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         }	
 		$volumes = get_the_terms($post->ID, 'issues');
 		  foreach($volumes as $volume){
-				echo '<meta name="citation_volume" content="'. $volume->name .'">'; 
+		  		$pieces = explode(" ", $volume->name);
+				$the_volume = trim($pieces[1], ',');
+				echo '<meta name="citation_volume" content="'. $the_volume .'">'; 
+				
+				$the_issue = array_pop($pieces);
+				echo '<meta name="citation_issue" content="'. $the_issue .'">';
+				
 				$print_date = get_tax_meta($volume->term_id ,'print_date'); 
 				echo '<meta name="citation_publication_date" content="'. $print_date .'">';
 	 		}
