@@ -45,7 +45,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
 
 	<?php 
-		$authors =  wp_get_post_terms($post->ID, 'aauthor', array("fields" => "all")); 
+		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all")); 
 		foreach ( $authors as $author ) {
 			echo '<meta name="citation_author" content="' . $author->name . '">';  
 		};

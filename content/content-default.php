@@ -24,16 +24,21 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php    
         
         
-  		$authors =  wp_get_post_terms($post->ID, 'aauthor', array("fields" => "all"));
+  		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all"));
   		$moreAuthors = array();
   		if($authors){
            foreach ( $authors as $author ) {
 
     		// The $term is an object, so we don't need to specify the $taxonomy.
     		$term_link = get_term_link( $author );
+    		
+    		// If there was an error, continue to the next term.
+			if ( is_wp_error( $term_link ) ) {
+				continue;
+			}
 
     		// We successfully got a link. Print it out.
-    		array_push( $moreAuthors,  $author->name );
+    		array_push( $moreAuthors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
 		}
 		echo implode(', ', $moreAuthors);
 

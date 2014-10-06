@@ -266,7 +266,7 @@ function register_taxonomy_sections() {
 
 add_action( 'init', 'register_taxonomy_sections' );
 
-function register_taxonomy_aauthors() {
+function register_taxonomy_authors() {
 $labels = array(
 		'name'                       => _x( 'Authors', 'Content Authors', 'cdrs_text' ),
 		'singular_name'              => _x( 'Author', 'Content Author', 'cdrs_text' ),
@@ -293,9 +293,9 @@ $labels = array(
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'aauthor', array( 'article','post' ), $args );
+	register_taxonomy( 'authors', array( 'article','post' ), $args );
 };
-add_action( 'init', 'register_taxonomy_aauthors' );
+add_action( 'init', 'register_taxonomy_authors' );
 
 
 //allowing custom logo upload for use in the header
