@@ -38,7 +38,8 @@ get_header();
 	<?php
 	
 	// For the loop used, look in /loops
-	cfct_loop();
+	//cfct_loop();
+	 get_template_part( 'loop/tax', 'issues' ); 
 	comments_template();
 	?>
 		</div><!-- #content -->

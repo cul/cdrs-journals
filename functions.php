@@ -334,65 +334,6 @@ function my_login_stylesheet() {
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
-//adding a new meta box
-add_action( 'load-post.php', 'user_author_setup' );
-add_action( 'load-post-new.php', 'user_author_setup' );
-
-function user_author_setup() {
-  add_action( 'add_meta_boxes', 'user_author_meta_boxes' );
-  add_action( 'save_post', 'user_author_save', 10, 2 );
-}
-
-function user_author_meta_boxes() {
-
-  add_meta_box(
-    'user_author_class',      // Unique ID
-    esc_html__( 'Add Author', 'Add Author' ),    // Title
-    'user_author_meta_box',   // Callback function
-    'article',         // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-}
-
-/* Display the post meta box. */
-function user_author_meta_box( $object, $box ) { ?>
-
-  <?php wp_nonce_field( basename( __FILE__ ), 'user_author_class_nonce' ); ?>
-
-  <p>
-    <label for="user_author_class">Create an Author</label></br>
-    <br />
-	First Name: <input type="text" id='first_name' name="first_name" value=""></br>
-	Last Name: <input type="text" id='last_name' name="last_name" value=""></br>
-	Display Name: <input type="text" id='user_display' name="display_name" value=""></br>
-	User Name: <input type="text" id='user_name'name="user_name" value=""></br>
-	Password: <input type="text" id='user_pass' name="user_pass" value=""></br>
-	<div id="make_my_user">
-	<input type="button" id="user_author" class="button" value="Add">
-  	</div>
-  </p>
-<?php }
-
-//saving a new user as author
-function user_author_save(){
-	$args = array(
-	"fist_name" => $_POST['first_name'],
-	"last_name" => $_POST['last_name'],
-	"display_name" => $_POST['display_name'],
-	"user_login" => $_POST['user_name'],
-	"user_pass" => $_POST['user_pass'],
-	"role" => "author"
-	);
-	wp_insert_user($args);
-
-}
-
-wp_enqueue_script( 'function', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
-wp_localize_script( 'function', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
-add_action("wp_ajax_user_author_save", "user_author_save");
-
 //adding term meta to an issue
   require_once('Tax-Meta-Class/Tax-meta-class/Tax-meta-class.php');
 
@@ -440,7 +381,6 @@ function doi_meta_box( $object, $box ) { ?>
   </p>
 <?php }
 
-//saving a new user as author
 function doi_save($post_id){
     // Check permissions
     if ( !current_user_can( 'edit_post', $post_id ) )
@@ -455,5 +395,74 @@ if ( ! isset( $_POST['doi_add'] ) ) {
 	// Update the meta field in the database.
 	update_post_meta( $post_id, 'doi', $my_data );
 }
+
+//add first/last name to authors page
+$config_auths = array(
+   'id' => 'auths_name',
+   'title' => 'Print Date ',                      // meta box title
+   'pages' => array('authors'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
+   'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
+   'fields' => array(),                             // list of meta fields (can be added by field arrays)
+   'local_images' => false,                         // Use local or hosted images (meta box images for add/remove)
+   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+);
+
+$new_meta = new Tax_Meta_Class($config_auths);
+$new_meta->addText('first_name' ,array('name'=> 'First Name'));
+$new_meta->addText('last_name' ,array('name'=> 'Last Name'));
+$new_meta->Finish();
+
+//add first/last name boxes to articles page
+add_action( 'load-post.php', 'auths_setup' );
+add_action( 'load-post-new.php', 'auths_setup' );
+
+function auths_setup() {
+  add_action( 'add_meta_boxes', 'auths_meta_boxes' );
+  add_action( 'save_post', 'auths_save', 10, 2 );
+}
+
+function auths_meta_boxes() {
+
+  add_meta_box(
+    'auths_class',      // Unique ID
+    esc_html__( 'Add Author', 'Add Author' ),    // Title
+    'auths_meta_box',   // Callback function
+    'article',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+}
+
+/* Display the post meta box. */
+function auths_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'auths_class_nonce' ); ?>
+
+  <p>
+    <label for="auths_class">Add Author</label></br>
+    <br />
+	First Name: <input type="text" id='auths_first' name="auths_first" value=""></br>
+	Last Name: <input type="text" id='auths_last' name="auths_last" value=""></br>
+	<div id="add_new_auths">
+	<input type="button" id="new_auths" class="button" value="Add">
+  	</div>
+  </p>
+<?php }
+
+//saving a new user as author
+function auths_save(){
+	$args = array(
+	"fist_name" => $_POST['first_name'],
+	"last_name" => $_POST['last_name'],
+	);
+	wp_insert_term($_POST['first_name'], 'authors');
+	
+
+}
+
+wp_enqueue_script( 'function', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
+wp_localize_script( 'function', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+add_action("wp_ajax_auths_save", "auths_save");
 
 

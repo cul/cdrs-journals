@@ -21,6 +21,7 @@ if (have_posts()) {
 	$current_section = null;
 	while (have_posts()) {
 		the_post();
+		//Displaying the section name, defaults to article if none specified
 		$section = wp_get_post_terms($post->ID, 'sections');
 		if(!empty($section) && $section[0]->name != $current_section){
 			$current_section = $section[0]->name;

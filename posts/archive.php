@@ -31,6 +31,8 @@ get_header();
 			printf(__('Yearly Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date(_x('Y', 'yearly archives date format', 'carrington-blueprint')) . '</span>');
 		}  elseif (is_tax('issues')) {
 			printf(__('Issue: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
+		} elseif (is_tax('authors')) {
+			printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}
 	?></h1>
 
