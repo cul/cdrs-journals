@@ -409,7 +409,7 @@ function citation_meta_boxes() {
 
   add_meta_box(
     'citation_box',      // Unique ID
-    esc_html__( 'Citation', 'citation' ),    // Title
+    esc_html__( 'Citation', 'Citation' ),    // Title
     'citation_meta_box',   // Callback function
     'article',         // Admin page (or post type)
     'side',         // Context
@@ -441,5 +441,12 @@ if ( ! isset( $_POST['citation_add'] ) ) {
   update_post_meta( $post_id, 'citation', $citation_data );
 }
 
+//ensures category can be used with both post and custom post type
+function wpse_category_set_post_types( $query ){
+    if( $query->is_category() && $query->is_main_query() ){
+        $query->set( 'post_type', array( 'article', 'post' ) );
+    }
+}
+add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
 
 
