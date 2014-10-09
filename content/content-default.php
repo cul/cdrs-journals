@@ -19,7 +19,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class('clearfix') ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h1>
+		<h1 class="entry-title"><?php the_title() ?></h1>
 	<h2 class="authors">
 	<?php    
         
@@ -84,6 +84,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                	  echo '<span class="pdf_link">'.wp_get_attachment_link($attachment->ID, '' , false, false, 'PDF').'</span>'; 
         		}
 		}
+
+		$citation_info = get_post_custom($post->ID);
+  		$the_citation = $citation_info['citation'];
+  		echo $the_citation[0];
 
 		?>
 	</div>

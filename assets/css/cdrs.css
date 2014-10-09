@@ -3,3 +3,7 @@ h3.toggle:before {
 	
   }
 
+#topnav li.current-menu-item a { 
+	background-color:#B2C629;
+	font-style: italic;
+}

@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', false);
+define('CFCT_DEBUG', true);
 
 /**
  * Theme version.
@@ -396,73 +396,50 @@ if ( ! isset( $_POST['doi_add'] ) ) {
 	update_post_meta( $post_id, 'doi', $my_data );
 }
 
-//add first/last name to authors page
-$config_auths = array(
-   'id' => 'auths_name',
-   'title' => 'Print Date ',                      // meta box title
-   'pages' => array('authors'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
-   'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
-   'fields' => array(),                             // list of meta fields (can be added by field arrays)
-   'local_images' => false,                         // Use local or hosted images (meta box images for add/remove)
-   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
-);
+//adding custom citation box to articles
+add_action( 'load-post.php', 'citation_setup' );
+add_action( 'load-post-new.php', 'citation_setup' );
 
-$new_meta = new Tax_Meta_Class($config_auths);
-$new_meta->addText('first_name' ,array('name'=> 'First Name'));
-$new_meta->addText('last_name' ,array('name'=> 'Last Name'));
-$new_meta->Finish();
-
-//add first/last name boxes to articles page
-add_action( 'load-post.php', 'auths_setup' );
-add_action( 'load-post-new.php', 'auths_setup' );
-
-function auths_setup() {
-  add_action( 'add_meta_boxes', 'auths_meta_boxes' );
-  add_action( 'save_post', 'auths_save', 10, 2 );
+function citation_setup() {
+  add_action( 'add_meta_boxes', 'citation_meta_boxes' );
+  add_action( 'save_post', 'citation_save', 10, 2 );
 }
 
-function auths_meta_boxes() {
+function citation_meta_boxes() {
 
   add_meta_box(
-    'auths_class',      // Unique ID
-    esc_html__( 'Add Author', 'Add Author' ),    // Title
-    'auths_meta_box',   // Callback function
+    'citation_box',      // Unique ID
+    esc_html__( 'Citation', 'citation' ),    // Title
+    'citation_meta_box',   // Callback function
     'article',         // Admin page (or post type)
     'side',         // Context
     'default'         // Priority
   );
 }
 
-/* Display the post meta box. */
-function auths_meta_box( $object, $box ) { ?>
+function citation_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'auths_class_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'citation_class_nonce' ); ?>
 
   <p>
-    <label for="auths_class">Add Author</label></br>
-    <br />
-	First Name: <input type="text" id='auths_first' name="auths_first" value=""></br>
-	Last Name: <input type="text" id='auths_last' name="auths_last" value=""></br>
-	<div id="add_new_auths">
-	<input type="button" id="new_auths" class="button" value="Add">
-  	</div>
+   <input type="text" id="citation_add" name="citation_add" value=""></br>
   </p>
 <?php }
 
-//saving a new user as author
-function auths_save(){
-	$args = array(
-	"fist_name" => $_POST['first_name'],
-	"last_name" => $_POST['last_name'],
-	);
-	wp_insert_term($_POST['first_name'], 'authors');
-	
+function citation_save($post_id){
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+if ( ! isset( $_POST['citation_add'] ) ) {
+    return;
+  }
 
+  // Sanitize user input.
+  $citation_data = sanitize_text_field( $_POST['citation_add'] );
+
+  // Update the meta field in the database.
+  update_post_meta( $post_id, 'citation', $citation_data );
 }
 
-wp_enqueue_script( 'function', get_template_directory_uri().'/assets/js/journals.js', 'jquery', true);
-wp_localize_script( 'function', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
-add_action("wp_ajax_auths_save", "auths_save");
 
 
