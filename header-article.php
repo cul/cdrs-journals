@@ -102,10 +102,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     </div>
 </nav>
 
-
-<img id="header_image" src="<?php header_image(); ?>" height=100px width=100px  alt="CURJ logo" />
-
-
 <h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1>
 
 

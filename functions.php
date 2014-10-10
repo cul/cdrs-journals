@@ -315,10 +315,6 @@ $defaults = array(
 );
 add_theme_support( 'custom-header', $defaults );
 
-//allowing custom background image/COLOR
-
-add_theme_support( 'custom-background' );
-
 //change excerpt box name to 'abstract' for articles
 
 function custom_article_type_boxes(){
@@ -367,7 +363,7 @@ function doi_meta_boxes() {
     esc_html__( 'DOI', 'DOI' ),    // Title
     'doi_meta_box',   // Callback function
     'article',         // Admin page (or post type)
-    'side',         // Context
+    'advanced',         // Context
     'default'         // Priority
   );
 }
@@ -376,8 +372,12 @@ function doi_meta_box( $object, $box ) { ?>
 
   <?php wp_nonce_field( basename( __FILE__ ), 'doi_class_nonce' ); ?>
 
+  <?php $post_doi  = get_post_custom($post->ID);
+        $doi = $post_doi['doi'];
+  ?>
+
   <p>
-	 <input type="text" id="doi_add" name="doi_add" value=""></br>
+	 <input type="text" id="doi_add" name="doi_add" value="<?php echo $doi[0]; ?>"></br>
   </p>
 <?php }
 
@@ -412,7 +412,7 @@ function citation_meta_boxes() {
     esc_html__( 'Citation', 'Citation' ),    // Title
     'citation_meta_box',   // Callback function
     'article',         // Admin page (or post type)
-    'side',         // Context
+    'advanced',         // Context
     'default'         // Priority
   );
 }
@@ -421,8 +421,11 @@ function citation_meta_box( $object, $box ) { ?>
 
   <?php wp_nonce_field( basename( __FILE__ ), 'citation_class_nonce' ); ?>
 
+  <?php $the_cite  = get_post_custom($post->ID);
+        $cite = $the_cite['citation'];
+  ?>
   <p>
-   <input type="text" id="citation_add" name="citation_add" value=""></br>
+   <input type="text" id="citation_add" name="citation_add" value="<?php echo $cite[0]; ?>"></br>
   </p>
 <?php }
 

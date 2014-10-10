@@ -35,7 +35,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!-- 	adding meta tags  -->
 	
-	<?php if(get_post_type() == 'article'): ?>
 	<meta name="citation_publisher" content="Center for Research and Digital Scholarship, Columbia University"/>
 	<meta name="citation_journal_title" content="<?php echo get_bloginfo(); ?>" />
 	<?php $options = get_option( 'my-theme-options' ); 
@@ -64,20 +63,18 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 					
 					$the_issue = array_pop($pieces);
 					echo '<meta name="citation_issue" content="'. $the_issue .'">';
-				}
+				
 				$print_date = get_tax_meta($volume->term_id ,'print_date'); 
 				echo '<meta name="citation_publication_date" content="'. $print_date .'">';
+	 			}
 	 		}
 	 	$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
-  		foreach ( $the_doi as $doi ) {
-  			echo '<meta name="citation_doi" content="'. $doi .'">'; 
-		} 
+  			echo '<meta name="citation_doi" content="'. $the_doi[0] .'">'; 
 
 	?>
 	<meta name="citation_online_date" content="<?php echo get_the_date('Y/m/d', $POST->ID); ?>" />
 	<meta name="citation_date" content="<?php echo date('Y/m/d'); ?>" />
-	<?php endif; ?>
 	
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->
@@ -119,10 +116,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         ?>
     </div>
 </nav>
-
-
-<img id="header_image" src="<?php header_image(); ?>" height=100px width=100px  alt="CURJ logo" />
-
 
 <h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1>
 
