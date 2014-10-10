@@ -57,13 +57,14 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         }	
 		$volumes = get_the_terms($post->ID, 'issues');
 		  foreach($volumes as $volume){
-		  		$pieces = explode(" ", $volume->name);
-				$the_volume = trim($pieces[1], ',');
-				echo '<meta name="citation_volume" content="'. $the_volume .'">'; 
-				
-				$the_issue = array_pop($pieces);
-				echo '<meta name="citation_issue" content="'. $the_issue .'">';
-				
+		  		if($volume->slug != "current-issue"){
+			  		$pieces = explode(" ", $volume->name);
+					$the_volume = trim($pieces[1], ',');
+					echo '<meta name="citation_volume" content="'. $the_volume .'">'; 
+					
+					$the_issue = array_pop($pieces);
+					echo '<meta name="citation_issue" content="'. $the_issue .'">';
+				}
 				$print_date = get_tax_meta($volume->term_id ,'print_date'); 
 				echo '<meta name="citation_publication_date" content="'. $print_date .'">';
 	 		}
