@@ -17,7 +17,6 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-query_posts( 'post_type=article&tag=current&orderby=menu_order&order=ASC');  
 
 get_header();
 ?>
@@ -36,7 +35,8 @@ get_header();
 	</h1>
 	
 	<?php
-	
+	query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
+
 	// For the loop used, look in /loops
 	//cfct_loop();
 	 get_template_part( 'loop/tax', 'issues' ); 

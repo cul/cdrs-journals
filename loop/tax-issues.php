@@ -26,7 +26,7 @@ if (have_posts()) {
 		if(!empty($section) && $section[0]->name != $current_section){
 			$current_section = $section[0]->name;
 			echo '<h1>' . $current_section . '</h1>';
-		} elseif( "Articles" !== $current_section) {
+		} elseif( empty($section) && ($current_section != "Articles")) {
 			$current_section = "Articles";
 			echo '<h1> Articles </h1>';
 		}	
