@@ -39,7 +39,9 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<meta name="citation_journal_title" content="<?php echo get_bloginfo(); ?>" />
 	<?php $options = get_option( 'my-theme-options' ); 
 		$print = $options['print_issn'];
+		if($print){
 		echo '<meta name="citation_issn" content="'. $print .'"/>';
+		}
 	?>
 	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
 
@@ -63,15 +65,18 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 					
 					$the_issue = array_pop($pieces);
 					echo '<meta name="citation_issue" content="'. $the_issue .'">';
-				
 				$print_date = get_tax_meta($volume->term_id ,'print_date'); 
-				echo '<meta name="citation_publication_date" content="'. $print_date .'">';
+				if($print_date){
+					echo '<meta name="citation_publication_date" content="'. $print_date .'">';
+	 			}
 	 			}
 	 		}
 	 	$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
-  			echo '<meta name="citation_doi" content="'. $the_doi[0] .'">'; 
-
+  		if($the_doi[0] != ""){
+  			var_dump($the_doi);
+  			echo '<meta name="citation_doi" content="'. $the_doi[0] .'">';
+  		}
 	?>
 	<meta name="citation_online_date" content="<?php echo get_the_date('Y/m/d', $POST->ID); ?>" />
 	<meta name="citation_date" content="<?php echo date('Y/m/d'); ?>" />
