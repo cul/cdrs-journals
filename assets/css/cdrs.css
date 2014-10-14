@@ -1,12 +1,3 @@
-h3.toggle:before {
-	content: 'show ';
-	
-  }
-
-#topnav li.current-menu-item a { 
-	background-color:#B2C629;
-	font-style: italic;
-}
 div#cdrs_logo_space{
 	background: url("../img/cdrs-icon.png");
 	background-repeat: no-repeat;
