@@ -1,3 +1,6 @@
 [submodule "carrington-core"]
 	path = carrington-core
 	url = https://github.com/crowdfavorite/wp-carrington-core.git
+[submodule "Tax-Meta-Class"]
+	path = Tax-Meta-Class
+	url = https://github.com/bainternet/Tax-Meta-Class.git
