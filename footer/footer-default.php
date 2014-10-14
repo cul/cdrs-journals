@@ -37,17 +37,20 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			</div>
 
 			<div class="col-sm-4">
-			<h5>ISSN(PRINT): <?php $options = get_option( 'my-theme-options' );
-    							   $print = $options['print_issn'];
-    							   echo $print;
-    							   ?>
-    		</h5>
+			<?php $options = get_option( 'my-theme-options' );
+    			  $print = $options['print_issn'];
+    			  if($print){
+    		?>
+			<h5>ISSN(PRINT): <?php echo $print ?></h5>
+    		<?php } ?>
 
-    		<h5>ISSN(Online): <?php $options = get_option( 'my-theme-options' );
-    							   $online = $options['online_issn'];
-    							   echo $online;
-    							   ?>
-    		</h5>
+    		<?php $options = get_option( 'my-theme-options' );
+    			  $online = $options['online_issn'];
+    			  if($online){
+    		?>
+    		<h5>ISSN(Online): <?php echo $online; ?></h5>
+    		<?php } ?>
+
     		<?php $options = get_option( 'my-footer-options' );
     			  $copyright_url = $options['copyright_url'];
     			  if($copyright_url && $options['copyright']){
