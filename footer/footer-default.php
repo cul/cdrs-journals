@@ -22,18 +22,75 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<hr>
 	<footer id="footer" class="row site-footer" role="contentinfo">
 		<div class="c1-12">
-<?php
+			
+			<div class="col-sm-4" id="cdrs_logo_footer">
+				<h6>Published in partnership with</h6>
+				<a href="http://cdrs.columbia.edu">
+					<div id="cdrs_logo_space">
+						
+						CDRS
+					
+					</div>
+					Center For Digital Research & Scholarship</br>
+					<span class="small">Columbia University Libraries/Information Services</span>
+				</a>
+			</div>
 
-	if (cfct_get_option('cfct_copyright') != null) {
-		echo '<p>'.cfct_get_option('cfct_copyright').'</p>';
-	}
+			<div class="col-sm-4">
+			<h5>ISSN(PRINT): <?php $options = get_option( 'my-theme-options' );
+    							   $print = $options['print_issn'];
+    							   echo $print;
+    							   ?>
+    		</h5>
 
-	if (cfct_get_option('cfct_credit') == 'yes') {
-?>
-		<!-- <p id="developer-link"><?php printf(__('Crafted by <a href="http://crowdfavorite.com" title="Custom WordPress development, design and consulting services." rel="developer designer">%s</a>', 'carrington-blueprint'), 'Crowd Favorite'); ?></p> -->
-<?php
-	}
-?>
+    		<h5>ISSN(Online): <?php $options = get_option( 'my-theme-options' );
+    							   $online = $options['online_issn'];
+    							   echo $online;
+    							   ?>
+    		</h5>
+    		<?php $options = get_option( 'my-footer-options' );
+    			  $copyright_url = $options['copyright_url'];
+    			  if($copyright_url && $options['copyright']){
+    		?>
+    		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"> <?php echo $options['copyright']; ?> </a> liscense. </h5>
+
+    		<?php } ?>
+    		
+    		<?php if(!$copyright_url && $options['copyright']){ ?>
+    			<h5>This work is Licensed under a <?php echo $options['copyright']; ?> </a> liscense. </h5>
+    		<?php }?>
+
+    		<?php if($options['custom_copyright']){ ?>
+    			<h5> <?php echo $options['custom_copyright'] ?> </h5>
+    		<?php } ?>
+    		
+    		  	
+    	</div>
+    	<div class="col-sm-4" id="ac_logo_footer">
+    		<?php $options = get_option( 'my-footer-options' );
+    							 $checked = $options['ac_partner'];
+    							 if($checked != null){ ?>
+				
+				<h6>Also published in partnership with</h6>
+				<a href="http://academiccommons.columbia.edu">	
+				<div id="ac_logo_space">
+						
+						Academic Commons
+					
+				</div>				
+
+    							
+
+
+    		<?php } ?>
+    							    
+
+    							   
+    		
+    	</div>
+    		
+
+
 		</div><!-- .c1-12 -->
 	</footer><!--#footer -->
 

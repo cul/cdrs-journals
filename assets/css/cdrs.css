@@ -7,3 +7,12 @@ h3.toggle:before {
 	background-color:#B2C629;
 	font-style: italic;
 }
+div#cdrs_logo_space{
+	background: url("../img/cdrs-icon.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position-x: 55px;
+	background-position-y: 0px;
+	line-height: 30px;
+	font-size: 18px;  
+}
