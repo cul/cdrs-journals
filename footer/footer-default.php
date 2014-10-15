@@ -27,16 +27,21 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				<h6>Published in partnership with</h6>
 				<a href="http://cdrs.columbia.edu">
 					<div id="cdrs_logo_space">
-						
-						CDRS
-					
-					</div>
-					Center For Digital Research & Scholarship</br>
+                        <div class="col-xs-6" id="cdrs_crab">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/cdrs-icon.png" alt="cdrs logo"  />
+						</div>
+                        <div class="col-xs-6">
+                        <p>CDRS</p>
+					   </div>
+					</div></br>
+                    <div id="cdrs_full">
+					Center For Digital Research & Scholarship
 					<span class="small">Columbia University Libraries/Information Services</span>
-				</a>
+				    </div>
+                </a>
 			</div>
 
-			<div class="col-sm-4">
+			<div class="col-sm-4" id="issn_copyright">
 			<?php $options = get_option( 'my-theme-options' );
     			  $print = $options['print_issn'];
     			  if($print){
@@ -81,7 +86,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 						Academic Commons
 					
 				</div>				
-
+                
     							
 
 
