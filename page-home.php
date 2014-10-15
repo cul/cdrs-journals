@@ -17,40 +17,19 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+cfct_template_file('header', 'home');
 
-get_header();
 ?>
-
+ 
 <div id="primary" class="col-sm-8">
-	<h1 class="archive-title">Issue:
-		<?php 
-			$term = get_term_by('slug', 'current-issue', 'issues');
-			$term_id = $term->term_id;
-			$termchildren = get_term_children( $term_id, 'issues' );
-				foreach ( $termchildren as $child ) {
-					$the_term = get_term_by('id', $child, 'issues');
-					echo $the_term->name;
-				}
-		?>
-	</h1>
-	
 	<?php
-	query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
-
 	// For the loop used, look in /loops
-	//cfct_loop();
-	 get_template_part( 'loop/tax', 'issues' ); 
-/* 	 cfct_template_file('loop', 'tax-issues'); */
-
+	cfct_loop();
 	comments_template();
 	?>
-		</div><!-- #content -->
-	 
+</div><!-- #primary -->
 
- 
 <?php 
 get_sidebar();
- 
 get_footer();
-
 ?>
