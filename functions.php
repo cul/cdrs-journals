@@ -455,3 +455,47 @@ function wpse_category_set_post_types( $query ){
 }
 add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
 
+add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
+
+function cmb_sample_metaboxes( array $meta_boxes ) {
+
+  // Start with an underscore to hide fields from custom fields list
+  $prefix = '_cmb_';
+
+  /**
+   * Sample metabox to demonstrate each field type included
+   */
+  $meta_boxes['pdf_metabox'] = array(
+    'id'         => 'pdf_metabox',
+    'title'      => __( 'PDF Upload', 'cmb' ),
+    'pages'      => array( 'post', 'article' ), // Post type
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    // 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
+    'fields'     => array(
+            array(
+              'name'         => __( 'Upload Your PDF(s)', 'cmb' ),
+              'desc'         => __( 'Upload or add multiple PDFs.', 'cmb' ),
+              'id'           => $prefix . 'test_file_list',
+              'type'         => 'file_list',
+              'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+            ),
+        ),
+    );
+
+    return $meta_boxes;
+}
+
+add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+/**
+ * Initialize the metabox class.
+ */
+function cmb_initialize_cmb_meta_boxes() {
+
+  if ( ! class_exists( 'cmb_Meta_Box' ) )
+    require_once 'Custom-Metaboxes-and-Fields-for-WordPress-master/init.php';
+
+}
+
+
