@@ -22,7 +22,7 @@ get_header();
 
 <div id="primary" class="col-sm-8">
  
-	<H2>Issues:</H2>	
+	<H2>Issue Archive:</H2>	
 	 	
 	 	
 	 	<?php 
@@ -45,7 +45,7 @@ get_header();
 </div><!-- #primary -->
  
 <?php 
-get_sidebar();
+/* get_sidebar(); */
 
  
 get_footer();

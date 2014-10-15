@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', false);
+define('CFCT_DEBUG', true);
 
 /**
  * Theme version.
@@ -140,6 +140,8 @@ function cfct_load_assets() {
 	wp_enqueue_script('placeholder', $cfct_assets_url . 'js/jquery.placeholder.min.js', array('jquery'), CFCT_URL_VERSION);
 	wp_enqueue_script('bootstrap', $cfct_assets_url . 'js/bootstrap.min.js', array('jquery'), CFCT_URL_VERSION);
 	wp_enqueue_script('script', $cfct_assets_url . 'js/script.js', array('jquery', 'placeholder', 'bootstrap'), CFCT_URL_VERSION);
+
+  wp_enqueue_media();
 }
 add_action('wp_enqueue_scripts', 'cfct_load_assets');
 
@@ -378,6 +380,7 @@ function doi_meta_box( $object, $box ) { ?>
 
   <p>
 	 <input type="text" id="doi_add" name="doi_add" value="<?php echo $doi[0]; ?>"></br>
+   <span class="small">*This content will not appear directly on your site</span>
   </p>
 <?php }
 
@@ -451,5 +454,4 @@ function wpse_category_set_post_types( $query ){
     }
 }
 add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
-
 

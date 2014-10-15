@@ -91,7 +91,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<header id="masthead" class="row site-header clearfix">
 	 
  
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -122,7 +122,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     </div>
 </nav>
 
-<h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1>
 
 
  

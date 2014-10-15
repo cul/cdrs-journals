@@ -22,7 +22,8 @@ get_header();
 ?>
 
 <div id="primary" class="col-sm-8">
-	<h1 class="archive-title">Issue:
+<h3>Current Issue</h3>
+	<h1 class="archive-title">
 		<?php 
 			$term = get_term_by('slug', 'current-issue', 'issues');
 			$term_id = $term->term_id;

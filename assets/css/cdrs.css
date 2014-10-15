@@ -1,6 +1,4 @@
-div#cdrs_logo_space{
-	background: url("../img/cdrs-icon.png");
-	background-repeat: no-repeat;
+#cdrs_logo_footer h6{
 	text-align: center;
 	background-position-x: 55px;
 	background-position-y: 0px;
@@ -14,4 +12,18 @@ img.front-cover{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+
+}
+
+div#issn_copyright, div#ac_logo_footer, div#cdrs_full{
+	text-align: center;
+}
+
+div#cdrs_crab{
+	text-align: right;
+	padding-right: 5px;
+ 
+}
+body{ 
+	margin-top: 50px;
 }

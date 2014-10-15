@@ -21,33 +21,41 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</div><!-- #main -->
 	<hr>
 	<footer id="footer" class="row site-footer" role="contentinfo">
-		<div class="c1-12">
+		<div class="row">
 			
 			<div class="col-sm-4" id="cdrs_logo_footer">
 				<h6>Published in partnership with</h6>
 				<a href="http://cdrs.columbia.edu">
 					<div id="cdrs_logo_space">
-						
-						CDRS
-					
-					</div>
-					Center For Digital Research & Scholarship</br>
+                        <div class="col-xs-6" id="cdrs_crab">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/cdrs-icon.png" alt="cdrs logo"  />
+						</div>
+                        <div class="col-xs-6">
+                        <p>CDRS</p>
+					   </div>
+					</div></br>
+                    <div id="cdrs_full">
+					Center For Digital Research & Scholarship
 					<span class="small">Columbia University Libraries/Information Services</span>
-				</a>
+				    </div>
+                </a>
 			</div>
 
-			<div class="col-sm-4">
-			<h5>ISSN(PRINT): <?php $options = get_option( 'my-theme-options' );
-    							   $print = $options['print_issn'];
-    							   echo $print;
-    							   ?>
-    		</h5>
+			<div class="col-sm-4" id="issn_copyright">
+			<?php $options = get_option( 'my-theme-options' );
+    			  $print = $options['print_issn'];
+    			  if($print){
+    		?>
+			<h5>ISSN(PRINT): <?php echo $print ?></h5>
+    		<?php } ?>
 
-    		<h5>ISSN(Online): <?php $options = get_option( 'my-theme-options' );
-    							   $online = $options['online_issn'];
-    							   echo $online;
-    							   ?>
-    		</h5>
+    		<?php $options = get_option( 'my-theme-options' );
+    			  $online = $options['online_issn'];
+    			  if($online){
+    		?>
+    		<h5>ISSN(Online): <?php echo $online; ?></h5>
+    		<?php } ?>
+
     		<?php $options = get_option( 'my-footer-options' );
     			  $copyright_url = $options['copyright_url'];
     			  if($copyright_url && $options['copyright']){
@@ -78,7 +86,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 						Academic Commons
 					
 				</div>				
-
+                
     							
 
 
