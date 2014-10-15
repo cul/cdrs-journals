@@ -45,7 +45,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  
    
    }?>
-	</h2></br></br>
+	</h2></br>
+	<?php
+	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
+		foreach ($pdf_link as $pdf) {
+			echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
+		}
+	?>
 		
 	</header>
 	<div class="entry-content">
@@ -84,13 +90,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                	  echo '<span class="pdf_link">'.wp_get_attachment_link($attachment->ID, '' , false, false, 'PDF').'</span>'; 
         		}
 		}
-
-		//$lalala = get_post_custom_values('_cmb_pdf');
-		$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
-		foreach ($pdf_link as $pdf) {
-			echo '<a href="' . $pdf . '"> PDF </a>';
-		}
-		
 
 
 		$citation_info = get_post_custom($post->ID);
