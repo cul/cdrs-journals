@@ -477,7 +477,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
             array(
               'name'         => __( 'Upload Your PDF(s)', 'cmb' ),
               'desc'         => __( 'Upload or add multiple PDFs.', 'cmb' ),
-              'id'           => $prefix . 'test_file_list',
+              'id'           => $prefix . 'pdf',
               'type'         => 'file_list',
               'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
             ),

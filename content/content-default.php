@@ -85,9 +85,19 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
         		}
 		}
 
+		//$lalala = get_post_custom_values('_cmb_pdf');
+		$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
+		foreach ($pdf_link as $pdf) {
+			echo '<a href="' . $pdf . '"> PDF </a>';
+		}
+		
+
+
 		$citation_info = get_post_custom($post->ID);
   		$the_citation = $citation_info['citation'];
   		echo $the_citation[0];
+
+
 
 		?>
 	</div>
