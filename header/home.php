@@ -76,7 +76,14 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     </div>
 </nav>
 
-<!-- <h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1> -->
+<img src="<?php $options = get_option( 'my-theme-options' );
+   $logo = $options['logo'];
+   echo $logo?>" class='front-cover'>
+
+<h1 id="site-name">
+
+
+<a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1>
 
 
  

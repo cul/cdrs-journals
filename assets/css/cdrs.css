@@ -1,6 +1,18 @@
 #cdrs_logo_footer h6{
 	text-align: center;
-	border-bottom: 1px solid gray;
+	background-position-x: 55px;
+	background-position-y: 0px;
+	line-height: 30px;
+	font-size: 18px;  
+}
+
+img.front-cover{
+	
+	max-width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
 }
 
 div#issn_copyright, div#ac_logo_footer, div#cdrs_full{
@@ -10,4 +22,8 @@ div#issn_copyright, div#ac_logo_footer, div#cdrs_full{
 div#cdrs_crab{
 	text-align: right;
 	padding-right: 5px;
+ 
+}
+body{ 
+	margin-top: 50px;
 }

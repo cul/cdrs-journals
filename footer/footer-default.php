@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</div><!-- #main -->
 	<hr>
 	<footer id="footer" class="row site-footer" role="contentinfo">
-		<div class="c1-12">
+		<div class="row">
 			
 			<div class="col-sm-4" id="cdrs_logo_footer">
 				<h6>Published in partnership with</h6>

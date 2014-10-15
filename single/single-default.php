@@ -35,7 +35,7 @@ comments_template();
 <?php 
 
 // Calls sidebar.php
-get_sidebar();
+/* get_sidebar(); */
 
 // Calls footer.php
 get_footer();
