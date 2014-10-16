@@ -51,6 +51,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		foreach ($pdf_link as $pdf) {
 			echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
 		}
+
+		$citation_info = get_post_custom($post->ID);
+  		$the_citation = $citation_info['citation'];
+  		echo $the_citation[0];
+  		echo '</br>';
+
+  		if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail();
+		}
+
 	?>
 		
 	</header>
@@ -68,35 +78,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	<div class="entry-footer entry-meta">
 		<?php
-			echo the_terms($post->ID, 'issues');
-
-		?>
-		
-		<?php $args = array(
-       			 'post_type' => 'attachment',
-       			 'numberposts' => null,
-        		 'post_status' => null,
-        		 'post_parent' => $post->ID
-			);
-
-
-
-		$attachments = get_posts($args);
-		if ($attachments) {
-       			 foreach ($attachments as $attachment) {
-         
-         
-
-               	  echo '<span class="pdf_link">'.wp_get_attachment_link($attachment->ID, '' , false, false, 'PDF').'</span>'; 
-        		}
-		}
-
-
-		$citation_info = get_post_custom($post->ID);
-  		$the_citation = $citation_info['citation'];
-  		echo $the_citation[0];
-
-
+			echo the_terms($post->ID, 'issues');		
 
 		?>
 	</div>
