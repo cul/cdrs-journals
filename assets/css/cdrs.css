@@ -62,3 +62,13 @@ body.home #primary{
 	
 	text-align: center;
 }
+
+h3.section-label{
+	
+	text-transform: uppercase;
+}
+
+h3.authors{
+	
+	margin-top: 0;
+}
