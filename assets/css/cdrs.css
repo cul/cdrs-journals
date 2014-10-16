@@ -1,6 +1,12 @@
 body{
 	
 font-family: "aktiv-grotesk-std";
+font-size: 20px;
+}
+
+.navbar-fixed-top{
+	
+	font-size: 14px;
 }
 
 h1{
@@ -71,4 +77,16 @@ h3.section-label{
 h3.authors{
 	
 	margin-top: 0;
+}
+
+h3.home-title{
+	border-top: 1px solid silver;	
+	border-bottom: 1px solid silver;
+}
+
+footer{
+	border-top: 4px double silver;
+	margin-top: 40px;
+	padding-top: 40px;
+	margin-bottom: 3em;
 }
