@@ -46,6 +46,16 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 		if($print){
 		echo '<meta name="citation_issn" content="'. $print .'"/>';
 		}
+
+		$foot_opt = get_option('my-footer-options');
+		$abstract = $foot_opt['full_text_setting'];
+		$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+		if($abstract == "abstract"){
+		  echo '<meta name="citation_abstract_html_url" content="'. $current_url .'"/>';
+		}
+		elseif ($abstract == "full_text") {
+		  echo '<meta name="citation_fulltext_html_url" content="'. $current_url .'"/>';
+		}
 	?>
 	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
 
