@@ -88,6 +88,7 @@ if (! function_exists('cfct_theme_setup')) {
 		 */
 		register_nav_menus(array(
 			'primary' => 'Main Navigation',
+			'home' => 'Home Nav',
 			'footer' => 'Footer Navigation'
 		));
 

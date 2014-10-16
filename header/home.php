@@ -42,9 +42,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <body <?php body_class(); ?>>
 <div class="breakpoint-context"></div>
 <div class="container grid">
-	<header id="masthead" class="row site-header clearfix">
-	 
- 
 <nav class="navbar navbar-default navbar-fixed-top" style="display:none" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -76,6 +73,12 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     </div>
 </nav>
 
+
+
+	<header id="masthead" class="row site-header clearfix">
+	 
+ 
+
 <img src="<?php $options = get_option( 'my-theme-options' );
    $logo = $options['logo'];
    echo $logo?>" class='front-cover'>
@@ -83,7 +86,29 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
 
 
- 
+ <nav class="navbar col-sm-8 col-sm-offset-2" role="navigation">
+  <div class="">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    
+
+        <?php
+            wp_nav_menu( array(
+                'menu'              => 'home',
+                'theme_location'    => 'home',
+                'depth'             => 1,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+            );
+        ?>
+    </div>
+</nav>
+
+
+
 	</header><!-- #masthead -->
 
 	<div id="main" class="row clearfix">
