@@ -25,10 +25,10 @@ if (have_posts()) {
 		$section = wp_get_post_terms($post->ID, 'sections');
 		if(!empty($section) && $section[0]->name != $current_section){
 			$current_section = $section[0]->name;
-			echo '<h1>' . $current_section . '</h1>';
+			echo '<h3 class="section-label">' . $current_section . '</h3>';
 		} elseif( empty($section) && ($current_section != "Articles")) {
 			$current_section = "Articles";
-			echo '<h1> Articles </h1>';
+			echo '<h3 class=section-label>Articles</h3>';
 		}	
 		cfct_excerpt();
 		
