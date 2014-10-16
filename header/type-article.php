@@ -54,12 +54,14 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 		foreach ( $authors as $author ) {
 			echo '<meta name="citation_author" content="' . $author->name . '">';  
 		};
-		$attachments = get_posts(array('post_type' => 'attachment','numberposts' => null,'post_status' => null,'post_parent' => $post->ID));
+		
+		$attachments = get_post_meta(get_the_id(), '_cmb_pdf', true);
 		if ($attachments) {
           foreach ($attachments as $attachment) {
-             echo '<meta name="citation_pdf_url" content="'.wp_get_attachment_link($attachment->ID).'"/>'; 
+             echo '<meta name="citation_pdf_url" content="' . $attachment .'"/>'; 
           }
         }	
+		
 		$volumes = get_the_terms($post->ID, 'issues');
 		  foreach($volumes as $volume){
 		  		if($volume->slug != "current-issue"){
