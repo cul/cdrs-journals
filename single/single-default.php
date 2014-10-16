@@ -25,13 +25,9 @@ get_header();
 <?php
 // For the loop used, look in /loops
 cfct_loop();
-comments_template();
+
 ?>
-	<div class="pagination pagination-single">
-		<span class="next"><?php next_post_link() ?></span>
-		<span class="previous"><?php previous_post_link() ?></span>
-	</div>
-</div> <!-- #content -->
+	</div> <!-- #content -->
 <?php 
 
 // Calls sidebar.php

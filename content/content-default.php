@@ -48,8 +48,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</h2></br>
 	<?php
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
+	
+		if($pdf_link){
 		foreach ($pdf_link as $pdf) {
 			echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
+		}
 		}
 
 		$citation_info = get_post_custom($post->ID);

@@ -63,12 +63,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     			  $copyright_url = $options['copyright_url'];
     			  if($copyright_url && $options['copyright']){
     		?>
-    		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"> <?php echo $options['copyright']; ?> </a> liscense. </h5>
+    		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"> <?php echo $options['copyright']; ?> </a> license. </h5>
 
     		<?php } ?>
     		
     		<?php if(!$copyright_url && $options['copyright']){ ?>
-    			<h5>This work is Licensed under a <?php echo $options['copyright']; ?> </a> liscense. </h5>
+    			<h5>This work is Licensed under a <?php echo $options['copyright']; ?> </a> license. </h5>
     		<?php }?>
 
     		<?php if($options['custom_copyright']){ ?>

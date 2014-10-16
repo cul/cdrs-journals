@@ -80,10 +80,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
    $logo = $options['logo'];
    echo $logo?>" class='front-cover'>
 
-<h1 id="site-name">
-
-
-<a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1>
+<h1 id="site-name"><?php bloginfo('name'); ?></h1>
 
 
  

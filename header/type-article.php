@@ -74,7 +74,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	 	$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
   		if($the_doi[0] != ""){
-  			var_dump($the_doi);
+  
   			echo '<meta name="citation_doi" content="'. $the_doi[0] .'">';
   		}
 	?>
