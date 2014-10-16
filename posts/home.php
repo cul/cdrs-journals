@@ -17,36 +17,22 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8">
- 
-	<H2>Issue Archive:</H2>	
-	 	
-	 	
-	 	<?php 
-	 	//display issues, avoid showing current issue twice
-	 	$term = get_term_by('slug', 'current-issue', 'issues');
-		$term_id = $term->term_id;
-		$terms = get_terms('issues',  'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
-		echo '<ul>';
+<div id="primary" class="col-sm-8 col-sm-offset-2">
+<h3>Current Issue</h3>
+<?php
 
-		foreach ($terms as $term) {
-			echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
-		}
-		echo '</ul>';
-		
-	 	?>	 	
-	 	
-	    
-				 	    </ul>
- 
+
+cfct_loop();
+cfct_misc('nav-posts'); 
+?>
+
 </div><!-- #primary -->
- 
-<?php 
-get_sidebar();
 
- 
+<?php
+/* get_sidebar(); */
 get_footer();
 ?>

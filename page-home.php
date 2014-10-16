@@ -17,11 +17,11 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-cfct_template_file('header', 'home');
+get_header();
 
 ?>
  
-<div id="primary" class="col-sm-8">
+<div id="primary" class="col-sm-8 col-sm-offset-2">
 	<?php
 	// For the loop used, look in /loops
 	cfct_loop();
@@ -30,6 +30,6 @@ cfct_template_file('header', 'home');
 </div><!-- #primary -->
 
 <?php 
-get_sidebar();
+/* get_sidebar(); */
 get_footer();
 ?>
