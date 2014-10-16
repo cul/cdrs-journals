@@ -31,7 +31,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				<a href="http://cdrs.columbia.edu">
 					<div id="cdrs_logo_space">
                         <div class="col-xs-6" id="cdrs_crab">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/cdrs-icon.png" alt="cdrs logo"  />
+						<img src="<?php echo get_template_directory_uri() ?>/assets/img/cdrs-icon.png" alt="cdrs logo"  />
 						</div>
                         <div class="col-xs-6">
                         <p>CDRS</p>

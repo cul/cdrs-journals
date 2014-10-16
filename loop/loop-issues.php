@@ -32,7 +32,7 @@ if (have_posts()) {
 		} else{
 				$last_term = array_pop($term_array);
 				if ("Articles" !== $last_term){
-					echo '<h1> Articles </h1>';
+					echo '<h1>Articles</h1>';
 					array_push($term_array, "Articles"); 
 				}
 		}
