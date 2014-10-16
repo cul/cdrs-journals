@@ -11,42 +11,28 @@
 // **********************************************************************
 // This program is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-get_header();
-?>
-
-<div id="primary" class="col-sm-8">
- 
-	<H2>Issue Archive:</H2>	
-	 	
-	 	
-	 	<?php 
-	 	//display issues, avoid showing current issue twice
-	 	$term = get_term_by('slug', 'current-issue', 'issues');
-		$term_id = $term->term_id;
-		$terms = get_terms('issues',  'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
-		echo '<ul>';
-
-		foreach ($terms as $term) {
-			echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
-		}
-		echo '</ul>';
+if (have_posts()) {
+	$current_section = null;
+	while (have_posts()) {
+		the_post();
+		//Displaying the section name, defaults to article if none specified
+		$section = wp_get_post_terms($post->ID, 'sections');
+		if(!empty($section) && $section[0]->name != $current_section){
+			$current_section = $section[0]->name;
+			echo '<h1>' . $current_section . '</h1>';
+		} elseif( empty($section) && ($current_section != "Articles")) {
+			$current_section = "Articles";
+			echo '<h1> Articles </h1>';
+		}	
+		cfct_excerpt();
 		
-	 	?>	 	
-	 	
-	    
-				 	    </ul>
- 
-</div><!-- #primary -->
- 
-<?php 
-get_sidebar();
+	}
+}
 
- 
-get_footer();
 ?>

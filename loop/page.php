@@ -17,6 +17,14 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+
+if(is_front_page()){
+	
+		query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
+	
+}
+
+
 if (have_posts()) {
 	while (have_posts()) {
 		the_post();
