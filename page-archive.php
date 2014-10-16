@@ -22,7 +22,7 @@ get_header();
 
 <div id="primary" class="col-sm-8">
  
-	<H2>Issue Archive:</H2>	
+	<H2>Past Issues:</H2>	
 	 	
 	 	
 	 	<?php 
