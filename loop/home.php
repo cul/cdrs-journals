@@ -17,6 +17,8 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC'); 
+
 if (have_posts()) {
 	$current_section = null;
 	while (have_posts()) {
