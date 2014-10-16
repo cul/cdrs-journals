@@ -25,8 +25,15 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="container">
 	<footer id="footer" class="row site-footer" role="contentinfo">
 		<div class="row">
+            <?php $options = get_option( 'my-footer-options' );
+                                 $checked = $options['ac_partner'];
+                                 if($checked != null){
+                                    $col_width = "4";
+                                 }else{
+                                    $col_width = "6";
+                                 }?>
 			
-			<div class="col-sm-4" id="cdrs_logo_footer">
+			<div class="col-sm-<?php echo $col_width ?>" id="cdrs_logo_footer">
 				<h6>Published in partnership with</h6>
 				<a href="http://cdrs.columbia.edu">
 					<div id="cdrs_logo_space">
@@ -44,7 +51,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                 </a>
 			</div>
 
-			<div class="col-sm-4" id="issn_copyright">
+			<div class="col-sm-<?php echo $col_width ?>" id="issn_copyright">
 			<?php $options = get_option( 'my-theme-options' );
     			  $print = $options['print_issn'];
     			  if($print){
@@ -77,7 +84,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     		
     		  	
     	</div>
-    	<div class="col-sm-4" id="ac_logo_footer">
+    	<div class="col-sm-<?php echo $col_width ?>" id="ac_logo_footer">
     		<?php $options = get_option( 'my-footer-options' );
     							 $checked = $options['ac_partner'];
     							 if($checked != null){ ?>
