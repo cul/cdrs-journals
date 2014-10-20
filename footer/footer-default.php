@@ -19,14 +19,22 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 	</div><!-- #main -->
-	
+
 	</div>
-	
+	<?php
+        $foot_opt = get_option( 'my-footer-options' );
+        $ac_partner = $foot_opt['ac_partner'];
+        if($ac_partner != null){
+            $col_num = "4";
+        }else{
+            $col_num = "6";
+        }
+    ?>
 	<div class="container">
 	<footer id="footer" class="row site-footer" role="contentinfo">
 		<div class="row">
-			
-			<div class="col-sm-4" id="cdrs_logo_footer">
+
+			<div class="col-sm-<?php echo $col_num; ?>" id="cdrs_logo_footer">
 				<h6>Published in partnership with</h6>
 				<a href="http://cdrs.columbia.edu">
 					<div id="cdrs_logo_space">
@@ -44,7 +52,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                 </a>
 			</div>
 
-			<div class="col-sm-4" id="issn_copyright">
+			<div class="col-sm-<?php echo $col_num; ?>" id="issn_copyright">
 			<?php $options = get_option( 'my-theme-options' );
     			  $print = $options['print_issn'];
     			  if($print){
@@ -66,7 +74,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"> <?php echo $options['copyright']; ?> </a> license. </h5>
 
     		<?php } ?>
-    		
+
     		<?php if(!$copyright_url && $options['copyright']){ ?>
     			<h5>This work is Licensed under a <?php echo $options['copyright']; ?> </a> license. </h5>
     		<?php }?>
@@ -74,32 +82,32 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     		<?php if($options['custom_copyright']){ ?>
     			<h5> <?php echo $options['custom_copyright'] ?> </h5>
     		<?php } ?>
-    		
-    		  	
+
+
     	</div>
     	<div class="col-sm-4" id="ac_logo_footer">
     		<?php $options = get_option( 'my-footer-options' );
     							 $checked = $options['ac_partner'];
     							 if($checked != null){ ?>
-				
+
 				<h6>Also published in partnership with</h6>
-				<a href="http://academiccommons.columbia.edu">	
+				<a href="http://academiccommons.columbia.edu">
 				<div id="ac_logo_space">
-						
+
 						Academic Commons
-					
-				</div>				
-                
-    							
+
+				</div>
+
+
 
 
     		<?php } ?>
-    							    
 
-    							   
-    		
+
+
+
     	</div>
-    		
+
 
 
 		</div><!-- .c1-12 -->
