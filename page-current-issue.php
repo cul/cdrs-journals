@@ -43,7 +43,7 @@ get_header();
 	 get_template_part( 'loop/tax', 'issues' ); 
 /* 	 cfct_template_file('loop', 'tax-issues'); */
 
-	comments_template();
+	
 	?>
 		</div><!-- #content -->
 	 

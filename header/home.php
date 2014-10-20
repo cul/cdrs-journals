@@ -29,7 +29,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <head>
 	<meta charset="<?php bloginfo('charset') ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ).$title_description; ?></title>
+	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico"  type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -65,7 +65,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
                 'depth'             => 2,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
+				'container_id'      => 'bs-example-navbar-collapse-1',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
@@ -86,14 +86,14 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
 
-<p class="tagline">
+<p class="tagline col-sm-10 col-sm-offset-1">
 
- <?php echo  get_bloginfo ( 'description' );  ?>
+ <?php echo(get_bloginfo( 'description' ));  ?>
  
 </p>
 
- <nav class="navbar col-sm-8 col-sm-offset-2" role="navigation">
-  <div class="">
+ <nav class="navbar col-sm-12 col-med-8 col-med-offset-2" role="navigation">
+  
     <!-- Brand and toggle get grouped for better mobile display -->
     
 
@@ -104,16 +104,32 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
                 'depth'             => 1,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
+				'container_id'      => 'cujo-home-navbar',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-    </div>
+   
+		<li id="twitter-link"  class="menu-item"><a href="http://twitter.com"> <i class="fa fa-twitter"></i></a></li>
+    
+       <form class="navbar-form navbar-right" id="home-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+      
+        
 </nav>
 
+<script type="text/javascript">
 
+jQuery("#home-search").appendTo("#cujo-home-navbar");
+
+jQuery("#twitter-link").appendTo("#menu-homepage-nav");
+	
+</script>
 
 	</header><!-- #masthead -->
 

@@ -7,3 +7,6 @@
 [submodule "assets/js/waypoints"]
 	path = assets/js/waypoints
 	url = https://github.com/imakewebthings/jquery-waypoints.git
+[submodule "assets/fonts/font-awesome"]
+	path = assets/fonts/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git

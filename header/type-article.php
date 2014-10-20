@@ -116,6 +116,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<header id="masthead" class="row site-header clearfix">
 
 
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -138,7 +139,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
                 'depth'             => 2,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
+				'container_id'      => 'cujo-navbar',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
@@ -147,6 +148,21 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     </div>
 </nav>
 
+
+  <form class="navbar-form navbar-right" id="site-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+
+
+
+<script type="text/javascript">
+
+jQuery("#site-search").appendTo("#cujo-navbar");
+	
+</script>
 
 
 
