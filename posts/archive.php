@@ -32,7 +32,7 @@ get_header();
 		}  elseif (is_tax('issues')) {
 			printf(__('Issue: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		} elseif (is_tax('authors')) {
-			printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
+			printf(__('%s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}elseif (is_tax('sections')) {
 			printf(__(' %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}elseif (is_category()) {
