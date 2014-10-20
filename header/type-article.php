@@ -42,12 +42,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<meta name="citation_publisher" content="Center for Research and Digital Scholarship, Columbia University"/>
 	<meta name="citation_journal_title" content="<?php echo get_bloginfo(); ?>" />
 	<?php $options = get_option( 'my-theme-options' );
-		$print = $options['print_issn'];
+		$foot_opt = get_option('my-footer-options');
+		$print = $foot_opt['print_issn'];
 		if($print){
 		echo '<meta name="citation_issn" content="'. $print .'"/>';
 		}
 
-		$foot_opt = get_option('my-footer-options');
+		
 		$abstract = $foot_opt['full_text_setting'];
 		$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 		if($abstract == "abstract"){
@@ -105,6 +106,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	?>
 	<meta name="citation_online_date" content="<?php echo get_the_date('Y/m/d', $POST->ID); ?>" />
 	<meta name="citation_date" content="<?php echo date('Y/m/d'); ?>" />
+	<meta name="citation_language" content="en"/>
 
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->

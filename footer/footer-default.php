@@ -52,14 +52,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 			<div class="col-sm-4 <?php echo $offset ?>"  id="issn_copyright">
 
-			<?php $options = get_option( 'my-theme-options' );
+			<?php $options = get_option( 'my-footer-options' );
     			  $print = $options['print_issn'];
     			  if($print){
     		?>
 			<h5>ISSN(PRINT): <?php echo $print ?></h5>
     		<?php } ?>
 
-    		<?php $options = get_option( 'my-theme-options' );
+    		<?php $options = get_option( 'my-footer-options' );
     			  $online = $options['online_issn'];
     			  if($online){
     		?>
