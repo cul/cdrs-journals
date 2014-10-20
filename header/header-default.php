@@ -33,6 +33,9 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico"  type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	
+	<script src="//use.typekit.net/gyz5oea.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 
 	
 	<?php wp_head(); ?>

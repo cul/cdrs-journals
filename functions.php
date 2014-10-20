@@ -88,6 +88,7 @@ if (! function_exists('cfct_theme_setup')) {
 		 */
 		register_nav_menus(array(
 			'primary' => 'Main Navigation',
+			'home' => 'Home Nav',
 			'footer' => 'Footer Navigation'
 		));
 
@@ -150,7 +151,7 @@ add_action( 'init', 'register_cpt_article' );
 
 function register_cpt_article() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'articles', 'article' ),
         'singular_name' => _x( 'article', 'article' ),
         'all_items'           => __( 'All Articles', 'article' ),
@@ -166,10 +167,10 @@ function register_cpt_article() {
         'menu_name' => _x( 'Articles', 'article' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => true,
-        
+
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes', ),
         'taxonomies' => array( 'category', 'post_tag', 'page-category', 'issues', 'sections', 'aauthor' ),
         'public' => true,
@@ -194,7 +195,7 @@ function register_cpt_article() {
 
 function register_taxonomy_issues() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'issues', 'issues' ),
         'singular_name' => _x( 'issue', 'issues' ),
         'search_items' => _x( 'Search issues', 'issues' ),
@@ -212,7 +213,7 @@ function register_taxonomy_issues() {
         'menu_name' => _x( 'Issues', 'issues' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
@@ -233,7 +234,7 @@ add_action( 'init', 'register_taxonomy_issues' );
 
 function register_taxonomy_sections() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'sections', 'sections' ),
         'singular_name' => _x( 'section', 'sections' ),
         'search_items' => _x( 'Search sections', 'sections' ),
@@ -251,7 +252,7 @@ function register_taxonomy_sections() {
         'menu_name' => _x( 'Sections', 'sections' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
@@ -498,5 +499,6 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'Custom-Metaboxes-and-Fields-for-WordPress-master/init.php';
 
 }
+
 
 
