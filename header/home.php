@@ -86,6 +86,11 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
 
+<p class="tagline">
+
+ <?php echo  get_bloginfo ( 'description' );  ?>
+ 
+</p>
 
  <nav class="navbar col-sm-8 col-sm-offset-2" role="navigation">
   <div class="">
