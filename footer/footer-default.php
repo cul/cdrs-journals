@@ -24,7 +24,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php
         $foot_opt = get_option( 'my-footer-options' );
         $ac_partner = $foot_opt['ac_partner'];
-        if($ac_partner == null){
+        $school_opt = $foot_opt['school_affiliation'];
+        if($ac_partner == null && !$school_opt){
             $offset = "col-sm-offset-4";
         }
     ?>
@@ -86,22 +87,30 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
     	</div>
         <?php $options = get_option( 'my-footer-options' );
                                  $checked = $options['ac_partner'];
-                                 if($checked != null){ ?>
+                                 $school = $options['school_affiliation'];
+                                 $school_url = $options['school_affiliation_url'];
+                                 if($checked != null || $school){ ?>
     	<div class="col-sm-4" id="ac_logo_footer">
-    		
-
-				<h6>Also published in partnership with</h6>
-				<a href="http://academiccommons.columbia.edu">
-				<div id="ac_logo_space">
+    		<h6>Also published in partnership with:</h6>
+        <?php } ?>
+                <?php if($checked != null){
+                echo"
+				<a href='http://academiccommons.columbia.edu'>
+				<div id='ac_logo_space'>
 
 						Academic Commons
 
-				</div>
+				</div></a>";
+            } ?>
+
+            <?php if($school){ ?>
+                <a href="<?php echo $school_url; ?>"> <?php echo $school ?> </a>
+
+            <?php } ?>
 
 
 
-
-    		<?php } ?>
+    		
 
 
 
