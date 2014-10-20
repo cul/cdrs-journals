@@ -21,13 +21,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8 col-sm-offset-2">
+
 <?php
 // For the loop used, look in /loops
 cfct_loop();
 
 ?>
-	</div> <!-- #content -->
+ 
 <?php 
 
 // Calls sidebar.php

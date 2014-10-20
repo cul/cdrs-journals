@@ -114,3 +114,23 @@ p.tagline{
 	
 	font-weight: 100;
 }
+
+#scrolled-head{
+	
+	position: fixed;
+	left: 5px;
+	top: 100px;
+	
+}
+
+#scrolled-head h1{
+	
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+#scrolled-head h2{
+	
+	font-size: 1em;
+	
+}
