@@ -135,3 +135,10 @@ p.tagline{
 	font-size: 1em;
 	
 }
+
+#article-tools{
+	
+	position: fixed;
+	right: 15px;
+	top: 120px;
+}
