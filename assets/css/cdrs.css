@@ -120,6 +120,7 @@ p.tagline{
 	position: fixed;
 	left: 5px;
 	top: 100px;
+	max-width: 164px;
 	
 }
 

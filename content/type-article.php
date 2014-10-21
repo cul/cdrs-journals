@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div class="col-sm-2" id="left-bar">
 
-<div id="scrolled-head" style="display:none">
+<div id="scrolled-head" class="hidden-xs" style="display:none">
 	
 	<h1 class="entry-title"><?php the_title() ?></h1>
 	<h2 class="authors">
