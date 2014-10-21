@@ -145,7 +145,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 <hr>
-
-<a href="http://twitter.com"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
+	<?php $options = get_option( 'social-media-options' );
+	    $twitter_name =  $options['twitter_name'];
+	    $the_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+	    if($twitter_name){
+	?>
+<a href="http://twitter.com/intent/tweet?url=<?php echo $the_url ?>&via=<?php echo $twitter_name ?>"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
+	<?php } ?>
 </div>
 </div>
