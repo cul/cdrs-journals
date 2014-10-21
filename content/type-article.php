@@ -142,5 +142,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		}
 
 ?>
+
+<hr>
+
+<a href="http://twitter.com"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
 </div>
 </div>
