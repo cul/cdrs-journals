@@ -130,13 +130,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools">
-	download pdf
+	
 <?php
 
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
 	
 		if($pdf_link){
 		foreach ($pdf_link as $pdf) {
+			echo 'download pdf';
 			echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
 		}
 		}
