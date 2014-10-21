@@ -116,7 +116,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     ?>
 
 
-		<li id="twitter-link"  class="menu-item"><a href="http://twitter.com/<?php echo $twitter_name ?>"> <i class="fa fa-twitter"></i></a></li>
+		<li id="twitter-link"  class="menu-item"><a href="http://twitter.com/<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i></a></li>
     
 
 
