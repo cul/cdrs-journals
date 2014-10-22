@@ -54,9 +54,11 @@ body{
 	margin-top: 50px;
 }
 .pdf{
+/*
 	background: url(http://curj-dev.journals.cdrs.columbia.edu/wp-content/themes/cdrs-journals/assets/img/pdficon_small.gif);
 	background-repeat: no-repeat;
 	display: block;
+*/
 }
 .pdf a{
 	padding-left: 20px;
@@ -257,3 +259,14 @@ table.lib-data td{
 	padding-top: .5em;
 }
 
+#article-tools a{
+	
+	display: block;
+	font-size: 14px;
+	margin-left: 1.2em;
+}
+
+#article-tools h5{
+	font-size: 16px;
+	border-bottom: 1px solid silver;
+}

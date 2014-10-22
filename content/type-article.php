@@ -163,6 +163,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools">
+	<h5><i class="fa fa-wrench"></i>&nbsp;Article Tools</h5>
+	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
 	
 <?php
 
@@ -170,7 +172,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 		if($pdf_link){
 			foreach ($pdf_link as $pdf) {
-				echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
+				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Save PDF</a>';
 			}
 		}
 
@@ -180,7 +182,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	if($pdf_link && $twitter_name){ ?>
 
-<hr>
+<h5><i class="fa fa-share"></i>&nbsp;Share</h5>
+<a href="mailto:"><i class="fa fa-envelope"></i>&nbsp;Email</a>
+
+<!-- example for email link: <a href="mailto:onecooldude@gmail.com?subject=Hey+Dude.+You're+Cool.&cc=anotherdude@gmail.com&bcc=invisibledude@gmail.com&body=Your+awesome+message+goes+here.%0D%0A%0D%0AThis+is+on+a+new+line.+Go+to+http%3A%2F%2Fwww.google.com%2F.">onecooldude@gmail.com</a> -->
 
 	<?php }
 
