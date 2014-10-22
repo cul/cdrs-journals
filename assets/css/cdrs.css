@@ -155,18 +155,18 @@ p.tagline{
 	margin-right: 10px;
 }
 
-table{
+.entry-content table{
 	
 	text-align: center;
 }
 
-table {
+.entry-content table {
 width: 100%
 border: 1px solid #B0B0B0;
 margin-bottom: 2em;
 margin-top: 2em;
 }
-table tbody {
+.entry-content table tbody {
 /* Kind of irrelevant unless your .css is alreadt doing something else */
 margin: 0;
 padding: 0;
@@ -176,10 +176,10 @@ font-size: 100%;
 vertical-align: baseline;
 background: transparent;
 }
-table thead {
+.entry-content table thead {
 text-align: left;
 }
-table thead th {
+.entry-content table thead th {
 background: -moz-linear-gradient(top, #F0F0F0 0, #DBDBDB 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F0F0F0), color-stop(100%, #DBDBDB));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#DBDBDB', GradientType=0);
@@ -189,22 +189,71 @@ font-size: 16px;
 font-weight: bold;
 padding: 3px 10px;
 }
-table td {
+.entry-content table td {
 padding: 3px 10px;
 
 }
-tbody tr:nth-child(even) {
+.entry-content tbody tr:nth-child(even) {
 background: white;
 }
-td{ 
+.entry-content td{ 
 	padding: 5px 10px;
 	
 	text-align: center;
 	
 }
 
-tr{
+.entry-content tr{
 	
 	border-bottom: 1px solid silver;
+}
+
+ table.lib-data{
+	margin-top: 2em;
+	font-size: .7em;
+	border-bottom: 1px solid silver;
+	border-top: 1px solid silver;
+	width: 80%;
+
+
+}
+
+td.tlabel{
+	
+	 
+	color: #888;
+	padding-right: 10px;
+	text-align: right;
+}
+
+table.lib-data a{
+	
+	color: #333;
+}
+
+table.lib-data a:hover{
+	
+	color: blue;
+}
+
+table.lib-data tr{
+	
+	border-bottom: 1px dotted silver;
+}
+
+table.lib-data td{
+	vertical-align: top;
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+ 
+}
+.lib-data th{
+	
+	font-weight: 400;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 15px;
+	padding-top: .5em;
 }
 
