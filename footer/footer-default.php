@@ -101,9 +101,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 						Academic Commons
 
 				</div></a>";
-            } ?>
+            } 
 
-            <?php if($school){ ?>
+             if($checked != null && $school){ echo "and </br>"; }
+
+             if($school){ ?>
                 <a href="<?php echo $school_url; ?>"> <?php echo $school ?> </a>
 
             <?php } ?>

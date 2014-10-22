@@ -130,21 +130,27 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools">
-	download pdf
+	
 <?php
 
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
 	
 		if($pdf_link){
-		foreach ($pdf_link as $pdf) {
-			echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
-		}
+			foreach ($pdf_link as $pdf) {
+				echo 'download pdf';
+				echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
+			}
 		}
 
 ?>
 
 <hr>
-
-<a href="http://twitter.com"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
+	<?php $options = get_option( 'social-media-options' );
+	    $twitter_name =  $options['twitter_name'];
+	    $link = get_permalink();
+	    if($twitter_name){
+	?>
+<a href="http://twitter.com/intent/tweet?url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
+	<?php } ?>
 </div>
 </div>
