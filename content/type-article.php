@@ -76,7 +76,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				echo '<h3> Article </h3>';
 			}
 
+		if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail('full');
+		}
+
 		?>
+		
+
 		<h1 class="entry-title"><?php the_title() ?></h1>
 	<h2 class="authors">
 	<?php    
@@ -111,21 +117,25 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
+  		$citation_info = get_post_custom($post->ID);
+  		$the_citation = $citation_info['citation'];
+  		
+  		if($the_doi[0]||$the_citation[0]){
+  		
+  		echo "<table class='lib-data'><tbody>";
   		if($the_doi[0]){
-  		echo '<h4>DOI: <a href="http://dx.doi.org/'. $the_doi[0] . '">' . $the_doi[0] . '</a></h4>';
+  		echo '<tr><td class="tlabel">DOI:</td><td> <a href="http://dx.doi.org/'. $the_doi[0] . '">' . $the_doi[0] . '</a></td></tr>';
   		}
 
 
-		$citation_info = get_post_custom($post->ID);
-  		$the_citation = $citation_info['citation'];
+
   		if($the_citation[0]){
-  		echo '<h4>Citation:</h4>' .'<h4 style="color:' . $color .'">' . $the_citation[0] . '</h4>';
+  		echo '<tr><td class="tlabel">Citation:</td><td>' . $the_citation[0] . '</td></tr>';
   		};
-
-  		if ( has_post_thumbnail() ) {
-				echo the_post_thumbnail();
+		
+		echo "</tbody></table>";
 		}
-
+  		
 	?>
 	</div>
 
