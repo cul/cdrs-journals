@@ -52,7 +52,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 	<hr>
 	<?php
-	echo the_terms($post->ID, 'issues');	
+
+	$post_terms = (wp_get_post_terms($post->ID, 'issues'));
+	$the_issue = wp_list_filter($post_terms, array('slug'=>'current-issue'),'NOT');
+	foreach ($the_issue as $issue) {
+			echo $issue->name;
+		}	
 	?>
 </div>
 
@@ -117,10 +122,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</div>
 
 	<div class="entry-footer entry-meta">
-		<?php
-			echo the_terms($post->ID, 'issues');		
-
-		?>
+		
 	</div>
 	
 	 
@@ -137,7 +139,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 		if($pdf_link){
 			foreach ($pdf_link as $pdf) {
-				echo 'download pdf';
 				echo '<span class="pdf"><a href="' . $pdf . '"> PDF </a></span>';
 			}
 		}
