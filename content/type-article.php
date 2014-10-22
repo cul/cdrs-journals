@@ -163,12 +163,17 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			}
 		}
 
-?>
-
-<hr>
-	<?php $options = get_option( 'social-media-options' );
+		$options = get_option( 'social-media-options' );
 	    $twitter_name =  $options['twitter_name'];
 	    $link = get_permalink();
+	    
+	if($pdf_link && $twitter_name){ ?>
+
+<hr>
+
+	<?php }
+
+		 
 	    if($twitter_name){
 	?>
 <a href="http://twitter.com/intent/tweet?url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
