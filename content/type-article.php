@@ -110,7 +110,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
   		if($the_doi[0]){
-  		echo '<h4>DOI: <a href="dx.doi.org/'. $the_doi[0] . '">' . $the_doi[0] . '</a></h4>';
+  		echo '<h4>DOI: <a href="http://dx.doi.org/'. $the_doi[0] . '">' . $the_doi[0] . '</a></h4>';
   		}
 
 
@@ -166,7 +166,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		$options = get_option( 'social-media-options' );
 	    $twitter_name =  $options['twitter_name'];
 	    $link = get_permalink();
-	    
+
 	if($pdf_link && $twitter_name){ ?>
 
 <hr>
