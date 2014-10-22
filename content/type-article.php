@@ -67,6 +67,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <article id="post-<?php the_ID() ?>" <?php post_class('clearfix') ?>>
 	<header class="entry-header">
+		<?php $sections = wp_get_post_terms($post->ID, 'sections'); 
+			if(!empty($sections)){
+				foreach ($sections as $section) {
+					echo '<h3>'. $section->name . '</h3>';
+				}
+			}else{
+				echo '<h3> Articles </h3>';
+			}
+
+		?>
 		<h1 class="entry-title"><?php the_title() ?></h1>
 	<h2 class="authors">
 	<?php    
