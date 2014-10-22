@@ -118,7 +118,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   		$the_citation = $citation_info['citation'];
   		if($the_citation[0]){
   		echo '<h4>Citation: ' . $the_citation[0] . '</h4>';
-  		echo '</br>'
+  		echo '</br>';
   		};
 
   		if ( has_post_thumbnail() ) {
