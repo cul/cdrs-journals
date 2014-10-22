@@ -192,7 +192,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		 
 	    if($twitter_name){
 	?>
-<a href="http://twitter.com/intent/tweet?url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Share on Twitter</a>
+<a href="http://twitter.com/intent/tweet?url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
 	<?php } ?>
 </div>
 </div>
