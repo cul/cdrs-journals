@@ -56,7 +56,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	$post_terms = (wp_get_post_terms($post->ID, 'issues'));
 	$the_issue = wp_list_filter($post_terms, array('slug'=>'current-issue'),'NOT');
 	foreach ($the_issue as $issue) {
-			echo $issue->name;
+			echo '<a href="'.get_term_link($issue->slug, 'issues').'">'.$issue->name.'</a>';
 		}	
 	?>
 </div>
