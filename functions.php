@@ -382,7 +382,6 @@ function doi_meta_box( $object, $box ) { ?>
 
   <p>
 	 <input type="text" id="doi_add" name="doi_add" value="<?php echo $doi[0]; ?>"></br>
-   <span class="small">*This content will not appear directly on your site</span>
   </p>
 <?php }
 

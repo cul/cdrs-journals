@@ -103,13 +103,17 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  
    
    }?>
-	</h2></br>
+	</h2>
+	<div class="library_data">
 	<?php
 
+		$custom_doi = get_post_custom($post->ID);
+  		$the_doi = $custom_doi['doi'];
+  		echo '<h4>DOI: <a href="dx.doi.org/'. $the_doi[0] . '">' . $the_doi[0] . '</a></h4>';
 
 		$citation_info = get_post_custom($post->ID);
   		$the_citation = $citation_info['citation'];
-  		echo $the_citation[0];
+  		echo '<h4>Citation: ' . $the_citation[0] . '</h4>';
   		echo '</br>';
 
   		if ( has_post_thumbnail() ) {
@@ -117,7 +121,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		}
 
 	?>
-		
+	</div>
+
 	</header>
 	<div class="entry-content">
 		<?php
