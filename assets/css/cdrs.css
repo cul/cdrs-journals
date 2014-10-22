@@ -142,3 +142,15 @@ p.tagline{
 	right: 15px;
 	top: 120px;
 }
+
+.alignright{
+	
+	float:right;
+	margin-left: 10px;
+}
+
+.alignleft{
+	
+	float: left;
+	margin-right: 10px;
+}
