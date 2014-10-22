@@ -73,7 +73,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 					echo '<h3>'. $section->name . '</h3>';
 				}
 			}else{
-				echo '<h3> Articles </h3>';
+				echo '<h3> Article </h3>';
 			}
 
 		?>
@@ -106,6 +106,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</h2>
 	<div class="library_data">
 	<?php
+		$options = get_option( 'my-theme-options' );
+    	$color = $options['link_color'];
 
 		$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
@@ -117,8 +119,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		$citation_info = get_post_custom($post->ID);
   		$the_citation = $citation_info['citation'];
   		if($the_citation[0]){
-  		echo '<h4>Citation: ' . $the_citation[0] . '</h4>';
-  		echo '</br>';
+  		echo '<h4>Citation:</h4>' .'<h4 style="color:' . $color .'">' . $the_citation[0] . '</h4>';
   		};
 
   		if ( has_post_thumbnail() ) {
