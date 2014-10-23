@@ -30,7 +30,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<meta charset="<?php bloginfo('charset') ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ).$title_description; ?></title>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico"  type="image/x-icon" />
+  <?php $current_favicon = get_option('favicon_url');
+    if($current_favicon != ""){
+      echo '<link rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';  
+    }else{
+      echo '<link rel="shortcut icon" href="' .  get_stylesheet_directory_uri() . '/assets/img/favicon.ico"  type="image/x-icon" />';
+    }
+  ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
@@ -59,7 +65,9 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                <?php bloginfo('name'); ?>
+                <?php $current_logo = get_option('logo_url');
+                echo '<img src="' . $current_logo . '">';
+                 ?>
             </a>
     </div>
 
