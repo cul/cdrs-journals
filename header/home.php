@@ -88,7 +88,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 <img src="<?php $options = get_option( 'my-theme-options' );
    $logo = $options['logo'];
-   echo $logo?>" class='front-cover'>
+   echo $logo ?>" class='front-cover'> 
 
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
 
