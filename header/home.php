@@ -60,9 +60,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                <?php $current_logo = get_option('logo_url');
-                echo '<img src="' . $current_logo . '">';
-                 ?>
+                <?php echo bloginfo(); ?>
             </a>
     </div>
 
