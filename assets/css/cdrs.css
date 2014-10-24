@@ -291,3 +291,8 @@ img.nav_logo{
 	padding: 0px;
 }
 
+.row#footer_row{
+	margin-bottom: -30px;
+	margin-top: -10px;
+}
+
