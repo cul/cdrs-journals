@@ -295,4 +295,8 @@ img.nav_logo{
 	margin-bottom: -30px;
 	margin-top: -10px;
 }
+#issn_copyright h5, #ac_logo_footer h5{
+	margin-top: 0px;
+}
+
 
