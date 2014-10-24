@@ -45,14 +45,12 @@ h5.partner{
 	padding-left: 0px;
 }
 
-img.front-cover{
-	
+img.front-cover{	
 	max-width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	max-height: 300px;
-
+	max-height: 200px;
 }
 
 div#issn_copyright, div#ac_logo_footer, div#cdrs_full{
@@ -284,5 +282,12 @@ table.lib-data td{
 	font-size: 16px;
 	border-bottom: 1px solid silver;
 	color: #888;
+}
+img.nav_logo{
+	max-height: 100%;
+}
+.navbar-brand{
+	overflow: hidden;
+	padding: 0px;
 }
 
