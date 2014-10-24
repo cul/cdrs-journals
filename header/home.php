@@ -94,7 +94,10 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 <p class="tagline col-sm-10 col-sm-offset-1">
 
- <?php echo(get_bloginfo( 'description' ));  ?>
+ <?php $blog_info =  get_option( 'general-options' );
+  $words = $blog_info['site_desc']; 
+  $trim_words = wp_trim_words( $words, $num_words = 55, $more = null ); 
+  echo $trim_words; ?>
  
 </p>
 

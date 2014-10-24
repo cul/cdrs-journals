@@ -23,8 +23,10 @@ jQuery( document ).ready(function() {
     return -jQuery(this).height();
   }
 });
-	
+
+
 	
 	
 	
 });
+  jQuery("#blogdescription").after("<p>*Only the first 55 words will appear on your site</p>");
