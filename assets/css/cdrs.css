@@ -26,10 +26,23 @@ h3{
 #cdrs_logo_footer h5{
 	background-position-x: 55px;
 	background-position-y: 0px;
+	margin: 0px;
+}
+#cdrs_logo_footer h6{
+	margin: 0px;
 }
 
 h5.partner{
 	text-align: center;
+}
+#ac_logo_space{
+	overflow: hidden;
+}
+#ac_logo_space img{
+	max-width: 100%;	
+}
+#cdrs_footer_text{
+	padding-left: 0px;
 }
 
 img.front-cover{
