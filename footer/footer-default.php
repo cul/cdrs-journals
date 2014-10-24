@@ -52,26 +52,33 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			</div>
 
 			<div class="col-sm-4 <?php echo $offset ?>"  id="issn_copyright">
+            <?php $options = get_option( 'my-footer-options' ); 
+                  $print = $options['print_issn'];
+                  $online = $options['online_issn'];
+                  if($print && $online){
+            ?>
+                <h5>ISSN (PRINT): <?php echo $print ?></h5>
+                <h5>ISSN (Online): <?php echo $online; ?></h5>
+            <?php } ?>
 
-			<?php $options = get_option( 'my-footer-options' );
-    			  $print = $options['print_issn'];
-    			  if($print){
+			<?php
+    			  if($print && !$online){
     		?>
-			<h5>ISSN(PRINT): <?php echo $print ?></h5>
+			<h5>ISSN: <?php echo $print ?></h5>
     		<?php } ?>
 
-    		<?php $options = get_option( 'my-footer-options' );
-    			  $online = $options['online_issn'];
-    			  if($online){
+    		<?php 
+    			  if($online && !$print){
     		?>
-    		<h5>ISSN(Online): <?php echo $online; ?></h5>
-    		<?php } ?>
+    		<h5>ISSN: <?php echo $online; ?></h5>
+    		
+            <?php } ?>
 
     		<?php $options = get_option( 'my-footer-options' );
     			  $copyright_url = $options['copyright_url'];
     			  if($copyright_url && $options['copyright']){
     		?>
-    		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"> <?php echo $options['copyright']; ?> </a> license. </h5>
+    		<h5>This work is Licensed under a <a href="<?php echo $copyright_url; ?>"><em> <?php echo $options['copyright']; ?> </em></a> license. </h5>
 
     		<?php } ?>
 
