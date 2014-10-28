@@ -302,23 +302,6 @@ $labels = array(
 add_action( 'init', 'register_taxonomy_authors' );
 
 
-//allowing custom logo upload for use in the header
-$defaults = array(
-	'default-image'          => '',
-	'random-default'         => false,
-	'width'                  => 0,
-	'height'                 => 0,
-	'flex-height'            => true,
-	'flex-width'             => true,
-	'default-text-color'     => '',
-	'header-text'            => true,
-	'uploads'                => true,
-	'wp-head-callback'       => '',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => '',
-);
-add_theme_support( 'custom-header', $defaults );
-
 //change excerpt box name to 'abstract' for articles
 
 function custom_article_type_boxes(){
