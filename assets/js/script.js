@@ -24,8 +24,28 @@ jQuery( document ).ready(function() {
   }
 });
 
+  jQuery("div#footer_container").waypoint(function() {
+  jQuery("#scrolled-head").toggle();
+  
+ 
+  }, {
+  offset: function() {
+    return -jQuery(this).height();
+  }
+});
 
+
+
+
+var article = jQuery("#article-tools");
+if(window.innerWidth < 766){
+  jQuery(article).detach();
+  jQuery(article).appendTo(".library_data");
+  jQuery(article).removeAttr(style);
+}
 	
 	
 	
 });
+
+

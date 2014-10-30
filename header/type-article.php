@@ -32,7 +32,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ).$title_description; ?></title>
 	<?php $current_favicon = get_option('favicon_url');
 		if($current_favicon != ""){
-			echo '<link rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';	
+			echo '<link id="the_favicon" rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';	
 		}else{
 			echo '<link rel="shortcut icon" href="' .  get_stylesheet_directory_uri() . '/assets/img/favicon.ico"  type="image/x-icon" />';
 		}
@@ -52,16 +52,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 		$print = $foot_opt['print_issn'];
 		if($print){
 		echo '<meta name="citation_issn" content="'. $print .'"/>';
-		}
-
-		
-		$abstract = $foot_opt['full_text_setting'];
-		$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
-		if($abstract == "abstract"){
-		  echo '<meta name="citation_abstract_html_url" content="'. $current_url .'"/>';
-		}
-		elseif ($abstract == "full_text") {
-		  echo '<meta name="citation_fulltext_html_url" content="'. $current_url .'"/>';
 		}
 	?>
 	<meta name="citation_title" content="<?php echo get_the_title($POST->ID); ?>"/>
