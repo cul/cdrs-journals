@@ -22,7 +22,7 @@ get_header();
 ?>
 
 <div id="primary" class="col-sm-8 col-sm-offset-2">
-<h3 class="home-title">Current Issue</h3>
+<h3 class="home-title">Current Issue</h3><br>
 <?php
 
 

@@ -5,12 +5,17 @@ font-family: "freight-sans-pro";
 font-family: "museo-sans";
 font-family: "proxima-nova";
 font-size: 20px;
-font-weight: 400;
+font-weight: 300;
+}
+
+.lib-data{
+	font-weight: 400;
 }
 
 .navbar-fixed-top{
 	
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: 400;
 }
 
 h1{
@@ -20,7 +25,7 @@ h1{
 
 h3{
 	
-	font-weight: 200;
+	font-weight: 300;
 }
 
 #cdrs_logo_footer h5{
@@ -81,6 +86,18 @@ body.home h1#site-name{
 	text-align: center;
 
 }
+h3.super, h3.super a{
+	text-transform: uppercase;
+	color: silver;
+	
+	
+}
+
+
+span.super-r{
+	display: block;
+	float: right;
+}
 
 body.home #primary{
 	
@@ -117,7 +134,7 @@ h3.home-title{
 
 footer{
 	border-top: 4px double silver;
-	margin-top: 40px;
+	margin-top: 60px;
 	padding-top: 40px;
 	margin-bottom: 3em;
 }
@@ -306,6 +323,54 @@ img.nav_logo{
 #issn_copyright h5, #ac_logo_footer h5{
 	margin-top: 0px;
 }
+
+
+#primary{
+	
+	min-height: 400px;
+}
+
+
+h3.home-title{
+	
+	display: inline-block;
+}
+body.home h3.section-label{
+	
+	display: inline-block;
+	
+	
+	
+}
+
+
+
+
+.entry-content img,
+.comment-content img,
+.widget img,
+img.header-image,
+.author-avatar img,
+img.wp-post-image {
+	/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.wp-caption {
+	max-width: 100%; /* Keep wide captions from overflowing their container. */
+	padding: 4px;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	font-style: italic;
+	font-size: 14px;
+ 
+	line-height: 2;
+	color: #757575;
+}
+
+
 
 
 

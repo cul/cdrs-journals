@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Page With Sidebar
+*/
 
 // This file is part of the Carrington Blueprint Theme for WordPress
 //
@@ -20,7 +23,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8 col-sm-offset-2">
+<div id="primary" class="col-sm-8">
 	<?php
 	// For the loop used, look in /loops
 	cfct_loop();
@@ -29,6 +32,6 @@ get_header();
 </div><!-- #primary -->
 
 <?php 
-// get_sidebar();
+get_sidebar();
 get_footer();
 ?>
