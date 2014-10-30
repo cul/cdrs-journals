@@ -87,12 +87,20 @@ body.home #primary{
 	text-align: center;
 }
 
+h2.entry-title{
+	
+	margin-top: 10px;
+}
+
 h3.section-label{
 	
 	text-transform: uppercase;
-	font-weight: 100;
+	font-weight: 400;
 	font-size: 20px;
 	margin-bottom: 0;
+/* 	background: rgba(255,255,255,.5); */
+	border-bottom: 1px solid silver;
+	color: silver;
 }
 
 h3.authors{
