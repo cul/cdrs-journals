@@ -324,7 +324,6 @@ img.nav_logo{
 	margin-top: 0px;
 }
 
-
 #primary{
 	
 	min-height: 400px;
@@ -371,7 +370,10 @@ img.wp-post-image {
 }
 
 
-
+#the_favicon{
+	max-width: 16px;
+	max-height: 16px;
+}
 
 
 @media print {
@@ -477,4 +479,3 @@ img.wp-post-image {
 
 
 }
-

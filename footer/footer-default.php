@@ -29,7 +29,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
             $offset = "col-sm-offset-4";
         }
     ?>
-	<div class="container">
+	<div class="container" id="footer_container">
 	<footer id="footer" class="row site-footer" role="contentinfo">
 		<div class="row" id="footer_row">
 
