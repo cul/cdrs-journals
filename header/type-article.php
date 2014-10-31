@@ -150,9 +150,11 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
   <form class="navbar-form navbar-right" id="site-search" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        	<?php if ( is_active_sidebar( 'site-search' ) ) : ?>
+        		<?php dynamic_sidebar( 'site-search' ); ?>
+        		<button type="submit" class="btn btn-default" id="searchsubmit"><i class="fa fa-search"></i></button>
+        	<?php endif; ?>
         </div>
-        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
       </form>
 
 

@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', true);
+define('CFCT_DEBUG', false);
 
 /**
  * Theme version.
@@ -481,6 +481,15 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'Custom-Metaboxes-and-Fields-for-WordPress-master/init.php';
 
 }
+
+function search_widgets_init() {
+
+  register_sidebar( array(
+    'name' => 'Article Search',
+    'id' => 'site-search',
+  ) );
+}
+add_action( 'widgets_init', 'search_widgets_init' );
 
 
 
