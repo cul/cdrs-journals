@@ -45,6 +45,15 @@ if(window.innerWidth < 766){
 }
 
 jQuery("#s").addClass("form-control");
+
+//hackey article header search fix
+var url = "http://curj-dev.journals.cdrs.columbia.edu/?s=";
+jQuery("#sub").on("click", function(){
+  event.preventDefault();
+  var new_url = url.concat(jQuery("#s").val());
+//   jQuery.load(new_url);
+  window.location.href = new_url;
+})
 	
 	
 	

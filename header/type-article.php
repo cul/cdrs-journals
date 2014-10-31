@@ -79,7 +79,8 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         }
 
 		$volumes = get_the_terms($post->ID, 'issues');
-		  foreach($volumes as $volume){
+		if($volumes){
+			foreach($volumes as $volume){
 		  		if($volume->slug != "current-issue"){
 			  		$pieces = explode(" ", $volume->name);
 					$the_volume = trim($pieces[1], ',');
@@ -93,6 +94,8 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	 			}
 	 			}
 	 		}
+		}
+		  
 	 	$custom_doi = get_post_custom($post->ID);
   		$the_doi = $custom_doi['doi'];
   		if($the_doi[0] != ""){
@@ -152,7 +155,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <div class="form-group">
         	<?php if ( is_active_sidebar( 'site-search' ) ) : ?>
         		<?php dynamic_sidebar( 'site-search' ); ?>
-        		<button type="submit" class="btn btn-default" id="searchsubmit"><i class="fa fa-search"></i></button>
+        		<button type="submit" class="btn btn-default" id="sub"><i class="fa fa-search"></i></button>
         	<?php endif; ?>
         </div>
       </form>
