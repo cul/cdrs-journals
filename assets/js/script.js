@@ -43,6 +43,8 @@ if(window.innerWidth < 766){
   jQuery(article).appendTo(".library_data");
   jQuery(article).removeAttr(style);
 }
+
+jQuery("#s").addClass("form-control");
 	
 	
 	

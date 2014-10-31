@@ -91,10 +91,10 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <div class="form-group">
           <?php if ( is_active_sidebar( 'site-search' ) ) : ?>
             <?php dynamic_sidebar( 'site-search' ); ?>
-            <button type="submit" class="btn btn-default" id="searchsubmit"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
           <?php endif; ?>
         </div>
-  </form>
+      </form>
 
 
 
