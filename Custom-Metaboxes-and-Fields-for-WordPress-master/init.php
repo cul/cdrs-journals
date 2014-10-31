@@ -253,7 +253,7 @@ class cmb_Meta_Box {
 			if ( ! is_admin() ) {
 				// we need to register colorpicker on the front-end
 			   wp_register_script( 'iris', admin_url( 'js/iris.min.js' ), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), self::CMB_VERSION );
-		   	wp_register_script( 'wp-color-picker', admin_url( 'js/color-picker.min.js' ), array( 'iris' ), self::CMB_VERSION );
+		   		wp_register_script( 'wp-color-picker', admin_url( 'js/color-picker.min.js' ), array( 'iris' ), self::CMB_VERSION );
 				wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', array(
 					'clear'         => __( 'Clear' ),
 					'defaultString' => __( 'Default' ),
@@ -266,9 +266,9 @@ class cmb_Meta_Box {
 			$scripts[] = 'farbtastic';
 			$styles[] = 'farbtastic';
 		}
-		wp_register_script( 'cmb-datepicker', CMB_META_BOX_URL . 'js/jquery.datePicker.min.js' );
-		wp_register_script( 'cmb-timepicker', CMB_META_BOX_URL . 'js/jquery.timePicker.min.js' );
-		wp_register_script( 'cmb-scripts', CMB_META_BOX_URL .'js/cmb'. $min .'.js', $scripts, self::CMB_VERSION );
+		wp_register_script( 'cmb-datepicker', get_template_directory_uri() . '/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.datePicker.min.js' );
+		wp_register_script( 'cmb-timepicker', get_template_directory_uri() . '/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.timePicker.min.js' );
+		wp_register_script( 'cmb-scripts', get_template_directory_uri() .'/Custom-Metaboxes-and-Fields-for-WordPress-master/js/cmb'. $min .'.js', $scripts, self::CMB_VERSION );
 
 		wp_enqueue_media();
 
@@ -288,7 +288,7 @@ class cmb_Meta_Box {
 			'check_toggle'    => __( 'Select / Deselect All', 'cmb' ),
 		) ) );
 
-		wp_register_style( 'cmb-styles', CMB_META_BOX_URL . 'style'. $min .'.css', $styles );
+		wp_register_style( 'cmb-styles', get_template_directory_uri() . '/Custom-Metaboxes-and-Fields-for-WordPress-master/style'. $min .'.css', $styles );
 
 		// Ok, we've enqueued our scripts/styles
 		self::$is_enqueued = true;

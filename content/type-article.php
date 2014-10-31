@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <div class="col-sm-2" id="left-bar">
 
-<div id="scrolled-head" class="hidden-xs" style="display:none">
+<div id="scrolled-head" class="hidden-xs hidden-print" style="display:none">
 	
 	<h1 class="entry-title"><?php the_title() ?></h1>
 	<h2 class="authors">
@@ -52,11 +52,15 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 	<hr>
 	<?php
+		
+	$issue_link;
 
 	$post_terms = (wp_get_post_terms($post->ID, 'issues'));
 	$the_issue = wp_list_filter($post_terms, array('slug'=>'current-issue'),'NOT');
 	foreach ($the_issue as $issue) {
-			echo '<a href="'.get_term_link($issue->slug, 'issues').'">'.$issue->name.'</a>';
+		
+			$issue_link = '<a href="'.get_term_link($issue->slug, 'issues').'">'.$issue->name.'</a>';
+			echo $issue_link;
 		}	
 	?>
 </div>
@@ -73,7 +77,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 					echo '<h3>'. $section->name . '</h3>';
 				}
 			}else{
-				echo '<h3> Article </h3>';
+				echo '<h3 class="super"><span class="super-l">Article</span><span class="super-r">'.$issue_link.'</h3>';
 			}
 
 		if ( has_post_thumbnail() ) {
@@ -162,7 +166,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 </div>
 
 <div class="col-sm-2" id="right-bar">
-<div id="article-tools">
+<div id="article-tools" class="hidden-xs hidden-print">
 	<h5><i class="fa fa-wrench"></i>&nbsp;Article Tools</h5>
 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
 	
@@ -181,8 +185,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    $link = get_permalink();
 
  ?>
-
-<h5><i class="fa fa-share"></i>&nbsp;Share</h5>
+<hr>
+<!-- <h5><i class="fa fa-share"></i>&nbsp;Share</h5> -->
 <a href="mailto:?subject=<?php echo the_title(); ?>&body=<?php echo the_permalink(); ?>"><i class="fa fa-envelope"></i>&nbsp;Email</a>
 
 <!-- example for email link: <a href="mailto:onecooldude@gmail.com?subject=Hey+Dude.+You're+Cool.&cc=anotherdude@gmail.com&bcc=invisibledude@gmail.com&body=Your+awesome+message+goes+here.%0D%0A%0D%0AThis+is+on+a+new+line.+Go+to+http%3A%2F%2Fwww.google.com%2F.">onecooldude@gmail.com</a> -->

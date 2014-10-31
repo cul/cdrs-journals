@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8">
+<div id="primary" class="col-sm-8 col-sm-offset-2">
 <h3>Current Issue</h3>
 	<h1 class="archive-title">
 		<?php 

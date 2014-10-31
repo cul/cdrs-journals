@@ -1,5 +1,5 @@
 <?php
-
+ 
 // This file is part of the Carrington Blueprint Theme for WordPress
 //
 // Copyright (c) 2008-2014 Crowd Favorite, Ltd. All rights reserved.
@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8">
+<div id="primary" class="col-sm-8 col-sm-offset-2">
  
 	<H2>Past Issues:</H2>	
 	 	
