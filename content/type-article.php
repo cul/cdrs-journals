@@ -172,7 +172,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 		if($pdf_link){
 			foreach ($pdf_link as $pdf) {
-				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Save PDF</a>';
+				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
 		}
 
@@ -191,7 +191,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		 
 	    if($twitter_name){
 	?>
-<a href="http://twitter.com/intent/tweet?url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
 	<?php } ?>
 </div>
 </div>
