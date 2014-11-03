@@ -58,9 +58,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                                  $school_url = $options['school_affiliation_url'];
                                  if($checked != null || $school){ ?>
             <div class="col-sm-4" id="ac_logo_footer">
-                <h5>Also published in partnership with:</h5>
-            <?php } ?>
-                <?php if($school){ ?>
+            <?php } 
+                 if($school){ ?>
                     <h5><a href="<?php echo $school_url; ?>"> <?php echo $school ?> </a></h5>
                 <?php } ?>
                     <?php 

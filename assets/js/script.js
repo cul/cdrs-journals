@@ -44,7 +44,14 @@ if(window.innerWidth < 766){
   jQuery(article).removeAttr(style);
 }
 
+//removing some out of the box styling with the search everything plugin
 jQuery("#s").addClass("form-control");
+jQuery("input#searchsubmit").remove();
+jQuery("#site-search .screen-reader-text").remove();
+jQuery("#s").unwrap();
+jQuery("#s").unwrap();
+
+
 
 //hackey article header search fix
 var url = "http://curj-dev.journals.cdrs.columbia.edu/?s=";

@@ -30,7 +30,7 @@ get_header();
 	 	$term = get_term_by('slug', 'current-issue', 'issues');
 		$term_id = $term->term_id;
 		$terms = get_terms('issues',  'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
-		echo '<ul>';
+		echo '<ul class="archive_list">';
 
 		foreach ($terms as $term) {
 			echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
