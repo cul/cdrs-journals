@@ -27,7 +27,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php    
         
         
-  		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all"));
+  		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$moreAuthors = array();
   		if($authors){
            foreach ( $authors as $author ) {
@@ -92,7 +92,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<?php    
         
         
-  		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all"));
+  		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$moreAuthors = array();
   		if($authors){
            foreach ( $authors as $author ) {

@@ -296,6 +296,7 @@ $labels = array(
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+    'sort'                       => true,
 	);
 	register_taxonomy( 'authors', array( 'article','post' ), $args );
 };
@@ -491,7 +492,107 @@ function search_widgets_init() {
 }
 add_action( 'widgets_init', 'search_widgets_init' );
 
+function remove_default_authors_meta(){
+  remove_meta_box( 'tagsdiv-authors', 'article', 'normal' );
+}
+add_action('admin_menu', 'remove_default_authors_meta');
+
+//add custom authors metabox to article page
+add_action( 'load-post.php', 'authors_setup' );
+add_action( 'load-post-new.php', 'author_setup' );
+
+function authors_setup() {
+  add_action( 'add_meta_boxes', 'authors_meta_boxes' );
+  add_action( 'save_post', 'authors_save', 10, 2 );
+}
+
+function authors_meta_boxes() {
+
+  add_meta_box(
+    'authors_box',      // Unique ID
+    esc_html__( 'Authors', 'Authors' ),    // Title
+    'authors_meta_box',   // Callback function
+    'article',         // Admin page (or post type)
+    'advanced',         // Context
+    'default'         // Priority
+  );
+}
+
+function authors_meta_box( $object, $box ) { 
+  global $post;
+  wp_nonce_field( basename( __FILE__ ), 'authors_class_nonce' );     
+  ?>
+
+  <p>
+   <textarea id="authors_add" name="authors_add" value="">
+    <?php 
+
+     $the_authors =  wp_get_object_terms($post->ID, 'authors', array('orderby' => 'term_order'));
+     $authors_schools = array();
+      foreach ($the_authors as $the_author) {
+        $school = get_tax_meta($the_author->term_id, 'institution');
+        if(!empty($school)){
+          array_push($authors_schools, $the_author->name . ":" . $school);
+        }else{
+          array_push($authors_schools, $the_author->name);
+        }
+        
+      }
+      echo implode(", ", $authors_schools);
+  
+    ?>
+  </textarea></br>
+  <p>Separate authors with a comma. If adding an author's institution, please separate that from the author with a colon</p>
+   <input type="submit" value="add" id="add_authors">
+  </p>
+<?php }
+
+function authors_save($post_id){
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+    if ( ! isset( $_POST['authors_add'] ) ) {
+        return;
+      }
 
 
+  $my_data = sanitize_text_field( $_POST['authors_add'] );
+  $more_authors = explode(",", $my_data);
+  $id_array = array();
+  
+  // sets the authors for the article, and creates the term if it doesn't exist
+  foreach ($more_authors as $author) {
+    $school_name = explode(":", $author);
+    $the_term = term_exists($school_name[0], 'authors');
+    $their_school = get_tax_meta($author->term_id, 'institution');
+
+    if($the_term !== 0 && $the_term !== null){
+      update_tax_meta($the_term['term_id'],'institution',$school_name[1]);
+      array_push($id_array, intval($the_term['term_id']));
+    }else{
+      $new_term = wp_insert_term($school_name[0], 'authors');
+      update_tax_meta($new_term['term_id'],'institution',$school_name[1]);
+      array_push($id_array, $new_term['term_id'] );
+    }
+   
+  }
+
+  wp_set_object_terms( $post_id, $id_array, 'authors');
+  
+
+}
+
+$config_authors = array(
+   'id' => 'authors_institution',
+   'title' => 'Author\'s Institution ',                      // meta box title
+   'pages' => array('authors'),                    // taxonomy name, accept categories, post_tag and custom taxonomies
+   'context' => 'normal',                           // where the meta box appear: normal (default), advanced, side; optional
+   'fields' => array(),                             // list of meta fields (can be added by field arrays)
+   'local_images' => false,                         // Use local or hosted images (meta box images for add/remove)
+   'use_with_theme' => false                        //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+);
+
+$my_meta = new Tax_Meta_Class($config_authors);
+$my_meta->addText('institution' ,array('name'=> 'Institution Name'));
+$my_meta->Finish();
 
 

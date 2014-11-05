@@ -59,7 +59,11 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<?php
 		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all"));
 		foreach ( $authors as $author ) {
+			$school = get_tax_meta($author->term_id, 'institution');
 			echo '<meta name="citation_author" content="' . $author->name . '">';
+			if($school){
+			  echo '<meta name="citation_author_institution" content="' . $school . '">';
+			}
 		};
 
     $foot_options = get_option( 'my-footer-options' );
@@ -155,7 +159,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <div class="form-group" role="form">
         	<?php if ( is_active_sidebar( 'site-search' ) ) : ?>
         		<?php dynamic_sidebar( 'site-search' ); ?>
-        		<button type="submit" class="btn btn-default" id="sub"><i class="fa fa-search"></i></button>
+        		<button type="submit" class="btn btn-default controlls-row" id="sub"><i class="fa fa-search"></i></button>
         	<?php endif; ?>
         </div>
       </form>
