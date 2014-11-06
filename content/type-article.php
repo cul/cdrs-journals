@@ -88,32 +88,49 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		
 
 		<h1 class="entry-title"><?php the_title() ?></h1>
-	<h2 class="authors">
+		<div class="auth_div">
 	<?php    
         
         
   		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$moreAuthors = array();
+  		
+  		$schools = array();
+  		$num = 1;
+  		$auth_count = 1;
+  		$school_count = 1;
+
   		if($authors){
            foreach ( $authors as $author ) {
+	           $their_school = get_tax_meta($author->term_id, 'institution');
+	           if(!empty($their_school) && $their_school != NULL && !$schools[$their_school]){
+	           	 $schools[$their_school] = $num;
+	           	 ++$num;
+	           }
+	           	
+	    		// The $term is an object, so we don't need to specify the $taxonomy.
+	    		$term_link = get_term_link( $author );
+	    		
+	    		// If there was an error, continue to the next term.
+				if ( is_wp_error( $term_link ) ) {
+					continue;
+				}
 
-    		// The $term is an object, so we don't need to specify the $taxonomy.
-    		$term_link = get_term_link( $author );
-    		
-    		// If there was an error, continue to the next term.
-			if ( is_wp_error( $term_link ) ) {
-				continue;
+
+				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '') . '</h2>';	
+				++$auth_count;
 			}
-
-    		// We successfully got a link. Print it out.
-    		array_push( $moreAuthors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
 		}
-		echo implode(', ', $moreAuthors);
+		echo '<br><br>';
+		
+ 		foreach ($schools as $school => $number) {
+ 			echo '<h3 class="schools">' . $number . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h3>';
+ 			++$school_count;
+ 		}
 
- 
    
-   }?>
-	</h2>
+   ?>
+</div>
 	<div class="library_data">
 	<?php
 		$options = get_option( 'my-theme-options' );
