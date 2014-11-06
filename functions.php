@@ -524,7 +524,7 @@ function authors_meta_box( $object, $box ) {
   ?>
 
   <p>
-   <textarea id="authors_add" name="authors_add" value="">
+   <textarea id="authors_add" name="authors_add" value="" cols="50" rows="5">
     <?php 
 
      $the_authors =  wp_get_object_terms($post->ID, 'authors', array('orderby' => 'term_order'));
@@ -532,17 +532,17 @@ function authors_meta_box( $object, $box ) {
       foreach ($the_authors as $the_author) {
         $school = get_tax_meta($the_author->term_id, 'institution');
         if(!empty($school)){
-          array_push($authors_schools, $the_author->name . ":" . $school);
+          array_push($authors_schools, $the_author->name . "(" . $school . ")");
         }else{
           array_push($authors_schools, $the_author->name);
         }
         
       }
-      echo implode(", ", $authors_schools);
+      echo implode(": ", $authors_schools);
   
     ?>
   </textarea></br>
-  <p>Separate authors with a comma. If adding an author's institution, please separate that from the author with a colon</p>
+  <p>Separate authors with a colon. If adding an author's institution, please enter that information next to the author's name in parenthesis.</p>
    <input type="submit" value="add" id="add_authors">
   </p>
 <?php }
@@ -556,21 +556,21 @@ function authors_save($post_id){
 
 
   $my_data = sanitize_text_field( $_POST['authors_add'] );
-  $more_authors = explode(",", $my_data);
+  $more_authors = explode(":", $my_data);
   $id_array = array();
   
   // sets the authors for the article, and creates the term if it doesn't exist
   foreach ($more_authors as $author) {
-    $school_name = explode(":", $author);
+    $school_name = explode("(", $author);
     $the_term = term_exists($school_name[0], 'authors');
     $their_school = get_tax_meta($author->term_id, 'institution');
 
     if($the_term !== 0 && $the_term !== null){
-      update_tax_meta($the_term['term_id'],'institution',$school_name[1]);
+      update_tax_meta($the_term['term_id'],'institution', chop($school_name[1], ")"));
       array_push($id_array, intval($the_term['term_id']));
     }else{
       $new_term = wp_insert_term($school_name[0], 'authors');
-      update_tax_meta($new_term['term_id'],'institution',$school_name[1]);
+      update_tax_meta($new_term['term_id'],'institution', chop($school_name[1], ")"));
       array_push($id_array, $new_term['term_id'] );
     }
    

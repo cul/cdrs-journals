@@ -122,9 +122,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			}
 		}
 		echo '<br><br>';
-		
+
  		foreach ($schools as $school => $number) {
- 			echo '<h3 class="schools">' . $number . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h3>';
+ 			echo '<h5 class="schools">' . $number . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h5>';
  			++$school_count;
  		}
 
