@@ -138,12 +138,21 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         </div>
       </form>
       
+      <form class="navbar-form navbar-right" id="home-search-top" role="search">
+        <div class="form-group">
+          <?php if ( is_active_sidebar( 'site-search' ) ) : ?>
+            <?php dynamic_sidebar( 'site-search' ); ?>
+            <button type="submit" class="btn btn-default" id="searchsubmit"><i class="fa fa-search"></i></button>
+          <?php endif; ?>
+        </div>
+      </form>
         
 </nav>
 
 <script type="text/javascript">
 
 jQuery("#home-search").appendTo("#cujo-home-navbar");
+jQuery("#home-search-top").appendTo("#bs-example-navbar-collapse-1");
 
 jQuery("#twitter-link").appendTo("#menu-homepage-nav");
 	
