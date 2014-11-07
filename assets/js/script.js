@@ -48,6 +48,7 @@ if(window.innerWidth < 766){
 jQuery("#s").addClass("form-control");
 jQuery("input#searchsubmit").remove();
 jQuery("#site-search .screen-reader-text").remove();
+jQuery("#home-search-top .screen-reader-text").remove();
 jQuery("#s").unwrap();
 jQuery("#s").unwrap();
 
@@ -62,7 +63,7 @@ jQuery("#sub").on("click", function(){
   window.location.href = new_url;
 });
 
-jQuery(".menu_article_submit a").append("<img id='nav_arrow' src='wp-content/themes/cdrs_journals/assets/img/extlink.png'>");
+jQuery(".menu_article_submit a").append("<img id='nav_arrow' src='/wp-content/themes/cdrs_journals/assets/img/extlink.png'>");
 	
 	
 });
