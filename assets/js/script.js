@@ -60,8 +60,9 @@ jQuery("#sub").on("click", function(){
   var new_url = url.concat(jQuery("#s").val());
 //   jQuery.load(new_url);
   window.location.href = new_url;
-})
-	
+});
+
+jQuery(".menu_article_submit a").append("<img id='nav_arrow' src='wp-content/themes/cdrs_journals/assets/img/extlink.png'>");
 	
 	
 });
