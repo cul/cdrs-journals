@@ -26,6 +26,7 @@ h1{
 h3{
 	
 	font-weight: 300;
+	font-size: 1.2em;
 }
 
 #cdrs_logo_footer h5{
@@ -142,11 +143,13 @@ footer{
 h2{ 
 	
 	font-weight: 500;
+	font-size: 1.5em;
 }
 
 h1{
 	
 	font-weight: 700;
+	font-size: 1.8em;
 }
 
 p.tagline{
@@ -499,5 +502,12 @@ h5.schools{
   	max-width: 100%;
   }
 
+
+}
+
+@media (max-width: 480px) { 
+        body {
+          font-size: 16px;
+        }
 
 }
