@@ -171,6 +171,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			);
 			wp_link_pages($args);
 		?>
+		<?php previous_post(); ?>    <?php next_post(); ?>
+
 	</div>
 
 	<div class="entry-footer entry-meta">
