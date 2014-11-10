@@ -538,7 +538,7 @@ function authors_meta_box( $object, $box ) {
         }
         
       }
-      echo implode(": ", $authors_schools);
+      echo implode("; ", $authors_schools);
   
     ?>
   </textarea></br>
@@ -556,7 +556,7 @@ function authors_save($post_id){
 
 
   $my_data = sanitize_text_field( $_POST['authors_add'] );
-  $more_authors = explode(":", $my_data);
+  $more_authors = explode(";", $my_data);
   $id_array = array();
   
   // sets the authors for the article, and creates the term if it doesn't exist
