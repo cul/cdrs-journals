@@ -499,7 +499,7 @@ add_action('admin_menu', 'remove_default_authors_meta');
 
 //add custom authors metabox to article page
 add_action( 'load-post.php', 'authors_setup' );
-add_action( 'load-post-new.php', 'author_setup' );
+add_action( 'load-post-new.php', 'authors_setup' );
 
 function authors_setup() {
   add_action( 'add_meta_boxes', 'authors_meta_boxes' );
@@ -594,5 +594,9 @@ $config_authors = array(
 $my_meta = new Tax_Meta_Class($config_authors);
 $my_meta->addText('institution' ,array('name'=> 'Institution Name'));
 $my_meta->Finish();
+
+
+
+
 
 
