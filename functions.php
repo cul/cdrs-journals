@@ -542,7 +542,7 @@ function authors_meta_box( $object, $box ) {
   
     ?>
   </textarea></br>
-  <p>Separate authors with a colon. If adding an author's institution, please enter that information next to the author's name in parenthesis.</p>
+  <p>Separate authors with a semicolon. If adding an author's institution, please enter that information next to the author's name in parenthesis.</p>
    <input type="submit" value="add" id="add_authors">
   </p>
 <?php }
