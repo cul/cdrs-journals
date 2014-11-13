@@ -5,7 +5,7 @@ jQuery( document ).ready(function() {
 	
 	
   jQuery("body.home #masthead").waypoint(function() {
-  jQuery("nav").toggle();
+  jQuery("nav").fadeToggle( "slow", "linear" );
   }, {
   offset: function() {
     return -jQuery(this).height();
