@@ -595,7 +595,15 @@ $my_meta = new Tax_Meta_Class($config_authors);
 $my_meta->addText('institution' ,array('name'=> 'Institution Name'));
 $my_meta->Finish();
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
 
+function wpse_wpautop_nobr( $content ) {
+    return wpautop( $content, false );
+}
+
+add_filter( 'the_content', 'wpse_wpautop_nobr' );
+add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
 
 
 
