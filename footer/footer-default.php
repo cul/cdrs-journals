@@ -35,15 +35,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 			<div class="col-sm-4" id="cdrs_logo_footer">
 				<h5 class="partner" >Published in partnership with</h5>
-				<a href="http://cdrs.columbia.edu">
-					<div id="cdrs_logo_space">
-                        <div class="col-xs-6" id="cdrs_crab">
-						<img src="<?php echo get_template_directory_uri() ?>/assets/img/cdrs-icon.png" alt="cdrs logo"  />
-						</div>
-                        <div class="col-xs-6" id="cdrs_footer_text">
-                        <h4>CDRS</h4>
-					   </div>
-					</div></br>
+				<a href="http://cdrs.columbia.edu">	
                     <div id="cdrs_full"><h5>
 					Center For Digital Research & Scholarship</h5>
 					<span class="small"><h6>Columbia University Libraries/Information Services</h6></span>

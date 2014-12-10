@@ -74,7 +74,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<?php $sections = wp_get_post_terms($post->ID, 'sections'); 
 			if(!empty($sections)){
 				foreach ($sections as $section) {
-					echo '<h3>'. $section->name . '</h3>';
+				echo '<h3 class="super"><span class="super-l">' . $section->name. '</span><span class="super-r">'.$issue_link.'</h3>';
 				}
 			}else{
 				echo '<h3 class="super"><span class="super-l">Article</span><span class="super-r">'.$issue_link.'</h3>';
@@ -162,17 +162,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	</header>
 	<div class="entry-content">
-		<?php
-			the_content('<span class="more-link">'.__('Continued&hellip;', 'carrington-blueprint').'</span>');
-			$args = array(
-				'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-blueprint'),
-				'after' => "</p>\n",
-				'next_or_number' => 'number'
-			);
-			wp_link_pages($args);
-		?>
-		<?php previous_post(); ?>    <?php next_post(); ?>
-
+<!-- 		<?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?><br><br>    <?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?>
+ -->
 	</div>
 
 	<div class="entry-footer entry-meta">
@@ -201,6 +192,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		$options = get_option( 'social-media-options' );
 	    $twitter_name =  $options['twitter_name'];
+	    $fb_name = $options['fb_name'];
+	    $linked_in = $options['linkedin_name'];
 	    $link = get_permalink();
 
  ?>
@@ -215,6 +208,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    if($twitter_name){
 	?>
 <a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+	<?php } 
+		if($fb_name){
+	?>
+<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <i class="fa fa-facebook"></i>&nbsp;Facebook</a>
 	<?php } ?>
+<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
+
 </div>
 </div>

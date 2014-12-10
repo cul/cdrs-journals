@@ -66,7 +66,9 @@ jQuery("#sub").on("click", function(){
   window.location.href = new_url;
 });
 
-jQuery(".menu_article_submit a").append("<img id='nav_arrow' src='/wp-content/themes/cdrs-journals/assets/img/extlink.png'>");
+window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
+
+
 	
 	
 });
