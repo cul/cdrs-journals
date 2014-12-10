@@ -160,6 +160,7 @@ jQuery("#home-search").appendTo("#cujo-home-navbar");
 jQuery("#home-search-top").appendTo("#bs-example-navbar-collapse-1");
 
 jQuery("#twitter-link").appendTo("#menu-homepage-nav");
+jQuery("#fb-link").appendTo("#menu-homepage-nav");
 	
 </script>
 
