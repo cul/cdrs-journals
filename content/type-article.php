@@ -193,6 +193,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		$options = get_option( 'social-media-options' );
 	    $twitter_name =  $options['twitter_name'];
 	    $fb_name = $options['fb_name'];
+	    $linked_in = $options['linkedin_name'];
 	    $link = get_permalink();
 
  ?>
@@ -212,5 +213,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	?>
 <a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <i class="fa fa-facebook"></i>&nbsp;Facebook</a>
 	<?php } ?>
+<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
+
 </div>
 </div>

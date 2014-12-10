@@ -123,6 +123,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
    <?php $options = get_option( 'social-media-options' );
           $twitter_name =  $options['twitter_name'];
           $fb_name = $options['fb_name']; 
+          $linked_in = $options['linkedin_name'];
     ?>
 
 
@@ -130,7 +131,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     <li id="twitter-link"  class="menu-item"><a href="http://twitter.com/<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i></a></li>
     <?php endif; 
     if($fb_name !== ""): ?>
-    <li id="twitter-link"  class="menu-item"><a href="http://facebook.com/<?php echo $fb_name ?>" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+    <li id="fb-link"  class="menu-item"><a href="http://facebook.com/<?php echo $fb_name ?>" target="_blank"> <i class="fa fa-facebook"></i></a></li>
   <?php endif; ?>
 
        <form class="navbar-form navbar-right" id="home-search" role="search">
