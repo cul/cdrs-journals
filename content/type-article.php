@@ -192,6 +192,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		$options = get_option( 'social-media-options' );
 	    $twitter_name =  $options['twitter_name'];
+	    $fb_name = $options['fb_name'];
 	    $link = get_permalink();
 
  ?>
@@ -206,6 +207,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    if($twitter_name){
 	?>
 <a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+	<?php } 
+		if($fb_name){
+	?>
+<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <i class="fa fa-facebook"></i>&nbsp;Facebook</a>
 	<?php } ?>
 </div>
 </div>
