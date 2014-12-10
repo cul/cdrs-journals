@@ -66,6 +66,9 @@ jQuery("#sub").on("click", function(){
   window.location.href = new_url;
 });
 
+window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
+
+
 	
 	
 });
