@@ -595,6 +595,42 @@ $my_meta = new Tax_Meta_Class($config_authors);
 $my_meta->addText('institution' ,array('name'=> 'Institution Name'));
 $my_meta->Finish();
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+function wpse_wpautop_nobr( $content ) {
+    return wpautop( $content, false );
+}
+
+add_filter( 'the_content', 'wpse_wpautop_nobr' );
+add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
+
+function wpse73190_gist_adjacent_post_where($sql) {
+  if ( !is_main_query() || !is_singular() )
+    return $sql;
+
+  $the_post = get_post( get_the_ID() );
+  $patterns = array();
+  $patterns[] = '/post_date/';
+  $patterns[] = '/\'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\'/';
+  $replacements = array();
+  $replacements[] = 'menu_order';
+  $replacements[] = $the_post->menu_order;
+  return preg_replace( $patterns, $replacements, $sql );
+}
+add_filter( 'get_next_post_where', 'wpse73190_gist_adjacent_post_where' );
+add_filter( 'get_previous_post_where', 'wpse73190_gist_adjacent_post_where' );
+
+function wpse73190_gist_adjacent_post_sort($sql) {
+  if ( !is_main_query() || !is_singular() )
+    return $sql;
+
+  $pattern = '/post_date/';
+  $replacement = 'menu_order';
+  return preg_replace( $pattern, $replacement, $sql );
+}
+add_filter( 'get_next_post_sort', 'wpse73190_gist_adjacent_post_sort' );
+add_filter( 'get_previous_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 
 
 

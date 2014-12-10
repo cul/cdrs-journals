@@ -162,17 +162,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 	</header>
 	<div class="entry-content">
-		<?php
-			the_content('<span class="more-link">'.__('Continued&hellip;', 'carrington-blueprint').'</span>');
-			$args = array(
-				'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-blueprint'),
-				'after' => "</p>\n",
-				'next_or_number' => 'number'
-			);
-			wp_link_pages($args);
-		?>
-		<?php previous_post(); ?>    <?php next_post(); ?>
-
+<!-- 		<?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?><br><br>    <?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?>
+ -->
 	</div>
 
 	<div class="entry-footer entry-meta">
