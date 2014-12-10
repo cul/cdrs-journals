@@ -74,7 +74,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<?php $sections = wp_get_post_terms($post->ID, 'sections'); 
 			if(!empty($sections)){
 				foreach ($sections as $section) {
-					echo '<h3>'. $section->name . '</h3>';
+				echo '<h3 class="super"><span class="super-l">' . $section->name. '</span><span class="super-r">'.$issue_link.'</h3>';
 				}
 			}else{
 				echo '<h3 class="super"><span class="super-l">Article</span><span class="super-r">'.$issue_link.'</h3>';
