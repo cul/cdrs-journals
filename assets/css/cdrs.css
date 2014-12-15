@@ -404,6 +404,18 @@ h5.schools{
 	margin-bottom: 5px;
 }
 
+.featured_image{
+	text-align: center;
+}
+
+.featured_img_issue{
+	padding-top: 20px;
+}
+
+.featured_image a img{
+	max-width: 100%;
+}
+
 
 @media print {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {

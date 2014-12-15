@@ -80,10 +80,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				echo '<h3 class="super"><span class="super-l">Article</span><span class="super-r">'.$issue_link.'</h3>';
 			}
 
-		if ( has_post_thumbnail() ) {
-				echo the_post_thumbnail('full');
-		}
-
 		?>
 		
 
@@ -159,9 +155,19 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   		
 	?>
 	</div>
+	<div class="featured_image col-sm-12">
+		<?php
+		if ( has_post_thumbnail() ) {
+			    the_post_thumbnail('full');
+				echo '<h3 class="featured_image_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</h3>';
+				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		}
+		?>
+	</div>
 
 	</header>
 	<div class="entry-content">
+		<?php the_content() ?>
 <!-- 		<?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?><br><br>    <?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?>
  -->
 	</div>

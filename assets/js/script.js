@@ -68,6 +68,11 @@ jQuery("#sub").on("click", function(){
 
 window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
+var source = jQuery(".featured_image").find("img").attr("src");
+jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fancybox'></a>");
+
+
+
 
 	
 	
