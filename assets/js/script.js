@@ -58,7 +58,7 @@ jQuery("#home-search #s").unwrap();
 
 
 //hackey article header search fix
-var url = "http://curj-dev.journals.cdrs.columbia.edu/?s=";
+var url = "http://" + window.location.host + "/?s=";
 jQuery("#sub").on("click", function(){
   event.preventDefault();
   var new_url = url.concat(jQuery("#s").val());
