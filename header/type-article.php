@@ -175,6 +175,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <script type="text/javascript">
 
 jQuery("#site-search").appendTo("#cujo-navbar");
+
 	
 </script>
 

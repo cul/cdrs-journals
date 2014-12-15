@@ -57,20 +57,25 @@ jQuery("#home-search #s").unwrap();
 
 
 
-//hackey article header search fix
-var url = "http://" + window.location.host + "/?s=";
-jQuery("#sub").on("click", function(){
-  event.preventDefault();
-  var new_url = url.concat(jQuery("#s").val());
-//   jQuery.load(new_url);
-  window.location.href = new_url;
-});
+
 
 window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
 
-	
+jQuery("#sub").on("click", function(){
+  event.preventDefault();
+  var url = "http://" + window.location.host + "/?s=";
+  var new_url = url.concat(jQuery("#s").val());
+//   jQuery.load(new_url);
+  window.location.href = new_url;
+});
 	
 });
 
-
+jQuery("#sub").on("click", function(){
+  event.preventDefault();
+  var url = "http://" + window.location.host + "/?s=";
+  var new_url = url.concat(jQuery("#s").val());
+//   jQuery.load(new_url);
+  window.location.href = new_url;
+});
