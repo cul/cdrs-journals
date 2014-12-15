@@ -164,6 +164,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="entry-content">
 <!-- 		<?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?><br><br>    <?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?>
  -->
+ 	<?php the_content() ?>
 	</div>
 
 	<div class="entry-footer entry-meta">
