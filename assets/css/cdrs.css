@@ -367,9 +367,13 @@ img.wp-post-image {
 .entry-caption {
 	font-style: italic;
 	font-size: 14px;
- 
-	line-height: 2;
+	line-height: 1.2;
 	color: #757575;
+	text-align: justify;
+}
+
+div .wp-caption{
+	background: #EBEBEB;
 }
 
 
@@ -406,6 +410,7 @@ h5.schools{
 
 .featured_image{
 	text-align: center;
+	padding-top: 15px;
 }
 
 .featured_img_issue{
