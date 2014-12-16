@@ -96,7 +96,12 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <img src="<?php $logo = get_option('logo_url');
    echo $logo ?>" class='front-cover'> 
 
+<?php 
+  $options = get_option( 'general-options' );
+  if($options['site_title_setting'] == "yes"){ 
+?>
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
+<?php } ?>
 
 <p class="tagline col-sm-10 col-sm-offset-1">
 
