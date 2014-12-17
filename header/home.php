@@ -40,7 +40,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
   <link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<script src="//use.typekit.net/gyz5oea.js"></script>
+	<script src="//use.typekit.net/zum2nkz.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->
@@ -96,7 +96,12 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <img src="<?php $logo = get_option('logo_url');
    echo $logo ?>" class='front-cover'> 
 
+<?php 
+  $options = get_option( 'general-options' );
+  if($options['site_title_setting'] == "yes"){ 
+?>
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
+<?php } ?>
 
 <p class="tagline col-sm-10 col-sm-offset-1">
 

@@ -40,8 +40,8 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-		<script src="//use.typekit.net/gyz5oea.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
+		<script src="//use.typekit.net/zum2nkz.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 
 <!-- 	adding meta tags  -->
 
@@ -175,6 +175,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <script type="text/javascript">
 
 jQuery("#site-search").appendTo("#cujo-navbar");
+
 	
 </script>
 

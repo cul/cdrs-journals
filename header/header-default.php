@@ -40,7 +40,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
-	<script src="//use.typekit.net/gyz5oea.js"></script>
+	<script src="//use.typekit.net/zum2nkz.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 
 	
@@ -93,11 +93,11 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 </nav>
 
 
-  <form class="navbar-form navbar-right" id="site-search" role="search">
+  <form class="navbar-form navbar-right form-inline" id="site-search" role="search">
         <div class="form-group">
           <?php if ( is_active_sidebar( 'site-search' ) ) : ?>
             <?php dynamic_sidebar( 'site-search' ); ?>
-            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-default controlls-row" id="sub"><i class="fa fa-search"></i></button>
           <?php endif; ?>
         </div>
       </form>
@@ -107,6 +107,8 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <script type="text/javascript">
 
 jQuery("#site-search").appendTo("#cujo-navbar");
+
+
 	
 </script>
 <!-- <h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'carrington-blueprint'); ?>"><?php bloginfo('name'); ?></a></h1> -->

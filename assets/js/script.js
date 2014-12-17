@@ -57,14 +57,19 @@ jQuery("#home-search #s").unwrap();
 
 
 
-//hackey article header search fix
-var url = "http://curj-dev.journals.cdrs.columbia.edu/?s=";
+
+
+window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
+
+
 jQuery("#sub").on("click", function(){
   event.preventDefault();
+  var url = "http://" + window.location.host + "/?s=";
   var new_url = url.concat(jQuery("#s").val());
 //   jQuery.load(new_url);
   window.location.href = new_url;
 });
+<<<<<<< HEAD
 
 window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
@@ -75,7 +80,15 @@ jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fanc
 
 
 	
+=======
+>>>>>>> fae5fa1d99e47be843ba5ef3fa9fb9868e7fb63d
 	
 });
 
-
+jQuery("#sub").on("click", function(){
+  event.preventDefault();
+  var url = "http://" + window.location.host + "/?s=";
+  var new_url = url.concat(jQuery("#s").val());
+//   jQuery.load(new_url);
+  window.location.href = new_url;
+});
