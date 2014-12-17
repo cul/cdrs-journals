@@ -19,16 +19,27 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 
-<article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
-	<header class="entry-header">
-		<div class="col-sm-3 featured_img_issue">
-		<?php
-			    the_post_thumbnail('thumbnail');
-		?>
-		</div>
-		<div class="col-sm-9 show-thumb-in-list">
-		<h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
-		<h3 class="authors">
+<article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix show-thumb-in-list') ?>>
+
+<header class="entry-header">
+
+<?php
+if ( has_post_thumbnail() ) {
+	
+	echo '<div class="list-thumb-wrap">';
+     the_post_thumbnail('thumbnail');
+     echo '</div>';
+     
+     }
+?>
+	 
+	 
+<h2 class="entry-title">
+	<a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a>
+</h2>
+
+
+<h3 class="authors">
 	<?php    
   		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$more_authors = array();
@@ -50,20 +61,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		echo implode(', ', $more_authors);
    }?>
   
-	</h3>
-</div>
-		<?php if('article' != get_post_type()){
-		  echo the_time(get_option('date_format')); 
-		}?>
-	</header>
+</h3>
+ 
+</header>
 
-<!-- 	hide/show abstract, or just show depending on if article, or post -->
-	<div class="entry-content">
-	  	<?php if('article' != get_post_type()){
-	    	 the_excerpt(); 
-		}?>
-	</div>
-	
+ 	
 </article><!-- .post -->
 
 
