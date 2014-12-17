@@ -1,8 +1,10 @@
 body{
 	
+/*
 font-family: "aktiv-grotesk-std";
 font-family: "freight-sans-pro";
 font-family: "museo-sans";
+*/
 font-family: "proxima-nova";
 font-size: 20px;
 font-weight: 300;
@@ -532,3 +534,17 @@ h5.schools{
         }
 
 }
+article.show-thumb-in-list{
+	
+	position: relative;
+	text-align: left;
+}
+
+article.show-thumb-in-list div.list-thumb-wrap{
+	
+	float: left;
+	margin-right: 1em;
+	height: 150px;
+}
+
+ 
