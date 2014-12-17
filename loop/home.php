@@ -32,8 +32,12 @@ if (have_posts()) {
 			$current_section = "Articles";
 			echo '<h3 class="section-label">Articles</h3>';
 		}	
-		cfct_excerpt();
-		
+		$options = get_option('general-options');
+		if($options['featured_image_setting'] == "yes"){
+			get_template_part( 'excerpt/excerpt', 'featured' );
+		}else{
+			cfct_excerpt();
+		}		
 	}
 }
 

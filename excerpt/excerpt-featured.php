@@ -21,7 +21,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
 	<header class="entry-header">
-		<div class="col-sm-12">
+		<div class="col-sm-3 featured_img_issue">
+		<?php
+			    the_post_thumbnail('thumbnail');
+		?>
+		</div>
+		<div class="col-sm-9 show-thumb-in-list">
 		<h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
 		<h3 class="authors">
 	<?php    
