@@ -18,9 +18,15 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
+$options = get_option('general-options');
+if($options['featured_image_setting'] == "yes"){
+	$featured_class = "list-thumbs";
+}else{
+	$featured_class = "";
+}
 ?>
 
-<div id="primary" class="col-sm-8 col-sm-offset-2">
+<div id="primary" class="col-sm-9 col-sm-offset-1 <?php echo $featured_class ?>">
 	<h1 class="archive-title"><?php
 		if (is_day()) {
 			printf(__('Daily Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date() . '</span>');
