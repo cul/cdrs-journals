@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 
-<article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
+<article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix show-thumb-in-list') ?>>
 
 <header class="entry-header">
 
