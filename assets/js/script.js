@@ -69,19 +69,12 @@ jQuery("#sub").on("click", function(){
 //   jQuery.load(new_url);
   window.location.href = new_url;
 });
-<<<<<<< HEAD
 
-window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
 var source = jQuery(".featured_image").find("img").attr("src");
 jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fancybox'></a>");
 
 
-
-
-	
-=======
->>>>>>> fae5fa1d99e47be843ba5ef3fa9fb9868e7fb63d
 	
 });
 
