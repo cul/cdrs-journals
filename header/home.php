@@ -40,7 +40,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
   <link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<script src="//use.typekit.net/gyz5oea.js"></script>
+	<script src="//use.typekit.net/zum2nkz.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->
