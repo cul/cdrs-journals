@@ -129,7 +129,7 @@ function cfct_load_assets() {
 
 	// Styles
 	wp_enqueue_style('styles', $cfct_assets_url . 'css/bootstrap.min.css', array(), CFCT_URL_VERSION);
-	wp_enqueue_style('fontawesome', $cfct_assets_url . 'fonts/font-awesome/css/font-awesome.css', array(), CFCT_URL_VERSION);	
+	wp_enqueue_style('fontawesome', $cfct_assets_url . 'fonts/font-awesome/css/font-awesome.css', array(), CFCT_URL_VERSION);
 	wp_enqueue_style('cdrs', $cfct_assets_url . 'css/cdrs.css', array(), CFCT_URL_VERSION);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -258,7 +258,7 @@ function register_taxonomy_sections() {
         'show_in_nav_menus' => true,
         'show_ui' => true,
         'show_tagcloud' => true,
-        'show_admin_column' => false,
+        'show_admin_column' => true,
         'hierarchical' => true,
 
         'rewrite' => true,
@@ -518,14 +518,14 @@ function authors_meta_boxes() {
   );
 }
 
-function authors_meta_box( $object, $box ) { 
+function authors_meta_box( $object, $box ) {
   global $post;
-  wp_nonce_field( basename( __FILE__ ), 'authors_class_nonce' );     
+  wp_nonce_field( basename( __FILE__ ), 'authors_class_nonce' );
   ?>
 
   <p>
    <textarea id="authors_add" name="authors_add" value="" cols="50" rows="5">
-    <?php 
+    <?php
 
      $the_authors =  wp_get_object_terms($post->ID, 'authors', array('orderby' => 'term_order'));
      $authors_schools = array();
@@ -536,10 +536,10 @@ function authors_meta_box( $object, $box ) {
         }else{
           array_push($authors_schools, $the_author->name);
         }
-        
+
       }
       echo implode("; ", $authors_schools);
-  
+
     ?>
   </textarea></br>
   <p>Separate authors with a semicolon. If adding an author's institution, please enter that information next to the author's name in parenthesis.</p>
@@ -558,7 +558,7 @@ function authors_save($post_id){
   $my_data = sanitize_text_field( $_POST['authors_add'] );
   $more_authors = explode(";", $my_data);
   $id_array = array();
-  
+
   // sets the authors for the article, and creates the term if it doesn't exist
   foreach ($more_authors as $author) {
     $school_name = explode("(", $author);
@@ -573,11 +573,11 @@ function authors_save($post_id){
       update_tax_meta($new_term['term_id'],'institution', chop($school_name[1], ")"));
       array_push($id_array, $new_term['term_id'] );
     }
-   
+
   }
 
   wp_set_object_terms( $post_id, $id_array, 'authors');
-  
+
 
 }
 

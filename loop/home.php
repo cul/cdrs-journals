@@ -17,7 +17,7 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC'); 
+query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');
 
 if (have_posts()) {
 	$current_section = null;
@@ -27,17 +27,14 @@ if (have_posts()) {
 		$section = wp_get_post_terms($post->ID, 'sections');
 		if(!empty($section) && $section[0]->name != $current_section){
 			$current_section = $section[0]->name;
-			echo '<h3 class="section-label">' . $current_section . '</h3>';
-		} elseif( empty($section) && ($current_section != "Articles")) {
-			$current_section = "Articles";
-			echo '<h3 class="section-label">Articles</h3>';
-		}	
+			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->name, 'sections') . '">' . $section[0]->name . '</a></h3>';
+		}
 		$options = get_option('general-options');
 		if($options['featured_image_setting'] == "yes"){
 			get_template_part( 'excerpt/excerpt', 'featured' );
 		}else{
 			cfct_excerpt();
-		}		
+		}
 	}
 }
 
