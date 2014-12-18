@@ -1,9 +1,11 @@
 jQuery( document ).ready(function() {
-	
-	
-	
-	
-	
+
+if(jQuery("body").hasClass("search-no-results")){
+  jQuery("#primary").append("<p>No Results Found.</p>");
+}
+
+
+
   jQuery("body.home #masthead").waypoint(function() {
   jQuery("nav").toggle();
   }, {
@@ -16,8 +18,8 @@ jQuery( document ).ready(function() {
 
   jQuery("article header").waypoint(function() {
   jQuery("#scrolled-head").toggle();
-  
- 
+
+
   }, {
   offset: function() {
     return -jQuery(this).height();
@@ -26,8 +28,8 @@ jQuery( document ).ready(function() {
 
   jQuery("div#footer_container").waypoint(function() {
   jQuery("#scrolled-head").toggle();
-  
- 
+
+
   }, {
   offset: function() {
     return -jQuery(this).height();
@@ -75,7 +77,6 @@ var source = jQuery(".featured_image").find("img").attr("src");
 jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fancybox'></a>");
 
 
-	
 });
 
 jQuery("#sub").on("click", function(){
@@ -85,3 +86,4 @@ jQuery("#sub").on("click", function(){
 //   jQuery.load(new_url);
   window.location.href = new_url;
 });
+

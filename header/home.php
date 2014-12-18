@@ -32,7 +32,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
 	<?php $current_favicon = get_option('favicon_url');
     if($current_favicon != ""){
-      echo '<link id="the_favicon" rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';  
+      echo '<link id="the_favicon" rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';
     }else{
       echo '<link rel="shortcut icon" href="' .  get_stylesheet_directory_uri() . '/assets/img/favicon.ico"  type="image/x-icon" />';
     }
@@ -60,7 +60,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                 <?php 
+                 <?php
           if(get_option('menu_logo_url')){
             $logo = get_option('menu_logo_url');
           }else{
@@ -90,18 +90,20 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 
 	<header id="masthead" class="row site-header clearfix">
-	 
- 
+
+
 
 <img src="<?php $logo = get_option('logo_url');
-   echo $logo ?>" class='front-cover'> 
+   echo $logo ?>" class='front-cover'>
 
-<?php 
+<?php
   $options = get_option( 'general-options' );
-  if($options['site_title_setting'] == "yes"){ 
+  if($options['site_title_setting'] == "yes"){
 ?>
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
-<?php } ?>
+<?php }else{
+  echo '<br>';
+} ?>
 
 <p class="tagline col-sm-10 col-sm-offset-1">
 
@@ -109,13 +111,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     $str = str_replace('\\', '', $blog_info);
     echo $str;
    ?>
- 
+
 </p>
 
  <nav class="navbar col-sm-12 col-med-8 col-med-offset-2" role="navigation">
-  
+
     <!-- Brand and toggle get grouped for better mobile display -->
-    
+
 
         <?php
             wp_nav_menu( array(
@@ -130,17 +132,17 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-   
+
    <?php $options = get_option( 'social-media-options' );
           $twitter_name =  $options['twitter_name'];
-          $fb_name = $options['fb_name']; 
+          $fb_name = $options['fb_name'];
           $linked_in = $options['linkedin_name'];
     ?>
 
 
     <?php if($twitter_name !== ""): ?>
     <li id="twitter-link"  class="menu-item"><a href="http://twitter.com/<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i></a></li>
-    <?php endif; 
+    <?php endif;
     if($fb_name !== ""): ?>
     <li id="fb-link"  class="menu-item"><a href="http://facebook.com/<?php echo $fb_name ?>" target="_blank"> <i class="fa fa-facebook"></i></a></li>
   <?php endif; ?>
@@ -153,7 +155,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
           <?php endif; ?>
         </div>
       </form>
-      
+
       <form class="navbar-form navbar-right" id="home-search-top" role="search">
         <div class="form-group">
           <?php if ( is_active_sidebar( 'site-search' ) ) : ?>
@@ -162,7 +164,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
           <?php endif; ?>
         </div>
       </form>
-        
+
 </nav>
 
 <script type="text/javascript">
@@ -172,7 +174,7 @@ jQuery("#home-search-top").appendTo("#bs-example-navbar-collapse-1");
 
 jQuery("#twitter-link").appendTo("#menu-homepage-nav");
 jQuery("#fb-link").appendTo("#menu-homepage-nav");
-	
+
 </script>
 
 	</header><!-- #masthead -->
