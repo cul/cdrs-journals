@@ -19,12 +19,36 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 
+<?php
+	
+		global $current_section;
+		//Displaying the section name, defaults to article if none specified
+		$section = wp_get_post_terms($post->ID, 'sections');
+ 
+		if(!empty($section) && $section[0]->name != $current_section){
+			$current_section = $section[0]->name;
+			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'sections') . '">' . $section[0]->name . '</a></h3><br style="clear: both">';
+		}
+	
+	
+	
+	global $options;
+				
+	if($options['featured_image_setting'] == "yes"){
+			
+	if ( has_post_thumbnail() ) {
+	
+		the_post_thumbnail('thumbnail');
+ 
+    }
+     
+    }
+?>
+
 <article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
-	<header class="entry-header">
-		<div class="col-sm-12">
-		<h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
-		<h3 class="authors">
-	<?php    
+<h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
+<h3 class="authors">
+<?php    
   		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$more_authors = array();
   		if($authors){
@@ -46,18 +70,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
    }?>
   
 	</h3>
-</div>
-		<?php if('article' != get_post_type()){
-		  echo the_time(get_option('date_format')); 
-		}?>
-	</header>
+ 
 
-<!-- 	hide/show abstract, or just show depending on if article, or post -->
-	<div class="entry-content">
-	  	<?php if('article' != get_post_type()){
-	    	 the_excerpt(); 
-		}?>
-	</div>
+ 
 	
 </article><!-- .post -->
 

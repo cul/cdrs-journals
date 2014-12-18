@@ -539,12 +539,41 @@ article.show-thumb-in-list{
 	position: relative;
 	text-align: left;
 }
-
-article.show-thumb-in-list div.list-thumb-wrap{
+ul.issue-index{
+	
+	list-style-type: none;
+	padding: 0;
+}
+ul.issue-index-thumbs li img{
 	
 	float: left;
 	margin-right: 1em;
 	height: 150px;
 }
 
+ul.issue-index li{
+	
+	margin-top: 2em;
+}
+
+ul.issue-index h3{
+	
+	margin-bottom: 2em;
+}
+ul.issue-index-thumbs li article{
+	text-align: left;
+	margin-left: 180px;
+	
+}
+
+ul.issue-index li a{
+	
+	color: #777;
+}
+
+
+h3.section-label a:hover{
+	
+	text-decoration: none;
+}
  
