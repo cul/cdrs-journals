@@ -21,12 +21,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-9 col-sm-offset-1">
+<div id="primary" class="col-sm-12">
 <h3 class="home-title">Current Issue</h3><br>
 <?php
 
 
 cfct_loop();
+
 cfct_misc('nav-posts'); 
 ?>
 

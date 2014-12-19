@@ -117,10 +117,30 @@ h3.section-label{
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 20px;
+	line-height: 30px;
+/* 	padding-top: 1em; */
 	margin-bottom: 0;
+	 
 /* 	background: rgba(255,255,255,.5); */
-	border-bottom: 1px solid silver;
+/* 	border-top: 4px inset silver; */
 	color: silver;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #ccc;
+	margin-top: 2em;
+ 
+
+}
+
+html{
+	
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.navbar-form{
+	
+	margin-bottom: 0px;
 }
 
 h3.authors{
@@ -129,10 +149,12 @@ h3.authors{
 }
 
 h3.home-title{
-	border-top: 1px solid silver;	
-	border-bottom: 1px solid silver;
-	font-size: 36px;
-	line-height: 46px;
+ 	color: #ccc;
+	font-size: 68px;
+	text-transform: uppercase;
+	margin-top: .5em;
+	margin-bottom: 0em;
+ 
 }
 
 footer{
@@ -341,7 +363,7 @@ h3.home-title{
 }
 body.home h3.section-label{
 	
-	display: inline-block;
+	/* display: inline-block; */
 	
 	
 	
@@ -544,19 +566,27 @@ ul.issue-index{
 	list-style-type: none;
 	padding: 0;
 }
-ul.issue-index-thumbs li img{
+ul.issue-index-thumbs  li img{
 	
 	float: left;
 	margin-right: 1em;
 	height: 150px;
 }
+ 
+ 
+ul.issue-index-thumbs li:nth-child(even) img{
+	
+	float: right;
+	margin-left: 1em;
+	height: 150px;
 
-ul.issue-index li{
+}
+ul.issue-index li + li{
 	
 	margin-top: 2em;
 }
 
-ul.issue-index h3{
+ul.issue-index h3.section-label {
 	
 	margin-bottom: 2em;
 }
@@ -566,14 +596,77 @@ ul.issue-index-thumbs li article{
 	
 }
 
+
+ul.issue-index-thumbs li + li{
+	
+	border-top: 1px solid #eee;
+	padding-top: 2em;
+}
+ul.issue-index-thumbs h2{
+	
+	margin-top: 0;
+}
+
+ul.issue-index-thumbs li:nth-child(even) article{
+
+	margin-left: 2em;
+}
+/*
 ul.issue-index li a{
 	
 	color: #777;
 }
+*/
 
+h3.authors a{
+	
+color: #ccc;
+}
 
+h3.section-label a{
+	
+	color: white;
+}
 h3.section-label a:hover{
 	
 	text-decoration: none;
 }
+
+nav#home-access-nav{
+	
+	display: inline-block;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
  
+}
+div.home-nav-wrap{
+	
+	text-align: center;
+}
+form#home-search{
+	
+	display: inline-block;
+	float: right;
+}
+ 
+p.tagline{
+	text-align: justify;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+h3.issue-label{
+	
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+ul.issue-index{
+	
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}

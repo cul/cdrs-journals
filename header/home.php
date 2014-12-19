@@ -105,7 +105,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
   echo '<br>';
 } ?>
 
-<p class="tagline col-sm-10 col-sm-offset-1">
+<p class="tagline">
 
  <?php $blog_info =  get_option( 'site_desc' );
     $str = str_replace('\\', '', $blog_info);
@@ -114,7 +114,9 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 </p>
 
- <nav class="navbar col-sm-12 col-med-8 col-med-offset-2" role="navigation">
+<div class="home-nav-wrap">
+
+ <nav id="home-access-nav" role="navigation">
 
     <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -147,7 +149,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
     <li id="fb-link"  class="menu-item"><a href="http://facebook.com/<?php echo $fb_name ?>" target="_blank"> <i class="fa fa-facebook"></i></a></li>
   <?php endif; ?>
 
-       <form class="navbar-form navbar-right" id="home-search" role="search">
+       <form class="navbar-form" id="home-search" role="search">
         <div class="form-group">
           <?php if ( is_active_sidebar( 'site-search' ) ) : ?>
             <?php dynamic_sidebar( 'site-search' ); ?>
@@ -167,6 +169,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 </nav>
 
+</div>
 <script type="text/javascript">
 
 jQuery("#home-search").appendTo("#cujo-home-navbar");

@@ -21,7 +21,7 @@ get_header();
 
 ?>
  
-<div id="primary" class="col-sm-10 col-sm-offset-2">
+<div id="primary" class="col-sm-12">
 	<?php
 	// For the loop used, look in /loops
 	cfct_loop();

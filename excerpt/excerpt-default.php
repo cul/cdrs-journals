@@ -19,18 +19,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 
-<?php
-	
-		global $current_section;
-		//Displaying the section name, defaults to article if none specified
-		$section = wp_get_post_terms($post->ID, 'sections');
- 
-		if(!empty($section) && $section[0]->name != $current_section){
-			$current_section = $section[0]->name;
-			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'sections') . '">' . $section[0]->name . '</a></h3><br style="clear: both">';
-		}
-	
-	
+<?php	
 	
 	global $options;
 				
@@ -38,7 +27,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			
 	if ( has_post_thumbnail() ) {
 	
-		the_post_thumbnail('thumbnail');
+		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+	echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+	the_post_thumbnail( 'thumbnail' );
+	echo '</a>';
  
     }
      
