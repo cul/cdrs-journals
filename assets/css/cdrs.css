@@ -550,12 +550,7 @@ h5.schools{
 
 }
 
-@media (max-width: 480px) { 
-        body {
-          font-size: 16px;
-        }
 
-}
 article.show-thumb-in-list{
 	
 	position: relative;
@@ -669,4 +664,35 @@ ul.issue-index{
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+}
+@media (max-width: 767px){
+	.tagline{
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+
+}
+
+@media (max-width: 480px) { 
+        body {
+          font-size: 16px;
+        }
+
+        
+        ul.issue-index-thumbs li img{
+        	float: none;
+        	margin-right: 0px;
+        }
+
+        ul.issue-index-thumbs li:nth-child(even) img{
+        	float: none;
+        	margin-left: 0px;
+        }
+
+        ul.issue-index-thumbs li article{
+			text-align: center;
+			margin-left: 0px;
+			
+		}
+
 }
