@@ -124,7 +124,7 @@ h3.section-label{
 /* 	background: rgba(255,255,255,.5); */
 /* 	border-top: 4px inset silver; */
 	color: silver;
-	width: 40%;
+	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
 	background: #ccc;
@@ -146,6 +146,7 @@ html{
 h3.authors{
 	
 	margin-top: 0;
+	
 }
 
 h3.home-title{
@@ -620,7 +621,7 @@ ul.issue-index li a{
 
 h3.authors a{
 	
-color: #ccc;
+color: #aaa;
 }
 
 h3.section-label a{
@@ -653,7 +654,7 @@ p.tagline{
 	text-align: justify;
 	margin-top: 2em;
 	margin-bottom: 2em;
-	width: 60%;
+	width: 56%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
