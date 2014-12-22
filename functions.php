@@ -565,14 +565,17 @@ function authors_save($post_id){
     $the_term = term_exists($school_name[0], 'authors');
     $their_school = get_tax_meta($author->term_id, 'institution');
 
-    if($the_term !== 0 && $the_term !== null){
-      update_tax_meta($the_term['term_id'],'institution', chop($school_name[1], ")"));
-      array_push($id_array, intval($the_term['term_id']));
-    }else{
-      $new_term = wp_insert_term($school_name[0], 'authors');
-      update_tax_meta($new_term['term_id'],'institution', chop($school_name[1], ")"));
-      array_push($id_array, $new_term['term_id'] );
+    if($school_name[0] !== ""){
+      if($the_term !== 0 && $the_term !== null){
+        update_tax_meta($the_term['term_id'],'institution', chop($school_name[1], ")"));
+        array_push($id_array, intval($the_term['term_id']));
+      }else{
+        $new_term = wp_insert_term($school_name[0], 'authors');
+        update_tax_meta($new_term['term_id'],'institution', chop($school_name[1], ")"));
+        array_push($id_array, $new_term['term_id'] );
+      }
     }
+    
 
   }
 
