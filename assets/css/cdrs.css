@@ -151,7 +151,7 @@ h3.authors{
 
 h3.home-title{
  	color: #ccc;
-	font-size: 68px;
+	font-size: 48px;
 	text-transform: uppercase;
 	margin-top: .5em;
 	margin-bottom: 0em;
@@ -647,12 +647,11 @@ form#home-search{
  
 p.tagline{
 	text-align: justify;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	width: 56%;
+	margin-top: 1px;
+	margin-bottom: 1em;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 h3.issue-label{
 	

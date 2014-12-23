@@ -27,7 +27,7 @@ if (have_posts()) {
 
 
 	 		//Displaying the section name, defaults to article if none specified
-		$section = wp_get_post_terms($post->ID, 'sections');
+		$section = wp_get_post_terms($post->ID, 'issues');
  
 		if(!empty($section) && $section[0]->name != $current_section){
 			if($current_section != null){
@@ -36,7 +36,7 @@ if (have_posts()) {
 				
 			}
 			$current_section = $section[0]->name;
-			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'sections') . '">' . $section[0]->name . '</a></h3><br style="clear: both">';
+			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'issues') . '">' . $section[0]->name . '</a></h3><br style="clear: both">';
 		
 		
 			$options = get_option('general-options');
