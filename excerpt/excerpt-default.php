@@ -24,6 +24,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	global $options;
 				
 	if($options['featured_image_setting'] == "yes"){
+		
 			
 	if ( has_post_thumbnail() ) {
 	

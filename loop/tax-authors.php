@@ -19,6 +19,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 if (have_posts()) {
 	global $current_section;
+	global $options;
 
 	$current_section = null;
 	
