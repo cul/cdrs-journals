@@ -665,6 +665,16 @@ ul.issue-index{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.prev_article{
+	padding-left: 0px;
+}
+.next_article{
+	padding-right: 0px
+}
+.next_article a{
+	float: right;
+}
 @media (max-width: 767px){
 	.tagline{
 		margin-right: 10%;

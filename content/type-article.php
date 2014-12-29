@@ -168,9 +168,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</header>
 	<div class="entry-content">
 		<?php the_content() ?>
-<!-- 		<?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?><br><br>    <?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?>
- -->
 	</div>
+	<div class="col-sm-6 prev_article"><?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?></div>
+	<div class="col-sm-6 next_article"><?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?></div>
+
 
 	<div class="entry-footer entry-meta">
 
