@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', false);
+define('CFCT_DEBUG', true);
 
 /**
  * Theme version.
@@ -531,9 +531,15 @@ function authors_meta_box( $object, $box ) {
      $authors_schools = array();
       foreach ($the_authors as $the_author) {
         $school = get_tax_meta($the_author->term_id, 'institution');
-        if(!empty($school)){
+        $email = get_tax_meta($the_author->term_id, 'email');
+        if(!empty($school) && !empty($email)){
+          array_push($authors_schools, $the_author->name . "(" . $school . ")" . "[" . $email . "]");
+        }elseif( !empty($school) && empty($email)){
           array_push($authors_schools, $the_author->name . "(" . $school . ")");
-        }else{
+        }elseif( empty($school) && !empty($email)){
+          array_push($authors_schools, $the_author->name . "[" . $email . "]");
+        }
+        else{
           array_push($authors_schools, $the_author->name);
         }
 
@@ -542,7 +548,7 @@ function authors_meta_box( $object, $box ) {
 
     ?>
   </textarea></br>
-  <p>Separate authors with a semicolon. If adding an author's institution, please enter that information next to the author's name in parenthesis.</p>
+  <p>Separate authors with a semicolon. If adding an author's institution, please enter that information next to the author's name in parenthesis. When entering an author's email, please enter that information next to the author's name in brackets.</p>
    <input type="submit" value="add" id="add_authors">
   </p>
 <?php }
@@ -561,17 +567,27 @@ function authors_save($post_id){
 
   // sets the authors for the article, and creates the term if it doesn't exist
   foreach ($more_authors as $author) {
-    $school_name = explode("(", $author);
+    if( strpos($author, ")") !== false){
+      $school_name = explode("(", $author);
+      $school = strtok($school_name[1], ')');
+    }else{
+      $school_name = explode("[", $author);
+      $school = "";
+    }
     $the_term = term_exists($school_name[0], 'authors');
     $their_school = get_tax_meta($author->term_id, 'institution');
+    $their_email = explode("[", $author);
+    $email = strtok($their_email[1], ']');
 
     if($school_name[0] !== ""){
       if($the_term !== 0 && $the_term !== null){
-        update_tax_meta($the_term['term_id'],'institution', chop($school_name[1], ")"));
+        update_tax_meta($the_term['term_id'],'institution', $school);
+        update_tax_meta($the_term['term_id'], 'email', $email);
         array_push($id_array, intval($the_term['term_id']));
       }else{
         $new_term = wp_insert_term($school_name[0], 'authors');
-        update_tax_meta($new_term['term_id'],'institution', chop($school_name[1], ")"));
+        update_tax_meta($new_term['term_id'],'institution', $school);
+        update_tax_meta($new_term['term_id'], 'email', $email);
         array_push($id_array, $new_term['term_id'] );
       }
     }

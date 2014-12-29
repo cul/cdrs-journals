@@ -60,9 +60,13 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 		$authors =  wp_get_post_terms($post->ID, 'authors', array("fields" => "all"));
 		foreach ( $authors as $author ) {
 			$school = get_tax_meta($author->term_id, 'institution');
+			$email = get_tax_meta($author->term_id, 'email');
 			echo '<meta name="citation_author" content="' . $author->name . '">';
 			if($school){
 			  echo '<meta name="citation_author_institution" content="' . $school . '">';
+			}
+			if($email){
+			  echo '<meta name="citation_author_email" content="' . $email . '">';
 			}
 		};
 

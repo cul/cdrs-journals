@@ -99,6 +99,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   		if($authors){
            foreach ( $authors as $author ) {
 	           $their_school = get_tax_meta($author->term_id, 'institution');
+	           $their_email = get_tax_meta($author->term_id, 'email');
 	           if(!empty($their_school) && $their_school != NULL && !$schools[$their_school]){
 	           	 $schools[$their_school] = $num;
 	           	 ++$num;
@@ -113,7 +114,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				}
 
 
-				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '') . '</h2>';
+				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ' '  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
 				++$auth_count;
 			}
 		}
