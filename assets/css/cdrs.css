@@ -159,8 +159,8 @@ h3.home-title{
 }
 
 footer{
-	border-top: 4px double silver;
-	margin-top: 60px;
+/*	border-top: 4px double silver;
+	margin-top: 60px;*/
 	padding-top: 40px;
 	margin-bottom: 3em;
 }
@@ -703,6 +703,10 @@ ul.issue-index{
 			text-align: center;
 			margin-left: 0px;
 			
+		}
+
+		ul.issue-index-thumbs  li{
+			text-align: center;
 		}
 
 }

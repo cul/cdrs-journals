@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', true);
+define('CFCT_DEBUG', false);
 
 /**
  * Theme version.
@@ -612,6 +612,8 @@ $config_authors = array(
 
 $my_meta = new Tax_Meta_Class($config_authors);
 $my_meta->addText('institution' ,array('name'=> 'Institution Name'));
+$my_meta->addText('email' ,array('name'=> 'Email'));
+$my_meta->addImage('author_pic',array('name'=> 'Headshot '));
 $my_meta->Finish();
 
 remove_filter( 'the_content', 'wpautop' );
