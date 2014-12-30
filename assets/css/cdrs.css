@@ -170,7 +170,12 @@ h2{
 	font-weight: 500;
 	font-size: 1.5em;
 }
-
+.single-article h2{
+	font-size: 1.0em;
+}
+.single-article h1{
+	font-size: 1.444em;
+}
 h1{
 	
 	font-weight: 700;
@@ -674,6 +679,9 @@ ul.issue-index{
 }
 .next_article a{
 	float: right;
+}
+.author_info{
+	text-align: center;
 }
 @media (max-width: 767px){
 	.tagline{
