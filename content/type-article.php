@@ -173,9 +173,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="entry-content">
 		<?php the_content() ?>
 	</div>
-	<div class="col-sm-6 prev_article"><?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?></div>
-	<div class="col-sm-6 next_article"><?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?></div>
+	<div class="col-sm-6 hidden-sm hidden-xs prev_article"><?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?></div>
+	<div class="col-sm-6 hidden-sm hidden-xs next_article"><?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?></div>
 
+	<div class="col-xs-6 hidden-md hidden-lg prev_article"><?php previous_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-left"></span>', TRUE, ' ', 'issues'); ?></div>
+	<div class="col-xs-6 hidden-md hidden-lg next_article"><?php next_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-right"></span>' , TRUE, ' ', 'issues') ?></div>
 
 	<div class="entry-footer entry-meta">
 
