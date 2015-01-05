@@ -84,6 +84,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 
 		<h1 class="entry-title"><?php the_title() ?></h1>
+		<?php 
+			$post_custom = get_post_custom($post->ID);
+	  		$cc = $post_custom['cc'];
+			if($cc[0]){ ?>
+			  <a href="<?php echo $cc[0] ?>"><img class="cc_icon" src="<?php echo get_template_directory_uri() ?>/assets/img/cc.png" ></a>
+		<?php
+			}
+		?>
 		<div class="auth_div">
 	<?php
 
@@ -130,13 +138,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 </div>
 	<div class="library_data">
 	<?php
-		$options = get_option( 'my-theme-options' );
-    	$color = $options['link_color'];
-
-		$custom_doi = get_post_custom($post->ID);
-  		$the_doi = $custom_doi['doi'];
-  		$citation_info = get_post_custom($post->ID);
-  		$the_citation = $citation_info['citation'];
+  		$the_doi = $post_custom['doi'];
+  		$the_citation = $post_custom['citation'];
 
   		if($the_doi[0]||$the_citation[0]){
 
