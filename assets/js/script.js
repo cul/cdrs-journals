@@ -23,7 +23,7 @@ if(jQuery("body").hasClass("search-no-results")){
   }, {
   offset: function() {
     return -jQuery(this).height();
-  }
+  },
 });
 
   jQuery("div#footer_container").waypoint(function() {
@@ -31,9 +31,7 @@ if(jQuery("body").hasClass("search-no-results")){
 
 
   }, {
-  offset: function() {
-    return -jQuery(this).height();
-  }
+  offset: 'bottom-in-view'
 });
 
 
