@@ -458,8 +458,12 @@ h5.schools{
 	opacity: 0.2;
 }
 
-.mobile_social_media a{
-	margin-right: 5px;
+.mobile_social_media span{
+	text-align: center;
+}
+
+.mobile_social_media{
+	padding-top: 10px;
 }
 
 @media print {
