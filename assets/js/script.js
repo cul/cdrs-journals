@@ -4,6 +4,7 @@ if(jQuery("body").hasClass("search-no-results")){
   jQuery("#primary").append("<p>No Results Found.</p>");
 }
 
+jQuery(".mobile_social_media").insertAfter(".library_data");
 
 
   jQuery("body.home #masthead").waypoint(function() {
@@ -58,7 +59,6 @@ jQuery("#home-search #s").unwrap();
 
 
 
-
 window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
 
@@ -84,4 +84,5 @@ jQuery("#sub").on("click", function(){
 //   jQuery.load(new_url);
   window.location.href = new_url;
 });
+
 
