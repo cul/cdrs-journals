@@ -169,9 +169,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 		?>
 	</div>
-	<div class="featured_image col-xs-21 hidden-md hidden-lg">
+	<div class="featured_image col-xs-12 hidden-md hidden-lg">
 		<?php
-			    the_post_thumbnail();
+			    the_post_thumbnail('large');
 				echo '<h3 class="featured_image_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</h3>';
 				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 		?>

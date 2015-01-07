@@ -57,7 +57,8 @@ jQuery("#home-search #s").unwrap();
 jQuery("#home-search #s").unwrap();
 
 
-
+var source = jQuery(".featured_image").find("img").attr("src");
+jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fancybox'></a>");
 
 window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
@@ -71,8 +72,7 @@ jQuery("#sub").on("click", function(){
 });
 
 
-var source = jQuery(".featured_image").find("img").attr("src");
-jQuery(".featured_image").find("img").wrap("<a href='" + source + "' class='fancybox'></a>");
+
 
 
 });
