@@ -653,53 +653,7 @@ function wpse73190_gist_adjacent_post_sort($sql) {
 add_filter( 'get_next_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 add_filter( 'get_previous_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 
-add_action( 'load-post.php', 'cc_setup' );
-add_action( 'load-post-new.php', 'cc_setup' );
 
-function cc_setup() {
-  add_action( 'add_meta_boxes', 'cc_meta_boxes' );
-  add_action( 'save_post', 'cc_save', 10, 2 );
-}
-
-function cc_meta_boxes() {
-
-  add_meta_box(
-    'cc_box',      // Unique ID
-    esc_html__( 'CC', 'CC' ),    // Title
-    'cc_meta_box',   // Callback function
-    'article',         // Admin page (or post type)
-    'advanced',         // Context
-    'default'         // Priority
-  );
-}
-
-function cc_meta_box( $object, $box ) { ?>
-
-  <?php wp_nonce_field( basename( __FILE__ ), 'cc_class_nonce' ); ?>
-
-  <?php $post_cc  = get_post_custom($post->ID);
-        $cc = $post_cc['cc'];
-  ?>
-
-  <p>
-   <input type="text" id="cc_add" name="cc_add" value="<?php echo $cc[0]; ?>"></br>
-  </p>
-<?php }
-
-function cc_save($post_id){
-    // Check permissions
-    if ( !current_user_can( 'edit_post', $post_id ) )
-        return $post_id;
-if ( ! isset( $_POST['cc_add'] ) ) {
-    return;
-  }
-
-  // Sanitize user input.
-  $my_data = sanitize_text_field( $_POST['cc_add'] );
-
-  // Update the meta field in the database.
-  update_post_meta( $post_id, 'cc', $my_data );
-}
 
 
 

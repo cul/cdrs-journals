@@ -87,9 +87,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<h1 class="entry-title"><?php the_title() ?></h1>
 		<?php 
 			$post_custom = get_post_custom($post->ID);
-	  		$cc = $post_custom['cc'];
-			if($cc[0]){ ?>
-			  <a href="<?php echo $cc[0] ?>"><img class="cc_icon" src="<?php echo get_template_directory_uri() ?>/assets/img/cc.png" ></a>
+			$options = get_option('general-options');
+			$foot_options = get_option( 'my-footer-options' );
+        	$copyright_url = $foot_options['copyright_url'];
+	  		$cc = $options['cc_setting'];
+			if($cc != null){ ?>
+			  <a href="<?php echo $copyright_url ?>"><img class="cc_icon" src="<?php echo get_template_directory_uri() ?>/assets/img/cc.png" ></a>
 		<?php
 			}
 		?>
