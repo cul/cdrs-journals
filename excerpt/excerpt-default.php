@@ -29,7 +29,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	if ( has_post_thumbnail() ) {
 	
 		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
-	echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+	echo '<a href="'. post_permalink($post->ID) . '">';
 	the_post_thumbnail( 'thumbnail' );
 	echo '</a>';
  

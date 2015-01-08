@@ -122,18 +122,19 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 					continue;
 				}
 
-
-				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ' '  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
+				// echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ' '  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
+				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school])? ( count($authors) == 1 ? '' : '<sup>' . $schools[$their_school] . '</sup>')  : ''  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><span class="glyphicon glyphicon-envelope"></span></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
 				++$auth_count;
+
 			}
 		}
-		echo '<br><br>';
 
+		echo '<div class="auths_schools">';
  		foreach ($schools as $school => $number) {
- 			echo '<h5 class="schools">' . $number . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h5>';
+ 			echo '<h5 class="schools">' . ( count($authors) > 1 ? $number : '') . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h5>';
  			++$school_count;
  		}
-
+ 		echo '</div>';
 
    ?>
 </div>
@@ -186,8 +187,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="col-sm-6 hidden-sm hidden-xs prev_article"><?php previous_post_link('%link', 'Previous Article: %title', TRUE, ' ', 'issues'); ?></div>
 	<div class="col-sm-6 hidden-sm hidden-xs next_article"><?php next_post_link('%link', 'Next Article: %title' , TRUE, ' ', 'issues') ?></div>
 
-	<div class="col-xs-6 hidden-md hidden-lg prev_article"><?php previous_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-left"></span>', TRUE, ' ', 'issues'); ?></div>
-	<div class="col-xs-6 hidden-md hidden-lg next_article"><?php next_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-right"></span>' , TRUE, ' ', 'issues') ?></div>
+	<div class="col-xs-6 hidden-md hidden-lg prev_article"><?php previous_post_link('%link', '<i class="fa fa-arrow-circle-left fa-2x"></i>', TRUE, ' ', 'issues'); ?></div>
+	<div class="col-xs-6 hidden-md hidden-lg next_article"><?php next_post_link('%link', '<i class="fa fa-arrow-circle-right fa-2x"></i>' , TRUE, ' ', 'issues') ?></div>
 
 	<div class="entry-footer entry-meta">
 

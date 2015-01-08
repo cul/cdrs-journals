@@ -38,7 +38,7 @@ get_header();
 	<h2>
 		<?php
 		echo '<br>' . $the_obj->name;
-		 if(!empty($their_email) ){  echo '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>'; }
+		 if(!empty($their_email) ){  echo '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><span class="glyphicon glyphicon-envelope"></span></a></sup>'; }
 		
 		?>
 	</h2>
