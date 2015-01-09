@@ -653,7 +653,54 @@ function wpse73190_gist_adjacent_post_sort($sql) {
 add_filter( 'get_next_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 add_filter( 'get_previous_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 
+//add doi meta box to article page
+add_action( 'load-post.php', 'ac_pdf_setup' );
+add_action( 'load-post-new.php', 'ac_pdf_setup' );
 
+function ac_pdf_setup() {
+  add_action( 'add_meta_boxes', 'ac_pdf_meta_boxes' );
+  add_action( 'save_post', 'ac_pdf_save', 10, 2 );
+}
+
+function ac_pdf_meta_boxes() {
+
+  add_meta_box(
+    'ac_pdf_box',      // Unique ID
+    esc_html__( 'AC PDF', 'AC PDF' ),    // Title
+    'ac_pdf_meta_box',   // Callback function
+    'article',         // Admin page (or post type)
+    'advanced',         // Context
+    'default'         // Priority
+  );
+}
+
+function ac_pdf_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'ac_pdf_class_nonce' ); ?>
+
+  <?php $post_doi  = get_post_custom($post->ID);
+        $doi = $post_doi['ac_pdf'];
+  ?>
+
+  <p>
+   <input type="text" id="ac_pdf_add" name="ac_pdf_add" value="<?php echo $doi[0]; ?>"></br>
+  </p>
+<?php }
+
+function ac_pdf_save($post_id){
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+if ( ! isset( $_POST['ac_pdf_add'] ) ) {
+    return;
+  }
+
+  // Sanitize user input.
+  $my_data = sanitize_text_field( $_POST['ac_pdf_add'] );
+
+  // Update the meta field in the database.
+  update_post_meta( $post_id, 'ac_pdf', $my_data );
+}
 
 
 

@@ -126,7 +126,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				}
 
 				// echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school]) ? '<sup>' . $schools[$their_school] . '</sup>' : ' '  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
-				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school])? ( count($authors) == 1 ? '' : '<sup>' . $schools[$their_school] . '</sup>')  : ''  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><span class="glyphicon glyphicon-envelope"></span></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
+				echo '<h2 class="authors">' . '<a href="' . esc_url( $term_link ) . '">' .  $author->name . '</a>' . ( !empty($schools[$their_school])? ( count($authors) == 1 ? '' : '<sup>' . $schools[$their_school] . '</sup>')  : ''  ) . ( !empty($their_email) ? '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><i class="fa fa-envelope"></i></a></sup>' : ''  ) . ($auth_count < count($authors)? ', ' : '')  .  '</h2>';
 				++$auth_count;
 
 			}
@@ -210,9 +210,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <?php
 
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
+	$ac_pdf_link = $post_custom['ac_pdf'];
 
 		if($pdf_link){
 			foreach ($pdf_link as $pdf) {
+				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
+			}
+		}elseif ($ac_pdf_link) {
+			foreach ($ac_pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
 		}

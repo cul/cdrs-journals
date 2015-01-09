@@ -450,6 +450,9 @@ h5.schools{
 .featured_image img{
 	max-width: 100%;
 }
+.featured_image_caption{
+	font-size: 0.778em;
+}
 
 .cc_icon{
 	width: 16px;
@@ -466,7 +469,7 @@ h5.schools{
 	padding-top: 10px;
 }
 
-sup .glyphicon-envelope{
+sup .fa-envelope{
 	margin-left: 5px;
 	font-size: 0.8em
 }
