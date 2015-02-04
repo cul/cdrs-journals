@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', false);
+define('CFCT_DEBUG', true);
 
 /**
  * Theme version.
@@ -171,7 +171,7 @@ function register_cpt_article() {
         'labels' => $labels,
         'hierarchical' => true,
 
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
         'taxonomies' => array( 'category', 'post_tag', 'page-category', 'issues', 'sections', 'aauthor' ),
         'public' => true,
         'show_ui' => true,
@@ -190,6 +190,51 @@ function register_cpt_article() {
     );
 
     register_post_type( 'article', $args );
+};
+
+add_action( 'init', 'register_cpt_masthead' );
+
+function register_cpt_masthead() {
+
+    $labels = array(
+        'name' => _x( 'Mastheads', 'masthead' ),
+        'singular_name' => _x( 'masthead', 'masthead' ),
+        'all_items'           => __( 'All mastheads', 'masthead' ),
+        'add_new' => _x( 'Add New', 'masthead' ),
+        'add_new_item' => _x( 'Add New masthead', 'masthead' ),
+        'edit_item' => _x( 'Edit masthead', 'masthead' ),
+        'new_item' => _x( 'New masthead', 'masthead' ),
+        'view_item' => _x( 'View masthead', 'masthead' ),
+        'search_items' => _x( 'Search mastheads', 'masthead' ),
+        'not_found' => _x( 'No mastheads found', 'masthead' ),
+        'not_found_in_trash' => _x( 'No mastheads found in Trash', 'masthead' ),
+        'parent_item_colon' => _x( 'Parent masthead:', 'masthead' ),
+        'menu_name' => _x( 'mastheads', 'masthead' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+
+    'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'public'              => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'page'
+    );
+
+    register_post_type( 'masthead', $args );
 };
 
 
@@ -319,7 +364,7 @@ function my_login_stylesheet() {
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 //adding term meta to an issue
-  require_once('Tax-Meta-Class/Tax-meta-class/Tax-meta-class.php');
+  require_once('Tax-meta-class/Tax-meta-class.php');
 
 $config_issues = array(
    'id' => 'issues_print_date',
@@ -702,5 +747,46 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
   update_post_meta( $post_id, 'ac_pdf', $my_data );
 }
 
+// add_filter('manage_posts_columns', 'ST4_columns_head');
+// add_action('manage_posts_custom_column', 'ST4_columns_content', 10, 2);
+
+// function ST4_columns_head($defaults) {
+//     $defaults['menu_order'] = 'Menu Order';
+//     return $defaults;
+// }
+ 
+// // SHOW THE FEATURED IMAGE
+// function ST4_columns_content($column_name, $post_ID) {
+//     global $post;
+//           $order = $post->menu_order;
+
+
+//    if ($column_name == 'menu_order') {
+//         if ($order) {
+//             echo '<h3> Order: ' . $order . '</h3>';
+//         }
+//     }
+// }
+add_action('manage_edit-article_columns', 'add_new_header_text_column');
+
+add_action('manage_article_posts_custom_column','show_order_column', 10, 1);
+
+function add_new_header_text_column($header_text_columns) {
+  $header_text_columns['menu_order'] = "Order";
+  return $header_text_columns;
+}
+
+function show_order_column($name){
+  global $post;
+
+  switch ($name) {
+    case 'menu_order':
+      $order = $post->menu_order;
+      echo $order;
+      break;
+   default:
+      break;
+   }
+}
 
 
