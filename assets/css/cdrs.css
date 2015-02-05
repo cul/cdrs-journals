@@ -705,6 +705,13 @@ ul.issue-index{
 .author_info{
 	text-align: center;
 }
+.mastheads{
+	list-style: none;
+}
+.cc_img{
+	float: right;
+	max-height: 30px;
+}
 @media (max-width: 767px){
 	.tagline{
 		margin-right: 10%;

@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 	?>
 
-<h1><?php the_title(); ?></h1>
+<h1>Mastheads:</h1>
 <div id="primary" class="col-sm-8 col-sm-offset-2">
  	<?php
 		$type = 'masthead';
@@ -35,7 +35,7 @@ get_header();
 		$my_query = null;
 		$my_query = new WP_Query($args);
 		if( $my_query->have_posts() ) {
-			echo '<ul>';
+			echo '<ul class="mastheads">';
 		  while ($my_query->have_posts()) : $my_query->the_post(); ?>
 		    <li><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 		    <?php
