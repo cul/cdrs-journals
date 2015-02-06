@@ -378,6 +378,7 @@ $config_issues = array(
 
 $my_meta = new Tax_Meta_Class($config_issues);
 $my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
+$my_meta->addSelect('cc_id',array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND'),array('name'=> 'CC License ', 'std'=> array('selectkey2')));
 $my_meta->Finish();
 
 //add doi meta box to article page
@@ -789,4 +790,9 @@ function show_order_column($name){
    }
 }
 
-
+function get_cc_status($name){
+  $cc_deeds = array('CC BY' => array( "deed" => "http://creativecommons.org/licenses/by/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/cc_by.png"), 'CC BY-SA' => array( "deed" => "http://creativecommons.org/licenses/by-sa/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-sa.png"), 'CC BY-ND' => array("deed" => "http://creativecommons.org/licenses/by-nd/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nd.png"), 'CC BY-NC' => array("deed" => "http://creativecommons.org/licenses/by-nc/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc.png"), 'CC BY-NC-SA' => array("deed" => "http://creativecommons.org/licenses/by-nc-sa/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc-sa.png"), 'CC BY-NC-ND' => array("deed" => "http://creativecommons.org/licenses/by-nc-nd/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc-nd.png"));
+  if($cc_deeds[$name] != null){
+    echo '<a href="'. $cc_deeds[$name]["deed"] . '"><img class="cc_img" src="' . $cc_deeds[$name]["image"] . '"></a>';
+  }
+}
