@@ -712,6 +712,9 @@ ul.issue-index{
 	float: right;
 	max-height: 30px;
 }
+.section-label{
+	text-align: center;
+}
 @media (max-width: 767px){
 	.tagline{
 		margin-right: 10%;
