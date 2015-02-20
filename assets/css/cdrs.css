@@ -111,6 +111,9 @@ h2.entry-title{
 	
 	margin-top: 10px;
 }
+#primary li{
+	list-style: none;
+}
 
 h3.section-label{
 	
