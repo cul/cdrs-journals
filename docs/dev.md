@@ -31,6 +31,10 @@ In order to get the search bar on the homepage aka current articles screen, you 
 
 After you endable the theme, you need to click on permalinks to refresh or else you'll get a 404
 
+##Setting Up the "Current Issue" Page
+
+For the current issue page you have to go to the back end -> Pages -> Add New and then call the page "Current Issue". You don't need to put any content on the page, just add it with that title. Then you can put that newly created page in the menu and it will display properly. 
+
 ##Plugins
 
 Plugins common to all new installations:

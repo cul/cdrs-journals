@@ -748,26 +748,6 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
   update_post_meta( $post_id, 'ac_pdf', $my_data );
 }
 
-// add_filter('manage_posts_columns', 'ST4_columns_head');
-// add_action('manage_posts_custom_column', 'ST4_columns_content', 10, 2);
-
-// function ST4_columns_head($defaults) {
-//     $defaults['menu_order'] = 'Menu Order';
-//     return $defaults;
-// }
- 
-// // SHOW THE FEATURED IMAGE
-// function ST4_columns_content($column_name, $post_ID) {
-//     global $post;
-//           $order = $post->menu_order;
-
-
-//    if ($column_name == 'menu_order') {
-//         if ($order) {
-//             echo '<h3> Order: ' . $order . '</h3>';
-//         }
-//     }
-// }
 add_action('manage_edit-article_columns', 'add_new_header_text_column');
 
 add_action('manage_article_posts_custom_column','show_order_column', 10, 1);
