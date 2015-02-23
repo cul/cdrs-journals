@@ -56,7 +56,6 @@ if($options['featured_image_setting'] == "yes"){
 
  
 <?php 
-get_sidebar();
  
 get_footer();
 
