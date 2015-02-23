@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', false);
+define('CFCT_DEBUG', true);
 
 /**
  * Theme version.
@@ -171,7 +171,7 @@ function register_cpt_article() {
         'labels' => $labels,
         'hierarchical' => true,
 
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
         'taxonomies' => array( 'category', 'post_tag', 'page-category', 'issues', 'sections', 'aauthor' ),
         'public' => true,
         'show_ui' => true,
@@ -190,6 +190,51 @@ function register_cpt_article() {
     );
 
     register_post_type( 'article', $args );
+};
+
+add_action( 'init', 'register_cpt_masthead' );
+
+function register_cpt_masthead() {
+
+    $labels = array(
+        'name' => _x( 'Mastheads', 'masthead' ),
+        'singular_name' => _x( 'masthead', 'masthead' ),
+        'all_items'           => __( 'All mastheads', 'masthead' ),
+        'add_new' => _x( 'Add New', 'masthead' ),
+        'add_new_item' => _x( 'Add New masthead', 'masthead' ),
+        'edit_item' => _x( 'Edit masthead', 'masthead' ),
+        'new_item' => _x( 'New masthead', 'masthead' ),
+        'view_item' => _x( 'View masthead', 'masthead' ),
+        'search_items' => _x( 'Search mastheads', 'masthead' ),
+        'not_found' => _x( 'No mastheads found', 'masthead' ),
+        'not_found_in_trash' => _x( 'No mastheads found in Trash', 'masthead' ),
+        'parent_item_colon' => _x( 'Parent masthead:', 'masthead' ),
+        'menu_name' => _x( 'mastheads', 'masthead' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+
+    'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'public'              => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'page'
+    );
+
+    register_post_type( 'masthead', $args );
 };
 
 
@@ -319,7 +364,7 @@ function my_login_stylesheet() {
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 //adding term meta to an issue
-  require_once('Tax-Meta-Class/Tax-meta-class/Tax-meta-class.php');
+  require_once('Tax-meta-class/Tax-meta-class.php');
 
 $config_issues = array(
    'id' => 'issues_print_date',
@@ -333,6 +378,7 @@ $config_issues = array(
 
 $my_meta = new Tax_Meta_Class($config_issues);
 $my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
+$my_meta->addSelect('cc_id',array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND'),array('name'=> 'CC License ', 'std'=> array('selectkey2')));
 $my_meta->Finish();
 
 //add doi meta box to article page
@@ -702,5 +748,31 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
   update_post_meta( $post_id, 'ac_pdf', $my_data );
 }
 
+add_action('manage_edit-article_columns', 'add_new_header_text_column');
 
+add_action('manage_article_posts_custom_column','show_order_column', 10, 1);
 
+function add_new_header_text_column($header_text_columns) {
+  $header_text_columns['menu_order'] = "Order";
+  return $header_text_columns;
+}
+
+function show_order_column($name){
+  global $post;
+
+  switch ($name) {
+    case 'menu_order':
+      $order = $post->menu_order;
+      echo $order;
+      break;
+   default:
+      break;
+   }
+}
+
+function get_cc_status($name){
+  $cc_deeds = array('CC BY' => array( "deed" => "http://creativecommons.org/licenses/by/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/cc_by.png"), 'CC BY-SA' => array( "deed" => "http://creativecommons.org/licenses/by-sa/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-sa.png"), 'CC BY-ND' => array("deed" => "http://creativecommons.org/licenses/by-nd/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nd.png"), 'CC BY-NC' => array("deed" => "http://creativecommons.org/licenses/by-nc/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc.png"), 'CC BY-NC-SA' => array("deed" => "http://creativecommons.org/licenses/by-nc-sa/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc-sa.png"), 'CC BY-NC-ND' => array("deed" => "http://creativecommons.org/licenses/by-nc-nd/4.0/", "image" => get_stylesheet_directory_uri() . "/assets/img/by-nc-nd.png"));
+  if($cc_deeds[$name] != null){
+    echo '<a href="'. $cc_deeds[$name]["deed"] . '"><img class="cc_img" src="' . $cc_deeds[$name]["image"] . '"></a>';
+  }
+}

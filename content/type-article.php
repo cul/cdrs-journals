@@ -91,9 +91,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			$foot_options = get_option( 'my-footer-options' );
         	$copyright_url = $foot_options['copyright_url'];
 	  		$cc = $options['cc_setting'];
-			if($cc != null){ ?>
-			  <a href="<?php echo $copyright_url ?>"><img class="cc_icon" src="<?php echo get_template_directory_uri() ?>/assets/img/cc.png" ></a>
-		<?php
+	  		$issues =  wp_get_post_terms($post->ID, 'issues', array("fields" => "all"));
+	  		foreach ($issues as $issue) {
+	  			$cc_id = get_tax_meta($issue->term_id, 'cc_id');
+	  		}
+	        
+	        if($cc_id != null && $cc_id != "None"){
+	        	get_cc_status($cc_id);
+	        }
+			elseif($cc != null && $cc != "None"){ 
+				get_cc_status($cc);
 			}
 		?>
 		<div class="auth_div">
