@@ -435,7 +435,11 @@ h2.authors{
 	display: inline;
 }
 h5.schools{
-	display: inline;
+	display: block;
+}
+
+.school_num{
+	font-weight: bold;
 }
 #home-search button{
 	margin-bottom: 5px;

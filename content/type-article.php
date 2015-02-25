@@ -141,7 +141,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		echo '<div class="auths_schools">';
  		foreach ($schools as $school => $number) {
- 			echo '<h5 class="schools">' . ( count($authors) > 1 ? $number : '') . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h5>';
+ 			echo '<h5 class="schools">' . ( count($authors) > 1 ? '<span class="school_num">'. $number .'</span>' : '') . ' ' .$school . ($school_count < count($schools)? ', ' : '') . '</h5>';
  			++$school_count;
  		}
  		echo '</div>';
