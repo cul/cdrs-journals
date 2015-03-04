@@ -61,7 +61,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                     <a href='http://academiccommons.columbia.edu'>
                     <div id='ac_logo_space'>
 
-                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/Academic Commons Logo.jpg" >
+                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/ac_2015.png" >
 
                     </div>
                     </a>
