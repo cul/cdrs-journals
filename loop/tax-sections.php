@@ -28,7 +28,7 @@ if (have_posts()) {
 
 
 	 		//Displaying the section name, defaults to article if none specified
-		$section = wp_get_object_terms(get_the_ID(), 'issues', array('orderby' => 'term_id', 'order' => 'DESC'));
+		$section = wp_get_object_terms(get_the_ID(), 'issues', array('orderby' => 'name', 'order' => 'ASC'));
 		if(!empty($section) && $section[0]->name != $current_section){
 			if($current_section != null){
 				
