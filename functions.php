@@ -22,7 +22,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
  * Set this to "true" to turn on debugging mode.
  * Helps with development by showing the paths of the files loaded by Carrington.
  */
-define('CFCT_DEBUG', true);
+define('CFCT_DEBUG', false);
 
 /**
  * Theme version.
@@ -364,7 +364,7 @@ function my_login_stylesheet() {
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 //adding term meta to an issue
-  require_once('Tax-meta-class/Tax-meta-class.php');
+  require_once('Tax-Meta-Class/Tax-meta-class/Tax-meta-class.php');
 
 $config_issues = array(
    'id' => 'issues_print_date',
