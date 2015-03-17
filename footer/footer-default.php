@@ -76,7 +76,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                       $online = $options['online_issn'];
                       if($print && $online){
                 ?>
-                    <h5>ISSN (PRINT): <?php echo $print ?></h5>
+                    <h5>ISSN (Print): <?php echo $print ?></h5>
                     <h5>ISSN (Online): <?php echo $online; ?></h5>
                 <?php } ?>
 
