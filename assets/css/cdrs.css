@@ -111,6 +111,9 @@ h2.entry-title{
 	
 	margin-top: 10px;
 }
+.tax-sections #primary li{
+	list-style: none;
+}
 
 h3.section-label{
 	
@@ -476,6 +479,12 @@ h5.schools{
 sup .fa-envelope{
 	margin-left: 5px;
 	font-size: 0.8em
+}
+.home li{
+	list-style-type: none;
+}
+.tax-issues li{
+	list-style-type: none;
 }
 
 @media print {

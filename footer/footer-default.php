@@ -61,7 +61,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                     <a href='http://academiccommons.columbia.edu'>
                     <div id='ac_logo_space'>
 
-                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/Academic Commons Logo.jpg" >
+                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/ac_2015.png" >
 
                     </div>
                     </a>
@@ -76,7 +76,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                       $online = $options['online_issn'];
                       if($print && $online){
                 ?>
-                    <h5>ISSN (PRINT): <?php echo $print ?></h5>
+                    <h5>ISSN (Print): <?php echo $print ?></h5>
                     <h5>ISSN (Online): <?php echo $online; ?></h5>
                 <?php } ?>
 
