@@ -44,6 +44,9 @@ include_once(CFCT_PATH.'carrington-core/carrington.php');
 
 include_once(CFCT_PATH.'functions/wp_bootstrap_navwalker.php');
 
+include_once(CFCT_PATH.'functions/journals_dash.php');
+
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
