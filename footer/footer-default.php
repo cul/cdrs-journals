@@ -110,22 +110,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
         		<?php } ?>
     	   </div>
         
-
-             
-
-             
-
-
-
-    		
-
-
-
-
-    	
-
-
-
 		</div><!-- .c1-12 -->
 	</footer><!--#footer -->
 

@@ -42,13 +42,9 @@ if($options['featured_image_setting'] == "yes"){
 	</h1>
 	
 	<?php
-	query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
+	  query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
 
-	// For the loop used, look in /loops
-	//cfct_loop();
-	 get_template_part( 'loop/tax', 'issues' ); 
-/* 	 cfct_template_file('loop', 'tax-issues'); */
-
+	  get_template_part( 'loop/tax', 'issues' ); 
 	
 	?>
 		</div><!-- #content -->
