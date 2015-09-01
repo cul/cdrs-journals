@@ -69,7 +69,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                     <?php } else{ ?>
                         <div id='ac_logo_space'>
 
-                                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/asfalt-light.png" >
+                                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/asfalt-light.png" id="ac_filler_logo">
 
                         </div>
                     <?php } ?>

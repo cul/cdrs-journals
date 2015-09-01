@@ -40,6 +40,10 @@ h3{
 	margin: 0px;
 }
 
+img#ac_filler_logo{
+	height: 1px;
+}
+
 h5.partner{
 	text-align: center;
 }
