@@ -175,7 +175,7 @@ function register_cpt_article() {
         'hierarchical' => true,
 
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
-        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'issues', 'sections', 'aauthor' ),
+        'taxonomies' => array( 'category', 'post_tag', 'page-category', 'issues', 'sections', 'authors' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -751,27 +751,27 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
   update_post_meta( $post_id, 'ac_pdf', $my_data );
 }
 
-add_action('manage_edit-article_columns', 'add_new_header_text_column');
+// add_action('manage_edit-article_columns', 'add_new_header_text_column');
 
-add_action('manage_article_posts_custom_column','show_order_column', 10, 1);
+// add_action('manage_article_posts_custom_column','show_order_column', 10, 1);
 
-function add_new_header_text_column($header_text_columns) {
-  $header_text_columns['menu_order'] = "Order";
-  return $header_text_columns;
-}
+// function add_new_header_text_column($header_text_columns) {
+//   $header_text_columns['menu_order'] = "Order";
+//   return $header_text_columns;
+// }
 
-function show_order_column($name){
-  global $post;
+// function show_order_column($name){
+//   global $post;
 
-  switch ($name) {
-    case 'menu_order':
-      $order = $post->menu_order;
-      echo $order;
-      break;
-   default:
-      break;
-   }
-}
+//   switch ($name) {
+//     case 'menu_order':
+//       $order = $post->menu_order;
+//       echo $order;
+//       break;
+//    default:
+//       break;
+//    }
+// }
 
 function get_cc_status($name){
   $cc_deeds = array('CC BY' => array( "deed" => "http://creativecommons.org/licenses/by/4.0/", "image" => get_template_directory_uri() . "/assets/img/cc_by.png"), 'CC BY-SA' => array( "deed" => "http://creativecommons.org/licenses/by-sa/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-sa.png"), 'CC BY-ND' => array("deed" => "http://creativecommons.org/licenses/by-nd/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nd.png"), 'CC BY-NC' => array("deed" => "http://creativecommons.org/licenses/by-nc/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc.png"), 'CC BY-NC-SA' => array("deed" => "http://creativecommons.org/licenses/by-nc-sa/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc-sa.png"), 'CC BY-NC-ND' => array("deed" => "http://creativecommons.org/licenses/by-nc-nd/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc-nd.png"));

@@ -73,13 +73,7 @@ div#cdrs_crab{
 body{ 
 	margin-top: 50px;
 }
-.pdf{
-/*
-	background: url(http://curj-dev.journals.cdrs.columbia.edu/wp-content/themes/cdrs-journals/assets/img/pdficon_small.gif);
-	background-repeat: no-repeat;
-	display: block;
-*/
-}
+
 .pdf a{
 	padding-left: 20px;
 }
@@ -242,7 +236,6 @@ margin-bottom: 2em;
 margin-top: 2em;
 }
 .entry-content table tbody {
-/* Kind of irrelevant unless your .css is alreadt doing something else */
 margin: 0;
 padding: 0;
 border: 0;
@@ -486,6 +479,8 @@ sup .fa-envelope{
 .tax-issues li{
 	list-style-type: none;
 }
+
+
 
 @media print {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {

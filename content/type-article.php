@@ -218,11 +218,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
 	$ac_pdf_link = $post_custom['ac_pdf'];
 
-		if($pdf_link){
+		if($pdf_link != ""){
 			foreach ($pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
-		}elseif ($ac_pdf_link) {
+		}elseif ($ac_pdf_link[0] != "") {
 			foreach ($ac_pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
@@ -244,16 +244,28 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    if($twitter_name){
 	?>
 		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
-	<?php }
-		if($fb_name){
-	?>
-		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <i class="fa fa-facebook"></i>&nbsp;Facebook</a>
+	<?php } else{ ?>
+		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>" target="_blank"> <i class="fa fa-twitter"></i>&nbsp;Twitter</a>
 	<?php } ?>
+		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <i class="fa fa-facebook"></i>&nbsp;Facebook</a>
+
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
 
 </div>
 
 <div class="mobile_social_media visible-xs">
+
+	<?php 
+	if($pdf_link != ""){
+			foreach ($pdf_link as $pdf) {
+				echo '<a href="' . $pdf . '"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-file-text fa-1x"></i></span></a>';
+			}
+		}elseif ($ac_pdf_link[0] != "") {
+			foreach ($ac_pdf_link as $pdf) {
+				echo '<a href="' . $pdf . '"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-file-text fa-1x"></i></span></a>';
+			}
+		}
+?>
 	<a href="mailto:?subject=<?php echo the_title(); ?>&body=<?php echo the_permalink(); ?>"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-envelope fa-1x"></i></span></a>
 
 
@@ -262,11 +274,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    if($twitter_name){
 	?>
 		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i>  <i class="fa fa-twitter fa-1x"></i></span></a>
-	<?php }
-		if($fb_name){
-	?>
-		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-facebook fa-1x"></i></span></a>
+	<?php } else{ ?>
+		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i>  <i class="fa fa-twitter fa-1x"></i></span></a>
+	
 	<?php } ?>
+		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-facebook fa-1x"></i></span></a>
+
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-linkedin fa-1x"></i></span></a>
 </div>
 </div>
