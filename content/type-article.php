@@ -211,8 +211,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools" class="hidden-xs hidden-print">
 	<h5><i class="fa fa-wrench"></i>&nbsp;Article Tools</h5>
-	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
-
+<!-- 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
+ -->
 <?php
 
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
@@ -222,10 +222,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			foreach ($pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
+			echo '<hr>';
 		}elseif ($ac_pdf_link[0] != "") {
 			foreach ($ac_pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
+			echo '<hr>';
 		}
 
 		$options = get_option( 'social-media-options' );
@@ -235,7 +237,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	    $link = get_permalink();
 
  ?>
-<hr>
 <a href="mailto:?subject=<?php echo the_title(); ?>&body=<?php echo the_permalink(); ?>"><i class="fa fa-envelope"></i>&nbsp;Email</a>
 
 
