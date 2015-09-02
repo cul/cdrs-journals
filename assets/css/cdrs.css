@@ -201,13 +201,13 @@ p.tagline{
 
 #scrolled-head h1{
 	
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 500;
 }
 
 #scrolled-head h2{
 	
-	font-size: 1em;
+	font-size: .9em;
 	
 }
 
@@ -608,15 +608,7 @@ ul.issue-index-thumbs  li img{
 	margin-right: 1em;
 	height: 150px;
 }
- 
- 
-ul.issue-index-thumbs li:nth-child(even) img{
-	
-	float: right;
-	margin-left: 1em;
-	height: 150px;
 
-}
 ul.issue-index li + li{
 	
 	margin-top: 2em;
