@@ -39,6 +39,7 @@ For the current issue page you have to go to the back end -> Pages -> Add New an
 
 Plugins common to all new installations:
 * Custom Journal Settings (Developed in house)
+* Drag-N-Drop (Developed in house)
 * Easy Fancybox
 * Search Everything
 * FD Footnotes

@@ -45,7 +45,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  
    
    }?>
-	</h2></br>
+	</h2>
 	<?php
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
 	
@@ -58,7 +58,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		$citation_info = get_post_custom($post->ID);
   		$the_citation = $citation_info['citation'];
   		echo $the_citation[0];
-  		echo '</br>';
 
   		if ( has_post_thumbnail() ) {
 				echo the_post_thumbnail();
