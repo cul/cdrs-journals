@@ -11,13 +11,13 @@ jQuery( document ).ready(function() {
   jQuery(".mobile_social_media").insertAfter(".library_data");
 
 
-  jQuery("body.home #masthead").waypoint(function() {
-    jQuery("nav").toggle();
-    }, {
-    offset: function() {
-      return -jQuery(this).height();
-    }
-  });
+  // jQuery("body.home #masthead").waypoint(function() {
+  //   jQuery("nav").toggle();
+  //   }, {
+  //   offset: function() {
+  //     return -jQuery(this).height();
+  //   }
+  // });
 
   jQuery("article header").waypoint(function() {
     jQuery("#scrolled-head").toggle();
@@ -57,6 +57,7 @@ jQuery( document ).ready(function() {
 
   window.addEventListener("hashchange", function() { scrollBy(0, -71);   });
 
+  jQuery("input#s").attr("placeholder","Search this journal");
 
   jQuery("#sub").on("click", function(){
     event.preventDefault();
