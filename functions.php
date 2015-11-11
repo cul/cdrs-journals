@@ -779,3 +779,5 @@ function get_cc_status($name){
     echo '<a rel="license" href="'. $cc_deeds[$name]["deed"] . '"><img class="cc_img" src="' . $cc_deeds[$name]["image"] . '"></a>';
   }
 }
+
+remove_action('wp_head', 'wp_generator');
