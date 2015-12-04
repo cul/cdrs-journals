@@ -210,7 +210,7 @@ p.tagline{
 }
 
 #article-tools{
-	
+	max-width: 180px;
 	position: fixed;
 	right: 15px;
 	top: 120px;
@@ -330,7 +330,6 @@ table.lib-data td{
 }
 
 #article-tools a{
-	
 	display: block;
 	font-size: 14px;
 	margin-left: 1.2em;
@@ -340,7 +339,17 @@ table.lib-data td{
 	font-size: 16px;
 	border-bottom: 1px solid silver;
 	color: #888;
+	margin: 15px 0 10px 0;
 }
+
+#article-tools p {
+	color: #888;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+
 img.nav_logo{
 	max-height: 100%;
 }

@@ -210,7 +210,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools" class="hidden-xs hidden-print">
-	<h5><i class="fa fa-wrench"></i>&nbsp;Article Tools</h5>
+	<h5>Article Tools</h5>
 <!-- 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
  -->
 <?php
@@ -252,7 +252,24 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
 
+
+<?php if ( get_post_meta($post->ID, 'link1-name', true) ) { ?>
+
+<h5>Article Access</h5>
+
+<p>This article can be found in the following sources:</p>
+
+<a href="<?php echo get_post_meta($post->ID, 'link1-url', true); ?>"><?php echo get_post_meta($post->ID, 'link1-name', true); ?></a>
+<a href="<?php echo get_post_meta($post->ID, 'link2-url', true); ?>"><?php echo get_post_meta($post->ID, 'link2-name', true); ?></a>
+<a href="<?php echo get_post_meta($post->ID, 'link3-url', true); ?>"><?php echo get_post_meta($post->ID, 'link3-name', true); ?></a>
+<a href="<?php echo get_post_meta($post->ID, 'link4-url', true); ?>"><?php echo get_post_meta($post->ID, 'link4-name', true); ?></a>
+<a href="<?php echo get_post_meta($post->ID, 'link5-url', true); ?>"><?php echo get_post_meta($post->ID, 'link5-name', true); ?></a>
+
+
 </div>
+<?php } ?>
+
+
 
 <div class="mobile_social_media visible-xs">
 
@@ -282,5 +299,15 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-facebook fa-1x"></i></span></a>
 
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-linkedin fa-1x"></i></span></a>
+		
 </div>
+
+
+
+
+
+
+
+
+
 </div>
