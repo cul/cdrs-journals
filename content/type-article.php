@@ -64,9 +64,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		}
 	?>
 </div>
-
-
 </div>
+
 <div id="primary" class="col-sm-8">
 
 <article id="post-<?php the_ID() ?>" <?php post_class('clearfix') ?>>
@@ -210,7 +209,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools" class="hidden-xs hidden-print">
-	<h5>Article Tools</h5>
+		
+<h5>Article Tools</h5>
 <!-- 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
  -->
 <?php
@@ -239,7 +239,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
  ?>
 <a href="mailto:?subject=<?php echo the_title(); ?>&body=<?php echo the_permalink(); ?>"><i class="fa fa-envelope"></i>&nbsp;Email</a>
 
-
 	<?php
 
 	    if($twitter_name){
@@ -252,24 +251,25 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
 
-
-<?php if ( get_post_meta($post->ID, 'link1-name', true) ) { ?>
-
+<?php if ( get_tax_meta($issue->term_id, 'link1name', true) ) { ?>	
+	
 <h5>Article Access</h5>
 
-<p>This article can be found in the following sources:</p>
+<p>Access the article from these databases:</p>	
+	
+<a href="<?php $saved_data = get_tax_meta($issue->term_id,'link1url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link1name'); echo $saved_data; ?></a>
 
-<a href="<?php echo get_post_meta($post->ID, 'link1-url', true); ?>"><?php echo get_post_meta($post->ID, 'link1-name', true); ?></a>
-<a href="<?php echo get_post_meta($post->ID, 'link2-url', true); ?>"><?php echo get_post_meta($post->ID, 'link2-name', true); ?></a>
-<a href="<?php echo get_post_meta($post->ID, 'link3-url', true); ?>"><?php echo get_post_meta($post->ID, 'link3-name', true); ?></a>
-<a href="<?php echo get_post_meta($post->ID, 'link4-url', true); ?>"><?php echo get_post_meta($post->ID, 'link4-name', true); ?></a>
-<a href="<?php echo get_post_meta($post->ID, 'link5-url', true); ?>"><?php echo get_post_meta($post->ID, 'link5-name', true); ?></a>
+<a href="<?php $saved_data = get_tax_meta($issue->term_id,'link2url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link2name'); echo $saved_data; ?></a>
 
+<a href="<?php $saved_data = get_tax_meta($issue->term_id,'link3url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link3name'); echo $saved_data; ?></a>
 
-</div>
+<a href="<?php $saved_data = get_tax_meta($issue->term_id,'link4url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link4name'); echo $saved_data; ?></a>
+
+<a href="<?php $saved_data = get_tax_meta($issue->term_id,'link5url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link5name'); echo $saved_data; ?></a>
+
 <?php } ?>
 
-
+</div>
 
 <div class="mobile_social_media visible-xs">
 
@@ -301,13 +301,5 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-linkedin fa-1x"></i></span></a>
 		
 </div>
-
-
-
-
-
-
-
-
 
 </div>

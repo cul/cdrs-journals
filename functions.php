@@ -382,14 +382,18 @@ $config_issues = array(
 $my_meta = new Tax_Meta_Class($config_issues);
 $my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
 $my_meta->addSelect('cc_id',array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND'),array('name'=> 'CC License ', 'std'=> array('selectkey2')));
+
+$my_meta->addText('link1name' ,array('name'=> 'Link 1 - Name'));
+$my_meta->addText('link1url' ,array('name'=> 'Link 1 - URL'));
+$my_meta->addText('link2name' ,array('name'=> 'Link 2 - Name'));
+$my_meta->addText('link2url' ,array('name'=> 'Link 2 - URL'));
+$my_meta->addText('link3name' ,array('name'=> 'Link 3 - Name'));
+$my_meta->addText('link3url' ,array('name'=> 'Link 3 - URL'));
+$my_meta->addText('link4name' ,array('name'=> 'Link 4 - Name'));
+$my_meta->addText('link4url' ,array('name'=> 'Link 4 - URL'));
+$my_meta->addText('link5name' ,array('name'=> 'Link 5 - Name'));
+$my_meta->addText('link5url' ,array('name'=> 'Link 5 - URL'));
 $my_meta->Finish();
-
-
-
-
-
-
-
 
 
 //add doi meta box to article page
@@ -446,109 +450,6 @@ if ( ! isset( $_POST['doi_add'] ) ) {
 
 
 
-//add linka meta box to article page
-add_action( 'load-post.php', 'links_setup' );
-add_action( 'load-post-new.php', 'links_setup' );
-
-function links_setup() {
-  add_action( 'add_meta_boxes', 'links_meta_boxes' );
-  add_action( 'save_post', 'links_save', 10, 2 );
-}
-
-function links_meta_boxes() {
-
-  add_meta_box(
-    'links_box',      // Unique ID
-    esc_html__( 'Article Access Links', 'Article Access Links' ),    // Title
-    'links_meta_box',   // Callback function
-    'article',         // Admin page (or post type)
-    'advanced',         // Context
-    'default'         // Priority
-  );
-}
-
-function links_meta_box( $object, $box ) { ?>
-
-  <?php wp_nonce_field( basename( __FILE__ ), 'links_class_nonce' ); ?>
-
-  <?php $post_links  = get_post_custom($post->ID);
-        $link1name = $post_links['link1-name'];
-        $link1url = $post_links['link1-url'];
-        $link2name = $post_links['link2-name'];
-        $link2url = $post_links['link2-url'];
-        $link3name = $post_links['link3-name'];
-        $link3url = $post_links['link3-url'];
-        $link4name = $post_links['link4-name'];
-        $link4url = $post_links['link4-url'];
-        $link5name = $post_links['link5-name'];
-        $link5url = $post_links['link5-url'];
-  ?>
-
-  <p>
-	 Source: <input type="text" id="link1-name" name="link1-name" value="<?php echo $link1name[0]; ?>"> &nbsp;
-	 URL: <input type="text" id="link1-url" name="link1-url" value="<?php echo $link1url[0]; ?>">
-  </p>
-  <p>
-	 Source: <input type="text" id="link2-name" name="link2-name" value="<?php echo $link2name[0]; ?>"> &nbsp;
-	 URL: <input type="text" id="link2-url" name="link2-url" value="<?php echo $link2url[0]; ?>">
-  </p>
-  <p>
-	 Source: <input type="text" id="link3-name" name="link3-name" value="<?php echo $link3name[0]; ?>"> &nbsp;
-	 URL: <input type="text" id="link3-url" name="link3-url" value="<?php echo $link3url[0]; ?>">
-  </p>
-  <p>
-	 Source: <input type="text" id="link4-name" name="link4-name" value="<?php echo $link4name[0]; ?>"> &nbsp;
-	 URL: <input type="text" id="link4-url" name="link4-url" value="<?php echo $link4url[0]; ?>">
-  </p>
-  <p>
-	 Source: <input type="text" id="link5-name" name="link5-name" value="<?php echo $link5name[0]; ?>"> &nbsp;
-	 URL: <input type="text" id="link5-url" name="link5-url" value="<?php echo $link5url[0]; ?>">
-  </p>
-<?php }
-
-function links_save($post_id){
-    // Check permissions
-    if ( !current_user_can( 'edit_post', $post_id ) )
-        return $post_id;
-	if ( 
-		! isset( $_POST['link1-name'] ) || 
-		! isset( $_POST['link1-url'] ) 	||
-		! isset( $_POST['link2-name'] ) || 
-		! isset( $_POST['link2-url'] ) 	|| 
-		! isset( $_POST['link3-name'] ) || 
-		! isset( $_POST['link3-url'] ) 	|| 
-		! isset( $_POST['link4-name'] ) || 
-		! isset( $_POST['link4-url'] ) 	|| 
-		! isset( $_POST['link5-name'] ) || 
-		! isset( $_POST['link5-url'] )
-	) {
-    return;
-}
-
-	// Sanitize user input.
-	$my_data1 = sanitize_text_field( $_POST['link1-name'] );
-	$my_data2 = sanitize_text_field( $_POST['link1-url'] );
-	$my_data3 = sanitize_text_field( $_POST['link2-name'] );
-	$my_data4 = sanitize_text_field( $_POST['link2-url'] );
-	$my_data5 = sanitize_text_field( $_POST['link3-name'] );
-	$my_data6 = sanitize_text_field( $_POST['link3-url'] );
-	$my_data7 = sanitize_text_field( $_POST['link4-name'] );
-	$my_data8 = sanitize_text_field( $_POST['link4-url'] );
-	$my_data9 = sanitize_text_field( $_POST['link5-name'] );
-	$my_data10 = sanitize_text_field( $_POST['link5-url'] );			
-
-	// Update the meta field in the database.
-	update_post_meta( $post_id, 'link1-name', $my_data1 );
-	update_post_meta( $post_id, 'link1-url', $my_data2 );
-	update_post_meta( $post_id, 'link2-name', $my_data3 );
-	update_post_meta( $post_id, 'link2-url', $my_data4 );
-	update_post_meta( $post_id, 'link3-name', $my_data5 );
-	update_post_meta( $post_id, 'link3-url', $my_data6 );
-	update_post_meta( $post_id, 'link4-name', $my_data7 );
-	update_post_meta( $post_id, 'link4-url', $my_data8 );
-	update_post_meta( $post_id, 'link5-name', $my_data9 );
-	update_post_meta( $post_id, 'link5-url', $my_data10 );
-}
 
 
 
@@ -901,5 +802,17 @@ function get_cc_status($name){
     echo '<a rel="license" href="'. $cc_deeds[$name]["deed"] . '"><img class="cc_img" src="' . $cc_deeds[$name]["image"] . '"></a>';
   }
 }
+
+
+// adds access panel
+
+
+
+
+
+
+
+
+
 
 remove_action('wp_head', 'wp_generator');
