@@ -240,7 +240,6 @@ function register_cpt_masthead() {
     register_post_type( 'masthead', $args );
 };
 
-
 function register_taxonomy_issues() {
 
     $labels = array(
@@ -278,7 +277,6 @@ function register_taxonomy_issues() {
 };
 
 add_action( 'init', 'register_taxonomy_issues' );
-
 
 function register_taxonomy_sections() {
 
@@ -350,7 +348,6 @@ $labels = array(
 };
 add_action( 'init', 'register_taxonomy_authors' );
 
-
 //change excerpt box name to 'abstract' for articles
 
 function custom_article_type_boxes(){
@@ -394,7 +391,6 @@ $my_meta->addText('link4url' ,array('name'=> 'Link 4 - URL'));
 $my_meta->addText('link5name' ,array('name'=> 'Link 5 - Name'));
 $my_meta->addText('link5url' ,array('name'=> 'Link 5 - URL'));
 $my_meta->Finish();
-
 
 //add doi meta box to article page
 add_action( 'load-post.php', 'doi_setup' );
@@ -444,17 +440,6 @@ if ( ! isset( $_POST['doi_add'] ) ) {
 	// Update the meta field in the database.
 	update_post_meta( $post_id, 'doi', $my_data );
 }
-
-
-
-
-
-
-
-
-
-
-
 
 //adding custom citation box to articles
 add_action( 'load-post.php', 'citation_setup' );
@@ -632,7 +617,6 @@ function authors_save($post_id){
         return;
       }
 
-
   $my_data = sanitize_text_field( $_POST['authors_add'] );
   $more_authors = explode(";", $my_data);
   $id_array = array();
@@ -663,13 +647,9 @@ function authors_save($post_id){
         array_push($id_array, $new_term['term_id'] );
       }
     }
-    
-
   }
 
   wp_set_object_terms( $post_id, $id_array, 'authors');
-
-
 }
 
 $config_authors = array(
@@ -802,17 +782,5 @@ function get_cc_status($name){
     echo '<a rel="license" href="'. $cc_deeds[$name]["deed"] . '"><img class="cc_img" src="' . $cc_deeds[$name]["image"] . '"></a>';
   }
 }
-
-
-// adds access panel
-
-
-
-
-
-
-
-
-
 
 remove_action('wp_head', 'wp_generator');
