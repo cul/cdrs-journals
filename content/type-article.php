@@ -255,7 +255,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 <h5>Article Access</h5>
 
-<p>Access the article from these databases:</p>	
+<p>Search for this article in these subscription databases:</p>	
 	
 <a href="<?php $saved_data = get_tax_meta($issue->term_id,'link1url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link1name'); echo $saved_data; ?></a>
 
