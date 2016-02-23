@@ -31,13 +31,14 @@ get_header();
 	
 			printf(__('Articles by: ', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>'); ?>
 	</h1>
+	
 	<div class="author_info">
 	<?php if( isset($headshot['src'])){ ?>
 	<a href="<?php echo $headshot['src'] ?>" class="fancybox"><img src="<?php echo $headshot['src'] ?>"></a>
 	<?php } ?>
 	<h2>
 		<?php
-		echo '<br>' . $the_obj->name;
+		echo '' . $the_obj->name;
 		 if(!empty($their_email) ){  echo '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><span class="glyphicon glyphicon-envelope"></span></a></sup>'; }
 		
 		?>

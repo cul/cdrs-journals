@@ -26,7 +26,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<h2 class="authors">
 	<?php
 
-
   		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
   		$moreAuthors = array();
   		if($authors){
@@ -51,6 +50,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</h2>
 
 	<hr>
+	
 	<?php
 
 	$issue_link;
