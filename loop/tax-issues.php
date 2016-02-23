@@ -25,8 +25,7 @@ if (have_posts()) {
 	while (have_posts()) {
 		the_post();
 
-
-	 		//Displaying the section name, defaults to article if none specified
+	 	//Displaying the section name, defaults to article if none specified
 		$section = wp_get_post_terms($post->ID, 'sections');
  
 		if(!empty($section) && $section[0]->name != $current_section){
@@ -45,22 +44,12 @@ if (have_posts()) {
 
 			echo "<ul class='issue-index issue-index-thumbs'>";
 		
-		}else{
+		} else {
 
 			echo "<ul class='issue-index'>";
 
 		}
-
-		
-		
-		
-		
 		}
-	
-
-
-
-
 
 		echo '<li>';
 /*

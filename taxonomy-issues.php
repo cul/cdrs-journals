@@ -40,9 +40,19 @@ if($options['featured_image_setting'] == "yes"){
 			printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}
 	?></h1>
+	
+	
+	<!-- prints issue taxonomy description field  -->
 
 	<?php
+	$termDiscription = term_description( '', get_query_var( 'taxonomy' ) );
+	if($termDiscription != '') : ?>
+		<h3 class="section-label"><span>Bibliography</span></h3>
+		<div class="bibliography"><?php echo $termDiscription; ?></div>
+	<?php endif; ?>
 
+
+	<?php
 
 		global $query_string;
 		query_posts( $query_string . '&order=ASC&orderby=menu_order' );
