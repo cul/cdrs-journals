@@ -20,33 +20,27 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<div id="primary" class="col-sm-8 col-sm-offset-2">
- 
-	<H2>Past Issues:</H2>	
-	 	
-	 	
-	 	<?php 
-	 	//display issues, avoid showing current issue twice
-	 	$term = get_term_by('slug', 'current-issue', 'issues');
-		$term_id = $term->term_id;
-		$terms = get_terms('issues',  'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
-		echo '<ul class="archive_list">';
+<h1 class="archive-title">Past Issues</h1>
 
+<div id="primary" class="issue-archive col-sm-12">
+ 
+	<?php
+		
+		//display issues, avoid showing current issue twice
+
+		$term = get_term_by('slug', 'current-issue', 'issues');
+		$term_id = $term->term_id;
+		$terms = get_terms('issues', 'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
+		echo '<ul class="main-menu">';
+		
 		foreach ($terms as $term) {
-			echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
+		echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
 		}
 		echo '</ul>';
-		
-	 	?>	 	
-	 	
-	    
-				 	    </ul>
+	?>	 	
+  
+</ul>
  
 </div><!-- #primary -->
  
-<?php 
-// get_sidebar();
-
- 
-get_footer();
-?>
+<?php get_footer(); ?>
