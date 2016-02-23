@@ -26,7 +26,7 @@ if($options['featured_image_setting'] == "yes"){
 }
 ?>
 
-<div id="primary" class="col-sm-9 col-sm-offset-1 <?php echo $featured_class ?>">
+<div id="primary" class="col-sm-12 <?php echo $featured_class ?>">
 	<h1 class="archive-title"><?php
 		if (is_day()) {
 			printf(__('Daily Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date() . '</span>');
