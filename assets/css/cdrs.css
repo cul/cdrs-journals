@@ -106,38 +106,40 @@ body.home #primary{
 }
 
 h1.archive-title {
+	margin: 0 0 60px 0;
 	text-align: center;
 }
 
 h2.entry-title {
-	margin-top: 10px;
+	margin: 0 0 5px 0;
 }
+
 .tax-sections #primary li{
 	list-style: none;
 }
 
 h3.section-label {
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
-/* 	padding-top: 1em; */
-	margin-bottom: 0;
-	 
-/* 	background: rgba(255,255,255,.5); */
-/* 	border-top: 4px inset silver; */
-	color: silver;
-	width: 30%;
-	margin-left: auto;
-	margin-right: auto;
-	background: #ccc;
-	margin-top: 2em;
- 
-
+	margin: 0 0 15px 0;
 }
 
+h3.section-label a {
+	background: #d3d3d3;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 5px 10px 4px 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3.section-label a:hover {
+	background: #bbb;
+}
+
+
 html{
-	
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -602,16 +604,17 @@ sup .fa-envelope{
 }
 
 
-article.show-thumb-in-list{
-	
+article.show-thumb-in-list {
 	position: relative;
 	text-align: left;
 }
+
 ul.issue-index{
-	
 	list-style-type: none;
+	margin: 0 0 50px 0;
 	padding: 0;
 }
+
 ul.issue-index-thumbs  li img{
 	
 	float: left;
@@ -620,28 +623,21 @@ ul.issue-index-thumbs  li img{
 }
 
 ul.issue-index li + li{
-	
 	margin-top: 2em;
 }
 
-ul.issue-index h3.section-label {
-	
-	margin-bottom: 2em;
-}
+
 ul.issue-index-thumbs li article{
 	text-align: left;
 	margin-left: 180px;
-	
 }
 
-
 ul.issue-index-thumbs li + li{
-	
 	border-top: 1px solid #eee;
 	padding-top: 2em;
 }
-ul.issue-index-thumbs h2{
-	
+
+ul.issue-index-thumbs h2 { 
 	margin-top: 0;
 }
 
@@ -649,12 +645,7 @@ ul.issue-index-thumbs li:nth-child(even) article{
 
 	margin-left: 2em;
 }
-/*
-ul.issue-index li a{
-	
-	color: #777;
-}
-*/
+
 
 h3.authors a {
 	color: #aaa;
@@ -693,9 +684,9 @@ p.tagline{
 	margin-left: 10%;
 	margin-right: 10%;
 }
+
 h3.issue-label{
-	
-	margin-top: 0;
+	margin: 0 0 50px 0;
 	text-transform: uppercase;
 }
 

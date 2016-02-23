@@ -57,7 +57,7 @@ foreach ( $termchildren as $child ) {
 				
 			}
 			$current_section = $section[0]->name;
-			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'sections') . '">' . $section[0]->name . '</a></h3><br style="clear: both">';
+			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'sections') . '">' . $section[0]->name . '</a></h3>';
 		
 		
 			$options = get_option('general-options');
