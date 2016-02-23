@@ -105,16 +105,18 @@ body.home #primary{
 	text-align: center;
 }
 
-h2.entry-title{
-	
+h1.archive-title {
+	text-align: center;
+}
+
+h2.entry-title {
 	margin-top: 10px;
 }
 .tax-sections #primary li{
 	list-style: none;
 }
 
-h3.section-label{
-	
+h3.section-label {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 20px;
@@ -654,17 +656,15 @@ ul.issue-index li a{
 }
 */
 
-h3.authors a{
-	
-color: #aaa;
+h3.authors a {
+	color: #aaa;
 }
 
-h3.section-label a{
-	
+h3.section-label a {
 	color: white;
 }
+
 h3.section-label a:hover{
-	
 	text-decoration: none;
 }
 
