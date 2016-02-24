@@ -24,20 +24,37 @@ get_header();
 
 <div id="primary" class="issue-archive col-sm-12">
  
-	<?php
-		
-		//display issues, avoid showing current issue twice
+ 
 
-		$term = get_term_by('slug', 'current-issue', 'issues');
-		$term_id = $term->term_id;
-		$terms = get_terms('issues', 'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
-		echo '<ul class="main-menu">';
+
+<?php
 		
-		foreach ($terms as $term) {
-		echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
-		}
-		echo '</ul>';
-	?>	 	
+//display issues, avoid showing current issue twice
+
+$term = get_term_by('slug', 'current-issue', 'issues');
+$term_id = $term->term_id;
+$terms = get_terms('issues', 'orderby=ID&order=DESC&hide_empty=0&exclude=' . $term_id);
+echo '<ul class="main-menu">';
+
+foreach ($terms as $term) {
+echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.' <div class="issue-count">'.$term->count.'</div></a></li>';
+}
+echo '</ul>';
+
+?>
+  
+
+
+  
+  
+  
+	
+ 
+	
+
+  
+  
+  
   
 </ul>
  

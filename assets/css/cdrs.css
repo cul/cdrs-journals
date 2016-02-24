@@ -128,7 +128,7 @@ h3.section-label span {
 
 h3.section-label span {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #ddd;
 	color: #333;
 	font-weight: bold;
 }
@@ -467,10 +467,12 @@ article.show-thumb-in-list {
 }
 
 .bibliography {
+	border: 1px solid #e7e7e7;
 	font-size: 17px;
 	font-weight: 400;
-	margin: 20px auto 50px auto;
-	max-width: 700px;
+	margin: -26px auto 50px auto;
+	max-width: 800px;
+	padding: 50px;
 }
 
 .bibliography p {
@@ -552,10 +554,9 @@ h3.issue-label {
 	text-transform: uppercase;
 }
 
-ul.issue-index {
+article.excerpt {
 	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 30px auto;
 	text-align: center;
 }
 
@@ -618,7 +619,6 @@ ul.issue-index {
 	display: block;
 	font-weight: 400;
 	padding: 30px;
-
 }
 
 .issue-archive li a:hover {
@@ -626,9 +626,6 @@ ul.issue-index {
 	border: 1px solid #000;
 	text-decoration: none;
 }
-
-
-
 
 @media print {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
