@@ -37,12 +37,12 @@ $terms = get_terms('issues', 'orderby=ID&order=DESC&hide_empty=0&exclude=' . $te
 echo '<ul class="main-menu">';
 
 foreach ($terms as $term) {
-echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.' <div class="issue-count">'.$term->count.'</div></a></li>';
+echo '<li><a href="'.get_term_link($term->slug, 'issues').'">'.$term->name.'</a></li>';
 }
 echo '</ul>';
 
 ?>
-  
+
 
 
   
@@ -55,7 +55,7 @@ echo '</ul>';
   
   
   
-  
+
 </ul>
  
 </div><!-- #primary -->

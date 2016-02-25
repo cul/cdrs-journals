@@ -101,6 +101,8 @@ h1.archive-title {
 }
 
 h2.entry-title {
+	font-size: 1.3em;
+	line-height: 1.4;
 	margin: 0 0 5px 0;
 }
 
@@ -109,7 +111,7 @@ h2.entry-title {
 }
 
 h3.section-label {
-	margin: 0 0 15px 0;
+	margin: 0 0 12px 0;
 }
 
 h3.section-label a,
@@ -470,7 +472,7 @@ article.show-thumb-in-list {
 	border: 1px solid #e7e7e7;
 	font-size: 17px;
 	font-weight: 400;
-	margin: -26px auto 50px auto;
+	margin: -24px auto 50px auto;
 	max-width: 800px;
 	padding: 50px;
 }
@@ -616,15 +618,21 @@ article.excerpt {
 
 .issue-archive li a {
 	border: 1px solid #ddd;
+	border-radius: 3px;
 	display: block;
 	font-weight: 400;
 	padding: 30px;
 }
 
 .issue-archive li a:hover {
-	color: #000;
-	border: 1px solid #000;
+	color: #2a6496;
+	border: 1px solid #2a6496;
 	text-decoration: none;
+}
+
+.issue-archive .issue-count {
+	color: #999;
+	font-size: 12px;
 }
 
 @media print {
