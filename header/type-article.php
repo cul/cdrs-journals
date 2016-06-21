@@ -117,7 +117,60 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie78-style.css" type="text/css" media="all"><![endif]-->
-
+  <?php
+    $heading_color = get_option('heading_color');
+    $link_color = get_option('link_color');
+    $link_hover = get_option('link_hover');
+    $background_color = get_option('background_color');
+    $text_color = get_option('text_color');
+    $menu_background_color = get_option('menu_background_color');
+    $menu_text_color = get_option('menu_text_color');
+    $menu_text_hover_color = get_option('menu_text_hover_color');
+    $menu_hover_color = get_option('menu_hover_color');
+    $active_menu = get_option('active_menu');
+    $home_font_hover = get_option('home_font_hover');
+    $home_back_hover = get_option('home_back_hover');
+  ?>
+  <style>
+    h1,h2,h3,h4 { color:  <?php echo $heading_color; ?>; }
+    a { color: <?php echo $link_color ?>; }
+    a:hover {color: <? echo $link_hover ?>;}
+    body {background-color: <?php echo $background_color ?>;
+          color: <?php echo $text_color ?>;
+    }
+    div.container-fluid{ background-color: <?php echo $menu_background_color ?>;}
+    nav.navbar.navbar-default.navbar-fixed-top div.container-fluid{ background-color: <?php echo $menu_background_color ?>; color: <?php echo $menu_text_color ?>;}
+    div#bs-example-navbar-collapse-1 a{ color: <?php echo $menu_text_color ?>;}
+    div.navbar-header a.navbar-brand{ color: <?php echo $menu_text_color ?>; }
+    #cujo-navbar a {color: <?php echo $menu_text_color ?>;}
+    div#bs-example-navbar-collapse-1.collapse.navbar-collapse li:hover,  div#bs-example-navbar-collapse-1 a.dropdown-toggle:hover {
+      background-color: <?php echo $menu_hover_color ?>;
+    }
+    div.navbar-header a.navbar-brand:hover{ background-color: <?php echo $menu_hover_color ?>;
+      color: <?php echo $menu_text_hover_color ?>;
+    }
+    div#bs-example-navbar-collapse-1 a:hover {color: <?php echo $menu_text_hover_color ?>;}
+    div#bs-example-navbar-collapse-1 a:checked{
+      color: <?php echo $menu_text_hover_color ?>;
+      background-color: <?php echo $menu_hover_color ?>;
+    }
+    .navbar-default .navbar-nav > .open > a .caret,.navbar-default .navbar-nav > .open > a, 
+    .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+      color: <?php echo $menu_text_hover_color ?>;
+      background-color: <?php echo $menu_hover_color ?>;
+    }
+    div#bs-example-navbar-collapse-1 ul a:hover{
+      color: <?php echo $menu_text_hover_color ?>;
+      background-color: <?php echo $menu_hover_color ?>;
+    }
+    #cujo-navbar li.active a, div#bs-example-navbar-collapse-1 li.active a{
+      background-color: <?php echo $active_menu ?>; 
+    }
+    #home-access-nav li a:hover{
+      color: <?php echo $home_font_hover ?>;
+      background-color: <?php echo $home_back_hover ?> !important;
+    }
+  </style>
 </head>
 <body <?php body_class(); ?>>
 <div class="breakpoint-context"></div>

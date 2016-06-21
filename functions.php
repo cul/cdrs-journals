@@ -784,3 +784,91 @@ function get_cc_status($name){
 }
 
 remove_action('wp_head', 'wp_generator');
+
+//SETUP CUSTOMIZER
+function Ari_customize_register( $wp_customize ) {
+  //All our sections, settings, and controls will be added here
+    $colors = array();
+    $colors[] = array(
+      'slug'=>'heading_color', 
+      'default' => '#333',
+      'label' => __('Heading Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'link_color', 
+      'default' => '#333',
+      'label' => __('Link Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'link_hover', 
+      'default' => '#333',
+      'label' => __('Link Hover', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'background_color', 
+      'default' => '#333',
+      'label' => __('Background', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'text_color', 
+      'default' => '#333',
+      'label' => __('Text Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'menu_background_color', 
+      'default' => '#333',
+      'label' => __('Menu Background Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'menu_text_color', 
+      'default' => '#333',
+      'label' => __('Menu Text Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'menu_text_hover_color', 
+      'default' => '#333',
+      'label' => __('Menu Text Hover Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'menu_hover_color', 
+      'default' => '#333',
+      'label' => __('Menu Hover Color', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'active_menu', 
+      'default' => '#333',
+      'label' => __('Active Menu', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'home_font_hover', 
+      'default' => '#333',
+      'label' => __('Home Menu Font Hover', 'Ari')
+    );
+    $colors[] = array(
+      'slug'=>'home_back_hover', 
+      'default' => '#333',
+      'label' => __('Home Menu Background Hover', 'Ari')
+    );
+    foreach( $colors as $color ) {
+      // SETTINGS
+      $wp_customize->add_setting(
+        $color['slug'], array(
+          'default' => $color['default'],
+          'type' => 'option', 
+          'capability' => 
+          'edit_theme_options'
+        )
+      );
+      // CONTROLS
+      $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+          $wp_customize,
+          $color['slug'], 
+          array('label' => $color['label'], 
+          'section' => 'colors',
+          'settings' => $color['slug'])
+        )
+      );
+    }
+}
+add_action( 'customize_register', 'Ari_customize_register' );
