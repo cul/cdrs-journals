@@ -870,5 +870,212 @@ function Ari_customize_register( $wp_customize ) {
         )
       );
     }
+
+    $wp_customize->add_setting('theme_logo');
+    // Add a control to upload the logo
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_logo',
+    array(
+        'label' => 'Upload Logo',
+        'section' => 'title_tagline',
+        'settings' => 'theme_logo',
+    ) ) );
+
+    $wp_customize->add_setting('site_desc');
+    $wp_customize->add_control('site_desc',
+    array(
+        'label' => 'Add Site Description',
+        'type' => 'textarea',
+        'section' => 'title_tagline',
+        'settings' => 'site_desc',
+     ) );
+
+    $wp_customize->add_setting('site_title_setting');
+
+    $wp_customize->add_control('site_title_setting',
+    array(
+        'label' => 'Display site title on home page?',
+        'type' => 'radio',
+        'section' => 'title_tagline',
+        'settings' => 'site_title_setting',
+        'choices' => array(
+            '1' => 'Yes',
+            '0' => 'No'
+        ),
+     ) );
+
+    $wp_customize->add_setting('featured_image_setting');
+
+    $wp_customize->add_control('featured_image_setting',
+    array(
+        'label' => 'Display featured image on issues page?',
+        'type' => 'radio',
+        'section' => 'title_tagline',
+        'settings' => 'featured_image_setting',
+        'choices' => array(
+            '1' => 'Yes',
+            '0' => 'No'
+        ),
+     ) );
+
+    $wp_customize->add_section( 'footer' , array(
+      'title' => __( 'Footer')
+    ) );
+
+    $wp_customize->add_setting('ac_partner');
+    // Add a control to upload the logo
+    $wp_customize->add_control('ac_partner',
+    array(
+        'label' => 'AC Partner',
+        'type' => 'radio',
+        'section' => 'footer',
+        'settings' => 'ac_partner',
+        'choices' => array(
+            '1' => 'Yes',
+            '0' => 'No'
+        ),
+     ) );
+
+    $wp_customize->add_setting('online_issn');
+    // Add a control to upload the logo
+    $wp_customize->add_control('online_issn',
+    array(
+        'label' => 'Online ISSN',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'online_issn',
+     ) );
+
+    $wp_customize->add_setting('print_issn');
+    // Add a control to upload the logo
+    $wp_customize->add_control('print_issn',
+    array(
+        'label' => 'Print ISSN',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'print_issn',
+     ) );
+
+    $wp_customize->add_setting('full_text');
+    // Add a control to upload the logo
+    $wp_customize->add_control('full_text',
+    array(
+        'label' => 'Full Text',
+        'type' => 'radio',
+        'section' => 'footer',
+        'settings' => 'full_text',
+        'choices' => array(
+            '1' => 'Yes',
+            '0' => 'No'
+        ),
+     ) );
+
+    $wp_customize->add_setting('school_affiliation');
+    // Add a control to upload the logo
+    $wp_customize->add_control('school_affiliation',
+    array(
+        'label' => 'School Affiliation',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'school_affiliation',
+     ) );
+
+    $wp_customize->add_setting('school_affiliation_url');
+    // Add a control to upload the logo
+    $wp_customize->add_control('school_affiliation_url',
+    array(
+        'label' => 'School Affiliation URL',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'school_affiliation_url',
+     ) );
+
+    $wp_customize->add_setting('copyright_setting');
+    // Add a control to upload the logo
+    $wp_customize->add_control('copyright_setting',
+    array(
+        'label' => 'Copyright Setting',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'copyright_setting',
+     ) );
+
+    $wp_customize->add_setting('copyright_setting_url');
+    // Add a control to upload the logo
+    $wp_customize->add_control('copyright_setting_url',
+    array(
+        'label' => 'Copyright Setting URL',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'copyright_setting_url',
+     ) );
+
+    $wp_customize->add_setting('custom_copyright');
+    // Add a control to upload the logo
+    $wp_customize->add_control('custom_copyright',
+    array(
+        'label' => 'Custom Copyright Statement',
+        'type' => 'text',
+        'section' => 'footer',
+        'settings' => 'custom_copyright',
+     ) );
+
+    $wp_customize->add_setting('cc_setting');
+    // Add a control to upload the logo
+    $wp_customize->add_control('cc_setting',
+    array(
+        'label' => 'CC Setting',
+        'type' => 'radio',
+        'section' => 'footer',
+        'settings' => 'cc_setting',
+        'choices' => array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND')
+     ) );
+
+    $wp_customize->add_section( 'social' , array(
+      'title' => __( 'Social Media')
+    ) );
+
+    $wp_customize->add_setting('twitter_name');
+
+    $wp_customize->add_control('twitter_name',
+    array(
+        'label' => 'Twitter Name',
+        'type' => 'text',
+        'section' => 'social',
+        'settings' => 'twitter_name',
+     ) );
+
+    $wp_customize->add_setting('fb_name');
+
+    $wp_customize->add_control('fb_name',
+    array(
+        'label' => 'Facebook Name',
+        'type' => 'text',
+        'section' => 'social',
+        'settings' => 'fb_name',
+     ) );
+
+    $wp_customize->add_setting('linkedin_name');
+
+    $wp_customize->add_control('linkedin_name',
+    array(
+        'label' => 'LinkedIn Name',
+        'type' => 'text',
+        'section' => 'social',
+        'settings' => 'linkedin_name',
+     ) );
+
+    $wp_customize->add_setting('email_address');
+
+    $wp_customize->add_control('email_address',
+    array(
+        'label' => 'Email Address',
+        'type' => 'text',
+        'section' => 'social',
+        'settings' => 'email_address',
+     ) );
+
+
+
 }
 add_action( 'customize_register', 'Ari_customize_register' );
+

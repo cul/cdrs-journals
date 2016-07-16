@@ -86,10 +86,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<h1 class="entry-title"><?php the_title() ?></h1>
 		<?php 
 			$post_custom = get_post_custom($post->ID);
-			$options = get_option('general-options');
-			$foot_options = get_option( 'my-footer-options' );
-        	$copyright_url = $foot_options['copyright_url'];
-	  		$cc = $options['cc_setting'];
+        	$copyright_url = get_theme_mod('copyright_url');
+	  		$cc = get_theme_mod('cc_setting');
 	  		$issues =  wp_get_post_terms($post->ID, 'issues', array("fields" => "all"));
 	  		foreach ($issues as $issue) {
 	  			$cc_id = get_tax_meta($issue->term_id, 'cc_id');
@@ -229,11 +227,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			}
 			echo '<hr>';
 		}
-
-		$options = get_option( 'social-media-options' );
-	    $twitter_name =  $options['twitter_name'];
-	    $fb_name = $options['fb_name'];
-	    $linked_in = $options['linkedin_name'];
+	    $twitter_name =  get_theme_mod('twitter_name');
+	    $fb_name = get_theme_mod('fb_name');
+	    $linked_in = get_theme_mod('linkedin_name');
 	    $link = get_permalink();
 
  ?>

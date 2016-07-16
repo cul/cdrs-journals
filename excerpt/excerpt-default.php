@@ -20,10 +20,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 
 <?php	
-	
-	global $options;
-				
-	if($options['featured_image_setting'] == "yes"){
+					
+	if(get_theme_mod('featured_image_setting') == "yes"){
 		
 			
 	if ( has_post_thumbnail() ) {

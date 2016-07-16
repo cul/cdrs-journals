@@ -30,7 +30,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	<meta charset="<?php bloginfo('charset') ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ); ?></title>
-	<?php $current_favicon = get_option('favicon_url');
+	<?php $current_favicon = get_theme_mod('favicon_url');
     if($current_favicon != ""){
       echo '<link id="the_favicon" rel="shortcut icon" href="' . $current_favicon .'"  type="image/x-icon" />';
     }else{
@@ -146,12 +146,10 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 
 
-<img src="<?php $logo = get_option('logo_url');
-   echo $logo ?>" class='front-cover'>
+<img src="<?php echo get_theme_mod( 'your_theme_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="front-cover">
 
 <?php
-  $options = get_option( 'general-options' );
-  if($options['site_title_setting'] == "yes"){
+  if(get_theme_mod('site_title_setting') == "1"){
 ?>
 <h1 id="site-name"><?php bloginfo('name'); ?></h1>
 <?php }else{
@@ -160,7 +158,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 <p class="tagline">
 
- <?php $blog_info =  get_option( 'site_desc' );
+ <?php $blog_info =  get_theme_mod( 'site_desc' );
     $str = str_replace('\\', '', $blog_info);
     echo $str;
    ?>
@@ -188,10 +186,10 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
             );
         ?>
 
-   <?php $options = get_option( 'social-media-options' );
-          $twitter_name =  $options['twitter_name'];
-          $fb_name = $options['fb_name'];
-          $linked_in = $options['linkedin_name'];
+   <?php 
+          $twitter_name =  get_theme_mod('twitter_name');
+          $fb_name = get_theme_mod('fb_name');
+          $linked_in = get_theme_mod('linkedin_name');
     ?>
 
 

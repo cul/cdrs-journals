@@ -18,8 +18,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
-$options = get_option('general-options');
-if($options['featured_image_setting'] == "yes"){
+if(get_theme_mod('featured_image_setting') == "1"){
 	$featured_class = "list-thumbs";
 }else{
 	$featured_class = "";

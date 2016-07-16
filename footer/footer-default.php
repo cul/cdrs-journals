@@ -22,10 +22,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
     </div>
     <?php
-        $foot_opt = get_option( 'my-footer-options' );
-        $ac_partner = $foot_opt['ac_partner'];
-        $school_opt = $foot_opt['school_affiliation'];
-        if($ac_partner == null && !$school_opt){
+        $ac_partner = get_theme_mod('ac_partner');
+        $school_opt = get_theme_mod('school_affiliation');
+        if($ac_partner == "0" && !$school_opt){
             $offset = "col-sm-offset-4";
         }
     ?>
@@ -45,20 +44,19 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 
             <?php 
-               $options = get_option( 'my-footer-options' );
-               $checked = $options['ac_partner'];
-             $school = $options['school_affiliation'];
-             $school_url = $options['school_affiliation_url'];
+               $checked = get_theme_mod('ac_partner');
+             $school = get_theme_mod('school_affiliation');
+             $school_url = get_theme_mod('school_affiliation_url');
             ?>
             
             <div class="col-sm-4" id="ac_logo_footer">
                  <?php if($school){ ?>
                     <h5><a href="<?php echo $school_url; ?>"> <?php echo $school ?> </a></h5>
                 <?php } 
-                    if($checked != null && $school){ 
+                    if($checked != "0" && $school){ 
                         echo "<h5> and</h5>"; 
                     }
-                    if($checked != null){ ?>
+                    if($checked != "0"){ ?>
                         <a href='http://academiccommons.columbia.edu'>
                         <div id='ac_logo_space'>
 
@@ -79,9 +77,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 
             <div class="col-sm-4"  id="issn_copyright">
-                <?php $options = get_option( 'my-footer-options' ); 
-                      $print = $options['print_issn'];
-                      $online = $options['online_issn'];
+                <?php 
+                      $print = get_theme_mod('print_issn');
+                      $online = get_theme_mod('online_issn');
                       if($print && $online){
                 ?>
                     <h5>ISSN (Print): <?php echo $print ?></h5>
@@ -101,20 +99,20 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
                 
                 <?php } ?>
 
-                <?php $options = get_option( 'my-footer-options' );
-                      $copyright_url = $options['copyright_url'];
-                      if($copyright_url && $options['copyright']){
+                <?php 
+                      $copyright_url = get_theme_mod('copyright_url');
+                      if($copyright_url && get_theme_mod('copyright')){
                 ?>
-                <h5>This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><em> <?php echo $options['copyright']; ?> </em></a> License. </h5>
+                <h5>This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><em> <?php echo get_theme_mod('copyright'); ?> </em></a> License. </h5>
 
                 <?php } ?>
 
-                <?php if(!$copyright_url && $options['copyright']){ ?>
-                    <h5>This work is Licensed under a <?php echo $options['copyright']; ?> License. </h5>
+                <?php if(!$copyright_url && get_theme_mod('copyright')){ ?>
+                    <h5>This work is Licensed under a <?php echo get_theme_mod('copyright'); ?> License. </h5>
                 <?php }?>
 
-                <?php if($options['custom_copyright']){ ?>
-                    <h5> <?php echo $options['custom_copyright'] ?> </h5>
+                <?php if(get_theme_mod('custom_copyright')){ ?>
+                    <h5> <?php echo get_theme_mod('custom_copyright') ?> </h5>
                 <?php } ?>
            </div>
         

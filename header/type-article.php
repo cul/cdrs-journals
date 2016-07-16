@@ -70,10 +70,9 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 			}
 		};
 
-    $foot_options = get_option( 'my-footer-options' );
-    $print = $foot_options['full_text_setting'];
+    $full_text = get_theme_mod('full_text');
     $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
-    if($print == "full_text"){
+    if($full_text == "1"){
       echo '<meta name="citation_fulltext_html_url" content="' . $current_url .'"/>';
     }else{
       echo '<meta name="citation_abstract_html_url" content="' . $current_url .'"/>';

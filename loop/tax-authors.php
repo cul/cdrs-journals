@@ -40,9 +40,8 @@ if (have_posts()) {
 			echo '<h3 class="section-label">' . '<a href="' . get_term_link($section[0]->term_id, 'issues') . '">' . $section[0]->name . '</a></h3>';
 		
 		
-			$options = get_option('general-options');
 
-		if($options['featured_image_setting'] == "yes"){
+		if(get_theme_mod('featured_image_setting') == "1"){
 
 			echo "<ul class='issue-index issue-index-thumbs'>";
 		
@@ -64,14 +63,8 @@ if (have_posts()) {
 
 
 		echo '<li>';
-/*
-		$options = get_option('general-options');
-		if($options['featured_image_setting'] == "yes"){
-			get_template_part( 'excerpt/excerpt', 'featured' );
-		}else{
-*/
+
 			cfct_excerpt();
-// 		}
 
 		echo "</li>";
 	}
