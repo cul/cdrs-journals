@@ -40,34 +40,54 @@ if($options['featured_image_setting'] == "yes"){
 			printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}
 	?></h1>
-	
-	
-	<!-- prints issue taxonomy description field  -->
-
-	<?php
-	$termDiscription = term_description( '', get_query_var( 'taxonomy' ) );
-	if($termDiscription != '') : ?>
-		<h3 class="section-label"><span>Bibliography</span></h3>
-		<div class="bibliography"><?php echo $termDiscription; ?></div>
-	<?php endif; ?>
 
 
-	<?php
+<!-- issue taxonomy description field  -->
 
-		global $query_string;
-		query_posts( $query_string . '&order=ASC&orderby=menu_order' );
+<?php
+	$termDescription = term_description( '', get_query_var( 'taxonomy' ) );
+	if($termDescription != '') : ?>
+		<h3 class="subhead"><?php echo $termDescription; ?></h3>
+<?php endif; ?>
 
-		cfct_loop();
-		
-		// Pagination
-		cfct_misc('nav-posts');
-	?>
+<!-- issue taxonomy bibliography field  -->
+
+<?php
+	$issue_link;
+	$post_terms = (wp_get_post_terms($post->ID, 'issues'));
+	$the_issue = wp_list_filter($post_terms, array('slug'=>'current-issue'),'NOT');
+	foreach ($the_issue as $issue) {
+		echo $issue_link;
+	}
+?>
+
+<?php if ( get_tax_meta($issue->term_id, 'bibliography', true) ) { ?>
+
+<?php
+	$saved_data = get_tax_meta($issue->term_id,'bibliography');
+	echo '<h3 class="section-label"><span>Bibliography</span></h3><div class="bibliography">';
+	echo $saved_data;
+	echo '</div>';
+?>
+<?php } ?>
+
+<!-- issue taxonomy articles  -->
+
+<?php
+	global $query_string;
+	query_posts( $query_string . '&order=ASC&orderby=menu_order' );
+
+	cfct_loop();
+
+	// Pagination
+	cfct_misc('nav-posts');
+?>
 
 </div><!-- #primary -->
- 
+
 <?php
 /* get_sidebar(); */
- 
+
 
 get_footer();
 ?>
