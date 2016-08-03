@@ -380,6 +380,8 @@ $my_meta = new Tax_Meta_Class($config_issues);
 $my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
 $my_meta->addSelect('cc_id',array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND'),array('name'=> 'CC License ', 'std'=> array('selectkey2')));
 
+$my_meta->addTextarea('bibliography' ,array('name'=> 'Bibliography'));
+
 $my_meta->addText('link1name' ,array('name'=> 'Link 1 - Name'));
 $my_meta->addText('link1url' ,array('name'=> 'Link 1 - URL'));
 $my_meta->addText('link2name' ,array('name'=> 'Link 2 - Name'));
