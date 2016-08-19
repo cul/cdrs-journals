@@ -27,20 +27,36 @@ if($options['featured_image_setting'] == "yes"){
 ?>
 
 <div id="primary" class="col-sm-12 <?php echo $featured_class ?>">
-	<h1 class="archive-title"><?php
-		if (is_day()) {
-			printf(__('Daily Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date() . '</span>');
-		} elseif (is_month()) {
-			printf(__('Monthly Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date(_x('F Y', 'monthly archives date format', 'carrington-blueprint')) . '</span>');
-		} elseif (is_year()) {
-			printf(__('Yearly Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date(_x('Y', 'yearly archives date format', 'carrington-blueprint')) . '</span>');
-		}  elseif (is_tax('issues')) {
-			printf(__('Issue: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
-		}elseif (is_tax('aauthor')) {
-			printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
-		}
-	?></h1>
 
+	<header role="page-title">
+		<h1 class="archive-title"><?php
+			if (is_day()) {
+				printf(__('Daily Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date() . '</span>');
+			} elseif (is_month()) {
+				printf(__('Monthly Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date(_x('F Y', 'monthly archives date format', 'carrington-blueprint')) . '</span>');
+			} elseif (is_year()) {
+				printf(__('Yearly Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date(_x('Y', 'yearly archives date format', 'carrington-blueprint')) . '</span>');
+			}  elseif (is_tax('issues')) {
+				printf(__('Issue: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
+			}elseif (is_tax('aauthor')) {
+				printf(__('Author Archives: %s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
+			}
+		?></h1>
+
+		<!-- issue taxonomy print date -->
+
+		<div class="issue-print-date">
+			<?php
+				//Get the correct taxonomy ID by slug
+				$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+
+				//Get Taxonomy Meta
+				$saved_data = get_tax_meta($term->term_id,'print_date');
+				echo $saved_data;
+			?>
+		</div>
+
+	</header>
 
 <!-- issue taxonomy description field  -->
 

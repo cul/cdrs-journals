@@ -11,7 +11,7 @@
 // **********************************************************************
 // This program is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
@@ -28,9 +28,12 @@ if($options['featured_image_setting'] == "yes"){
 ?>
 
 <div id="primary" class="col-sm-9 col-sm-offset-1 <?php echo $featured_class ?>">
-<h3>Current Issue</h3>
+
+
+<header role="page-title">
+	<h3>Current Issue</h3>
 	<h1 class="archive-title">
-		<?php 
+		<?php
 			$term = get_term_by('slug', 'current-issue', 'issues');
 			$term_id = $term->term_id;
 			$termchildren = get_term_children( $term_id, 'issues' );
@@ -40,19 +43,19 @@ if($options['featured_image_setting'] == "yes"){
 				}
 		?>
 	</h1>
-	
+</header>
 	<?php
-	  query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');  
+	  query_posts( 'post_type=article&issues=current-issue&orderby=menu_order&order=ASC');
 
-	  get_template_part( 'loop/tax', 'issues' ); 
-	
+	  get_template_part( 'loop/tax', 'issues' );
+
 	?>
 		</div><!-- #content -->
-	 
 
- 
-<?php 
- 
+
+
+<?php
+
 get_footer();
 
 ?>

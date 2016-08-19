@@ -23,6 +23,7 @@ get_header();
 
 <div id="primary" class="col-sm-12">
 
+<header role="page-title">
 	<h1 class="archive-title"><?php
 		if (is_day()) {
 			printf(__('Daily Archives: %s', 'carrington-blueprint'), '<span>' . get_the_date() . '</span>');
@@ -40,6 +41,7 @@ get_header();
 			printf(__('%s', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>');
 		}
 	?></h1>
+</header>
 
 	<?php
 		// Show an optional category description

@@ -96,6 +96,7 @@ body.home #primary {
 }
 
 h1.archive-title {
+	display: inline-block;
 	margin: 40px 0;
 	text-align: center;
 }
@@ -587,7 +588,7 @@ article.excerpt {
 }
 
 .author_info h2 {
-	font-size: 44px;
+	font-size: 34px;
 	font-weight: 300;
 }
 
@@ -603,6 +604,24 @@ article.excerpt {
 .section-label {
 	text-align: center;
 }
+
+
+
+
+/* issue taxonomy page */
+
+header[role="page-title"] {
+	text-align: center;
+}
+
+ .issue-print-date {
+	 color: #999;
+	 display: inline-block;
+	 margin: 0 0 0 8px;
+ }
+
+
+
 
 /* issue archive page */
 

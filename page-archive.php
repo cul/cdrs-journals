@@ -1,5 +1,5 @@
 <?php
- 
+
 // This file is part of the Carrington Blueprint Theme for WordPress
 //
 // Copyright (c) 2008-2014 Crowd Favorite, Ltd. All rights reserved.
@@ -11,7 +11,7 @@
 // **********************************************************************
 // This program is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
@@ -20,15 +20,17 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 ?>
 
-<h1 class="archive-title">Past Issues</h1>
+<header role="page-title">
+  <h1 class="archive-title">Past Issues</h1>
+</header>
 
 <div id="primary" class="issue-archive col-sm-12">
- 
- 
+
+
 
 
 <?php
-		
+
 //display issues, avoid showing current issue twice
 
 $term = get_term_by('slug', 'current-issue', 'issues');
@@ -45,19 +47,19 @@ echo '</ul>';
 
 
 
-  
-  
-  
-	
- 
-	
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 
 </ul>
- 
+
 </div><!-- #primary -->
- 
+
 <?php get_footer(); ?>

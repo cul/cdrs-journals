@@ -27,11 +27,14 @@ get_header();
 	      $their_email = get_tax_meta($the_obj->term_id, 'email');
 	      $headshot = get_tax_meta($the_obj->term_id, 'author_pic');
 	?>
+
+	<header role="page-title">
 	<h1 class="archive-title"><?php
-	
+
 			printf(__('Articles by: ', 'carrington-blueprint'), '<span>' . single_cat_title('', false ) . '</span>'); ?>
 	</h1>
-	
+</header>
+
 	<div class="author_info">
 	<?php if( isset($headshot['src'])){ ?>
 	<a href="<?php echo $headshot['src'] ?>" class="fancybox"><img src="<?php echo $headshot['src'] ?>"></a>
@@ -40,7 +43,7 @@ get_header();
 		<?php
 		echo '' . $the_obj->name;
 		 if(!empty($their_email) ){  echo '<sup><a title="' . $their_email . '" href="mailto:'. $their_email .'"><span class="glyphicon glyphicon-envelope"></span></a></sup>'; }
-		
+
 		?>
 	</h2>
 	<h3><?php if(!empty($their_school) ){ echo $their_school; } ?></h3>
@@ -48,7 +51,7 @@ get_header();
 	</div>
 
 	<?php
-		
+
 		// For the loop used, look in /loops
 		cfct_loop();
 

@@ -377,7 +377,7 @@ $config_issues = array(
 );
 
 $my_meta = new Tax_Meta_Class($config_issues);
-$my_meta->addText('print_date' ,array('name'=> 'Print Date (YYYY/MM/DD)'));
+$my_meta->addText('print_date' ,array('name'=> 'Print Date'));
 $my_meta->addSelect('cc_id',array('None' => 'None', 'CC BY' => 'CC BY', 'CC BY-SA' => 'CC BY-SA', 'CC BY-ND' => 'CC BY-ND', 'CC BY-NC' => 'CC BY-NC', 'CC BY-NC-SA' => 'CC BY-NC-SA', 'CC BY-NC-ND' => 'CC BY-NC-ND'),array('name'=> 'CC License ', 'std'=> array('selectkey2')));
 
 $my_meta->addTextarea('bibliography' ,array('name'=> 'Bibliography'));
