@@ -476,7 +476,7 @@ article.show-thumb-in-list {
 	margin: -24px auto 50px auto;
 	max-width: 800px;
 	padding: 50px;
-	white-space: pre-wrap;
+	white-space: pre-line;
 }
 
 .bibliography p {
