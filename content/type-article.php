@@ -50,7 +50,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	</h2>
 
 	<hr>
-	
+
 	<?php
 
 	$issue_link;
@@ -84,7 +84,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 
 		<h1 class="entry-title"><?php the_title() ?></h1>
-		<?php 
+		<?php
 			$post_custom = get_post_custom($post->ID);
 			$options = get_option('general-options');
 			$foot_options = get_option( 'my-footer-options' );
@@ -94,11 +94,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	  		foreach ($issues as $issue) {
 	  			$cc_id = get_tax_meta($issue->term_id, 'cc_id');
 	  		}
-	        
+
 	        if($cc_id != null && $cc_id != "None"){
 	        	get_cc_status($cc_id);
 	        }
-			elseif($cc != null && $cc != "None"){ 
+			elseif($cc != null && $cc != "None"){
 				get_cc_status($cc);
 			}
 		?>
@@ -185,9 +185,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 		?>
 	</div>
-	
+
 	<?php } ?>
-	
+
 	</header>
 	<div class="entry-content">
 		<?php the_content() ?>
@@ -209,34 +209,39 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="col-sm-2" id="right-bar">
 <div id="article-tools" class="hidden-xs hidden-print">
-		
-<h5>Article Tools</h5>
-<!-- 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a>
- -->
+
+<!-- 	<a href="javascript:print();"><i class="fa fa-print"></i>&nbsp;Print</a> -->
 <?php
 
 	$pdf_link = get_post_meta(get_the_id(), '_cmb_pdf', true);
 	$ac_pdf_link = $post_custom['ac_pdf'];
 
 		if($pdf_link != ""){
+			echo '<h5>Download Full Text</h5>';
 			foreach ($pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
-			echo '<hr>';
 		}elseif ($ac_pdf_link[0] != "") {
 			foreach ($ac_pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
-			echo '<hr>';
 		}
-
-		$options = get_option( 'social-media-options' );
-	    $twitter_name =  $options['twitter_name'];
-	    $fb_name = $options['fb_name'];
-	    $linked_in = $options['linkedin_name'];
-	    $link = get_permalink();
-
  ?>
+
+
+
+
+
+<?php
+$options = get_option( 'social-media-options' );
+	$twitter_name =  $options['twitter_name'];
+	$fb_name = $options['fb_name'];
+	$linked_in = $options['linkedin_name'];
+	$link = get_permalink();
+?>
+
+<h5>Share This</h5>
+
 <a href="mailto:?subject=<?php echo the_title(); ?>&body=<?php echo the_permalink(); ?>"><i class="fa fa-envelope"></i>&nbsp;Email</a>
 
 	<?php
@@ -251,12 +256,15 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"> <i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
 
-<?php if ( get_tax_meta($issue->term_id, 'link1name', true) ) { ?>	
-	
+
+
+
+<?php if ( get_tax_meta($issue->term_id, 'link1name', true) ) { ?>
+
 <h5>Article Access</h5>
 
-<p>Search for this article in these subscription databases:</p>	
-	
+<p>Search for this article in these subscription databases:</p>
+
 <a href="<?php $saved_data = get_tax_meta($issue->term_id,'link1url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link1name'); echo $saved_data; ?></a>
 
 <a href="<?php $saved_data = get_tax_meta($issue->term_id,'link2url'); echo $saved_data; ?>"><?php $saved_data = get_tax_meta($issue->term_id,'link2name'); echo $saved_data; ?></a>
@@ -273,7 +281,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="mobile_social_media visible-xs">
 
-	<?php 
+	<?php
 	if($pdf_link != ""){
 			foreach ($pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-file-text fa-1x"></i></span></a>';
@@ -294,12 +302,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>&via=<?php echo $twitter_name ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i>  <i class="fa fa-twitter fa-1x"></i></span></a>
 	<?php } else{ ?>
 		<a href="http://twitter.com/intent/tweet?text=<?php echo the_title() ?>&url=<?php echo $link ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i>  <i class="fa fa-twitter fa-1x"></i></span></a>
-	
+
 	<?php } ?>
 		<a href="http://facebook.com//sharer/sharer.php?u=<?php echo $link ?>" target="_blank"> <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-facebook fa-1x"></i></span></a>
 
 		<a href="http:///www.linkedin.com/shareArticle?mini=true&url=<?php echo $link ?>&title=<?php echo the_title() ?>" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-linkedin fa-1x"></i></span></a>
-		
+
 </div>
 
 </div>
