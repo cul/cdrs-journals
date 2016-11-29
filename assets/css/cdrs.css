@@ -551,7 +551,7 @@ form#home-search {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 
 	form#home-search {
 		float: none;
@@ -561,7 +561,6 @@ form#home-search {
 	.navbar-nav {
 		float: none;
 	}
-
 }
 
 
