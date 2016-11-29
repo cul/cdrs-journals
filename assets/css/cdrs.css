@@ -550,6 +550,23 @@ form#home-search {
 	float: right;
 }
 
+
+@media screen and (max-width: 1000px) {
+
+	form#home-search {
+		float: none;
+		padding-bottom: 20px;
+	}
+
+	.navbar-nav {
+		float: none;
+	}
+
+}
+
+
+
+
 p.tagline {
 	text-align: justify;
 	margin-top: 1px;
