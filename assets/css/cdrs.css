@@ -642,6 +642,12 @@ header[role="page-title"] {
 
 /* issue archive page */
 
+.archive-description {
+	margin: -20px auto 50px auto;
+	max-width: 700px;
+}
+
+
 .issue-archive {
 	text-align: center;
 }
