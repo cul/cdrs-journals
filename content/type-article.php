@@ -222,6 +222,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
 		}elseif ($ac_pdf_link[0] != "") {
+			echo '<h5>Download Full Text</h5>';
 			foreach ($ac_pdf_link as $pdf) {
 				echo '<a href="' . $pdf . '"><i class="fa fa-file-text"></i>&nbsp;Download PDF</a>';
 			}
