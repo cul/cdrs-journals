@@ -32,8 +32,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   $checked = $options['ac_partner'];
   $school = $options['school_affiliation'];
   $school_url = $options['school_affiliation_url'];
-
-
+  $logo = get_option('logo_url');
 ?>
 
 
@@ -43,9 +42,29 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <footer>
 
+<div class="footer-logo">
+  <a href="<?php echo home_url(); ?>">
+    <img src="<?php echo $logo ?>">
+  </a>
+</div>
+
+<ul class="footer-links">
+  <li><a href="<?php echo home_url(); ?>">Home</a></li>
+  <li><a href="<?php echo home_url(); ?>/about">About</a></li>
+  <li><a href="<?php echo home_url(); ?>/copyright">Copyright</a></li>
+</ul>
+
+
+
+
+
+
+<div class="footer-text">
+
 <!-- partnership-->
 
-Published in Partnership with Columbia University Libraries
+<p>
+  Published in Partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a>
 <?php if($school){ ?>
   and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.
   <?php } else{ ?>
@@ -54,55 +73,61 @@ Published in Partnership with Columbia University Libraries
 <!-- ac -->
 
 <?php if($checked != null){ ?>
-  Journal content made available through Academic Commons.
+  Journal content made available through <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
   <?php } else{ ?>
-<?php } ?>
-
-<!-- issn -->
-
-<?php $options = get_option( 'my-footer-options' );
-  $print = $options['print_issn'];
-  $online = $options['online_issn'];
-  if($print && $online){
-?>
-
-ISSN (Print): <?php echo $print ?> &nbsp;
-ISSN (Online): <?php echo $online; ?>
-
-<?php } ?>
-
-<?php if($print && !$online){ ?>
-
-ISSN: <?php echo $print ?>
-
-<?php } ?>
-
-<?php if($online && !$print){ ?>
-
-ISSN: <?php echo $online; ?>
-
 <?php } ?>
 
 <!-- copyright -->
 
-<?php $options = get_option( 'my-footer-options' );
-  $copyright_url = $options['copyright_url'];
-  if($copyright_url && $options['copyright']){
-?>
+  <?php $options = get_option( 'my-footer-options' );
+    $copyright_url = $options['copyright_url'];
+    if($copyright_url && $options['copyright']){
+  ?>
 
-This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><?php echo $options['copyright']; ?></a> License.
+  This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><?php echo $options['copyright']; ?></a> License.
 
-<?php } ?>
+  <?php } ?>
 
-<?php if(!$copyright_url && $options['copyright']){ ?>
+  <?php if(!$copyright_url && $options['copyright']){ ?>
 
-This work is Licensed under a <?php echo $options['copyright']; ?> License.
+  This work is Licensed under a <?php echo $options['copyright']; ?> License.
 
-<?php }?>
+  <?php }?>
 
-<?php if($options['custom_copyright']){ ?>
-<?php echo $options['custom_copyright'] ?>
-<?php } ?>
+  <?php if($options['custom_copyright']){ ?>
+  <?php echo $options['custom_copyright'] ?>
+  <?php } ?>
+
+</p>
+
+<!-- issn -->
+
+<p>
+  <?php $options = get_option( 'my-footer-options' );
+    $print = $options['print_issn'];
+    $online = $options['online_issn'];
+    if($print && $online){
+  ?>
+
+  <span class="issn">ISSN (Print): <?php echo $print ?> &nbsp;
+  <span class="issn">ISSN (Online): <?php echo $online; ?></span>
+
+  <?php } ?>
+
+  <?php if($print && !$online){ ?>
+
+  <span class="issn">ISSN: <?php echo $print ?></span>
+
+  <?php } ?>
+
+  <?php if($online && !$print){ ?>
+
+  <span class="issn">ISSN: <?php echo $online; ?></span>
+
+  <?php } ?>
+</p>
+
+</div>
 
 </footer>
 

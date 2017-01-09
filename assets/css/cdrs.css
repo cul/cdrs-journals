@@ -642,23 +642,62 @@ header[role="page-title"] {
 	font-size: 12px;
 }
 
+
+
+
+
+
 /* footer */
 
-
 footer {
-	background: #ddd;
-
-	padding: 100px 30px;
+	background: #f5f5f5;
+	border-top: 1px solid #ddd;
+	border-bottom: 20px solid #ddd;
+	color: #444;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 50px;
 }
 
+footer .footer-logo,
+footer .footer-links,
+footer .footer-text {
+	line-height: 1.7;
+	padding: 30px 30px 25px 30px;
+}
 
+footer .footer-logo {
+	max-width: 250px;
+}
 
+footer .footer-logo img {
+	height: auto;
+	max-width: 100%;
+}
 
+footer .footer-links {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	margin: 0;
+}
 
+footer .footer-links li {
+	list-style: none;
+}
 
+footer .footer-text {
+	max-width: 800px;
+}
 
+footer .footer-text p {
+	margin-bottom: 0;
+}
 
-
+footer .footer-text span {
+	color: #999;
+}
 
 /* print styles */
 
