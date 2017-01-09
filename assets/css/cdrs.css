@@ -27,16 +27,6 @@ h3 {
 	font-size: 1.2em;
 }
 
-#cdrs_logo_footer h5 {
-	background-position-x: 55px;
-	background-position-y: 0px;
-	margin: 0px;
-}
-
-#cdrs_logo_footer h6 {
-	margin: 0px;
-}
-
 img#ac_filler_logo {
 	height: 1px;
 }
@@ -53,10 +43,6 @@ h5.partner {
 	max-width: 100%;
 }
 
-#cdrs_footer_text {
-	padding-left: 0px;
-}
-
 img.front-cover {
 	margin-left: auto;
 	margin-right: auto;
@@ -64,7 +50,7 @@ img.front-cover {
 	max-height: 300px;
 }
 
-div#issn_copyright, div#ac_logo_footer, div#cdrs_full {
+div#issn_copyright, div#cdrs_full {
 	text-align: center;
 }
 
@@ -154,13 +140,6 @@ h3.home-title{
 	text-transform: uppercase;
 	margin-top: .5em;
 	margin-bottom: 0em;
-}
-
-footer {
-	border-top: 4px double silver;
-	margin-top: 60px;
-	padding-top: 40px;
-	margin-bottom: 3em;
 }
 
 h2 {
@@ -337,15 +316,6 @@ img.nav_logo {
 .navbar-brand {
 	overflow: hidden;
 	padding: 0px;
-}
-
-.row#footer_row {
-	margin-bottom: -30px;
-	margin-top: -10px;
-}
-
-#issn_copyright h5, #ac_logo_footer h5 {
-	margin-top: 0px;
 }
 
 #primary {
@@ -550,7 +520,6 @@ form#home-search {
 	float: right;
 }
 
-
 @media screen and (max-width: 1200px) {
 
 	form#home-search {
@@ -562,9 +531,6 @@ form#home-search {
 		float: none;
 	}
 }
-
-
-
 
 p.tagline {
 	text-align: justify;
@@ -621,23 +587,17 @@ article.excerpt {
 	text-align: center;
 }
 
-
-
-
 /* issue taxonomy page */
 
 header[role="page-title"] {
 	text-align: center;
 }
 
- .issue-print-date {
-	 color: #999;
-	 display: inline-block;
-	 margin: 0 0 0 8px;
- }
-
-
-
+.issue-print-date {
+ color: #999;
+ display: inline-block;
+ margin: 0 0 0 8px;
+}
 
 /* issue archive page */
 
@@ -645,7 +605,6 @@ header[role="page-title"] {
 	margin: -20px auto 50px auto;
 	max-width: 700px;
 }
-
 
 .issue-archive {
 	text-align: center;
@@ -683,7 +642,28 @@ header[role="page-title"] {
 	font-size: 12px;
 }
 
+/* footer */
+
+
+footer {
+	background: #ddd;
+
+	padding: 100px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* print styles */
+
 @media print {
+
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
@@ -730,12 +710,7 @@ header[role="page-title"] {
 		min-width: 768px;
   }
 
-  #footer {
-  	min-width: 750px;
-  	max-width: 100%;
-  }
-
-  .entry-header, #footer_row div {
+  .entry-header {
   	overflow: hidden;
   	word-wrap: break-word;
   }
@@ -785,6 +760,8 @@ header[role="page-title"] {
   	max-width: 100%;
   }
 }
+
+/* media queries */
 
 @media (max-width: 767px) {
 	.tagline{
