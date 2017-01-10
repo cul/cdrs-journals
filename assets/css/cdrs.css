@@ -642,22 +642,17 @@ header[role="page-title"] {
 	font-size: 12px;
 }
 
-
-
-
-
-
 /* footer */
 
 footer {
-	background: #f5f5f5;
+	background: #f6f6f6;
 	border-top: 1px solid #ddd;
 	border-bottom: 20px solid #ddd;
-	color: #444;
+	color: #555;
 	display: flex;
 	justify-content: center;
-	font-size: 16px;
-	font-weight: normal;
+	font-size: 15px;
+	font-weight: 400;
 	margin-top: 50px;
 }
 
@@ -665,7 +660,7 @@ footer .footer-logo,
 footer .footer-links,
 footer .footer-text {
 	line-height: 1.7;
-	padding: 30px 30px 25px 30px;
+	padding: 25px 25px 20px 25px;
 }
 
 footer .footer-logo {
@@ -696,7 +691,7 @@ footer .footer-text p {
 }
 
 footer .footer-text span {
-	color: #999;
+	color: #aaa;
 }
 
 /* print styles */

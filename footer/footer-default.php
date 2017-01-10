@@ -35,12 +35,11 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   $logo = get_option('logo_url');
 ?>
 
-
-
-
 <!-- footer -->
 
 <footer>
+
+<!-- logo-->
 
 <div class="footer-logo">
   <a href="<?php echo home_url(); ?>">
@@ -48,36 +47,33 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   </a>
 </div>
 
+<!-- links-->
+
 <ul class="footer-links">
   <li><a href="<?php echo home_url(); ?>">Home</a></li>
   <li><a href="<?php echo home_url(); ?>/about">About</a></li>
   <li><a href="<?php echo home_url(); ?>/copyright">Copyright</a></li>
 </ul>
 
-
-
-
-
-
 <div class="footer-text">
 
 <!-- partnership-->
 
 <p>
-  Published in Partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a>
-<?php if($school){ ?>
-  and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.
-  <?php } else{ ?>
-<?php } ?>
+  Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a>
+  <?php if($school){ ?>
+    and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.
+    <?php } else{ ?>
+  <?php } ?>
 
-<!-- ac -->
+  <!-- ac -->
 
-<?php if($checked != null){ ?>
-  Journal content made available through <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
-  <?php } else{ ?>
-<?php } ?>
+  <?php if($checked != null){ ?>
+    Journal content made available through <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
+    <?php } else{ ?>
+  <?php } ?>
 
-<!-- copyright -->
+  <!-- copyright -->
 
   <?php $options = get_option( 'my-footer-options' );
     $copyright_url = $options['copyright_url'];
@@ -97,7 +93,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   <?php if($options['custom_copyright']){ ?>
   <?php echo $options['custom_copyright'] ?>
   <?php } ?>
-
 </p>
 
 <!-- issn -->
