@@ -52,7 +52,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <ul class="footer-links">
   <li><a href="<?php echo home_url(); ?>">Home</a></li>
   <li><a href="<?php echo home_url(); ?>/about">About</a></li>
-  <li><a href="<?php echo home_url(); ?>/copyright">Copyright</a></li>
+  <?php if($checked != null){ ?>
+    <li><a href="<?php echo home_url(); ?>/copyright">Copyright</a></li>
+  <?php } else{ ?>
+  <?php } ?>
 </ul>
 
 <div class="footer-text">
@@ -69,7 +72,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   <!-- ac -->
 
   <?php if($checked != null){ ?>
-    Journal content made available through <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
+    Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
     <?php } else{ ?>
   <?php } ?>
 
