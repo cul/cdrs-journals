@@ -72,7 +72,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
   <!-- ac -->
 
   <?php if($checked != null){ ?>
-    Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
+    Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.
     <?php } else{ ?>
   <?php } ?>
 
