@@ -694,6 +694,8 @@ footer .footer-text span {
 	color: #aaa;
 }
 
+
+
 /* print styles */
 
 @media print {
@@ -801,6 +803,28 @@ footer .footer-text span {
 	.tagline{
 		margin-right: 10%;
 		margin-left: 10%;
+	}
+
+	footer {
+		display: block;
+	}
+
+	footer .footer-logo {
+		margin: 0 auto;
+	}
+
+	footer .footer-links {
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		padding: 8px 0;
+		text-align: center;
+	}
+
+	footer .footer-links li {
+		display: inline;
+		margin: 0 6px;
 	}
 }
 
