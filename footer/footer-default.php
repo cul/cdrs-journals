@@ -63,10 +63,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <!-- partnership-->
 
 <p>
-  Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a>
-  <?php if($school){ ?>
+  Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a><?php if($school){ ?>
     and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.
-    <?php } else{ ?>
+    <?php } else{ ?>.
   <?php } ?>
 
   <!-- ac -->
