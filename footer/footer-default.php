@@ -62,24 +62,22 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <!-- partnership-->
 
-<p>
-  Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a><?php if($school){ ?>
-    and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.
-    <?php } else{ ?>.
+  <p>Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a><?php if($school){ ?>
+  and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.</p>
+  <?php } else{ ?>.</p>
   <?php } ?>
 
   <!-- ac -->
 
   <?php if($checked != null){ ?>
-    Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.
-    <?php } else{ ?>
+  <p>Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
+  <?php } else{ ?>
   <?php } ?>
 
   <!-- copyright -->
-
-  <?php $options = get_option( 'my-footer-options' );
-    $copyright_url = $options['copyright_url'];
-    if($copyright_url && $options['copyright']){
+  <p><?php $options = get_option( 'my-footer-options' );
+  $copyright_url = $options['copyright_url'];
+  if($copyright_url && $options['copyright']){
   ?>
 
   This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><?php echo $options['copyright']; ?></a> License.

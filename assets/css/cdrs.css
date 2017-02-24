@@ -668,7 +668,7 @@ footer .footer-logo {
 }
 
 footer .footer-logo img {
-	height: auto;
+	max-height: 70px;
 	max-width: 100%;
 }
 
