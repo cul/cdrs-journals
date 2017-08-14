@@ -460,6 +460,12 @@ sup .fa-envelope {
 	list-style-type: none;
 }
 
+.home #menu-homepage-nav li {
+	display: inline-block;
+	float: none;
+	text-align: center;
+}
+
 .tax-issues li {
 	list-style-type: none;
 }
