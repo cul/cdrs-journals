@@ -460,7 +460,8 @@ sup .fa-envelope {
 	list-style-type: none;
 }
 
-.home #menu-homepage-nav li {
+.home #menu-homepage-nav li,
+.home #menu-homepage-navigation li {
 	display: inline-block;
 	float: none;
 	text-align: center;
