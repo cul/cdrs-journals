@@ -18,110 +18,113 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-    </div><!-- #main -->
+</div><!-- #main -->
 
-    </div>
-    <?php
-        $foot_opt = get_option( 'my-footer-options' );
-        $ac_partner = $foot_opt['ac_partner'];
-        $school_opt = $foot_opt['school_affiliation'];
-        if($ac_partner == null && !$school_opt){
-            $offset = "col-sm-offset-4";
-        }
-    ?>
-    <div class="container" id="footer_container">
-    <footer id="footer" class="row site-footer" role="contentinfo">
-        <div class="row" id="footer_row">
+</div>
 
-            <div class="col-sm-4" id="cdrs_logo_footer">
-                <h5 class="partner" >Published in partnership with</h5>
-                <a href="http://cdrs.columbia.edu"> 
-                    <div id="cdrs_full"><h5>
-                    Center For Digital Research & Scholarship</h5>
-                    <span class="small"><h6>Columbia University Libraries/Information Services</h6></span>
-                    </div>
-                </a>
-            </div>
+<!-- footer options -->
 
+<?php
+  $foot_opt = get_option( 'my-footer-options' );
+  $ac_partner = $foot_opt['ac_partner'];
+  $school_opt = $foot_opt['school_affiliation'];
+  $options = get_option( 'my-footer-options' );
+  $checked = $options['ac_partner'];
+  $school = $options['school_affiliation'];
+  $school_url = $options['school_affiliation_url'];
+  $logo = get_option('logo_url');
+?>
 
-            <?php 
-               $options = get_option( 'my-footer-options' );
-               $checked = $options['ac_partner'];
-             $school = $options['school_affiliation'];
-             $school_url = $options['school_affiliation_url'];
-            ?>
-            
-            <div class="col-sm-4" id="ac_logo_footer">
-                 <?php if($school){ ?>
-                    <h5><a href="<?php echo $school_url; ?>"> <?php echo $school ?> </a></h5>
-                <?php } 
-                    if($checked != null && $school){ 
-                        echo "<h5> and</h5>"; 
-                    }
-                    if($checked != null){ ?>
-                        <a href='http://academiccommons.columbia.edu'>
-                        <div id='ac_logo_space'>
+<!-- footer -->
 
-                                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/ac_2015.png" >
+<footer>
 
-                        </div>
-                        </a>
-                    <?php } else{ ?>
-                        <div id='ac_logo_space'>
+<!-- logo-->
 
-                                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/asfalt-light.png" id="ac_filler_logo">
+<div class="footer-logo">
+  <a href="<?php echo home_url(); ?>">
+    <img src="<?php echo $logo ?>">
+  </a>
+</div>
 
-                        </div>
-                    <?php } ?>
-            </div>
+<!-- links-->
 
-            
+<ul class="footer-links">
+  <li><a href="<?php echo home_url(); ?>">Home</a></li>
+  <li><a href="<?php echo home_url(); ?>/about">About</a></li>
+  <?php if($checked != null){ ?>
+    <li><a href="<?php echo home_url(); ?>/copyright">Copyright</a></li>
+  <?php } else{ ?>
+  <?php } ?>
+</ul>
 
+<div class="footer-text">
 
-            <div class="col-sm-4"  id="issn_copyright">
-                <?php $options = get_option( 'my-footer-options' ); 
-                      $print = $options['print_issn'];
-                      $online = $options['online_issn'];
-                      if($print && $online){
-                ?>
-                    <h5>ISSN (Print): <?php echo $print ?></h5>
-                    <h5>ISSN (Online): <?php echo $online; ?></h5>
-                <?php } ?>
+<!-- partnership-->
 
-                <?php
-                      if($print && !$online){
-                ?>
-                <h5>ISSN: <?php echo $print ?></h5>
-                <?php } ?>
+  <p>Published in partnership with <a href="http://library.columbia.edu">Columbia University Libraries</a><?php if($school){ ?>
+  and <a href="<?php echo $school_url; ?>"> <?php echo $school ?></a>.</p>
+  <?php } else{ ?>.</p>
+  <?php } ?>
 
-                <?php 
-                      if($online && !$print){
-                ?>
-                <h5>ISSN: <?php echo $online; ?></h5>
-                
-                <?php } ?>
+  <!-- ac -->
 
-                <?php $options = get_option( 'my-footer-options' );
-                      $copyright_url = $options['copyright_url'];
-                      if($copyright_url && $options['copyright']){
-                ?>
-                <h5>This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><em> <?php echo $options['copyright']; ?> </em></a> License. </h5>
+  <?php if($checked != null){ ?>
+  <p>Distributed through Columbia University’s <a href="http://academiccommons.columbia.edu">Academic Commons</a>.</p>
+  <?php } else{ ?>
+  <?php } ?>
 
-                <?php } ?>
+  <!-- copyright -->
+  <p><?php $options = get_option( 'my-footer-options' );
+  $copyright_url = $options['copyright_url'];
+  if($copyright_url && $options['copyright']){
+  ?>
 
-                <?php if(!$copyright_url && $options['copyright']){ ?>
-                    <h5>This work is Licensed under a <?php echo $options['copyright']; ?> License. </h5>
-                <?php }?>
+  This work is Licensed under a <a rel="license" href="<?php echo $copyright_url; ?>"><?php echo $options['copyright']; ?></a> License.
 
-                <?php if($options['custom_copyright']){ ?>
-                    <h5> <?php echo $options['custom_copyright'] ?> </h5>
-                <?php } ?>
-           </div>
-        
-        </div><!-- .c1-12 -->
-    </footer><!--#footer -->
+  <?php } ?>
 
-</div><!-- .container -->
+  <?php if(!$copyright_url && $options['copyright']){ ?>
+
+  This work is Licensed under a <?php echo $options['copyright']; ?> License.
+
+  <?php }?>
+
+  <?php if($options['custom_copyright']){ ?>
+  <?php echo $options['custom_copyright'] ?>
+  <?php } ?>
+</p>
+
+<!-- issn -->
+
+<p>
+  <?php $options = get_option( 'my-footer-options' );
+    $print = $options['print_issn'];
+    $online = $options['online_issn'];
+    if($print && $online){
+  ?>
+
+  <span class="issn">ISSN (Print): <?php echo $print ?> &nbsp;
+  <span class="issn">ISSN (Online): <?php echo $online; ?></span>
+
+  <?php } ?>
+
+  <?php if($print && !$online){ ?>
+
+  <span class="issn">ISSN: <?php echo $print ?></span>
+
+  <?php } ?>
+
+  <?php if($online && !$print){ ?>
+
+  <span class="issn">ISSN: <?php echo $online; ?></span>
+
+  <?php } ?>
+</p>
+
+</div>
+
+</footer>
 
 <?php wp_footer() ?>
 
