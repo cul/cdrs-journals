@@ -655,7 +655,7 @@ header[role="page-title"] {
 footer {
 	background: #f6f6f6;
 	border-top: 1px solid #ddd;
-	border-bottom: 20px solid #ddd;
+	border-bottom: 10px solid #ddd;
 	color: #555;
 	display: flex;
 	justify-content: center;
