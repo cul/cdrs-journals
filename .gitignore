@@ -1,2 +1,8 @@
+/log
+
+# Ignore editor files
+*~
+\#*\#
+
+# Ignore OS-specific
 .DS_Store
-assets/.sass-cache
