@@ -14,8 +14,8 @@ set :keep_releases, 2
 ######################
 
 # Set up important directories
-set :wp_docroot, "#{fetch(:deploy_to)}/wp_docroot"
-set :wp_data_path, "#{fetch(:deploy_to)}/wp_data"
+set :wp_docroot, "#{fetch(:deploy_to)}/html"
+set :wp_content_path, "#{fetch(:deploy_to)}/wp-content"
 set :multisite, true
 set :title, 'CDRS Journals Network'
 
