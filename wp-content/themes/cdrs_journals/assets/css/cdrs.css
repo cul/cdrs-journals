@@ -438,6 +438,21 @@ sup .fa-envelope {
 	text-align: center;
 }
 
+.home #home-access-nav li#twitter-link,
+.home #home-access-nav li#fb-link,
+.home #home-access-nav li#linkedin-link {
+	display: inline-block;
+  float: none;
+  text-align: center;
+  padding: 15px 5px;
+}
+
+.home #home-access-nav #cujo-home-navbar li#twitter-link,
+.home #home-access-nav #cujo-home-navbar li#fb-link,
+.home #home-access-nav #cujo-home-navbar li#linkedin-link {
+	padding: 0;
+}
+
 .tax-issues li {
 	list-style-type: none;
 }
