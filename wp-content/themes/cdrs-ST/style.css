@@ -1,0 +1,1495 @@
+/*
+ Theme Name:     Social Text 2016 Theme
+ Theme URI:      http://socialtextjournal.org/
+ Description:    Custom theme for socialtextjournal.org. This is a child theme based on the twentysixteen theme from <a href="https://wordpress.org/">Wordpress</a>.
+ Author:         Chris Powell and CDRS Team
+ Author URI:     http://radarlake.co.uk
+ Template:       twentysixteen
+ Version:        1.0.0
+*/
+
+/* Add Custom CSS after this line */
+
+
+
+
+
+/**
+ * 3.0 - Typography
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: Georgia, serif;
+}
+
+
+pre {
+	border: none;
+	padding: 0;
+	font-family: Georgia, serif;
+}
+
+
+
+/**
+ * 4.0 - Elements
+ */
+
+
+body {
+	background: #fff;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+
+/**
+ * 6.0 - Navigation
+ */
+
+
+/**
+ * 6.1 - Links
+ */
+
+a:hover,
+a:focus,
+a:active {
+	background-color: #888;
+	color: #fff;
+}
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title {
+	color: #686868;
+}
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:focus {
+	background-color: #686868;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus {
+	color: #686868;
+}
+
+.site-header-main .site-branding a:hover {
+	background-color: transparent;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: transparent;
+	border-color: #686868;
+	color: #686868;
+}
+.entry-title a:hover,
+.entry-title a:focus {
+	color: #686868;
+}
+.entry-footer a:hover,
+.entry-footer a:focus {
+	color: #686868;
+}
+.page-links a:hover,
+.page-links a:focus {
+	background-color: #686868;
+}
+.required {
+	color: #686868;
+}
+.site-info a:hover,
+.site-info a:focus {
+	color: #fff;
+}
+.site-footer .site-info a:hover,
+.site-footer .site-info a:focus {
+	color: #fff;
+}
+
+
+/**
+ * 6.2 - Menus
+ */
+
+.main-navigation #menu-main-menu {
+	font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+
+	letter-spacing: 0.2px;
+}
+
+.main-navigation a {
+    color: #00404f;
+}
+.main-navigation a:hover,
+.main-navigation a:focus {
+	color: #686868;
+	background-color: transparent;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	color: #686868;
+}
+
+
+
+/**
+ * 10.0 - Widgets
+ */
+
+.widget {
+	border-top: none;
+	margin-bottom: 3.5em;
+	padding-top: 1.75em;
+}
+
+.widget .widget-title {
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+/*    letter-spacing: 0.046875em; */
+    letter-spacing: 0.1em;
+}
+
+.widget ul {
+	list-style: none;
+	margin-left: 0;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 13px;
+
+}
+.widget li {
+	padding-bottom: 18px;
+}
+.widget li a {
+	color: #444;
+}
+.widget li a:hover {
+	color: #fff;
+}
+
+
+.PI_SimpleTwitterTweets {
+	background: #f2f2f2 url("images/tweet-corner.png") no-repeat right top;
+	background-image: ;
+	padding: 18px;
+}
+.PI_SimpleTwitterTweets .widget-title {
+	padding-top: 18px;
+	padding-left: 36px;
+	background: url("images/twitter-black.png") no-repeat left center;
+}
+.widget .tweets {
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+.widget .tweets li {
+    margin-bottom: 12px;
+	border-bottom: 1px solid #e6e6e8;
+	padding-bottom: 12px;
+}
+.widget .tweets li:last-child {
+    margin-bottom: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.widget .stt-em a {
+    color: #686868;
+}
+.widget .stt-em a:hover {
+    color: #fff;
+}
+
+
+
+
+/**
+ * 11.0 - Content
+ */
+
+
+
+
+/**
+ * 11.1 - Header
+ */
+
+#header-container {
+	background-color: #1d2228;
+	background-color: #c9c585;
+	margin-bottom: 42px;
+}
+
+.site-header {
+	padding-top: 30px;
+	padding-bottom: 22px;
+}
+
+.site-branding, .site-header-menu, .header-image {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.site-header .site-branding {
+	width: 294px;
+	height: 100px;
+	margin-top: 10px;
+}
+.site-header .site-title {
+	display: none;
+}
+
+.site-header .site-branding svg {
+	max-width: 100%;
+}
+
+.site-strapline {
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 4px;
+	font-size: 1.2em;
+	padding-left: 4px;
+}
+
+#header-social-container {
+	text-align: right;
+	margin: 0px 0 12px;
+}
+.social-icon {
+	margin-left: 24px;
+}
+.social-icon a:hover {
+	background-color: transparent;
+}
+
+.main-navigation .search-form {
+	margin-bottom: 18px;
+}
+.main-navigation input[type="search"].search-field {
+    width: 100%;
+	font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+	padding: 0.4615384615em 0.5384615385em;
+	border: 1px solid #8a8a8a;
+}
+.main-navigation button.search-submit {
+	font-size: 11px;
+	width: 35px;
+	line-height: 1;
+	font-family: Merriweather;
+}
+.main-navigation .search-submit:before {
+    font-size: 16px;
+    left: 1px;
+    line-height: 35px;
+    width: 34px;
+}
+
+
+/**
+ * 11.1.1 - Home Specific Header
+ */
+
+#journal-container {
+	background-color: #f2f2f2;
+	margin-bottom: 42px;
+	padding: 42px 0;
+}
+.home-section-one, #journal-container .site-content {
+	margin-right: 7.6923%;
+    margin-left: 7.6923%;
+}
+.home-section-one {
+	margin-bottom: 42px;
+}
+
+.home-periscope, .home-journal-contents, .home-journal-article {
+	background-color: ;
+}
+.home-journal-cover {
+	display: none;
+}
+.home-journal-cover img {
+	box-shadow: 5px 3px 6px rgba(100, 100, 100, 0.4);
+}
+.journal-subscribe-button {
+	display: block;
+	background: #1d2228;
+	color: #fff;
+	padding: 6px;
+	text-align: center;
+	margin-top: 30px;
+	font-weight: bold;
+}
+.home-per-strap h4 {
+    color: #8d8f8e;
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+	font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.3125;
+    text-transform: uppercase;
+}
+.home-per-details-inner {
+	background: #f2f2f2;
+	padding: 18px;
+}
+
+
+/**
+ * 11.1.2 - Home Specific Main
+ */
+
+.home .site-main .feed_item {
+	width: 100%;
+	float: none;
+}
+.feed_item {
+	margin-bottom: 42px;
+}
+.home-first-post .feed_item {
+	margin-bottom: 0;
+}
+.feed_item img {
+	max-width: 100%;
+	height: auto;
+    margin-bottom: 30px;
+}
+.feed_item_cat {
+    display: block;
+    color: #8d8f8e;
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+	font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.3125;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.content-list .feed_item_cat {
+	margin-bottom: 12px;
+}
+.feed_item_title {
+    display: block;
+    color: #1a1a1a;
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+	font-weight: 700;
+    font-size: 28px;
+    font-size: ;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+a.feed_item_title:hover {
+    background-color: transparent;
+	color: #686868;
+}
+#current_journal a:hover .feed_item_title {
+    background-color: transparent;
+	color: #686868;
+}
+.feed_item_subtitle {
+    display: block;
+	font-size: 22px;
+	margin-top: 6px;
+}
+.content-list .feed_item_subtitle {
+	font-size: 28px;
+}
+.feed_item_details {
+    display: block;
+    color: #8d8f8e;
+	font-size: 13px;
+}
+.feed_item_excerpt {
+    margin-bottom: 24px;
+	font-size: 13px;
+}
+.feed_item_excerpt p {
+    margin-bottom: 0;
+}
+#journal-container .feed_item_excerpt p {
+    margin-bottom: 1.75em;
+}
+#journal-container .feed_item_excerpt {
+    margin-bottom: 0;
+}
+.per_home_links {
+	list-style: none;
+	margin: 0;
+	font-size: 13px;
+	font-weight: bold;
+}
+.per_home_links li {
+	display: inline-block;
+}
+.per_home_links li:first-child {
+	margin-right: 120px;
+}
+
+
+/**
+ * 11.1.3 - Header Logo SVG
+ */
+
+.logosvg {
+	fill: #00404f;
+}
+
+
+
+/**
+ * 11.2 - Posts and pages
+ */
+
+
+.entry-footer {
+	display: none;
+}
+
+.entry-title {
+	font-family: "Archivo Narrow", "Helvetica Neue", sans-serif;
+	font-size: 48px;
+	font-size: ;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-bottom: 1em;
+	letter-spacing: 0.5px;
+}
+.entry-title a:hover {
+	background-color: transparent;
+}
+
+.tax-periscope_topic .entry-title {
+	margin-bottom: 0.6em;
+}
+
+
+.article-info-box {
+	background-color: #f2f2f2;
+	margin-bottom: 42px;
+	padding: 0
+}
+.article-info {
+	float: none;
+    width: 21.42857143%;
+    width: 100%;
+	color: #444;
+
+	font-size: 14px;
+    font-size: 0.9375rem;
+}
+.article-info-no {
+	color: #444;
+
+	font-size: 14px;
+    font-size: 0.9375rem;
+}
+.author .article-info {
+	display: none;
+}
+.article-image {
+	float: none;
+    width: 100%;
+}
+.article-info-content, .article-info-content-no {
+	padding: 18px 7.6923%;
+}
+ .article-image-content, .article-no-image-content {
+	padding: 18px 7.6923%;
+}
+
+.article-type {
+	display: block;
+	margin-bottom: 0.5384615385em;
+	margin-bottom: 2.1538em;
+	text-transform: uppercase;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.article-image-content img {
+	max-width: 100%;
+	height: auto;
+}
+
+.byline, .posted-on {
+	font-weight: bold;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+.byline {
+
+}
+.byline em {
+	font-family: Georgia, serif;
+}
+.cat-links {
+	margin-top: 24px;
+}
+.cat-links, .tags-links {
+	font-size: 13px;
+	display: block;
+}
+
+.author-info {
+    border: none;
+	background-color: #f2f2f2;
+    clear: both;
+    padding: 1.75em;
+}
+.entry-content .author-title {
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	margin-bottom: 1em;
+}
+.author-link {
+	display: block;
+	margin-top: 1.75em;
+}
+.author-link:hover {
+	background-color: transparent;
+	color: #686868;
+}
+
+
+/**
+ * Related Posts
+ */
+
+.rp4wp-related-posts {
+
+}
+.rp4wp-related-posts h3 {
+	padding-bottom: 1.3125em;
+    border-bottom: 1px solid #e6e6e8;
+	font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    letter-spacing: 0.1em;
+	margin-bottom: 1.3125em;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.3125;
+    margin: 0 0 1.75em;
+    text-transform: uppercase;
+}
+.rp4wp-related-posts ul>li {
+    padding-bottom: 0px;
+}
+.rp4wp-related-post-content a {
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: ;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+	text-decoration: none;
+}
+
+.yuzo_related_post .relatedthumb a {
+    box-shadow: none;
+	font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    letter-spacing: 0.1em;
+	font-weight: 700;
+	line-height: 1.3125;
+	font-size: 28px;
+}
+.yuzo_related_post .yuzo_text {
+    line-height: 1.75;
+	margin-top: 6px;
+}
+.yuzo_related_post h3 {
+    font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+
+.journal-archive-container {
+	margin-bottom: 24px;
+}
+.journal-archive-container img {
+	float: left;
+	width: 14.88095238%;
+	height: auto;
+	border: 1px solid #ccc;
+}
+.journal-archive-details {
+	float: right;
+	width: 77.9761904%;
+	width: 82.26190476%;
+	margin-top: 0;
+}
+.journal-archive-container .feed_item_excerpt p {
+    margin-bottom: 1.75em;
+}
+.journal-archive-container .feed_item_excerpt {
+    margin-bottom: 0;
+}
+.page-template-journals-template .feed_item_title {
+    margin-bottom: 12px;
+	font-size: 22px;
+	clear: both;
+}
+.page-template-journals-template p.collapseomatic {
+    margin: 0 0 1em;
+}
+
+.page-template-journals-template p.toggleshow {
+    margin: 0 0 1em;
+}
+
+.toggleshow {
+    background-image: url('images/arrow-down.png');
+    background-repeat: no-repeat;
+    padding: 0 0 10px 16px;
+    cursor: pointer;
+}
+.togglehide {
+	margin-left: 16px;
+}
+
+
+/**
+ * 11.2.1 - Blog Pages
+ */
+
+.content-area-wide {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+}
+.content-list-title {
+	font-size: 36px;
+	margin-bottom: 0.6em;
+	letter-spacing: 0.04em;
+}
+.content-list-thumb {
+	display: none;
+}
+
+.content-list-thumb img {
+    max-width: 100%;
+	height: auto;
+}
+.content-list .entry-content p {
+	margin-bottom: 0.9em;
+}
+
+.pagination {
+    border-top: 1px solid #e6e6e8;
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+}
+.pagination .prev,
+.pagination .next {
+	background-color: #1a1a1a;
+}
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:focus {
+	background-color: #c3c3c3;
+	color: #fff;
+}
+
+
+/**
+ * 11.2.2 - Archives
+ */
+
+.page-header {
+	border-top: none;
+
+	background-color: none;
+    padding: 12px;
+	border-bottom: 1px solid #e6e6e8;
+}
+.page-title {
+    font-family: "Archivo Narrow", "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    font-size: ;
+    font-weight: 700;
+    line-height: 1.25;
+	letter-spacing: 0.04em;
+}
+
+.category .page-header, .search .page-header {
+	padding: 34px 0 18px;
+}
+
+/**
+ * 11.2.3 - Author Pages
+ */
+
+.site .avatar {
+    border-radius: 0;
+}
+.author .avatar {
+	margin-left: 0;
+}
+.weblink {
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.author-articles-header {
+	font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+	border-bottom: 1px solid #e6e6e8;
+	padding-bottom: 1em;
+	margin-bottom: 1.75em;
+}
+.article-image-content {
+    color: #686868;
+}
+
+
+/**
+ * 11.2.4 - Periscope Homepage
+ */
+
+.periscope-info-box .feed_item_cat, .periscope-box .feed_item_cat, .periscope-att .feed_item_cat {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #e6e6e8;
+}
+.periscope_topic_cover_img {
+	margin-top: 6px;
+}
+.periscope_topic_description_box {
+	margin-top: 24px;
+}
+.periscope_more_links {
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 24px;
+}
+.periscope-second-box {
+	padding-bottom: 42px;
+	border-bottom: 1px solid #e6e6e8;
+	margin-bottom: 42px;
+}
+.page-header {
+	padding: 18px 0;
+}
+.taxonomy-description {
+    color: #686868;
+    font-size: 13px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+.tax-periscope_topic .tax-header {
+	margin-bottom: 4em;
+}
+.tax-periscope_topic .tax-header img {
+	margin-bottom: 1em;
+}
+
+.page-numbers:hover {
+	background-color: transparent;
+}
+
+
+/**
+ * 11.2.5 - Periscope Article Pages
+ */
+.periscope-att {
+	padding: 18px 7.6923% 0;
+}
+.periscope-att .feed_item_cat {
+	margin-bottom: 0;
+}
+
+
+/**
+ * 11.2.6 - Search Pages
+ */
+
+.search-results .entry-title {
+    font-family: "Archivo Narrow", "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    font-size: ;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.5px;
+}
+.search-results .post-thumbnail {
+	display: none;
+}
+
+
+/**
+ * 11.2.7 - Editors Blog
+ */
+
+.editors-title {
+	font-size: 48px;
+}
+.editors-image {
+	display: inline;
+	float: right;
+	border: 6px solid #f2f2f2;
+}
+.editors-info {
+	float: left;
+	display: inline;
+}
+.editors-info p {
+	margin: 0.5em 0 1.75em;
+}
+.editorsblog .entry-title {
+	font-size: 36px;
+}
+.single-editorsblog .feed_item_cat {
+	margin-top: 1.75em;
+}
+
+
+.current_ed_date {
+	display: block;
+	color: #8d8f8e;
+    font-size: 13px;
+	font-family: Georgia, serif;
+	margin-top: 12px;
+}
+
+
+/**
+ * 11.5 - Sidebar
+ */
+
+.rpwe-block h3.rpwe-title {
+    font-weight: 400;
+    font-size: 13px!important;
+}
+.rpwe-block h3.rpwe-title a:hover {
+    color: #fff;
+}
+
+.side-journal-cover {
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 12px 18px;
+}
+.side-journal-cover img {
+	max-width: 150px;
+	height: auto;
+	box-shadow: 5px 3px 6px rgba(100, 100, 100, 0.4);
+}
+.widget_current_journal .feed_item_title {
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: ;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 18px;
+	text-align: center;
+}
+.widget_current_journal .journal-subscribe-button {
+    margin-top: 0px;
+}
+
+.side-periscope {
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 6px 6px 18px;
+	margin-bottom: 12px;
+}
+.widget_current_per .feed_item_title {
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: ;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 6px;
+	margin-top: 18px;
+	text-align: center;
+}
+
+
+.per-archive-item p {
+	color: #8d8f8e;
+}
+.per-archive-item a {
+	color: #1a1a1a;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+.widget_current_per .per-archive-item li, .widget_current_per .per-archive-item p {
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #e6e6e8;
+}
+.widget_current_per .per-archive-item li:last-child {
+	border-bottom: none;
+}
+.per-archive-item .per-archive-count {
+	display: block;
+	font-family: Georgia, serif;
+	color: #8d8f8e;
+}
+
+
+
+
+
+.per_toc {
+	margin-top: 30px;
+}
+.per_toc li {
+
+}
+.per_toc a {
+	color: #1a1a1a;
+	font-weight: bold;
+	font-size: 15px;
+}
+.per_toc .per_toc_byline {
+	color: #8d8f8e;
+}
+.per_toc .per_toc_byline span {
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+.per_toc_archive_link {
+	margin-top: 12px;
+	padding-top: 30px;
+	border-top: 1px solid #e6e6e8;
+	font-size: 1.2em;
+}
+
+.widget dl {
+	font-size: 15px;
+}
+.widget dt {
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+.widget dt {
+	margin-bottom: 12px;
+}
+.widget dd {
+	margin-bottom: 4px;
+}
+
+
+
+/**
+ * 11.5.1 - Recent Posts Hardcoded Widget
+ */
+
+
+.recent-ul {
+	list-style: none!important;
+    margin-left: 0!important;
+    padding-left: 0!important;
+}
+.recent-li {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+.recent-clearfix {
+    zoom: 1;
+}
+.recent-content-block a {
+    display: inline!important;
+    text-decoration: none;
+}
+.recent-alignleft {
+    display: inline;
+    float: left;
+}
+.recent-thumb {
+    border: 1px solid #EEE!important;
+    box-shadow: none!important;
+    margin: 2px 10px 2px 0;
+    padding: 3px!important;
+	width: 50px;
+	height: 50px;
+}
+.recent-content-block h3.recent-title {
+    font-weight: 400;
+    font-size: 13px!important;
+}
+.recent-content-block h3.recent-title {
+    font-weight: 400;
+    font-size: 13px!important;
+}
+
+.recent-content-block h3 {
+    background: none!important;
+    clear: none;
+    margin-bottom: 0!important;
+    margin-top: 0!important;
+    font-weight: 400;
+    font-size: 12px!important;
+    line-height: 1.5em;
+}
+.recent-time {
+    color: #bbb;
+    font-size: 11px;
+}
+
+
+
+.sidebar #text-7 .widget-title {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+
+
+
+
+/**
+ * 11.6 - Footer
+ */
+
+#signupbox {
+	border: 1px solid #e6e6e8;
+	clear: both;
+	text-align: center;
+	padding: 42px;
+	margin-bottom: 60px;
+}
+
+#footer-container {
+	background-color: #f2f2f2;
+}
+.site-footer {
+	padding-top: 60px;
+}
+
+.signup-text {
+    font-family: "Archivo Narrow", Montserrat, "Helvetica Neue", sans-serif;
+/*    letter-spacing: 0.046875em; */
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    font-size: 1rem;
+	font-weight: 700;
+    line-height: 1.3125;
+    margin: 0 0 1.75em;
+    text-transform: uppercase;
+}
+
+.site-footer .site-info, .site-footer .site-title {
+	font-weight: bold;
+}
+
+.site-info {
+	text-align: left;
+	width: 100%;
+}
+.site-copy {
+	float: left;
+}
+.site-footer-nav {
+	clear: both;
+	margin-top: 18px;
+}
+
+
+#menu-footer-menu {
+	list-style-type: none;
+	margin: 0 0 0 0px;
+}
+
+#menu-footer-menu li:first-child {
+	border-left: none;
+}
+
+
+
+/**
+ * Media Queries
+ */
+
+/**
+ * >= 710px
+ */
+
+@media screen and (min-width: 44.375em) {
+
+body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {
+		height: 0px !important;
+	}
+
+	.site {
+		margin: 0px;
+	}
+
+
+.article-info-content, .article-no-image-content, .article-info-content-no {
+	padding: 18px 23.0769% 18px 7.6923%;
+}
+.periscope-att {
+	padding: 18px 23.0769% 0px 7.6923%;
+}
+
+/**
+ * 11.2.4 - Periscope Homepage
+ */
+
+.periscope_topic_cover_img {
+	max-width: 68.5714285%;
+	height: auto;
+}
+.periscope-info-box .periscope_topic_cover_img {
+
+}
+
+
+
+}
+
+@media screen and (min-width: 44.375em) and (max-width: 56.875em) {
+
+.home-section-one, #journal-container .site-content {
+	margin-right: 23.0769%;
+}
+
+.home #primary {
+	margin-left: 7.6923%;
+	margin-right: 23.0769%;
+}
+
+.page-template-periscope .periscope-box, .page-template-periscope .periscope-info-box {
+	margin-left: 7.6923%;
+	margin-right: 23.0769%;
+}
+
+.entry-title {
+	font-size: 36px;
+	-webkit-hyphens:manual;
+	-moz-hyphens:manual;
+	hyphens:manual;
+}
+
+}
+
+
+/**
+ * >= 910px
+ */
+
+@media screen and (min-width: 56.875em) {
+
+.home-section-one, #journal-container .site-content {
+	margin-right: 0;
+    margin-left: 0;
+}
+
+.home-first-post, .home-periscope, .home-journal-cover, .home-journal-contents, .home-journal-article {
+	float: left;
+}
+
+.home-first-post {
+	width: 32.5%;
+	margin-right: 0;
+}
+.home-first-post .feed_item {
+	padding-right: 7.1428571%;
+	border-right: 1px solid #e6e6e8;
+}
+.home-periscope {
+	width: 62.5%;
+	margin-left: 2.5%;
+}
+.home-journal-cover {
+	display: block;
+	width: 16.666%;
+	margin-right: 5%;
+}
+.home-journal-contents {
+	width: 36.666%;
+	margin-right: 5%;
+}
+.home-journal-article {
+	width: 36.666%;
+}
+
+.journal_links {
+    font-weight: bold;
+}
+.home-journal-article .journal_links {
+	margin-top: 24px;
+}
+
+
+.site-header-menu .search-form {
+    float: right;
+	margin-right: 14px;
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+.main-navigation input[type="search"].search-field {
+    width: 240px;
+}
+	.main-navigation li:hover > a,
+	.main-navigation li.focus > a {
+		color: #686868;
+	}
+
+.site-header-menu {
+/*    width: 75%; */
+/*    width: 60%; */
+    width: 75%;
+}
+.menu-main-menu-container {
+	float: right;
+	margin-right: 0px;
+}
+
+#header-social-container {
+	text-align: right;
+	margin: -40px 0 12px;
+}
+
+
+.home-section-one {
+
+}
+.home-first-post {
+
+}
+.home-periscope {
+	position: relative;
+	z-index: 0;
+
+}
+.home-periscope img {
+
+}
+.home-per-strap h4 {
+	background: #1d2228;
+	display: inline-block;
+	color: #fff;
+	padding: 6px 18px;
+}
+.home-periscope-details {
+	position: absolute;
+	z-index: 20;
+	bottom: -2px;
+}
+
+
+.home .site-main .feed_item {
+/*	width: 46.428571%; */
+	width: 50%;
+	float: left;
+}
+.home .site-main .feed_item_inner {
+	min-height: 680px;
+}
+.home .site-main .feed_col_left .feed_item_inner {
+	padding-right: 7.1428571%;
+	border-right: 1px solid #e6e6e8;
+}
+.home .site-main .feed_col_right .feed_item_inner {
+	padding-left: 7.1428571%;
+}
+
+
+
+.widget {
+/*    padding-top: 1.615384615em; */
+	padding-top: 0;
+}
+.widget .widget-title {
+    padding-bottom: 1.3125em;
+	border-bottom: 1px solid #e6e6e8;
+}
+
+
+.article-info-box {
+	padding: 0;
+}
+
+.article-info {
+	float: left;
+/*    width: 21.42857143%; */
+    width: 26.19047619%;
+}
+.article-info-no {
+    width: 100%;
+}
+.author .article-info {
+	display: block;
+}
+.article-image {
+	float: right;
+    width: 71.42857144%;
+}
+
+.article-info-content {
+	padding: 18px 0 18px 18px;
+}
+.article-info-content-no {
+	padding: 18px 18px 18px 18px;
+}
+.periscope-att {
+	padding: 18px 18px 0px 18px;
+}
+ .article-image-content {
+	padding: 18px 18px 18px 0;
+}
+ .article-no-image-content {
+	padding: 18px;
+}
+
+.periscope-info-box img {
+	border: 3px solid #fff;
+}
+
+
+.content-list-thumb {
+	display: block;
+	float: left;
+    max-width: 27.38095238%;
+	max-width: 35.71428571%;
+    margin: 8px 2.85714285% 10px 0;
+}
+body:not(.search-results) .content-area .content-list .entry-content-float {
+	float: right;
+	width: 69.76190476%;
+	width: 61.42857142%;
+}
+.content-list-thumb img {
+    max-width: 100%;
+	height: auto;
+}
+
+#menu-footer-menu {
+	margin: 0 0 0 42px;
+}
+#menu-footer-menu li {
+	display: inline;
+	margin-left: 18px;
+	padding-left: 18px;
+	border-left: 1px solid #aaa;
+}
+.site-info {
+	text-align: right;
+}
+.site-info {
+	margin-right: 0;
+}
+.site-footer-nav {
+	float: right;
+	clear: none;
+	margin-top: 0px;
+}
+
+
+
+}
+
+
+/**
+ * >= 985px
+ */
+
+@media screen and (min-width: 61.5625em) {
+
+
+body:not(.search-results) article:not(.type-page) .entry-content {
+    float: none;
+    width: 100%;
+}
+body:not(.search-results) article:not(.type-page) .entry-footer {
+    float: none;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.site-main > article {
+    margin-bottom: 4.0em;
+}
+
+
+
+}
+
+
+/**
+ * >= 1200px
+ */
+
+@media screen and (min-width: 75em) {
+
+
+.menu-main-menu-container {
+	margin-right: 24px;
+}
+
+
+}
+
+/**
+ * >= 1300px
+ */
+
+@media screen and (min-width: 81.25em) {
+
+
+#header-social-container {
+	text-align: right;
+	margin: 10px 0 18px;
+}
+
+
+}
+
+
+/**
+ * <= 710px
+ */
+
+@media screen and (max-width: 44.375em) {
+
+.home #primary {
+	margin-left: 7.6923%;
+	margin-right: 7.6923%;
+}
+
+.page-template-periscope .periscope-box, .page-template-periscope .periscope-info-box {
+	margin-left: 7.6923%;
+	margin-right: 7.6923%;
+}
+
+.entry-title {
+	font-size: 30px;
+	-webkit-hyphens:manual;
+	-moz-hyphens:manual;
+	hyphens:manual;
+}
+
+}
+
+
+
+
+/* Other Sample Code */
+
+.warning {
+	color: red;
+}
+.shadow {
+	box-shadow: 0 8px 8px -6px #333;
+}

@@ -1,0 +1,94 @@
+// Colors and Spritesless
+// -------------------------
+
+@cdrsIconSpritePath:        '../img/cdrs-icons.png';
+@cdrsIconWhiteSpritePath:   '../img/cdrs-icons-white.png';
+@cdrsIconColorSpritePath:   '../img/cdrs-icons-color.png';
+@cdrsIconNavySpritePath:   '../img/cdrs-icons-cunavy.png';
+@cdrsIconDesatSpritePath:   '../img/cdrs-icons-cujla.png';
+
+// Basic Scaffolding
+// ------------------------
+body {
+
+    & > article {
+    }
+
+    & > nav {
+        position:fixed;
+        margin-top: 60px;
+    }
+    hr {
+        border-color: gray;
+    }
+}
+
+// Navbars
+// ------
+.nav-fixed {
+    // Add in special styling
+    // @navbarBackgroundHighlight:       @cdrsGreen; //#ffffff;
+    // @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+}
+
+// More
+// -----
+header {
+
+    h1 {
+        margin-left: -3px;
+        padding: 8px 0 0 0;
+    }
+
+    .parent-organization {
+        #grid > .core > .span(3);
+        .pull-right;
+        text-align: center;
+        position: relative;
+    }
+}
+#journalServices {
+    border-bottom: dashed 1px;
+    padding-bottom: 50px;
+}
+
+#journal-list { 
+    padding-top: 30px;
+    & > h1 {
+        margin-bottom: -30px;
+    }
+}
+
+.thumbnails li {
+    padding-top: 30px;
+    clear: both;
+    margin-bottom: 0px;
+}
+
+// Overrides
+// ----------
+.nav-pills.nav-stacked {
+    .dropdown-toggle {
+        padding-left:12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+        // & a {
+        //     margin-bottom: 3px;
+        // }
+
+        // &:hover {
+        //     text-decoration: none;
+        //     background-color: #eee;
+        // }
+
+        .caret {
+            // margin-top: 13px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+ #essay blockquote.inside  + p{
+	text-indent: 0;
+	 
+	
+}
+
+#essay p.no-indent{
+	
+	text-indent: 0;
+}

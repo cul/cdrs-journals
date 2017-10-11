@@ -1,0 +1,64 @@
+// Colors and Spritesless
+// -------------------------
+
+@cdrsIconSpritePath:        '../img/cdrs-icons.png';
+@cdrsIconWhiteSpritePath:   '../img/cdrs-icons-white.png';
+@cdrsIconColorSpritePath:   '../img/cdrs-icons-color.png';
+@cdrsIconNavySpritePath:   '../img/cdrs-icons-cunavy.png';
+@cdrsIconDesatSpritePath:   '../img/cdrs-icons-cujla.png';
+
+[class^="cdrs-icon-"], [class*=" cdrs-icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("@{cdrsIconSpritePath}");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin-top:1px;
+}
+// Addition to make BS standard icons light up on hover
+.navbar-inverse .nav > li > a:hover > [class^="cdrs-icon-"],
+.navbar-inverse .nav > li > a:hover > [class*=" cdrs-icon-"] {
+    background-image: url("@{iconWhiteSpritePath}");
+}
+
+// White icons with optional class, or on hover/active states of certain elements
+.cdrs-icon-white,
+.nav-tabs > .active > a > [class^="cdrs-icon-"],
+.nav-tabs > .active > a > [class*=" cdrs-icon-"],
+.nav-pills > .active > a > [class^="cdrs-icon-"],
+.nav-pills > .active > a > [class*=" cdrs-icon-"],
+.nav-list > .active > a > [class^="cdrs-icon-"],
+.nav-list > .active > a > [class*=" cdrs-icon-"],
+.navbar-inverse .nav > .active > a > [class^="cdrs-icon-"],
+.navbar-inverse .nav > .active > a > [class*=" cdrs-icon-"],
+.navbar-inverse .nav > li > a:hover > [class^="cdrs-icon-"],
+.navbar-inverse .nav > li > a:hover > [class*=" cdrs-icon-"],
+.dropdown-menu > li > a:hover > [class^="cdrs-icon-"],
+.dropdown-menu > li > a:hover > [class*=" cdrs-icon-"],
+.dropdown-menu > .active > a > [class^="cdrs-icon-"],
+.dropdown-menu > .active > a > [class*=" cdrs-icon-"] {
+    background-image: url("@{cdrsIconWhiteSpritePath}");
+}
+
+.cdrs-icon-color {
+    background-image: url("@{cdrsIconColorSpritePath}");
+}
+
+.cdrs-icon-navy {
+    background-image: url("@{cdrsIconNavySpritePath}");
+}
+
+.cdrs-icon-desat {
+    background-image: url("@{cdrsIconDesatSpritePath}");
+}
+
+.cdrs-icon-crown {
+    background-position: 0 0;
+}
+
+.cdrs-icon-cdrs {
+    background-position: -24px 0;
+}

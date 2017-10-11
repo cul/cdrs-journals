@@ -1,0 +1,3056 @@
+/* @override 
+	http://webdev.cdrs.columbia.edu/tmr/wp-content/themes/tmr/style.css
+	https://morningsidereview-dev.cul.columbia.edu/wp-content/themes/tmr/style.css
+	http://webdev.cdrs.columbia.edu/~jackson/tmr/wp-content/themes/tmr/style.css
+*/
+
+/*
+
+Theme Name: the Morningside Review
+Theme URI: http://cdrs.columbia.edu
+Description: Custom theme for The Morningside Review by Columbia University Center for Digital Research and Scholarship 
+Version: 0.9
+Author: CDRS based on carrington JAM 1.4
+Author URI: http://cdrs.columbia.edu
+Tags: cdrs
+
+// This file is part of the Carrington JAM Theme for WordPress
+// http://carringtontheme.com
+//
+// Copyright (c) 2008-2009 Crowd Favorite, Ltd. All rights reserved.
+// http://crowdfavorite.com
+//
+// Released under the GPL license
+// http://www.opensource.org/licenses/gpl-license.php
+//
+// **********************************************************************
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// **********************************************************************
+
+NOTE: This file is not used in this theme but is included for WordPress theme expected format compatibility - it's standard to use the css/ dir for actual theme CSS in a Carrington-based theme.
+
+ 
+ 
+
+/* including for compatibility */
+
+.alignleft {
+	float:left;
+	margin-right:1em;
+	margin-bottom:1em;
+}
+.alignright {
+	float:right;
+	margin-left:1em;
+	margin-bottom:1em;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	/* optional rounded corners for browsers that support it */
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+
+
+
+ 
+
+
+
+/** START HTML5 Boilerplate CSS **/
+
+/**
+ * HTML5 ? Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, body div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body{
+	 font-family: 'Lato', sans-serif;
+}
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: .2em 0; padding: 0; }
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+
+ body{
+/* 	background: url(img/linen-dark.png) repeat; */
+	background-image: url(img/seamlesstexture29_500.jpg);
+ 
+}
+
+
+
+#main.container{
+	 
+/* 	background-image: url(img/seamlesstexture29_500.jpg); */
+ 	padding-top: 40px;
+   min-height: 600px;
+   
+/*
+	border: 1px solid #fbf9f7;
+	-moz-box-shadow:    0 0px 50px rgba(255,255,255,.5);
+	-webkit-box-shadow: 0 0px 50px rgba(255,255,255,.5);
+	box-shadow:         0 0px 50px rgba(255,255,255,.5);
+*/
+}
+
+ 
+
+
+ 
+
+
+
+.content{
+	color: #101111;
+ 
+	/*line-height: 1.6;
+	font-family: "Sorts Mill Goudy";*/
+}
+
+h3.flyer {
+ 
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #8f1b08;
+}
+
+body.page-id-123 h1.page-title, body.archive h1.page-title{
+	display: none;
+}
+ 
+
+ 
+body.home p{
+	font-size: 16px;
+	line-height: 21px;
+	margin-right: 20px;
+	font-weight: 300;
+	 }
+
+p a {
+	
+	font-weight: 400;
+}
+
+p.blurb {
+	margin-top: 25px;
+}
+
+
+
+  ul.home-nav li p {
+ 
+	margin-bottom: 0;
+}
+
+ 
+
+body.home div#header h1{
+
+ 
+/* 	background: url(img/lion.png) no-repeat 0 10px; */
+	font-size: 40px;
+	padding-left: 110px;
+	font-weight: 700;
+	padding-bottom: 29px;
+	padding-top: 10px;
+	margin: 48px 0 0 8px;
+}
+
+h1.masthead{
+
+
+	font-size: 44px;
+	padding-left: 109px;
+	font-weight: 700;
+	line-height: 100%;
+	margin-left: -114px;
+	padding-top: 14px;
+	margin-top: 0px;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+ 
+	
+	
+	 color: #1a6284;
+ -webkit-text-fill-color: transparent;
+ background: -webkit-linear-gradient(transparent, transparent),
+             url('img/tmr_header_bg.png') repeat;
+ background: -o-linear-gradient(transparent, transparent);
+ -webkit-background-clip: text;
+	
+	
+}
+
+h1.page-title {
+    margin-top: 0;
+    font-size: 28px;
+	line-height: 32px;
+	color: #56494f;
+	font-weight: 400;
+ 
+ 
+}
+
+#header {
+	
+		background: url(img/lion.png) no-repeat 120px 20px;
+	
+}
+
+
+li.essay h1 {
+margin-bottom: 5px ;
+	font-size: 22px;
+	line-height: 22px;
+	margin-right: 84px;
+}
+span.y {
+		 
+}
+
+span.light {
+	 font-size: 30px;
+ 
+	line-height: 30px;
+	letter-spacing: 1px;
+	 
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+span.bottom {
+ 
+}
+
+div#header h1 a{
+	 	color: #3e6068;
+	 		 	 
+}
+
+div#header h1 a:hover{
+ 
+
+}
+
+ /* Hack retained to preserve specificity */
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* 1) Always force a scrollbar in non-IE
+   2) Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #1a6284;
+ 
+}
+a.title-link:hover, a:hover { color: #b81f0f;
+	 
+}
+
+ul, ol {
+
+/*  margin-left: 2em; */
+ 
+  list-style-type: none;}
+
+ul.home-nav {
+	margin-left: 0;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	 
+	list-style-position: inside;
+ 
+}
+
+ul.home-nav li {
+ 
+ 
+}
+
+ul.home-nav li a {
+	/*border-left-style: solid;
+	border-left-width: 10px;
+	padding-left: 5px;*/
+}
+
+ 
+ 
+body.home div#header div#cu-writing{
+	position: relative;
+	float: right;
+	margin-top: 0;
+}
+ #main{
+	position: relative;
+}
+div#cu-writing {
+
+margin-top: 200px;
+ 
+
+  
+ 
+}
+img#selected-essays{
+	
+	width: 230px;
+}
+
+
+#tmr-index div#cu-writing{
+	display: none;
+}
+
+ul.home-nav li a {
+display: block;
+text-transform: uppercase;
+width: 80%;
+ 
+
+font-size: 24px;
+	color: #9b534d;
+}
+
+ul.home-nav li a:hover{
+ 	color: white;
+ background-color:  #9b534d; 
+}
+
+ul.home-nav li:hover{
+ 
+}
+
+div.hp-feature h2{
+	
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	margin-bottom: .5em;
+}
+
+
+
+
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+b, strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+   2) WebKit browsers add a 2px margin outside the chrome of form elements.
+      Firefox adds a 1px margin above and below textareas
+   3) Set font-size to match <body>'s, and font-family to sans-serif
+   4) Align to baseline */
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+
+
+div.footer {
+}
+
+#footer {
+	margin-top: 44px;
+	 
+}
+
+#tmr-index-content {
+	 min-height: 75px;
+}
+
+#footer hr {
+ border: 0;
+ 
+}
+
+
+
+
+ 
+
+ 
+
+#footer  p {
+	font-size: 11px;
+	display: block;
+ 
+	margin-top: 7px;
+}
+
+
+ 
+
+div.home-box {
+	margin-bottom: 1em;
+}
+
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+   2) Align to text-top */
+textarea { overflow: auto; vertical-align:text-top; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Remove extra padding and inner border in Firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+/**
+ * You might tweak these..
+ */
+
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #333;
+  
+  /* Set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+
+
+h1, h2{
+ 
+ font-size: 1.4em;
+ margin-top: .5em;
+ margin-bottom: .5em;
+ /*text-transform: uppercase;*/
+
+ 
+}
+ H1.homepage-label{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1em;
+	margin-right: 19px;
+	color: #667176;
+	border-bottom-style: none;
+	border-bottom-width: 2px;
+	border-top: 2px dotted #adbec5;
+}
+
+#super{
+	 position: fixed;
+ background-image: url(img/seamlesstexture29_500.jpg);
+ z-index: 100;
+ padding-top: 5px;
+ padding-bottom: 5px;
+	
+	
+}
+
+nav#access {
+
+ width:720px;
+ margin-left: 65px;
+
+}
+
+img#nav-lion-icon{
+	
+ 
+	position: absolute;
+ 
+}
+
+ 
+ 
+
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+  */
+::-moz-selection { background: #008094; color:#fff; text-shadow: none; }
+::selection { background: #008094; color:#fff; text-shadow: none; }
+
+/**
+ * Primary styles
+ *
+ * Author:
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+   nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+div.social-media {
+ 
+}
+
+#tax-meta h3 {
+ 
+	float: left;
+	width: 100px;
+}
+
+a.meta-link {
+color: #1a6284;
+ display: block;
+ margin-left: 100px;
+ margin-top: -2px;
+}
+
+a.meta-link:before, a.meta-link:after { content: ""; display: table; }
+a.meta-link:after { clear: both; }
+a.meta-link  { zoom: 1; }
+
+#essay-meta h2 {
+	text-transform: uppercase;
+	margin-top: 0;
+}
+
+#essay-meta a.meta-link {
+	 
+ 
+}
+
+#tax-meta h3:after {
+content: ":";
+}
+
+
+/**
+ * Placeholder media queries for responsive design. Modify as design requires.
+ * These follow after, and will override, the primary ('mobile first') styles
+ * The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
+ */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}/*/mediaquery*/
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}/*/mediaquery*/
+
+a{
+	text-decoration: none;
+}
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+
+/** END HTML5 Boilerplate CSS **/
+
+
+/** START Starkers CSS **/
+
+/* LAYOUT */
+/* ----------------------------------------- */
+
+/* These rather presentational classes are generated by WordPress, so it's useful to have some styles for them. Edit as you see fit. More info: http://codex.wordpress.org/CSS */
+.aligncenter { display:block; margin:0 auto }
+.alignleft { float:left }
+.alignright { float:right }
+.wp-caption { border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+
+/* You might find the following useful */
+/* div, ul, li { position:relative } This will save you having to declare each div / ul / li's position as 'relative' and allows you to absolutely position elements inside them
+br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } /* Use this br class to clear your floated columns */
+li#theme-switcher { background:#fff; border:10px solid red; padding:20px; position:fixed; top:0; right:0 } /* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
+*/
+/* TYPOGRAPHY */
+/* ----------------------------------------- */
+
+ h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
+.alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
+
+
+
+/* Font stack options
+
+	The following represents a list of font stacks, as recommended by Nathan Ford in
+	http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+
+	I've added inverted commas around the relevant family names to ensure compatibility.
+	p = balanced for paragraphs or body copy
+	t = balanced for headlines or titles
+
+	- - - -
+
+Arial, "Helvetica Neue", Helvetica, sans-serif - p, t
+
+Baskerville, "Times New Roman", Times, serif - p
+Baskerville, "Times, Times New Roman", serif - t
+
+Cambria, Georgia, Times, "Times New Roman", serif - p, t
+"Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Consolas, "Lucida Console", Monaco, monospace - p, t
+
+"Copperplate Light", "Copperplate Gothic Light", serif - p, t
+
+"Courier New", Courier, monospace - p, t
+
+"Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif - p, t
+
+Futura, "Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Garamond, "Hoefler Text", "Times New Roman", Times, serif - p
+Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif - t
+
+Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif - p
+Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - t
+
+Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif - p
+Georgia, Times, "Times New Roman", serif - t
+
+GillSans, Calibri, Trebuchet, sans-serif - p
+GillSans, Trebuchet, Calibri, sans-serif - t
+
+"Helvetica Neue", Arial, Helvetica, sans-serif - p
+Helvetica, "Helvetica Neue", Arial, sans-serif - t
+
+Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif - p, t
+
+"Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - p, t
+
+Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif - p
+Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif - t
+
+Tahoma, Geneva, Verdana - p
+Tahoma, Verdana, Geneva - t
+
+Times, "Times New Roman", Georgia, serif - p, t
+
+Trebuchet, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif - p
+Trebuchet, Tahoma, Arial, sans-serif - t
+
+Verdana, Geneva, Tahoma, sans-serif - p
+Verdana, Tahoma, Geneva, sans-serif - t
+
+*/
+
+/** END Starkers CSS **/
+
+/** START WordPress-Defined CSS Classes **/
+.wp-caption-text{}
+.gallery-caption{}
+.bypostauthor{}
+.sticky{}
+/** END WordPress-Defined CSS Classes **/
+
+
+
+
+
+ 
+
+#essay-meta dl dt {
+	float: left;
+	margin-right: .5em;}
+
+div#essay-meta {
+ padding: 1em;
+}
+
+#essay-meta div.author-feature img {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+body.home div#header #cu-writing {
+ float: right;
+	margin-top: 0;
+}
+
+body.home #cu-writing img{
+	margin-right: 16px;
+}
+
+div.span-8.center.content {
+}
+
+span.author-credit:before{
+	
+	content: 'By ';
+}
+
+
+h2.author-edition{
+	text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+
+	/*margin-bottom: .5em;*/
+	 
+  
+	margin-bottom: .5em;
+}
+
+blockquote.top-quote{
+	
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: none;
+	
+	
+}
+
+p.quote-attribution{
+	
+	text-align: right;
+}
+
+
+
+span.numbered-item
+{
+	display: none;	
+}
+/*tmr index*/
+
+#tmr-index ul {
+	list-style-type: none;
+	margin-left: 0;
+	
+}
+
+#tmr-index li {
+	border-bottom: 1px dotted #cbcbcb;
+	line-height: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#index-left-col ul li{
+ 
+	 
+	text-align: center;
+}
+
+#tmr-index h1 {
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #737b83;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	
+	color: #56494f;}
+
+.taxlist-toggle {
+ 	
+}
+
+li.tax-nav {
+float: left;
+margin-right: 15px;	
+text-transform: uppercase;
+font-weight: bold;
+	font-size: 13px;
+}
+
+ 
+
+ul#author-index li{
+	/*float: left;
+	width: 290px;
+	margin-right: 0;*/
+	/*text-transform: uppercase;*/
+	text-align: center;
+ 
+}
+
+ul.edition-list{
+	list-style-type: none;
+	margin-left: 0;
+}
+
+ul.edition-list li{
+	margin-bottom: 1em;
+}
+li.essay h1 a {
+ 
+ 
+margin: 0;
+color: #56494f;
+text-decoration: none;
+ 
+}
+
+li.essay h1 a:hover {
+ 
+  
+color: #56494f;
+text-decoration: underline;
+border-bottom: none;
+ 
+}
+
+
+li.essay h1 a:hover {
+ 
+ 
+margin: 0;
+color: #ce3525;
+text-decoration: none;
+ 
+}
+
+
+
+h1.edition-label {
+ 
+ 	 margin-top: 0;
+ font-size: 40px;
+color: #b92d0c;
+		color: #56494f;
+	line-height: 40px;
+}
+a.author, .author-link a{
+	color: #1a6284;
+	text-decoration: none;
+	text-transform: uppercase;
+	 
+}
+
+ 
+
+ 
+
+ul.archive-list li{
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #d8cfc7;
+}
+
+a.title-link {
+	
+ 
+	font-size: 22px;
+	line-height: 22px;
+	margin-bottom: 5px;
+	color: #56494f;
+}
+
+span.edition-link {
+	float: right; 
+ 
+	
+}
+
+span.edition-link:before{
+	
+	content: "Edition ";
+}
+/*a.author:before,.author-link a:before {
+	content:"\2014\a0";
+	color: #844240;
+	}*/
+
+.container p{
+  	margin-bottom: 1em; 
+}
+
+div.wp-caption.alignleft {
+	margin-left: 5em;
+}
+
+ 
+#work_cited h1, #essay-meta h1 {
+	font-size: 26px;
+	border-top: 1px solid #bbb;
+	color: #2f5064;
+	margin-top: 44px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+#essay blockquote{
+	 
+}
+
+ 
+
+ 
+#essay p.descender:first-letter,span.descendertwo {
+font-size:4em;
+line-height:.8em;
+margin-right:4px;
+margin-top:5px;
+display:block;
+float:left;
+text-indent: 0em;
+font-weight: 400;
+}
+
+#essay p.descender{
+	
+	text-indent: 0;
+}
+
+.glyphicon-share-alt:before {
+    content: "\e095"
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+ 
+#access ul {
+ 
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 0 2px;
+}
+#access li {
+	float: left;
+	position: relative;
+	margin-right: 1.5em;
+}
+
+
+#access a {
+ 
+	display: block;
+ 
+     
+	text-decoration: none;
+}
+#access ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	 
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #f9f9f9;
+	border-bottom: 1px dotted #ddd;
+ 
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+ 
+ 
+ 
+
+#access a:focus:hover, #access li.current-menu-item > a:hover, li.current-page-ancestor a:hover {
+	color: #3e6068;
+		border-top: 2px solid #1a6284;
+	border-bottom: none;
+	  
+}
+
+#access ul li:hover > ul {
+	display: block;
+}
+body.single-essay #access .menu-item-142> a,
+body.archive #access .menu-item-142 >a,
+#access .current-menu-item > a,
+#access .current-menu-ancestor > a,
+#access .current_page_item > a,
+#access .current_page_ancestor > a,
+body.single-essay #access .menu-item-142> a:hover,
+body.archive #access .menu-item-142 >a:hover,
+#access .current-menu-item > a:hover,
+#access .current-menu-ancestor > a:hover,
+#access .current_page_item > a:hover,
+#access .current_page_ancestor > a:hover {
+	color: #3e6068;
+	border-top: 3px solid #1a6284;
+	background-color: transparent;
+	
+	
+}
+
+ 
+ nav#access ul:first-child{
+	margin-left: -3px;
+}
+
+nav#access li a{
+    text-align: left;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #9b534d;
+	padding: 0 3px;
+	border-top: 3px solid #9b534d;
+	font-weight: 400;
+}
+
+nav#access li a:hover{
+ 	color: white;
+ background-color:  #9b534d; 
+ 
+ 
+}
+a#skip {
+	display: none;
+}
+
+.sidebar{
+/*  margin-top: 230px; */
+}
+#essay  div.author-bio p {
+	 text-indent: 0;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+img.essay-thumb {
+	float: left;
+	margin-right: 1em;
+}
+
+ 
+
+div.fb-like {
+ 
+	width: 110px;
+}
+
+#colophon{
+	
+	padding-bottom: 10px;
+	padding-top: 10px;
+		
+	margin-top: 3em;
+ 
+}
+
+label.assistive-text {
+display: none;	
+}
+ 
+
+
+#search {
+	text-align: right;
+
+}
+
+#searchform{
+	float: right;
+ 
+	
+}
+
+body.home #searchform{
+	float: none;
+	margin-top: .8em;
+}
+
+#searchform input#s{
+	margin: 0;
+}
+#searchform input[type="text"]{
+    background: url(img/search-white.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    color: #333;
+    width: 150px;
+    padding: 3px 15px 3px 35px;
+    font-size: 16px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+
+
+/*
+#searchform input[type="text"]:focus {
+    width: 200px;
+    }
+*/
+#searchsubmit {
+ 
+	display: none;
+}
+
+div.hp-feature img {
+	float: left;
+
+ 
+	
+}
+
+  div.hp-feature p{
+ 
+}
+
+ 
+
+
+div.hp-feature {
+ 
+}
+
+#copyrights {
+	text-align: center;
+}
+
+div.authors-column {
+	
+	float: left;
+	width: 33%;
+	
+}
+
+ 
+body.home img.attachment-post-thumbnail, body.home img.attachment-thumbnail{
+	float: left;
+	margin-right: 1em;
+	margin-top: .5em;
+	border-radius: 75px;
+	width: 100px;
+	height: 100px;
+}
+
+
+
+
+ul.about-nav {
+margin-left: 0;	
+margin-top: 80px;
+}
+
+
+
+ 
+
+
+ ul#menu-about-subnav li a {
+ 
+	border-bottom: 1px dotted #ddd;
+ 	display: block;
+	font-size: 14px;
+ 	line-height: 25px;
+	text-transform: uppercase;
+	text-align: right;
+ 
+	color: #9b534d;
+
+}
+
+ ul#menu-about-subnav li.current_page_item a {
+	color: #1a6284;
+}
+
+
+
+ 
+ul.archive-list {
+	margin-left: 0;
+}
+
+a.home-social {
+display: inline-block;
+width: 32px;
+height: 32px;
+text-indent: -10000px;
+}
+
+#facebook {
+	background: url(img/facebook.png) no-repeat 0 0;
+}
+
+#facebook:hover {
+	background: url(img/facebook.png) no-repeat 0 -33px;
+}
+
+#twitter {
+	background: url(img/twitter.png) no-repeat 0 0;
+}
+
+#twitter:hover {
+	background: url(img/twitter.png) no-repeat 0 -33px;
+}
+
+#email {
+	background: url(img/email.png) no-repeat 0 0;
+}
+
+div.home-sm-icons {
+ 
+}
+
+div.hp-feature img.attachment-medium.wp-post-image {
+	margin: 0;
+ 
+}
+
+#email:hover {
+	background: url(img/email.png) no-repeat 0 -33px;
+}
+ 
+ 
+ 
+ 
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End captions */
+
+ul#menu-about-subnav  {
+	text-align: right;
+	text-transform: uppercase;
+	 
+	margin-right: 5px;
+ 
+}
+
+ 
+
+
+
+.format-gallery .gallery-thumb {
+	float: left;
+	display: block;
+	margin: .375em 1.625em 0 0;
+}
+
+
+dl.gallery-item {
+	margin: 0;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	color: #666;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+}
+#essay .gallery {
+	margin: 0 auto 1.625em;
+}
+#essay .gallery a img {
+	border: none;
+}
+#essay .gallery-columns-4 .gallery-item {
+	width: 23%;
+	padding-right: 2%;
+}
+#essay .gallery-columns-4 .gallery-item img {
+	width: 100%;
+	height: auto;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+	border: 1px solid #ddd;
+	padding: 6px;
+}
+a:focus img[class*="align"],
+a:hover img[class*="align"],
+a:active img[class*="align"],
+a:focus img[class*="wp-image-"],
+a:hover img[class*="wp-image-"],
+a:active img[class*="wp-image-"],
+#content .gallery .gallery-icon a:focus img,
+#content .gallery .gallery-icon a:hover img,
+#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+	background: #eee;
+	border-color: #bbb;
+}
+
+.format-gallery .gallery-thumb {
+	float: left;
+	display: block;
+	margin: .375em 1.625em 0 0;
+}
+	#essay .gallery-columns-3 .gallery-item {
+		width: 31%;
+		padding-right: 2%;
+	}
+	#essay .gallery-columns-3 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+	#essay .gallery-columns-2 .gallery-item {
+		width: 45%;
+		padding-right: 4%;
+	}
+	#essay .gallery-columns-2 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+	
+	
+	.gallery {
+                margin: auto;
+        }
+        .gallery-item {
+                float: left;
+                margin-top: 10px;
+                text-align: center;
+                width: 33%;
+        }
+        .gallery img {
+                border: 2px solid #cfcfcf;
+        }
+        .gallery-caption {
+                margin-left: 0;
+        }
+
+ 
+
+ 
+
+  ul.home-nav li p {
+	display: none;
+}
+
+#print-colophon{
+	
+	display: none;
+}
+
+body.home #header {
+	height: 260px;
+	
+	background: url(img/lion.png) no-repeat 43px 68px;
+
+}
+
+  #essay p{
+	 
+ 
+ 
+	margin-bottom: .5em;
+	text-indent: 2.3em;
+			
+		
+	}  
+	
+ #content p{
+	 
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 26px;
+	text-rendering: optimizelegibility;
+ 
+	 
+ }
+
+#essay blockquote p{
+	
+	
+	font-weight: 300;
+	text-indent: 0;
+	font-size: 16px;
+    line-height: 26px;
+	margin-left: 2.6em;
+	margin-right: 2.6em;
+	font-style: normal;
+	 
+ 
+	
+}
+
+#essay p.wp-caption-text{
+	
+		text-indent: 0;
+		text-align: left;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		font-size: 14px;
+	
+}
+
+#work_cited p{
+	
+	padding-left: 2em;
+	text-indent: -2em;
+	
+}
+a.read-more {
+	display: block;
+	text-align: right;
+	margin-top: -10px;
+}
+
+div.content {
+	margin-bottom: 2em;
+}
+
+#meta-content {
+	
+	background: rgba(255,255,255,.5);
+	padding-top: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+
+}
+
+#meta-toggle {
+ 
+	text-transform: uppercase;
+	padding: 0 5px;
+	border: 1px solid #d7d7d7;
+	background-color: #fffeff;
+	font-size: 13px;
+	margin-bottom: 8px;
+	display: block;
+	width: 42px;
+	text-align: center;
+	margin-right: 15px;
+	color: #1a6284;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+ 
+#meta-toggle:hover, #meta-toggle.active{
+    -moz-box-shadow:    0 0 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow:         0 0 5px rgba(0,0,0,0.5);
+  color: #b81f0f;
+}
+
+ 
+body.home div.content{
+	margin-top: 0;
+}
+
+div.menu-about-subnav-container {
+	margin-top: 30px;
+}
+#print-header{
+	display: none;
+}
+
+ 
+
+#colophon a{
+	text-decoration: underline;
+	color: #f8fdef;
+}
+ 
+#colophon a:hover {
+	color: #0038a8;
+	text-decoration: underline;
+
+
+}
+
+span.copy-sign{
+	
+	display: block;
+	float: left;
+	font-size: 36px;
+	font-weight: 300;	
+	border-right: 1px solid #ccc;
+	 
+		margin-right: 10px;
+		padding-right: 10px;
+		 
+}
+
+div.copy-warn{
+	
+	border: 1px solid #d9b2b2;
+ 
+	padding: 15px;
+	font-size: 14px;
+	text-align: left;
+	margin-top: 15px;
+
+	
+	
+	
+	
+}
+
+div.page-nav{
+	
+	position: fixed;
+}
+
+#essay {
+	
+/* 	padding-right: 1em; */
+/* 	text-align: justify; */
+}
+
+/*
+
+.essay-meta{
+	
+	position: fixed;
+	top: 200px;
+
+	background: rgba(255,255,255,.5);
+	
+	padding: 40px;
+	border: 1px solid silver;
+	width: 450px;
+}
+*/
+.colophon {
+	
+	position: fixed;
+	bottom:20px;
+	width: 230px;
+ 
+}
+
+body.home #cdrs-colophon{
+	
+	margin-top: 50px;
+	
+}
+
+#cdrs-colophon{
+/*
+	position: fixed;
+	bottom: 10px;
+*/
+	font-size: 12px;
+	line-height: 10px;
+	color: #555555;
+
+	
+		
+}
+
+#cdrs-colophon a{
+	
+	color: #555;
+	text-decoration: none;
+}
+
+#cdrs-colophon a:hover{
+	
+color: #1a6284;
+text-decoration: none;
+}
+
+#cdrs-id{
+	font-size: 18px;
+	line-height: 30px;
+/* 	padding-left: 35px; */
+ 
+ width: 230px;
+		text-align: center;
+
+	background: url(img/cdrs-icon.png) no-repeat 55px 0px;
+
+}
+
+body.home #cdrs-id{
+	font-size: 18px;
+	line-height: 30px;
+/* 	padding-left: 35px; */
+ 
+ 
+		text-align: center;
+
+	background: url(img/cdrs-icon.png) no-repeat 55px 0px;
+
+}
+
+#cdrs-colophon h6{
+	
+	font-weight: normal;
+	border-bottom: 1px solid #747576;
+	margin-bottom: 8px;
+	width: 96%;
+	line-height: 14px;
+		color: #555555;
+}
+div.colophon img{
+	
+	max-width: 100%;
+}
+
+
+.content {
+	
+ 
+}
+
+img#selected-essays {
+	
+ 
+ max-width: 100%;
+ 
+	
+}
+
+body.page-id-131 img#selected-essays {
+
+display: none;
+}
+
+ul.tools{
+	
+	padding-left: 0;
+}
+
+ul.social{
+	
+	padding-left: 15px;
+	
+	 
+	padding-top: .5em;
+	border-bottom: 1px dotted #ccc;
+}
+ul.tools a {
+	
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+body.home div.cdrs-colophon{
+	
+	
+	margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('css/glyphicons-halflings-regular.eot');
+  src: url('css/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('css/glyphicons-halflings-regular.woff') format('woff'), url('css/glyphicons-halflings-regular.ttf') format('truetype'), url('css/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon:empty {
+  width: 1em;
+}
+
+
+
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+
+
+.glyphicon-print:before {
+  content: "\e045";
+}
+
+.glyphicon-list:before {
+  content: "\e056";
+}
+
+.glyphicon-user:before {
+  content: "\e008";
+}
+
+.glyphicon-share:before {
+content: "\e066";
+}
+
+
+a#share-show{
+	
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+
+
+
+/*! jQuery UI - v1.10.3 - 2014-01-06
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Helvetica%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=2px&bgColorHeader=dddddd&bgTextureHeader=highlight_soft&bgImgOpacityHeader=50&borderColorHeader=dddddd&fcHeader=444444&iconColorHeader=0073ea&bgColorContent=ffffff&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=dddddd&fcContent=444444&iconColorContent=ff0084&bgColorDefault=f6f6f6&bgTextureDefault=highlight_soft&bgImgOpacityDefault=100&borderColorDefault=dddddd&fcDefault=0073ea&iconColorDefault=666666&bgColorHover=0073ea&bgTextureHover=highlight_soft&bgImgOpacityHover=25&borderColorHover=0073ea&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=dddddd&fcActive=ff0084&iconColorActive=454545&bgColorHighlight=ffffff&bgTextureHighlight=flat&bgImgOpacityHighlight=55&borderColorHighlight=cccccc&fcHighlight=444444&iconColorHighlight=0073ea&bgColorError=ffffff&bgTextureError=flat&bgImgOpacityError=55&borderColorError=ff0084&fcError=222222&iconColorError=ff0084&bgColorOverlay=eeeeee&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px
+* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-clearfix {
+	min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0);
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+.ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
+}
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin-top: 2px;
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
+}
+.ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-noicons {
+	padding-left: .7em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+.ui-button {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible; /* removes extra width in IE */
+}
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2.2em;
+}
+/* button elements seem to need a little more width */
+button.ui-button-icon-only {
+	width: 2.4em;
+}
+.ui-button-icons-only {
+	width: 3.4em;
+}
+button.ui-button-icons-only {
+	width: 3.7em;
+}
+
+/* button text element */
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
+}
+.ui-button-text-only .ui-button-text {
+	padding: .4em 1em;
+}
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+	padding: .4em;
+	text-indent: -9999999px;
+}
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+	padding: .4em 1em;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-button-icon-only .ui-icon {
+	left: 50%;
+	margin-left: -8px;
+}
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+	left: .5em;
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+	right: .5em;
+}
+
+/* button sets */
+.ui-buttonset {
+	margin-right: 7px;
+}
+.ui-buttonset .ui-button {
+	margin-left: 0;
+	margin-right: -.3em;
+}
+
+/* workarounds */
+/* reset extra padding in Firefox, see h5bp.com/l */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year {
+	width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+.ui-dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: .4em 1em;
+	position: relative;
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 0;
+	white-space: nowrap;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 21px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none;
+	overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: .5em .4em .5em 0;
+	cursor: pointer;
+}
+.ui-dialog .ui-resizable-se {
+	width: 12px;
+	height: 12px;
+	right: -5px;
+	bottom: -5px;
+	background-position: 16px 16px;
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+}
+.ui-menu {
+	list-style: none;
+	padding: 2px;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/* support: IE10, see #8844 */
+	list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px -2px 5px -2px;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration: none;
+	display: block;
+	padding: 2px .4em;
+	line-height: 1.5;
+	min-height: 0; /* support: IE7 */
+	font-weight: normal;
+}
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+
+.ui-menu .ui-state-disabled {
+	font-weight: normal;
+	margin: .4em 0 .2em;
+	line-height: 1.5;
+}
+.ui-menu .ui-state-disabled a {
+	cursor: default;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item a {
+	position: relative;
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: .2em;
+	left: .2em;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	position: static;
+	float: right;
+}
+.ui-progressbar {
+	height: 2em;
+	text-align: left;
+	overflow: hidden;
+}
+.ui-progressbar .ui-progressbar-value {
+	margin: -1px;
+	height: 100%;
+}
+.ui-progressbar .ui-progressbar-overlay {
+	background: url("images/animated-overlay.gif");
+	height: 100%;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background-image: none;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* For IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.ui-spinner {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
+}
+.ui-spinner-input {
+	border: none;
+	background: none;
+	color: inherit;
+	padding: 0;
+	margin: .2em 0;
+	vertical-align: middle;
+	margin-left: .4em;
+	margin-right: 22px;
+}
+.ui-spinner-button {
+	width: 16px;
+	height: 50%;
+	font-size: .5em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	position: absolute;
+	cursor: default;
+	display: block;
+	overflow: hidden;
+	right: 0;
+}
+/* more specificity required here to overide default borders */
+.ui-spinner a.ui-spinner-button {
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+}
+/* vertical centre icon */
+.ui-spinner .ui-icon {
+	position: absolute;
+	margin-top: -8px;
+	top: 50%;
+	left: 0;
+}
+.ui-spinner-up {
+	top: 0;
+}
+.ui-spinner-down {
+	bottom: 0;
+}
+
+/* TR overrides */
+.ui-spinner .ui-icon-triangle-1-s {
+	/* need to fix icons sprite */
+	background-position: -65px -16px;
+}
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: .2em .2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: text;
+}
+.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+body .ui-tooltip {
+	border-width: 2px;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+background: #e1e1e1;
+	box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
+
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1em;
+}
+.ui-widget-content {
+	border: 2px solid #dddddd;
+	background: #eee url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+	color: #444444;
+
+}
+
+.ui-widget-header {
+	border: 1px solid #dddddd;
+	background: #dddddd url(../images/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x;
+	color: #444444;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #444444;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid #dddddd;
+	background: #f6f6f6 url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #0073ea;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #0073ea;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #0073ea;
+	background: #0073ea url(images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #ffffff;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #dddddd;
+	background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #ff0084;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #ff0084;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #cccccc;
+	background: #ffffff url(images/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x;
+	color: #444444;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #444444;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #ff0084;
+	background: #ffffff url(images/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x;
+	color: #222222;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #222222;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #222222;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70);
+	font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35);
+	background-image: none;
+}
+.ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url(images/ui-icons_ff0084_256x240.png);
+}
+.ui-widget-header .ui-icon {
+	background-image: url(images/ui-icons_0073ea_256x240.png);
+}
+.ui-state-default .ui-icon {
+	background-image: url(images/ui-icons_666666_256x240.png);
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+	background-image: url(images/ui-icons_ffffff_256x240.png);
+}
+.ui-state-active .ui-icon {
+	background-image: url(images/ui-icons_454545_256x240.png);
+}
+.ui-state-highlight .ui-icon {
+	background-image: url(images/ui-icons_0073ea_256x240.png);
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: url(images/ui-icons_ff0084_256x240.png);
+}
+
+/* positioning */
+.ui-icon-blank { background-position: 16px 16px; }
+.ui-icon-carat-1-n { background-position: 0 0; }
+.ui-icon-carat-1-ne { background-position: -16px 0; }
+.ui-icon-carat-1-e { background-position: -32px 0; }
+.ui-icon-carat-1-se { background-position: -48px 0; }
+.ui-icon-carat-1-s { background-position: -64px 0; }
+.ui-icon-carat-1-sw { background-position: -80px 0; }
+.ui-icon-carat-1-w { background-position: -96px 0; }
+.ui-icon-carat-1-nw { background-position: -112px 0; }
+.ui-icon-carat-2-n-s { background-position: -128px 0; }
+.ui-icon-carat-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -64px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-on { background-position: -96px -144px; }
+.ui-icon-radio-off { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 2px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 2px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 2px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 2px;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	background: #eeeeee url(images/ui-bg_flat_0_eeeeee_40x100.png) 50% 50% repeat-x;
+	opacity: .8;
+	filter: Alpha(Opacity=80);
+}
+.ui-widget-shadow {
+	margin: -4px 0 0 -4px;
+	padding: 4px;
+	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+	opacity: .6;
+	filter: Alpha(Opacity=60);
+	border-radius: 0px;
+}
