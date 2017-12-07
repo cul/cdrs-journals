@@ -575,6 +575,15 @@ article.excerpt {
 	text-align: center;
 }
 
+/* excerpts */
+
+article.excerpt p.excerpt-byline {
+	font-size: 16px;
+}
+
+article.excerpt p.excerpt-text {
+}
+
 .prev_article {
 	padding-left: 0px;
 }

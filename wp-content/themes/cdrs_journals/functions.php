@@ -778,6 +778,17 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
 //    }
 // }
 
+
+/* read more */
+
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '...(<a class="read-more" href="%1$s">%2$s</a>)',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
 function get_cc_status($name){
   $cc_deeds = array('CC BY' => array( "deed" => "http://creativecommons.org/licenses/by/4.0/", "image" => get_template_directory_uri() . "/assets/img/cc_by.png"), 'CC BY-SA' => array( "deed" => "http://creativecommons.org/licenses/by-sa/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-sa.png"), 'CC BY-ND' => array("deed" => "http://creativecommons.org/licenses/by-nd/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nd.png"), 'CC BY-NC' => array("deed" => "http://creativecommons.org/licenses/by-nc/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc.png"), 'CC BY-NC-SA' => array("deed" => "http://creativecommons.org/licenses/by-nc-sa/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc-sa.png"), 'CC BY-NC-ND' => array("deed" => "http://creativecommons.org/licenses/by-nc-nd/4.0/", "image" => get_template_directory_uri() . "/assets/img/by-nc-nd.png"));
   if($cc_deeds[$name] != null){
