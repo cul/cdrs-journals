@@ -47,6 +47,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	  		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
 	  		$more_authors = array();
 	  		if($authors){
+					echo 'by ';
 	           foreach ( $authors as $author ) {
 
 	    		// The $term is an object, so we don't need to specify the $taxonomy.
@@ -58,7 +59,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				}
 
 	    		// We successfully got a link. Print it out.
-	    		array_push( $more_authors, 'by <a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
+	    		array_push( $more_authors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
 			}
 			echo implode(', ', $more_authors);
 	   }?>
