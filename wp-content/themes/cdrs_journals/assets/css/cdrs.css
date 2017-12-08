@@ -578,10 +578,16 @@ article.excerpt {
 /* excerpts */
 
 article.excerpt p.excerpt-byline {
-	font-size: 16px;
+	color: #aaa;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 0 0 18px 0;
 }
 
-article.excerpt p.excerpt-text {
+article.excerpt span.read-more {
+	color: #aaa;
+	font-size: 15px;
+	font-weight: 400;
 }
 
 .prev_article {
