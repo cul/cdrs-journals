@@ -586,8 +586,9 @@ article.excerpt p.excerpt-byline {
 
 article.excerpt span.read-more {
 	color: #aaa;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: 400;
+	text-transform: uppercase;
 }
 
 .prev_article {

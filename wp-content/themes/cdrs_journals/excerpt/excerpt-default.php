@@ -58,7 +58,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 				}
 
 	    		// We successfully got a link. Print it out.
-	    		array_push( $more_authors, '<em>by</em> <a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
+	    		array_push( $more_authors, 'by <a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
 			}
 			echo implode(', ', $more_authors);
 	   }?>
