@@ -58,13 +58,7 @@ get_header();
 		}
 	?>
 
-	<?php
-	if (have_posts()) {
-		while (have_posts()) {
-			the_post();
-		}
-	}
-	?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
 	<h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
@@ -96,6 +90,9 @@ get_header();
 	<p class="excerpt-text"><?php the_excerpt(); ?></p>
 
 	</article><!-- .post -->
+
+<?php endwhile; else : ?>
+<?php endif; ?>
 
 </div><!-- #primary -->
 
