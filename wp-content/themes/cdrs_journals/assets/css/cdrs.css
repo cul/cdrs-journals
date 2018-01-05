@@ -733,7 +733,13 @@ footer .footer-text span {
 	color: #aaa;
 }
 
+/* pagination styling modification */
 
+.navigation {
+	font-size: 2.5rem;
+	text-align: center;
+	width: 100%;
+}
 
 /* print styles */
 
