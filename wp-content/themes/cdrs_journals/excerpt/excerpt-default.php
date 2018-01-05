@@ -40,32 +40,31 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <article id="post-<?php the_ID() ?>" <?php post_class('excerpt clearfix') ?>>
 <h2 class="entry-title"><a href="<?php the_permalink() ?>"  title="<?php printf( esc_attr__( 'Permalink to %s', 'carrington-blueprint' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title() ?></a></h2>
+<h3 class="authors">
+<?php
+  		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
+  		$more_authors = array();
+  		if($authors){
+           foreach ( $authors as $author ) {
 
-<p class="excerpt-byline">
-	Published <?php the_time('M n, Y'); ?>
-	<?php
-	  		$authors =  wp_get_object_terms($post->ID, 'authors', array("fields" => "all", 'orderby' => 'term_order'));
-	  		$more_authors = array();
-	  		if($authors){
-					echo 'by ';
-	           foreach ( $authors as $author ) {
+    		// The $term is an object, so we don't need to specify the $taxonomy.
+    		$term_link = get_term_link( $author );
 
-	    		// The $term is an object, so we don't need to specify the $taxonomy.
-	    		$term_link = get_term_link( $author );
-
-	    		// If there was an error, continue to the next term.
-				if ( is_wp_error( $term_link ) ) {
-					continue;
-				}
-
-	    		// We successfully got a link. Print it out.
-	    		array_push( $more_authors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
+    		// If there was an error, continue to the next term.
+			if ( is_wp_error( $term_link ) ) {
+				continue;
 			}
-			echo implode(', ', $more_authors);
-	   }?>
-</p>
 
-<p class="excerpt-text"><?php the_excerpt(); ?></p>
+
+    		// We successfully got a link. Print it out.
+    		array_push( $more_authors, '<a href="' . esc_url( $term_link ) . '">' . $author->name . '</a>');
+		}
+		echo implode(', ', $more_authors);
+   }?>
+
+	</h3>
+
+
 
 
 </article><!-- .post -->
