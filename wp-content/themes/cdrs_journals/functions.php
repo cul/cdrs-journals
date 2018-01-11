@@ -784,7 +784,7 @@ if ( ! isset( $_POST['ac_pdf_add'] ) ) {
 function wpdocs_excerpt_more( $more ) {
     return sprintf( '... <span class="read-more"><a href="%1$s">%2$s</a></span>',
         get_permalink( get_the_ID() ),
-        __( 'Read More &raquo;', 'textdomain' )
+        __( 'Read more <em>&rarr;</em>', 'textdomain' )
     );
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

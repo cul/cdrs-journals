@@ -592,7 +592,12 @@ article.excerpt span.read-more {
 	color: #aaa;
 	font-size: 13px;
 	font-weight: 400;
-	text-transform: uppercase;
+}
+
+article.excerpt span.read-more em {
+	font-style: normal;
+  position: relative;
+  top: 1px;
 }
 
 .prev_article {
