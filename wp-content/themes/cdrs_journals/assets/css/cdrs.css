@@ -578,9 +578,12 @@ article.excerpt {
 /* excerpts */
 
 article.excerpt p.excerpt-byline {
-	color: #aaa;
 	font-size: 15px;
-	font-weight: 400;
+	font-weight: 300;
+}
+
+article.excerpt p.pubdate {
+	font-size: 15px;
 	margin: 0 0 18px 0;
 }
 
