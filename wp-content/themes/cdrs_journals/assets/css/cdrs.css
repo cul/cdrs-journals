@@ -578,13 +578,14 @@ article.excerpt {
 /* excerpts */
 
 article.excerpt p.excerpt-byline {
-	font-size: 15px;
+	font-size: 2.1rem;
 	font-weight: 300;
+	margin: 0 0 5px 0;
 }
 
 article.excerpt p.pubdate {
 	font-size: 15px;
-	margin: 0 0 18px 0;
+	margin: 0 0 23px 0;
 }
 
 article.excerpt span.read-more {
