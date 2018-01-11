@@ -203,7 +203,7 @@ p.tagline {
 }
 
 .entry-content table {
-	width: 100%
+	width: 100%;
 	border: 1px solid #B0B0B0;
 	margin-bottom: 2em;
 	margin-top: 2em;
@@ -606,7 +606,7 @@ article.excerpt span.read-more em {
 }
 
 .next_article {
-	padding-right: 0px
+	padding-right: 0px;
 }
 
 .next_article a {
@@ -816,10 +816,8 @@ footer .footer-text span {
   }
 
   img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
+    max-width: 100% !important;
+	}
 
   a,
   a:visited {
@@ -850,6 +848,10 @@ footer .footer-text span {
   	overflow: hidden;
   	max-width: 100%;
   }
+}
+
+@page {
+	margin: 0.5cm;
 }
 
 /* media queries */
