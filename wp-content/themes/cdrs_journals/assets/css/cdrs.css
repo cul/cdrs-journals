@@ -597,8 +597,13 @@ article.excerpt span.read-more {
 
 article.excerpt span.read-more em {
 	font-style: normal;
+	margin-left: 2px;
   position: relative;
   top: 1px;
+}
+
+article.excerpt span.read-more a:hover {
+	text-decoration: none;
 }
 
 .prev_article {
