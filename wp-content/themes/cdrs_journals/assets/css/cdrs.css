@@ -602,7 +602,7 @@ article.excerpt span.read-more em {
   top: 1px;
 }
 
-article.excerpt span.read-more a:hover em {
+article.excerpt span.read-more a:hover {
 	text-decoration: none;
 }
 
