@@ -602,6 +602,10 @@ article.excerpt span.read-more em {
   top: 1px;
 }
 
+article.excerpt span.read-more a:hover em {
+	text-decoration: none;
+}
+
 .prev_article {
 	padding-left: 0px;
 }
