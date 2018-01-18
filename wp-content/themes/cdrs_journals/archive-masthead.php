@@ -41,7 +41,7 @@ get_header();
 		$my_query = new WP_Query($args);
 		if( $my_query->have_posts() ) {
 		  while ($my_query->have_posts()) : $my_query->the_post(); ?>
-		    <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		    <h2 class="entry-title" style="text-align: center;"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		    <?php
 		  endwhile;
 	}
