@@ -86,7 +86,7 @@ get_header();
 			   }?>
 		</p>
 
-		<p class="pubdate">Published <?php the_time('M n, Y'); ?></p>
+		<p class="pubdate">Published <?php the_time('M j, Y'); ?></p>
 
 		<p class="excerpt-text"><?php the_excerpt(); ?></p>
 

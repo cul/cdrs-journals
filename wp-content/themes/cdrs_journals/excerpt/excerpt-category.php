@@ -65,7 +65,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	   }?>
 </p>
 
-<p class="pubdate">Published <?php the_time('M n, Y'); ?></p>
+<p class="pubdate">Published <?php the_time('M j, Y'); ?></p>
 
 <p class="excerpt-text"><?php the_excerpt(); ?></p>
 
