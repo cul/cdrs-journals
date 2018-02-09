@@ -25,7 +25,7 @@ if (have_posts()) {
 				foreach($terms as $term){
 					$last_term = array_pop($term_array);
 					if ($term->name !== $last_term){
-						echo '<h1>'. $term->name . '</h1>'; 
+						echo '<h1>'. $term->name . '</h1>';
 						array_push($term_array, $term->name);
 					}
 				}
@@ -33,13 +33,13 @@ if (have_posts()) {
 				$last_term = array_pop($term_array);
 				if ("Articles" !== $last_term){
 					echo '<h1>Articles</h1>';
-					array_push($term_array, "Articles"); 
+					array_push($term_array, "Articles");
 				}
 		}
-		
+
 			the_post();
 			cfct_excerpt();
-		
+
 	}
 }
 
