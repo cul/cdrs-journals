@@ -1,4 +1,4 @@
-lock "3.9"
+lock "3.9.1"
 
 set :department, 'cdrs'
 set :application, 'journals'
