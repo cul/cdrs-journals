@@ -1,0 +1,19 @@
+body { padding:10px; }
+.article_page_articles_order .sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+.article_page_articles_order .sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em;  }
+.article_page_articles_order .sortable li span { position: absolute; margin-left: -1.3em; }
+.article_page_articles_order .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+.article_page_articles_order .sortable-number { width: 25px;float: right;line-height: 1em;text-align: center;font-weight: bold; }
+
+#sortable_nav li{
+	border: 2px solid black;
+	border-radius: 5px;
+	background: lightblue;
+}
+.ui-draggable-helper{
+	background: yellow;
+}
+#sortable_nav li:hover{
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+}
