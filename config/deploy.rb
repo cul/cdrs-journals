@@ -1,3 +1,4 @@
+# encoding: UTF-8
 lock "3.9.1"
 
 set :department, 'cdrs'
@@ -35,3 +36,17 @@ set :wp_custom_themes, {
   'twentythirteen' => 'wp-content/themes/twentythirteen',
   'twentytwelve' => 'wp-content/themes/twentytwelve'
 }
+
+set :wp_content_rsync_exclude_filters, [
+  "uploads/sites/16/2016/05/PHIL-WATTS-READER-OF-RANCI*RE_2014.pdf",
+  "uploads/sites/16/2016/05/Bruno-Chaouat.-L*Ombre_104_3-4.pdf",
+  "uploads/sites/16/2016/06/d*Abondance_BR_103_3-4.pdf",
+  "uploads/sites/16/2016/06/Lef*vre_101_1-2.pdf",
+  "uploads/sites/16/2016/06/O*Beirne_101_3.pdf",
+  "uploads/sites/16/2016/07/Jean-Louis-caban*s_98_4.pdf",
+  "uploads/sites/3/2014/09",
+  "uploads/sites/21/2016/01/CSWR-Spring-2014-Editorial*Tables.pdf",
+  "uploads/sites/21/2016/01/CSWR-Spring-2014-Editorial*Figures.pdf",
+  "uploads/sites/21/2014/05/CSWR-Spring-2014-Editorial*Figures.pdf",
+  "uploads/sites/21/2014/05/CSWR-Spring-2014-Editorial*Tables.pdf"
+]
