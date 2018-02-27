@@ -30,9 +30,7 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
-						<?php $logofile = get_stylesheet_directory_uri();
-								$logofile .= "/images/STX_wordmarkedup.svg";
-						?>
+					<?php $logofile = get_stylesheet_directory() . "/images/STX_wordmarkedup.svg"; ?>
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php get_template_part('images/inline', 'STX_wordmark.svg'); ?></a>
