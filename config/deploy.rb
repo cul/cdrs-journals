@@ -33,7 +33,6 @@ set :wp_custom_themes, {
   'cujo-dev' => 'wp-content/themes/cujo-dev',
   'journals-home' => 'wp-content/themes/journals-home',
   'twentysixteen' => 'wp-content/themes/twentysixteen',
-  'twentythirteen' => 'wp-content/themes/twentythirteen',
   'twentytwelve' => 'wp-content/themes/twentytwelve'
 }
 
