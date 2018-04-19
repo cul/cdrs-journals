@@ -313,7 +313,9 @@ function wpdocs_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
+// allow html in author bio fields
 
+remove_filter('pre_user_description', 'wp_filter_kses');
 
 
 ?>
