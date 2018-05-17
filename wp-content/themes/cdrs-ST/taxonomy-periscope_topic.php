@@ -17,9 +17,9 @@ get_header(); ?>
 			<header class="entry-header tax-header">
 
 			<h1 class="entry-title">
-				<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; 
+				<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name;
 	$per_src = z_taxonomy_image_url($term->term_id, 'single-image');
-				
+
 				?>
 			</h1>
 			<img src="<?php echo $per_src; ?>" />
@@ -62,11 +62,11 @@ get_header(); ?>
 
 
 	<aside id="secondary" class="sidebar widget-area" role="complementary">
-	
 
 
 
-		<section id="current_per" class="widget widget_current_per">		
+
+		<section id="current_per" class="widget widget_current_per">
 			<h2 class="widget-title">Table of Contents</h2>
 
 			<ul class="per_toc">
@@ -81,24 +81,32 @@ get_header(); ?>
 							),
 							),
 						);
-			
+
 			$per_query = new WP_Query( $args );
-				
+
 			while ($per_query->have_posts()) : $per_query->the_post(); ?>
 			<li>
 			<a href="<?php the_permalink(); ?>">
 			<?php the_title(); ?>
 			</a>
-			<div class="per_toc_byline"><span>By</span> <?php the_author(); ?></div>
+			<div class="per_toc_byline"><span>By</span>
+
+				<?php if ( function_exists( 'coauthors_posts_links' ) )
+					coauthors_posts_links();
+					else
+					the_author_posts_link();
+				?>
+
+			</div>
 			</li>
 			<?php endwhile; ?>
-			
+
 			<?php wp_reset_postdata(); ?>
 
 			</ul>
-			
+
 			<div class="per_toc_archive_link"><a href="/periscope/">Periscope Archive</a></div>
-		
+
 		</section>
 
 

@@ -149,7 +149,7 @@ $taxlink = get_term_link($taxid);
 				<?php if ( function_exists( 'coauthors_posts_links' ) )
 					coauthors_posts_links();
 					else
-						the_author_posts_link();
+					the_author_posts_link();
 				?>
 			</div>
 			</li>
