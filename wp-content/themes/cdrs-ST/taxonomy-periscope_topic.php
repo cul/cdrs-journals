@@ -90,13 +90,11 @@ get_header(); ?>
 			<?php the_title(); ?>
 			</a>
 			<div class="per_toc_byline"><span>By</span>
-
-				<?php if ( function_exists( 'coauthors_posts_links' ) )
-					coauthors_posts_links();
+				<?php if ( function_exists( 'coauthors' ) )
+					coauthors();
 					else
-					the_author_posts_link();
+					the_author();
 				?>
-
 			</div>
 			</li>
 			<?php endwhile; ?>
