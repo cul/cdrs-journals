@@ -72,7 +72,7 @@ get_header(); ?>
 					}
 				$homefirstpost .= '</span></a>';
 				$homefirstpost .= '<span class="feed_item_cat">';
-				$homefirstpost .=  coauthors(', ', ',and ', null, null, false) . '</span>';
+				$homefirstpost .=  coauthors(', ', ' and ', null, null, false) . '</span>';
 				$homefirstpost .= '<div class="feed_item_excerpt">';
 				$homefirstpost .= '<p>' . get_the_excerpt() . '</p></div>';
 				$homefirstpost .= '<span class="feed_item_details">';
