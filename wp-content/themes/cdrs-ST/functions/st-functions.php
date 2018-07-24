@@ -294,7 +294,7 @@ function register_cpt_journal() {
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'nav_menu_item', 'periscope_cpt'
+     'post', 'nav_menu_item', 'periscope_article'
 		));
 	  return $query;
 	}
