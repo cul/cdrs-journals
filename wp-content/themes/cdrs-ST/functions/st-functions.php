@@ -3,11 +3,11 @@
 //include the main class file
 
 if (is_admin()){
-  /* 
+  /*
    * prefix of meta keys, optional
    */
   $prefix = 'st_';
-  /* 
+  /*
    * configure your meta box
    */
   $config = array(
@@ -19,37 +19,37 @@ if (is_admin()){
     'local_images' => true,          // Use local or hosted images (meta box images for add/remove)
     'use_with_theme' => true          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
   );
-  
-  
+
+
   /*
    * Initiate your meta box
    */
   $my_meta =  new Tax_Meta_Class($config);
- 
+
   $my_meta->addText($prefix.'item_number',array('name'=> __('Issue/Topic Number','socialtext')));
-  
+
   $my_meta->addText($prefix.'item_title',array('name'=> __('Issue/Topic Title','socialtext')));
-  
+
   $my_meta->addText($prefix.'item_date',array('name'=> __('Issue/Topic Date','socialtext')));
-  
+
   //Image field
   $my_meta->addImage($prefix.'item_feature_image',array('name'=> 'Cover Image '));
-  
- 
-  $my_meta->addCheckbox($prefix.'item_show_description',array('name'=> 'Show Description on Archive Page')); 
-  
-  $my_meta->addText($prefix.'item_show_description_sequence',array('name'=> 'Show Description in sequence')); 
+
+
+  $my_meta->addCheckbox($prefix.'item_show_description',array('name'=> 'Show Description on Archive Page'));
+
+  $my_meta->addText($prefix.'item_show_description_sequence',array('name'=> 'Show Description in sequence'));
 
   $my_meta->addWysiwyg($prefix.'item_description',array('name'=> __('Issue/Topic Intro Text','socialtext')));
   //taxonomy field
- 
+
   //Finish Meta Box Decleration
   $my_meta->Finish();
 }
 
 
 
-// the function below will be used to remove redundant category description and title fields as we customize the interface with custom metaboxes. 
+// the function below will be used to remove redundant category description and title fields as we customize the interface with custom metaboxes.
 // it is currently not being called as we finalize custom fields.
 
 //add_action( 'admin_footer-edit-tags.php', 'remove_cat_tag_description' );
@@ -57,9 +57,9 @@ if (is_admin()){
 
 function remove_cat_tag_description(){
     global $current_screen;
-    
+
     echo $current_screen->id;
-    switch ( $current_screen->id ) 
+    switch ( $current_screen->id )
     {
         case 'edit-issue':
             // WE ARE AT /wp-admin/edit-tags.php?taxonomy=category
@@ -166,7 +166,7 @@ add_action( 'init', 'register_cpt_article' );
 
 function register_cpt_article() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Articles', 'article' ),
         'singular_name' => _x( 'Article', 'article' ),
         'add_new' => _x( 'Add New', 'article' ),
@@ -181,7 +181,7 @@ function register_cpt_article() {
         'menu_name' => _x( 'Articles', 'article' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'Articles published in socialtext journal. distinct from blog posts or other content',
@@ -190,8 +190,8 @@ function register_cpt_article() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        
-        
+
+
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
@@ -210,7 +210,7 @@ add_action( 'init', 'register_taxonomy_issues' );
 
 function register_taxonomy_issues() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Issues', 'issues' ),
         'singular_name' => _x( 'Issue', 'issues' ),
         'search_items' => _x( 'Search Issues', 'issues' ),
@@ -228,7 +228,7 @@ function register_taxonomy_issues() {
         'menu_name' => _x( 'Issues', 'issues' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
@@ -251,7 +251,7 @@ add_action( 'init', 'register_cpt_journal' );
 
 function register_cpt_journal() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Journals', 'twentysixteen' ),
         'singular_name' => _x( 'Journal', 'twentysixteen' ),
         'add_new' => _x( 'Add New', 'twentysixteen' ),
@@ -266,7 +266,7 @@ function register_cpt_journal() {
         'menu_name' => _x( 'Journals', 'twentysixteen' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'Journal issues with brief description and cover image.',
@@ -274,8 +274,8 @@ function register_cpt_journal() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        
-        
+
+
         'show_in_nav_menus' => false,
         'publicly_queryable' => false,
         'exclude_from_search' => true,
@@ -289,7 +289,16 @@ function register_cpt_journal() {
     register_post_type( 'journal', $args );
 }
 
+// add custom taxonomy to archive page
 
-
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'periscope_article'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 ?>
